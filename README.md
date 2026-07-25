@@ -139,8 +139,11 @@ docker run -d --restart unless-stopped --name oasisic-runner \
   -e ACCESS_TOKEN=ghp_your_token \
   -e RUNNER_NAME=oasisic-iptv-wuhan \
   -e RUNNER_LABELS=self-hosted,iptv,region-wuhan \
-  barryallen26/oasisic-runner:latest
+  ghcr.io/hawaiine/oasisic-runner:latest
 ```
+
+或 Docker Hub（若已双推）：`barryallen26/oasisic-runner:latest`  
+一键脚本：`curl -fsSL https://raw.githubusercontent.com/Hawaiine/oasisic-runner/main/install.sh | bash`（需先 `export ACCESS_TOKEN=...`）
 
 镜像仓库与说明见 [Hawaiine/oasisic-runner](https://github.com/Hawaiine/oasisic-runner) 与 [docs/RUNNER.md](docs/RUNNER.md)。  
 旧 `minimal-runner` 已弃用，请勿再使用。
