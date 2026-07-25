@@ -2,6 +2,8 @@
 
 📺 公开 IPTV 源日更聚合 · 分类 M3U · EPG · 可选地域测活
 
+[![collect](https://github.com/Hawaiine/Oasisic-IPTV/actions/workflows/collect.yml/badge.svg)](https://github.com/Hawaiine/Oasisic-IPTV/actions/workflows/collect.yml)
+
 ---
 
 ## 项目结构
@@ -14,8 +16,11 @@ Oasisic-IPTV/
 ├── scripts/
 │   ├── collect.py         # 主采集管线
 │   ├── manage_sources.py  # 源管理工具（validate / list）
+│   ├── verify_outputs.py  # 输出验证
+│   ├── send_discord.py    # Discord 通知
 │   ├── lib/               # 核心库
 │   │   ├── categories.py  # 分类定义
+│   │   ├── classify.py    # 关键词分类兜底
 │   │   ├── clean.py       # 频道名清洗
 │   │   ├── m3u.py         # M3U 解析/生成
 │   │   ├── match.py       # 标准表匹配
@@ -25,7 +30,9 @@ Oasisic-IPTV/
 ├── data/
 │   ├── channels.json      # 标准频道表
 │   └── aliases.json       # 频道别名字典
-├── output/                # 生成 M3U/EPG
+├── output/                # 生成 M3U 和 check_result
+├── .github/workflows/
+│   └── collect.yml        # 每日 UTC 22:00 自动采集
 ├── docs/
 │   ├── ARCHITECTURE.md    # 架构设计
 │   ├── PIPELINE.md        # 数据流水线
@@ -56,12 +63,18 @@ python scripts/manage_sources.py list
 
 # 执行采集（无测活）
 PROBE_ENABLED=false python scripts/collect.py
+
+# 验证输出
+python scripts/verify_outputs.py
+
+# 发送 Discord 通知（需要设置 DISCORD_WEBHOOK）
+python scripts/send_discord.py
 ```
 
 ## 数据流水线
 
 ```
-采集 → 解析 → 清洗 → 匹配 → 分组 → 测活 → 选优 → 生成
+采集 → 解析 → 清洗 → 匹配 → 分类 → 分组 → 测活 → 选优 → 生成
 ```
 
 详见 [docs/PIPELINE.md](docs/PIPELINE.md)。

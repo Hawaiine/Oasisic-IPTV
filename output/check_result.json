@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "stage": "collect",
-  "generated_at": "2026-07-25 14:40:02",
+  "generated_at": "2026-07-25 15:04:26",
   "timezone": "Asia/Shanghai",
-  "total": 171,
+  "total": 19172,
   "ok": 0,
   "fail": 0,
   "ratio": 0.0,

@@ -1,0 +1,21 @@
+#EXTM3U
+#EXTINF:-1 group-title="网络直播",douyu8
+http://epg.112114.xyz/douyu/4332
+#EXTINF:-1 group-title="网络直播",douyu9
+http://epg.112114.xyz/douyu/6140589
+#EXTINF:-1 group-title="网络直播",douyu15
+http://epg.112114.xyz/douyu/8770422
+#EXTINF:-1 group-title="网络直播",douyu19
+http://epg.112114.xyz/douyu/747764
+#EXTINF:-1 group-title="网络直播",douyu20
+http://epg.112114.xyz/douyu/52787
+#EXTINF:-1 group-title="网络直播",douyu24
+http://epg.112114.xyz/douyu/36337
+#EXTINF:-1 group-title="网络直播",douyu25
+http://epg.112114.xyz/douyu/8814650
+#EXTINF:-1 group-title="网络直播",douyu28
+http://epg.112114.xyz/douyu/263824
+#EXTINF:-1 group-title="网络直播",douyu44
+http://epg.112114.xyz/douyu/323876
+#EXTINF:-1 group-title="网络直播",立法会直播 (Legislative Council Live)
+https://live3.tdm.com.mo/tv/ch21.live/playlist.m3u8

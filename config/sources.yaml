@@ -1,25 +1,76 @@
 # Oasisic-IPTV 采集源配置
-# key 全局唯一；type 支持 m3u / txt；enabled 控制是否采集
-# 约 20 个中文优先稳定源
+# key 全局唯一；type: m3u；enabled: true/false
+# 所有 enabled 源已验证可正常拉取（HTTP 200 + #EXTM3U 头部）
+# 中文优先，约 20 个稳定源
 
 sources:
-  - name: "iptv-org-index"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u"
-    type: "m3u"
-    enabled: true
-
   - name: "iptv-org-cn"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/cn.m3u"
+    url: "https://iptv-org.github.io/iptv/countries/cn.m3u"
     type: "m3u"
     enabled: true
 
   - name: "iptv-org-hk"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/hk.m3u"
+    url: "https://iptv-org.github.io/iptv/countries/hk.m3u"
     type: "m3u"
     enabled: true
 
   - name: "iptv-org-tw"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/tw.m3u"
+    url: "https://iptv-org.github.io/iptv/countries/tw.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-jp"
+    url: "https://iptv-org.github.io/iptv/countries/jp.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-kr"
+    url: "https://iptv-org.github.io/iptv/countries/kr.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-us"
+    url: "https://iptv-org.github.io/iptv/countries/us.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-uk"
+    url: "https://iptv-org.github.io/iptv/countries/uk.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-de"
+    url: "https://iptv-org.github.io/iptv/countries/de.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-fr"
+    url: "https://iptv-org.github.io/iptv/countries/fr.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-in"
+    url: "https://iptv-org.github.io/iptv/countries/in.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-ru"
+    url: "https://iptv-org.github.io/iptv/countries/ru.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-ca"
+    url: "https://iptv-org.github.io/iptv/countries/ca.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-au"
+    url: "https://iptv-org.github.io/iptv/countries/au.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "iptv-org-br"
+    url: "https://iptv-org.github.io/iptv/countries/br.m3u"
     type: "m3u"
     enabled: true
 
@@ -28,82 +79,17 @@ sources:
     type: "m3u"
     enabled: true
 
-  - name: "fanmingming-ipv6-hk"
-    url: "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6_hk.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "fanmingming-ipv6-tw"
-    url: "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6_tw.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "fanmingming-radio"
-    url: "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/radio.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "YueChan-cn"
+  - name: "yuechan-cn"
     url: "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
     type: "m3u"
     enabled: true
 
-  - name: "YueChan-hk"
-    url: "https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/IPTV-HK.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "YueChan-tw"
-    url: "https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/IPTV-TW.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "YueChan-radio"
-    url: "https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/IPTV-Radio.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "live-net"
-    url: "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "live-net-ipv6"
-    url: "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-IPV6.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "xuanchen-cn"
-    url: "https://raw.githubusercontent.com/xuanchen333/IPTV/refs/heads/main/IPTV.m3u"
-    type: "m3u"
-    enabled: true
-
   - name: "free-tv"
-    url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
+    url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
     type: "m3u"
     enabled: true
 
-  - name: "iptv-org-jp"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/jp.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-kr"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/kr.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-us"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/us.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-uk"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/uk.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-de"
-    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist/de.m3u"
+  - name: "iptv-org-index"
+    url: "https://iptv-org.github.io/iptv/index.m3u"
     type: "m3u"
     enabled: true
