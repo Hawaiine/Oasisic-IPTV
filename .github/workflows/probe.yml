@@ -14,8 +14,12 @@ permissions:
 
 jobs:
   probe:
-    runs-on: [self-hosted, iptv, region-wuhan]
+    # 通用标签；region-wuhan 为软标签，与实际 runner 标签对齐
+    runs-on: [self-hosted, iptv]
     timeout-minutes: 60
+    if: >
+      github.event_name != 'workflow_run'
+      || github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,6 +39,10 @@ jobs:
           STRICT_SOURCES: '1'
         run: python scripts/collect.py
 
+      - name: 标记失效源
+        continue-on-error: true
+        run: python scripts/flag_dead_sources.py
+
       - name: 验证输出
         run: python scripts/verify_outputs.py
 
@@ -50,6 +58,8 @@ jobs:
             output/live_verified.m3u \
             output/*.m3u \
             output/check_result.json \
+            config/sources.yaml \
+            data/source_history.json \
             CHANGELOG.md
           if git diff --cached --quiet; then
             echo "无变化，跳过提交"

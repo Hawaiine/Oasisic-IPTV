@@ -6,6 +6,23 @@
 采集 → 解析 → 清洗 → 匹配 → 分类 → 分组 → 测活 → 选优 → 生成
 ```
 
+## 双 job 职责
+
+### collect（云端，GitHub ubuntu-latest）
+- **职责**：候选/完整列表采集，无测活
+- **步骤**：采集 → EPG → 报告 → 验证 → 提交日更
+- **触发**：UTC 22:00 定时 + workflow_dispatch
+- **不依赖** self-hosted runner，任何时刻独立运行
+- **STRICT 源策略**：核心源（cn/hk/tw + fanmingming + yuechan）必须 100% 成功
+
+### probe（自建 runner，武汉联通出口）
+- **职责**：测活 + live_verified + 失效源标记 + 可覆盖分类文件
+- **步骤**：采集 → 测活 → 失效标记 → 验证 → 报告 → 提交
+- **触发**：collect 成功后的 workflow_run + UTC 22:30 定时 + workflow_dispatch
+- **网络口径**：武汉联通，IPv4 NAT（仅出站），IPv6 有公网
+- **冲突处理**：pull --rebase 失败时 job 立即 fail，禁止 force push
+- **离线说明**：runner 离线时 job 失败/queued，不影响 collect 已推内容
+
 ### 1. 采集 (Collect)
 从 `config/sources.yaml` 中配置的源 URL 拉取 M3U 播放列表。
 

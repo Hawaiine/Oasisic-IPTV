@@ -5,7 +5,8 @@ Oasisic-IPTV 源管理工具。
 子命令
 ------
 validate  — 检查 sources.yaml 的合法性（重复 key、空 URL、非法 URL）
-list      — 列出所有源
+list      — 列出所有源（含 disabled 状态）
+disabled  — 列出已禁用的源
 """
 
 from __future__ import annotations
@@ -98,9 +99,26 @@ def cmd_list() -> None:
         print(f"{i:>3}  {name:<30} {src_type:<6} {enabled:<5} {url_display}")
 
 
+def cmd_disabled() -> None:
+    """List disabled sources."""
+    sources = _get_sources()
+    disabled = [s for s in sources if not s.get("enabled", True)]
+    if not disabled:
+        print("(无禁用源)")
+        return
+    print(f"{'#':>3}  {'名称':<30} {'类型':<6} URL")
+    print("-" * 90)
+    for i, src in enumerate(disabled, start=1):
+        name = src.get("name", "?")
+        url = src.get("url", "")
+        src_type = src.get("type", "?")
+        url_display = url if len(url) < 60 else url[:57] + "..."
+        print(f"{i:>3}  {name:<30} {src_type:<6} {url_display}")
+
+
 def main() -> None:
     if len(sys.argv) < 2:
-        print("用法: python scripts/manage_sources.py <validate|list>")
+        print("用法: python scripts/manage_sources.py <validate|list|disabled>")
         sys.exit(1)
 
     cmd = sys.argv[1]
@@ -108,9 +126,11 @@ def main() -> None:
         cmd_validate()
     elif cmd == "list":
         cmd_list()
+    elif cmd == "disabled":
+        cmd_disabled()
     else:
         print(f"未知子命令: {cmd}")
-        print("支持: validate, list")
+        print("支持: validate, list, disabled")
         sys.exit(1)
 
 
