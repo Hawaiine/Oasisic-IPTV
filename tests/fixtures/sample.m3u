@@ -1,0 +1,31 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://example.com/cctv1.png" group-title="央视",CCTV-1 综合
+http://example.com/cctv1.m3u8
+
+#EXTINF:-1 tvg-id="CCTV13" group-title="央视",CCTV-13 新闻
+http://example.com/cctv13.m3u8
+
+#EXTINF:-1 tvg-id="HunanTV" group-title="卫视",湖南卫视
+http://example.com/hunan.m3u8
+
+#EXTINF:-1 tvg-id="ZJTV" group-title="卫视",浙江卫视
+http://example.com/zhejiang.m3u8
+
+#EXTINF:-1 tvg-id="PhoenixChinese" group-title="港澳台",凤凰卫视中文台
+http://example.com/phoenix.m3u8
+
+#EXTINF:-1 tvg-id="TVBJade" group-title="港澳台",TVB Jade
+http://example.com/tvbjade.m3u8
+
+#EXTINF:-1 tvg-id="GDSports" group-title="体育",广东体育
+http://example.com/gdsports.m3u8
+
+#EXTINF:-1 tvg-id="CCTV5" group-title="体育",CCTV-5 体育
+http://example.com/cctv5.m3u8
+
+#EXTINF:-1 tvg-id="BTV" group-title="各省市",北京卫视
+http://example.com/beijing.m3u8
+
+#EXTINF:-1 tvg-id="SZTV" group-title="各省市",深圳卫视
+http://example.com/shenzhen.m3u8

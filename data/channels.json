@@ -1,0 +1,86 @@
+[
+  {
+    "standard_name": "CCTV-1",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV1",
+    "display_name": "CCTV-1 综合"
+  },
+  {
+    "standard_name": "CCTV-13",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV13",
+    "display_name": "CCTV-13 新闻"
+  },
+  {
+    "standard_name": "湖南卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "HunanTV",
+    "display_name": "湖南卫视"
+  },
+  {
+    "standard_name": "浙江卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "ZJTV",
+    "display_name": "浙江卫视"
+  },
+  {
+    "standard_name": "凤凰卫视中文台",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "PhoenixChinese",
+    "display_name": "凤凰卫视中文台"
+  },
+  {
+    "standard_name": "TVB Jade",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVBJade",
+    "display_name": "TVB Jade"
+  },
+  {
+    "standard_name": "广东体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "GDSports",
+    "display_name": "广东体育"
+  },
+  {
+    "standard_name": "CCTV-5",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "CCTV5",
+    "display_name": "CCTV-5 体育"
+  },
+  {
+    "standard_name": "上海东方卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "DragonTV",
+    "display_name": "上海东方卫视"
+  },
+  {
+    "standard_name": "江苏卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "JSTV",
+    "display_name": "江苏卫视"
+  },
+  {
+    "standard_name": "深圳卫视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "SZTV",
+    "display_name": "深圳卫视"
+  },
+  {
+    "standard_name": "北京卫视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "BTV",
+    "display_name": "北京卫视"
+  }
+]

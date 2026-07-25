@@ -5,10 +5,9 @@ __pycache__/
 .venv/
 venv/
 
-# 数据缓存（不提交原始数据）
+# 数据缓存（不提交采集原始数据，允许标准表提交）
 data/all_channels.json
 data/*.csv
-data/*.json
 !data/.gitkeep
 
 # EPG（体积大，由 self-hosted runner 生成）
