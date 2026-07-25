@@ -9,13 +9,33 @@ from lib.io_util import data_path, load_json, save_json, project_root
 
 
 class TestProjectRoot:
-    def test_project_root_ends_with_oasisic_iptv(self):
+    def test_is_absolute_path(self):
         root = project_root()
-        assert root.endswith("Oasisic-IPTV")
+        assert os.path.isabs(root)
 
-    def test_data_path(self):
+    def test_project_root_is_dir(self):
+        assert os.path.isdir(project_root())
+
+    def test_has_config_settings(self):
+        path = os.path.join(project_root(), "config", "settings.yaml")
+        assert os.path.isfile(path)
+
+    def test_has_config_sources(self):
+        path = os.path.join(project_root(), "config", "sources.yaml")
+        assert os.path.isfile(path)
+
+    def test_data_path_channels_exists(self):
         path = data_path("channels.json")
-        assert path.endswith("data/channels.json")
+        assert os.path.isfile(path)
+
+    def test_data_path_is_absolute(self):
+        path = data_path("channels.json")
+        assert os.path.isabs(path)
+
+    def test_data_path_ends_data(self):
+        path = data_path("channels.json")
+        # Should contain "data" in the path
+        assert "data" in path.split(os.sep)
 
 
 class TestLoadSaveJson:

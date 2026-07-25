@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "stage": "collect",
+  "generated_at": "2026-07-25 14:40:02",
+  "timezone": "Asia/Shanghai",
+  "total": 171,
+  "ok": 0,
+  "fail": 0,
+  "ratio": 0.0,
+  "probe_enabled": false,
+  "channels": []
+}
