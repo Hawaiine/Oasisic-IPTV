@@ -1,0 +1,19 @@
+# Oasisic-IPTV 源配置
+# 3~5 个稳定测试源，key 唯一
+# 采集脚本自动拉取并解析
+
+sources:
+  - name: "iptv-org"
+    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/index.njk"
+    type: "index"
+    enabled: true
+
+  - name: "free-tv"
+    url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u"
+    type: "m3u"
+    enabled: true
+
+  - name: "live-channels"
+    url: "https://raw.githubusercontent.com/iptv-org/iptv/master/streams.csv"
+    type: "csv"
+    enabled: true

@@ -1,0 +1,3 @@
+aiohttp>=3.9
+PyYAML>=6.0
+zhconv>=0.4

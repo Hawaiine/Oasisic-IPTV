@@ -1,0 +1,14 @@
+# Oasisic-IPTV 全局设置
+# 采集 → 清洗 → 匹配 → 分组 → 测活 → 选优 → 生成
+
+max_keep_per_channel: 2          # 每频道最多保留优质源数
+probe: false                     # 默认不测活（由 self-hosted runner 开启）
+epg_commit: false                # EPG 默认不进 git（体积大）
+output_dir: "output/"            # 输出目录
+data_dir: "data/"                # 数据缓存目录
+
+# 测活口径（self-hosted runner 覆盖）
+probe_settings:
+  timeout: 10                    # 单源超时秒数
+  concurrent: 5                  # 并发测活数
+  region: "wuhan-unicom"         # 武汉联通出口

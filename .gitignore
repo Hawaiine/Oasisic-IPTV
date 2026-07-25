@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 数据缓存（不提交原始数据）
+data/all_channels.json
+data/*.csv
+data/*.json
+!data/.gitkeep
+
+# EPG（体积大，由 self-hosted runner 生成）
+output/guide.xml
+output/*.xml
+
+# 系统
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
