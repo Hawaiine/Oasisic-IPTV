@@ -243,14 +243,19 @@ def main() -> None:
     # ── 8. Write M3U ───────────────────────────────────────────
     print("💾 写 M3U ...")
 
+    # Normalize group_title for every channel: map category → canonical title
+    for key, ch_list in selected.items():
+        canonical = cat.group_title(key)
+        for ch in ch_list:
+            ch["group_title"] = canonical
+
     # Main live.m3u: follow categories.iter_main_order(), exclude radio
     main_order = list(cat.iter_main_order())
     main_channels: list[dict] = []
     for key in main_order:
         if key in selected:
             for ch in selected[key]:
-                ch["group_title"] = cat.group_title(key)
-                main_channels.append(ch)
+                main_channels.append({**ch, "group_title": cat.group_title(key)})
 
     generate_m3u(main_channels, os.path.join(output_abs, "live.m3u"), "Oasisic-IPTV")
     print(f"   live.m3u: {len(main_channels)} 条")
@@ -261,10 +266,9 @@ def main() -> None:
         if cat.is_radio(key):
             continue
         filename = cat.file_for(key)
-        for ch in ch_list:
-            ch["group_title"] = cat.group_title(key)
+        cat_channels = [{**ch, "group_title": cat.group_title(key)} for ch in ch_list]
         generate_m3u(
-            ch_list,
+            cat_channels,
             os.path.join(output_abs, filename),
             f"Oasisic-IPTV - {cat.title_for(key)}",
         )
@@ -273,9 +277,7 @@ def main() -> None:
     # Radio
     radio_key = cat.RADIO_KEY
     if radio_key in selected:
-        radio_list = selected[radio_key]
-        for ch in radio_list:
-            ch["group_title"] = cat.group_title(radio_key)
+        radio_list = [{**ch, "group_title": cat.group_title(radio_key)} for ch in selected[radio_key]]
         generate_m3u(
             radio_list,
             os.path.join(output_abs, cat.file_for(radio_key)),
