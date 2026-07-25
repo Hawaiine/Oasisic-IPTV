@@ -5,44 +5,43 @@
 ```
                      ┌──────────────────┐
                      │   GitHub Cloud   │
-                     │  (collect job)   │
+                     │  collect.yml     │  ◄── 必跑日更
                      │   UTC 22:00      │
                      └──────┬───────────┘
-                            │ 采集结果
-                            ▼
-                    ┌───────┴───────────┐
-                    │   Artifacts API   │
-                    └───────┬───────────┘
-                            │ 下载
+                            │ live.m3u / 分类 / artifact
                             ▼
                      ┌──────┴──────┐
-                     │ Self-hosted │
-                     │  Runner     │
-                     │ (武汉联通)  │
-                     │ probe-job   │
+                     │   main 仓   │
                      └──────┬──────┘
-                            │ 测活+生成
+                            │ 可选
+                            ▼
+                     ┌──────┴──────────┐
+                     │ oasisic-runner  │  self-hosted,iptv
+                     │ (如武汉联通)    │
+                     │ probe.yml       │
+                     └──────┬──────────┘
+                            │ 有则推 live_verified
                             ▼
                      ┌──────┴──────┐
-                     │  git push   │
-                     │  output/*   │
+                     │   main 仓   │
                      └─────────────┘
 ```
 
-## 关键设计决策
+## 关键决策
 
-### 两阶段分离（Cloud + Self-hosted）
+### 云端必跑 + 测活可选
 
-- **collect（云端）**：纯采集，不测活，生成中间数据
-- **probe（自建 runner）**：下载采集产物，武汉联通出口测活，去重选优，生成最终 M3U/EPG，推送
+- **collect**：纯采集，不测活，保证公开列表日更
+- **probe**：可选；依赖 [oasisic-runner](https://github.com/Hawaiine/oasisic-runner)
+- 无 runner 时 Disable `probe` workflow 即可，主链路不受影响
 
 ### 测活口径
 
-- **唯一口径**：武汉联通出口（AS4837）
-- 测活方式：HTTP HEAD + m3u8 子片段验证
-- 超时：10s/源，并发 5 路
+- 等于 **runner 所在出口**（部署在武汉联通则写武汉联通）
+- 方式：HTTP + m3u8 首段验证
+- **禁止**写成全国/全球可用
 
-### 家宽环境说明
+### 家宽说明
 
-- IPv4 无公网仍可运行 self-hosted runner（只需出站连接 GitHub）
-- IPv6 有公网可提供额外测活能力
+- IPv4 无公网仍可跑 runner（出站即可）
+- IPv6 有公网可覆盖部分源

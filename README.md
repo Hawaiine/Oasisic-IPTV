@@ -37,8 +37,8 @@
 - ✅ 约 20 个中文优先稳定源（iptv-org / fanmingming / YueChan / Free-TV）
 - ✅ 标准频道表匹配 + 关键词分类兜底（9 大分类 + 电台）
 - ✅ 频道名自动清洗（繁转简、去分辨率标签、CCTV 归一）
-- ✅ **可选地域测活**：武汉联通自建 runner（m3u8 子片段验证）
-- ✅ 失效源自动标记（连续 3 天不可用 → 禁用）
+- ✅ **可选地域测活**：自建 [oasisic-runner](https://github.com/Hawaiine/oasisic-runner) 时产出 `live_verified`（无 runner 可跳过）
+- ✅ 失效源自动标记（连续 3 天不可用 → 禁用；需测活数据）
 - ✅ EPG 多源合并（guide.xml）
 - ✅ 源管理工具（validate / list / disabled）
 - ✅ 输出验证 + Discord 通知
@@ -73,12 +73,12 @@ Oasisic-IPTV/
 │   └── aliases.json       # 别名字典
 ├── output/                # 生成 M3U / EPG / check_result
 ├── .github/workflows/
-│   ├── collect.yml        # 每日采集（云端）
-│   └── probe.yml          # 测活（自建 runner）
+│   ├── collect.yml        # 每日采集（云端，必跑）
+│   └── probe.yml          # 测活（可选；无 runner 可禁用）
 └── docs/
     ├── ARCHITECTURE.md    # 架构设计
     ├── PIPELINE.md        # 数据流水线 + 双 job 职责
-    └── RUNNER.md          # 自建 runner 部署
+    └── RUNNER.md          # 可选 oasisic-runner 部署
 ```
 
 ---
@@ -125,34 +125,34 @@ DRY_RUN=true python scripts/flag_dead_sources.py
 - **步骤**：采集 → EPG → 报告 → 验证 → 提交日更 → Discord 通知
 - **不依赖** self-hosted runner，任何时候独立运行
 
-### probe（自建 runner）
-- **运行环境**：`[self-hosted, iptv]` — 武汉联通出口
-- **触发**：collect 成功后 + UTC 22:30 定时 + `workflow_dispatch`
-- **步骤**：采集 → 测活 → 失效标记 → 验证 → 报告 → 提交
-- **网络口径**：IPv4 NAT（仅出站），IPv6 有公网
-- **离线说明**：runner 离线时 job 排队，不影响 collect 已推内容
+### probe（可选增强）
+- **运行环境**：`[self-hosted, iptv]`（需部署 [oasisic-runner](https://github.com/Hawaiine/oasisic-runner)）
+- **默认**：可在 Actions 中 **Disable**；无 runner 时不影响 `live.m3u` 日更
+- **有 runner 时**：测活 → `live_verified.m3u` → 可选失效源标记
+- **口径**：测活结果 = runner 所在出口（如武汉联通），**非全国通用**
 
-### 部署 Runner
+### 部署可选 Runner
 
 ```bash
-docker run -d --restart unless-stopped --name oasisic-iptv-runner \
+docker run -d --restart unless-stopped --name oasisic-runner \
   -e REPO_URL=https://github.com/Hawaiine/Oasisic-IPTV \
-  -e ACCESS_TOKEN=*** \
+  -e ACCESS_TOKEN=ghp_your_token \
   -e RUNNER_NAME=oasisic-iptv-wuhan \
   -e RUNNER_LABELS=self-hosted,iptv,region-wuhan \
-  barryallen26/minimal-runner:latest
+  barryallen26/oasisic-runner:latest
 ```
 
-详见 [docs/RUNNER.md](docs/RUNNER.md)。
+镜像仓库与说明见 [Hawaiine/oasisic-runner](https://github.com/Hawaiine/oasisic-runner) 与 [docs/RUNNER.md](docs/RUNNER.md)。  
+旧 `minimal-runner` 已弃用，请勿再使用。
 
 ---
 
 ## 相关项目
 
+- [oasisic-runner](https://github.com/Hawaiine/oasisic-runner) — 可选自建 Actions Runner 镜像
 - [Oasisic-Icons](https://github.com/Hawaiine/Oasisic-Icons) — 品牌图标库
 - [mihomo-rules](https://github.com/Hawaiine/mihomo-rules) — 代理规则集
 - [Oasisic-OpenWrt](https://github.com/Hawaiine/Oasisic-OpenWrt) — 固件编译
-
 ---
 
 ## 免责声明

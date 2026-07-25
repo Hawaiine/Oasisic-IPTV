@@ -1,23 +1,35 @@
+# 可选增强：地域测活（self-hosted）
+#
+# 主日更在 collect.yml（云端必跑）。本 workflow 仅在已部署
+# Hawaiine/oasisic-runner（标签 self-hosted,iptv）时有意义。
+# 未部署 runner 时：请保持本 workflow 禁用，或忽略 queued job；
+# 不影响 live.m3u 日更。
+#
+# 镜像：barryallen26/oasisic-runner:latest
+# 文档：https://github.com/Hawaiine/oasisic-runner
+
 name: probe
 
 on:
+  workflow_dispatch:            # 有 runner 时手动测活
   workflow_run:
     workflows: [collect]
     types:
       - completed
-  schedule:
-    - cron: '30 22 * * *'       # UTC 22:30 = Beijing 06:30 (collect 后 30 分钟)
-  workflow_dispatch:            # 手动触发
+  # 部署 runner 并确认在线后，可取消下一行注释启用定时测活
+  # schedule:
+  #   - cron: '30 22 * * *'    # UTC 22:30 = 北京 06:30
 
 permissions:
   contents: write
 
 jobs:
   probe:
-    # 通用标签；region-wuhan 为软标签，与实际 runner 标签对齐
+    # 硬标签：self-hosted + iptv（与 oasisic-runner 默认 RUNNER_LABELS 对齐）
     runs-on: [self-hosted, iptv]
     timeout-minutes: 60
-    if: >
+    # collect 失败时不跟跑；手动 dispatch 始终可跑
+    if: >-
       github.event_name != 'workflow_run'
       || github.event.workflow_run.conclusion == 'success'
     steps:
@@ -25,6 +37,7 @@ jobs:
         with:
           fetch-depth: 0
 
+      # 镜像已含 Python3+venv，禁止 setup-python（无 Node 会挂）
       - name: 安装依赖
         run: |
           pip install -r scripts/requirements.txt
@@ -50,7 +63,7 @@ jobs:
         continue-on-error: true
         run: python scripts/generate_report.py
 
-      - name: 提交
+      - name: 提交（仅 output / 源健康相关）
         run: |
           git config user.name "Oasisic-IPTV Bot"
           git config user.email "hawaiine@users.noreply.github.com"
