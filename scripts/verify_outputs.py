@@ -9,7 +9,8 @@ Oasisic-IPTV 输出验证脚本。
 3. live.m3u 中 ``group-title="电台"`` 计数为 0
 4. group_title 必须为规范中文分类名（来自 categories 模块）
 5. 若存在 output/guide.xml，检查 well-formed XML 开头
-6. 警告：other 占比 > 85% 且 total > 50 时 exit 1
+6. 若 probe_enabled=true 或 stage=probe：要求 live_verified.m3u 存在
+7. 警告：other 占比 > 85% 且 total > 50 时 exit 1
 """
 
 from __future__ import annotations
@@ -94,7 +95,21 @@ def main() -> None:
 
     print(f"✅ live.m3u: radio 计数 = {radio_count}")
 
-    # Group-title must be canonical (only check the first group-title attr per EXTINF line)
+    # ── 4.b Probe mode: live_verified.m3u must exist ────────────
+    probe_mode = check.get("probe_enabled") or check.get("stage") == "probe"
+    verified_path = os.path.join(output_dir, "live_verified.m3u")
+    if probe_mode:
+        if not os.path.isfile(verified_path):
+            errors.append("probe 模式下缺少 output/live_verified.m3u")
+        else:
+            from lib.m3u import count_extinf
+            vc = count_extinf(verified_path)
+            print(f"✅ live_verified.m3u: {vc} 条")
+
+    if errors:
+        _exit("❌ " + "\n   ".join(errors))
+
+    # ── 5. Group-title must be canonical (only check first attr) ─
     found_groups = set()
     for line in live_text.splitlines():
         if line.startswith("#EXTINF:"):

@@ -9,8 +9,8 @@
 ### 1. 采集 (Collect)
 从 `config/sources.yaml` 中配置的源 URL 拉取 M3U 播放列表。
 
-**源策略：** 核心源（cn/hk/tw + fanmingming 等中文源）要求 100% 成功率；
-国际补源失败仅警告，不阻塞整 job。总成功率阈值 50%（STRICT_SOURCES=1）。
+**源策略：** 核心源（cn/hk/tw + fanmingming + yuechan）要求 100% 成功率；
+国际补源失败仅警告，不阻塞整 job。总成功率不设阈值（仅卡核心源）。
 
 ### 2. 解析 (Parse)
 解析 M3U 格式，提取频道名、tvg-id、tvg-logo、group-title。

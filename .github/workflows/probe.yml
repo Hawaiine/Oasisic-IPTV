@@ -1,0 +1,68 @@
+name: probe
+
+on:
+  workflow_run:
+    workflows: [collect]
+    types:
+      - completed
+  schedule:
+    - cron: '30 22 * * *'       # UTC 22:30 = Beijing 06:30 (collect 后 30 分钟)
+  workflow_dispatch:            # 手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: [self-hosted, iptv, region-wuhan]
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装依赖
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: 采集 + 测活
+        env:
+          PROBE_ENABLED: 'true'
+          PROBE_CONCURRENCY: '20'
+          PROBE_TIMEOUT: '10'
+          MAX_KEEP_PER_CHANNEL: '1'
+          PROBE_REGION: 'wuhan-unicom'
+          STRICT_SOURCES: '1'
+        run: python scripts/collect.py
+
+      - name: 验证输出
+        run: python scripts/verify_outputs.py
+
+      - name: 工程报告
+        continue-on-error: true
+        run: python scripts/generate_report.py
+
+      - name: 提交
+        run: |
+          git config user.name "Oasisic-IPTV Bot"
+          git config user.email "hawaiine@users.noreply.github.com"
+          git add \
+            output/live_verified.m3u \
+            output/*.m3u \
+            output/check_result.json \
+            CHANGELOG.md
+          if git diff --cached --quiet; then
+            echo "无变化，跳过提交"
+          else
+            TZ='Asia/Shanghai' date '+📡 测活完成 %Y-%m-%d %H:%M' > /tmp/commit_msg.txt
+            git commit -F /tmp/commit_msg.txt
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      - name: Discord 通知
+        if: always()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        continue-on-error: true
+        run: python scripts/send_discord.py
