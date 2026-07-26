@@ -1,3 +1,67 @@
+## 📺 采集报告 (2026-07-26 21:59:12)
+
+- **状态**: stage=probe, total=6999, probe_enabled=True
+- **生成时间**: 2026-07-26 21:59:10
+
+### 📁 文件概览
+
+| 文件 | 条数 |
+|------|------|
+| live.m3u | 6804 |
+| live_cctv.m3u | 11 |
+| live_gangtai.m3u | 3 |
+| live_live.m3u | 0 |
+| live_local.m3u | 12 |
+| live_other.m3u | 5765 |
+| live_overseas.m3u | 1004 |
+| live_radio.m3u | 195 |
+| live_sports.m3u | 8 |
+| live_verified.m3u | 7036 |
+| live_weishi.m3u | 1 |
+
+### 🏷️ 分类分布 (live.m3u)
+
+| 分类 | 条数 |
+|------|------|
+| 其他 | 5765 |
+| 国际 | 1004 |
+| Undefined | 50 |
+| Movies | 48 |
+| General | 46 |
+| Sports | 35 |
+| Entertainment | 25 |
+| 各省市 | 12 |
+| 央视 | 11 |
+| Documentary | 11 |
+| News | 11 |
+| Music | 9 |
+| 体育 | 8 |
+| Kids | 8 |
+| Lifestyle | 4 |
+| 港澳台 | 3 |
+| Series | 3 |
+| Legislative | 3 |
+| Movies;Series | 2 |
+| Education | 2 |
+| Comedy | 2 |
+| 卫视 | 1 |
+| Animation;Kids | 1 |
+| Business;News | 1 |
+| Comedy;Movies;Series | 1 |
+| Culture;News | 1 |
+| Religious | 1 |
+| Family | 1 |
+| Documentary;Education | 1 |
+| Culture | 1 |
+| Science | 1 |
+| Auto | 1 |
+| Outdoor | 1 |
+| Entertainment;Lifestyle | 1 |
+| Entertainment;Kids | 1 |
+
+---
+
+
 ## 📺 采集报告 (2026-07-26 06:52:11)
 
 - **状态**: stage=collect, total=19172, probe_enabled=False

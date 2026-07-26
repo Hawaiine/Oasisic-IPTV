@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "stage": "collect",
-  "generated_at": "2026-07-26 06:52:09",
+  "stage": "probe",
+  "generated_at": "2026-07-26 21:59:10",
   "timezone": "Asia/Shanghai",
   "region": "wuhan-unicom",
-  "total": 19172,
-  "ok": 0,
-  "fail": 0,
-  "ratio": 0.0,
-  "probe_enabled": false,
-  "probe_concurrency": 10,
+  "total": 6999,
+  "ok": 9818,
+  "fail": 10666,
+  "ratio": 47.9,
+  "probe_enabled": true,
+  "probe_concurrency": 20,
   "probe_timeout": 10,
   "channels": []
 }

@@ -1,73 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="PhoenixChineseChannel.hk@SD" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/Phoenix1.png" group-title="港澳台",凤凰中文
-http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
-#EXTINF:-1 tvg-id="PhoenixChineseChannel.hk@SD" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/Phoenix1.png" group-title="港澳台",凤凰中文
-http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
-#EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-logo="https://i.imgur.com/mt4h3VO.png" group-title="港澳台",凤凰资讯
-http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
-#EXTINF:-1 tvg-id="PhoenixInfoNewsChannel.hk@SD" tvg-logo="https://i.imgur.com/mt4h3VO.png" group-title="港澳台",凤凰资讯
-http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
-#EXTINF:-1 tvg-id="CTiVariety.tw@SD" tvg-logo="https://i.imgur.com/tqsKObw.png" group-title="港澳台",CTi Variety (中天综合台)
-http://23.237.10.66:16372
-#EXTINF:-1 tvg-id="CTiVariety.tw@SD" tvg-logo="https://i.imgur.com/tqsKObw.png" group-title="港澳台",CTi Variety (中天综合台)
-http://23.237.10.66:16372
-#EXTINF:-1 tvg-id="EBCFinancialNews.tw@SD" tvg-logo="https://i.imgur.com/uFDkOhV.png" group-title="港澳台",EBC Financial News (东森财经新闻台) [Not 24/7]
-http://seb.sason.top/sc/dscjxw_fhd.m3u8
-#EXTINF:-1 tvg-id="EBCFinancialNews.tw@SD" tvg-logo="https://i.imgur.com/uFDkOhV.png" group-title="港澳台",EBC Financial News (东森财经新闻台) [Not 24/7]
-http://seb.sason.top/sc/dscjxw_fhd.m3u8
-#EXTINF:-1 tvg-id="EBCNews.tw@SD" tvg-logo="https://i.imgur.com/QFZs80p.png" group-title="港澳台",EBC News (东森新闻台) [Not 24/7]
-http://seb.sason.top/sc/dsxw_fhd.m3u8
-#EXTINF:-1 tvg-id="EBCNews.tw@SD" tvg-logo="https://i.imgur.com/QFZs80p.png" group-title="港澳台",EBC News (东森新闻台) [Not 24/7]
-http://seb.sason.top/sc/dsxw_fhd.m3u8
-#EXTINF:-1 tvg-id="FTV.tw@SD" tvg-logo="https://i.imgur.com/q8ahtbT.png" group-title="港澳台",FTV (民视) [Not 24/7]
-http://seb.sason.top/ptv/ftv.php?id=ms
-#EXTINF:-1 tvg-id="FTV.tw@SD" tvg-logo="https://i.imgur.com/q8ahtbT.png" group-title="港澳台",FTV (民视) [Not 24/7]
-http://seb.sason.top/ptv/ftv.php?id=ms
-#EXTINF:-1 tvg-id="FTVOne.tw@SD" tvg-logo="https://i.imgur.com/HBT2o0I.png" group-title="港澳台",FTV One (民视第一台) [Not 24/7]
-http://seb.sason.top/ptv/ftv.php?id=dy
-#EXTINF:-1 tvg-id="FTVOne.tw@SD" tvg-logo="https://i.imgur.com/HBT2o0I.png" group-title="港澳台",FTV One (民视第一台) [Not 24/7]
-http://seb.sason.top/ptv/ftv.php?id=dy
-#EXTINF:-1 tvg-id="SETNews.tw@SD" tvg-logo="https://i.imgur.com/EGVbAvJ.png" group-title="港澳台",SET News (三立新闻) [Geo-blocked]
-http://seb.sason.top/sc/sllive_fhd.m3u8
-#EXTINF:-1 tvg-id="SETNews.tw@SD" tvg-logo="https://i.imgur.com/EGVbAvJ.png" group-title="港澳台",SET News (三立新闻) [Geo-blocked]
-http://seb.sason.top/sc/sllive_fhd.m3u8
 #EXTINF:-1 tvg-id="TVBSAsia.tw@SD" tvg-logo="https://i.imgur.com/4S1rkhm.png" group-title="港澳台",TVBS Asia
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 tvg-id="TVBSAsia.tw@SD" tvg-logo="https://i.imgur.com/4S1rkhm.png" group-title="港澳台",TVBS Asia
-http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 tvg-id="TVBSNews.tw@SD" tvg-logo="https://i.imgur.com/171lwfg.png" group-title="港澳台",TVBS News (TVBS新闻台) [Geo-blocked]
-http://seb.sason.top/sc/tvbsxw_fhd.m3u8
-#EXTINF:-1 tvg-id="TVBSNews.tw@SD" tvg-logo="https://i.imgur.com/171lwfg.png" group-title="港澳台",TVBS News (TVBS新闻台) [Geo-blocked]
-http://seb.sason.top/sc/tvbsxw_fhd.m3u8
 #EXTINF:-1 tvg-id="KNXVTV611.us@HD" tvg-logo="https://i.imgur.com/43s7KXt.png" group-title="港澳台",ABC 15 Phoenix AZ (KNXV)
 https://aegis-cloudfront-1.tubi.video/e923f4ce-7229-4e01-a25e-d453993dab82/playlist.m3u8
-#EXTINF:-1 tvg-id="KNXVTV611.us@HD" tvg-logo="https://i.imgur.com/43s7KXt.png" group-title="港澳台",ABC 15 Phoenix AZ (KNXV)
-https://aegis-cloudfront-1.tubi.video/e923f4ce-7229-4e01-a25e-d453993dab82/playlist.m3u8
-#EXTINF:-1 tvg-id="phoenix.de@HD" tvg-logo="https://i.imgur.com/T1532t9.png" group-title="港澳台",Phoenix [Geo-blocked]
-https://zdf-hls-19.akamaized.net/hls/live/2016502/de/high/master.m3u8
-#EXTINF:-1 tvg-id="phoenix.de@HD" tvg-logo="https://i.imgur.com/T1532t9.png" group-title="港澳台",Phoenix [Geo-blocked]
-https://zdf-hls-19.akamaized.net/hls/live/2016502/de/high/master.m3u8
-#EXTINF:-1 tvg-id="Phoenix.de" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Phoenix-logo-2018.svg/640px-Phoenix-logo-2018.svg.png" group-title="港澳台",Phoenix Ⓖ
-https://zdf-hls-19.akamaized.net/hls/live/2016502/de/veryhigh/master.m3u8
-#EXTINF:-1 tvg-id="TVBNewsChannel.hk" tvg-logo="https://i.imgur.com/Gwij0Fj.png" group-title="港澳台",TVB News Channel
-https://tvp22.sky4k.top/index1.php
-#EXTINF:-1 tvg-id="TVBFinanceSportsInformationChannel.hk" tvg-logo="https://i.imgur.com/Fkkp7x7.png" group-title="港澳台",TVB Finance (Sports & Information Channel)
-https://tvp22.sky4k.top/index2.php
-#EXTINF:-1 tvg-id="FTV.tw" tvg-logo="https://upload.wikimedia.org/wikipedia/zh/thumb/4/49/FTV_HD_Logo.svg/640px-FTV_HD_Logo.svg.png" group-title="港澳台",民视无线台
-http://seb.sason.top/ptv/ftv.php?id=ms
-#EXTINF:-1 tvg-id="FTVOne.tw" tvg-logo="https://i.imgur.com/HBT2o0I.png" group-title="港澳台",FTV One (民视第一台)
-http://seb.sason.top/ptv/ftv.php?id=dy
-#EXTINF:-1 tvg-id="FTVNews.tw" tvg-logo="https://i.imgur.com/j9Gebr5.png" group-title="港澳台",FTV News (民视新闻台) Ⓨ
-https://www.youtube.com/watch?v=ylYJSBUgaMA
-#EXTINF:-1 tvg-id="FTVTaiwan.tw" tvg-logo="https://i.imgur.com/p108I5g.png" group-title="港澳台",FTV Taiwan (民视台湾台)
-http://seb.sason.top/ptv/ftv.php?id=tw
-#EXTINF:-1 tvg-id="TTV.tw" tvg-logo="https://upload.wikimedia.org/wikipedia/zh/4/43/TTV_Home_Channel_with_HD_2016.png" group-title="港澳台",TTV Main Channel (台湾电视台) Ⓨ Ⓖ
-https://www.youtube.com/watch?v=uDqQo8a7Xmk
-#EXTINF:-1 tvg-id="FTVTaiwan.tw@SD" tvg-logo="https://i.imgur.com/p108I5g.png" group-title="港澳台",FTV Taiwan (民视台湾台) [Not 24/7]
-http://seb.sason.top/ptv/ftv.php?id=tw
 #EXTINF:-1 tvg-id="TVBVietnam.vn@SD" tvg-logo="https://raw.githubusercontent.com/songwenhui239/Songwenhui239/refs/heads/main/TVB%20Vietnam.jpeg" group-title="港澳台",TVB Vietnam
 https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist/amg01868-tvbusa-tvbvietnam-tvbanywhereus/playlist.m3u8
-#EXTINF:-1 group-title="港澳台",凤凰香港
-http://223.110.245.136/PLTV/3/224/3221226975/index.m3u8
-#EXTINF:-1 group-title="港澳台",四川 Ⅰ 星空购物台 [Not 24/7]
-http://scgctvshow.sctv.com/hdlive/sctv6/index.m3u8
