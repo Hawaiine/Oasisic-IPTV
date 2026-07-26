@@ -28,6 +28,48 @@ _EXTINF_RE = re.compile(
 # ── Public API ─────────────────────────────────────────────────────
 
 
+def parse_txt_content(text: str, source_name: str) -> list[dict[str, t.Any]]:
+    """
+    Parse a TXT playlist in the ``#genre#`` format.
+
+    Format::
+
+        更新时间,#genre#
+        20260727 04:43,http://...
+        央视频道,#genre#
+        CCTV1,http://...
+        CCTV1,http://...
+
+    Returns the same dict structure as :func:`parse_m3u_content`.
+    """
+    channels: list[dict[str, t.Any]] = []
+    current_group = ""
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        # Genre header line: "央视频道,#genre#"
+        if "#genre#" in stripped:
+            current_group = stripped.split(",")[0].strip()
+            continue
+        # Channel line: "CCTV1,http://..."
+        if "," in stripped and not stripped.startswith("#"):
+            parts = stripped.split(",", 1)
+            name = parts[0].strip()
+            url = parts[1].strip()
+            if url.startswith("http://") or url.startswith("https://"):
+                channels.append({
+                    "name": name,
+                    "url": url,
+                    "tvg_id": "",
+                    "tvg_name": "",
+                    "tvg_logo": "",
+                    "group_title": current_group,
+                    "source": source_name,
+                })
+    return channels
+
+
 def parse_m3u_content(text: str, source_name: str) -> list[dict[str, t.Any]]:
     """
     Parse M3U playlist text.

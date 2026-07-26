@@ -9,27 +9,21 @@ Oasisic-IPTV 主采集管线。
 环境变量
 --------
 PROBE_ENABLED : str
-    设为 "true" 或 "1" 时启用测活（默认不启用）。
 PROBE_CONCURRENCY : int
-    并发测活数（默认 10）。
 PROBE_TIMEOUT : int
-    单源测活超时秒数（默认 10）。
 MAX_KEEP_PER_CHANNEL : int
-    每频道最多保留源数，可覆盖 settings（默认 settings.max_keep_per_channel 或 2）。
 PROBE_REGION : str
-    测活地域标识（默认 wuhan-unicom）。
 STRICT_SOURCES : str
-    设为 "0" 时关闭核心源 100% 门禁（默认严格：CORE 源必须全成功）。
 """
 
 from __future__ import annotations
 
 import datetime
 import os
+import re
 import sys
 import typing as t
 
-# Ensure scripts/ is on path
 _SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
@@ -41,10 +35,8 @@ from lib import categories as cat
 from lib.classify import classify_by_rules
 from lib.clean import clean_channel_name
 from lib.io_util import load_yaml, project_root, save_json
-from lib.m3u import generate_m3u, parse_m3u_content
+from lib.m3u import generate_m3u, parse_m3u_content, parse_txt_content
 from lib.match import match_channel
-
-# ── Config ─────────────────────────────────────────────────────────
 
 _PROBE_ENABLED = os.environ.get("PROBE_ENABLED", "").lower() in ("true", "1")
 _PROBE_CONCURRENCY = int(os.environ.get("PROBE_CONCURRENCY", "10"))
@@ -53,10 +45,9 @@ _PROBE_REGION = os.environ.get("PROBE_REGION", "wuhan-unicom")
 _MAX_KEEP_ENV = os.environ.get("MAX_KEEP_PER_CHANNEL", "")
 _STRICT_SOURCES = os.environ.get("STRICT_SOURCES", "1") not in ("0", "false", "no")
 
-# Core sources that must be 100% successful (cn/hk/tw + fanmingming + yuechan)
 _CORE_SOURCE_NAMES: set[str] = {
+    "fanmingming-ipv6", "yuechan-cn", "guovin-iptv-api",
     "iptv-org-cn", "iptv-org-hk", "iptv-org-tw",
-    "fanmingming-ipv6", "yuechan-cn",
 }
 
 
@@ -69,48 +60,35 @@ def _load_sources() -> list[dict]:
     return data.get("sources", [])
 
 
-# ── Fetch ──────────────────────────────────────────────────────────
-
-
 async def _fetch_source(
-    session: aiohttp.ClientSession,
-    source: dict,
-    timeout: int,
-    user_agent: str,
-) -> tuple[str, str, str]:
-    """Fetch a single source. Returns (name, url, content_or_error)."""
+    session: aiohttp.ClientSession, source: dict, timeout: int, user_agent: str,
+) -> tuple[str, str, str, str]:
     name: str = source["name"]
     url: str = source["url"]
+    src_type: str = source.get("type", "m3u")
     headers = {"User-Agent": user_agent}
     try:
         async with session.get(url, timeout=aiohttp.ClientTimeout(total=timeout)) as resp:
             if resp.status != 200:
-                return name, url, f"HTTP {resp.status}"
+                return name, url, src_type, f"HTTP {resp.status}"
             text = await resp.text(encoding="utf-8", errors="replace")
-            return name, url, text
+            return name, url, src_type, text
     except Exception as exc:
-        return name, url, f"ERROR: {exc}"
+        return name, url, src_type, f"ERROR: {exc}"
 
 
 async def _fetch_all(sources: list[dict], settings: dict) -> list[dict]:
-    """Fetch all enabled sources concurrently."""
     timeout = settings.get("request_timeout_sec", 30)
-    user_agent = settings.get(
-        "user_agent",
-        "Mozilla/5.0 (compatible; Oasisic-IPTV/1.0)",
-    )
+    user_agent = settings.get("user_agent", "Mozilla/5.0 (compatible; Oasisic-IPTV/1.0)")
     enabled = [s for s in sources if s.get("enabled", True)]
     connector = aiohttp.TCPConnector(limit_per_host=3)
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [_fetch_source(session, s, timeout, user_agent) for s in enabled]
         results = await asyncio.gather(*tasks)
     out: list[dict] = []
-    for source, (name, url, content) in zip(enabled, results):
-        out.append({"name": name, "url": url, "content": content})
+    for source, (name, url, stype, content) in zip(enabled, results):
+        out.append({"name": name, "url": url, "type": stype, "region": source.get("region", "cn"), "content": content})
     return out
-
-
-# ── Pipeline stages ────────────────────────────────────────────────
 
 
 def _is_error(content: str) -> bool:
@@ -118,19 +96,22 @@ def _is_error(content: str) -> bool:
 
 
 def _parse_all(fetched: list[dict]) -> list[dict]:
-    """Parse M3U content from all fetched sources into channel dicts."""
     all_channels: list[dict] = []
     for entry in fetched:
         content = entry["content"]
         if _is_error(content):
             continue
-        channels = parse_m3u_content(content, entry["name"])
+        if entry.get("type") == "txt":
+            channels = parse_txt_content(content, entry["name"])
+        else:
+            channels = parse_m3u_content(content, entry["name"])
+        for ch in channels:
+            ch["source_region"] = entry.get("region", "cn")
         all_channels.extend(channels)
     return all_channels
 
 
 def _clean_all(channels: list[dict]) -> list[dict]:
-    """Clean channel names in-place, removing entries that become None."""
     out: list[dict] = []
     for ch in channels:
         cleaned = clean_channel_name(ch.get("name", ""))
@@ -142,12 +123,11 @@ def _clean_all(channels: list[dict]) -> list[dict]:
 
 def _match_and_classify(channels: list[dict]) -> list[dict]:
     """
-    Match against standard table; fallback to keyword classification.
+    Match against standard table → classify with display name rule.
 
-    After this step every channel has:
-      - category
-      - group_title (canonical from categories module)
-      - standard_name (if matched, else "")
+    Display name priority:
+      1. standard_name (Chinese) if matched
+      2. cleaned name otherwise
     """
     for ch in channels:
         m = match_channel(ch["name"])
@@ -155,19 +135,40 @@ def _match_and_classify(channels: list[dict]) -> list[dict]:
             ch["category"] = m["category"]
             ch["standard_name"] = m["standard_name"]
             ch["group_title"] = cat.group_title(m["category"])
+            # Display name: use standard_name (Chinese) as output name
+            ch["name"] = m.get("display_name") or m["standard_name"]
             if not ch.get("tvg_id"):
                 ch["tvg_id"] = m.get("tvg_id", "")
         else:
             src_grp = ch.get("group_title", "")
-            cat_key, grp_title = classify_by_rules(ch["name"], src_grp)
-            ch["category"] = cat_key
-            ch["standard_name"] = ""
-            ch["group_title"] = grp_title
+            region = ch.get("source_region", "cn")
+
+            # Source region override
+            if region == "hotel":
+                ch["category"] = "special"
+                ch["standard_name"] = ""
+                ch["group_title"] = cat.group_title("special")
+            elif region == "overseas":
+                cat_key, grp_title = classify_by_rules(ch["name"], src_grp)
+                # If the name is clearly Chinese, keep the classify result
+                # Otherwise, overseas sources stay overseas
+                has_cn = bool(re.search(r"[\u4e00-\u9fff]", ch["name"]))
+                if has_cn and cat_key != "overseas":
+                    ch["category"] = cat_key
+                    ch["group_title"] = grp_title
+                else:
+                    ch["category"] = "overseas"
+                    ch["group_title"] = cat.group_title("overseas")
+                ch["standard_name"] = ""
+            else:
+                cat_key, grp_title = classify_by_rules(ch["name"], src_grp)
+                ch["category"] = cat_key
+                ch["standard_name"] = ""
+                ch["group_title"] = grp_title
     return channels
 
 
 def _group_by_category(channels: list[dict]) -> dict[str, list[dict]]:
-    """Group channels by category key."""
     groups: dict[str, list[dict]] = {}
     for ch in channels:
         key = ch.get("category", "other")
@@ -175,43 +176,28 @@ def _group_by_category(channels: list[dict]) -> dict[str, list[dict]]:
     return groups
 
 
-def _select_best(
-    groups: dict[str, list[dict]], max_keep: int
-) -> dict[str, list[dict]]:
-    """Select at most ``max_keep`` channels per standard_name within each
-    category.  When probe is disabled all channels are considered alive,
-    so we take the first N unique URLs per standard name.
-
-    When probe is enabled, only alive channels are kept, sorted by latency.
-    """
+def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list[dict]]:
     selected: dict[str, list[dict]] = {}
     for key, ch_list in groups.items():
         seen: dict[str, list[dict]] = {}
         for ch in ch_list:
-            # Skip dead channels when probe was done
             if ch.get("alive") is False:
                 continue
             std = ch.get("standard_name") or ch.get("name", "?")
             seen.setdefault(std, []).append(ch)
         chosen: list[dict] = []
         for _std, entries in seen.items():
-            # Sort by latency (ascending) when probe data available
-            sorted_entries = sorted(
-                entries,
-                key=lambda x: x.get("latency_ms", 999999),
-            )
+            sorted_entries = sorted(entries, key=lambda x: x.get("latency_ms", 999999))
             chosen.extend(sorted_entries[:max_keep])
         selected[key] = chosen
     return selected
-
-
-# ── Main ───────────────────────────────────────────────────────────
 
 
 def main() -> None:
     settings = _load_settings()
     sources = _load_sources()
     max_keep = int(_MAX_KEEP_ENV) if _MAX_KEEP_ENV else settings.get("max_keep_per_channel", 2)
+    main_include_overseas = settings.get("main_include_overseas", False)
     output_dir = settings.get("output_dir", "output/")
     output_abs = os.path.join(project_root(), output_dir)
     os.makedirs(output_abs, exist_ok=True)
@@ -234,11 +220,8 @@ def main() -> None:
                 core_ok += 1
         if is_core:
             core_total += 1
-
     success_rate = (ok_count / total_enabled * 100) if total_enabled else 0
     print(f"   成功: {ok_count}/{total_enabled} ({success_rate:.0f}%)")
-
-    # STRICT: CORE sources must be 100%
     if _STRICT_SOURCES and core_total > 0:
         if core_ok < core_total:
             print(f"❌ 核心源成功率 {core_ok}/{core_total} < 100%，退出")
@@ -246,7 +229,7 @@ def main() -> None:
         print(f"   ✅ 核心源 {core_ok}/{core_total} 全部成功")
 
     # ── 2. Parse ───────────────────────────────────────────────
-    print("📄 解析 M3U ...")
+    print("📄 解析 ...")
     parsed = _parse_all(fetched)
     print(f"   {len(parsed)} 条原始频道")
 
@@ -277,18 +260,12 @@ def main() -> None:
         from lib.probe import probe_channels
         print("📡 测活中 ...")
         matched = asyncio.run(
-            probe_channels(
-                matched,
-                concurrency=_PROBE_CONCURRENCY,
-                timeout=_PROBE_TIMEOUT,
-            )
+            probe_channels(matched, concurrency=_PROBE_CONCURRENCY, timeout=_PROBE_TIMEOUT)
         )
         probe_ok = sum(1 for ch in matched if ch.get("alive"))
         probe_fail = sum(1 for ch in matched if not ch.get("alive"))
-        print(f"   ✅ {probe_ok} 可用, ❌ {probe_fail} 不可用 "
-              f"(并发={_PROBE_CONCURRENCY}, 超时={_PROBE_TIMEOUT}s)")
+        print(f"   ✅ {probe_ok} 可用, ❌ {probe_fail} 不可用")
     else:
-        # Mark all as alive for non-probe mode
         for ch in matched:
             ch["alive"] = True
 
@@ -307,10 +284,13 @@ def main() -> None:
         for ch in ch_list:
             ch["group_title"] = canonical
 
-    # Main live.m3u
+    # Main live.m3u: cctv + weishi + local + gangtai + sports + live + special + other(CN)
+    # Exclude overseas unless main_include_overseas
     main_order = list(cat.iter_main_order())
     main_channels: list[dict] = []
     for key in main_order:
+        if key == "overseas" and not main_include_overseas:
+            continue
         if key in selected:
             for ch in selected[key]:
                 main_channels.append({**ch, "group_title": cat.group_title(key)})
@@ -318,34 +298,24 @@ def main() -> None:
     generate_m3u(main_channels, os.path.join(output_abs, "live.m3u"), "Oasisic-IPTV")
     print(f"   live.m3u: {len(main_channels)} 条")
 
-    # Category files
-    cat_files_written = 0
+    # Category files (all categories, including overseas)
     for key, ch_list in selected.items():
         if cat.is_radio(key):
             continue
         filename = cat.file_for(key)
         cat_channels = [{**ch, "group_title": cat.group_title(key)} for ch in ch_list]
-        generate_m3u(
-            cat_channels,
-            os.path.join(output_abs, filename),
-            f"Oasisic-IPTV - {cat.title_for(key)}",
-        )
-        cat_files_written += 1
+        generate_m3u(cat_channels, os.path.join(output_abs, filename), f"Oasisic-IPTV - {cat.title_for(key)}")
 
     # Radio
     radio_key = cat.RADIO_KEY
     if radio_key in selected:
         radio_list = [{**ch, "group_title": cat.group_title(radio_key)} for ch in selected[radio_key]]
-        generate_m3u(
-            radio_list,
-            os.path.join(output_abs, cat.file_for(radio_key)),
-            "Oasisic-IPTV - 电台",
-        )
+        generate_m3u(radio_list, os.path.join(output_abs, cat.file_for(radio_key)), "Oasisic-IPTV - 电台")
         print(f"   {cat.file_for(radio_key)}: {len(radio_list)} 条")
 
-    print(f"   分类文件: {cat_files_written} 个类别")
+    print(f"   分类文件: {len([k for k in selected if not cat.is_radio(k)])} 个类别")
 
-    # ── live_verified.m3u (probe mode only) ────────────────────
+    # ── live_verified.m3u (probe mode) ────────────────────────
     if _PROBE_ENABLED:
         verified_channels = [ch for ch in matched if ch.get("alive")]
         verified_dedup: list[dict] = []
@@ -355,11 +325,7 @@ def main() -> None:
             if url and url not in seen_urls:
                 seen_urls.add(url)
                 verified_dedup.append(ch)
-        generate_m3u(
-            verified_dedup,
-            os.path.join(output_abs, "live_verified.m3u"),
-            "Oasisic-IPTV - Verified",
-        )
+        generate_m3u(verified_dedup, os.path.join(output_abs, "live_verified.m3u"), "Oasisic-IPTV - Verified")
         print(f"   live_verified.m3u: {len(verified_dedup)} 条")
 
     # ── 9. Write check_result.json ─────────────────────────────
@@ -383,7 +349,6 @@ def main() -> None:
     check_path = os.path.join(output_abs, "check_result.json")
     save_json(check_path, check)
 
-    # ── Summary ────────────────────────────────────────────────
     print()
     print("=" * 40)
     print(f"✅ 采集完成 (probe_enabled={_PROBE_ENABLED})")

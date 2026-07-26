@@ -1,16 +1,17 @@
 # Oasisic-IPTV 全局设置
-# 采集 → 清洗 → 匹配 → 分组 → 测活 → 选优 → 生成
+# 采集 → 解析 → 清洗 → 匹配 → 分类 → 分组 → 测活 → 选优 → 生成
 
 max_keep_per_channel: 2
 probe_enabled: false
 epg_commit: false
 request_timeout_sec: 30
+main_include_overseas: false     # 主列表不混入国际（仅 live_overseas.m3u）
 user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 output_dir: "output/"
 data_dir: "data/"
 
-# 测活设置（仅 probe_enabled=true 时生效，Phase5 完整实现）
+# 测活设置（仅 probe_enabled=true 时生效）
 probe_settings:
   timeout: 10
   concurrent: 5

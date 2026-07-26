@@ -40,6 +40,7 @@ _STATUS_TAG = re.compile(
     | 电信 | 联通 | 移动 | 广电
     | 中国 | 默认
     | \d+M
+    | Not\s*24/7 | geo[- ]?block | geo[- ]?restrict
     )
     \s*\]?
     """,

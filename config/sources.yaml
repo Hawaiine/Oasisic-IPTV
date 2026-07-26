@@ -1,95 +1,67 @@
 # Oasisic-IPTV 采集源配置
-# key 全局唯一；type: m3u；enabled: true/false
-# 所有 enabled 源已验证可正常拉取（HTTP 200 + #EXTM3U 头部）
-# 中文优先，约 20 个稳定源
+# key 全局唯一；type: m3u|txt；enabled: true/false
+# region: cn|hk_tw|overseas|hotel|radio
 
 sources:
-  - name: "iptv-org-cn"
-    url: "https://iptv-org.github.io/iptv/countries/cn.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-hk"
-    url: "https://iptv-org.github.io/iptv/countries/hk.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-tw"
-    url: "https://iptv-org.github.io/iptv/countries/tw.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-jp"
-    url: "https://iptv-org.github.io/iptv/countries/jp.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-kr"
-    url: "https://iptv-org.github.io/iptv/countries/kr.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-us"
-    url: "https://iptv-org.github.io/iptv/countries/us.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-uk"
-    url: "https://iptv-org.github.io/iptv/countries/uk.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-de"
-    url: "https://iptv-org.github.io/iptv/countries/de.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-fr"
-    url: "https://iptv-org.github.io/iptv/countries/fr.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-in"
-    url: "https://iptv-org.github.io/iptv/countries/in.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-ru"
-    url: "https://iptv-org.github.io/iptv/countries/ru.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-ca"
-    url: "https://iptv-org.github.io/iptv/countries/ca.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-au"
-    url: "https://iptv-org.github.io/iptv/countries/au.m3u"
-    type: "m3u"
-    enabled: true
-
-  - name: "iptv-org-br"
-    url: "https://iptv-org.github.io/iptv/countries/br.m3u"
-    type: "m3u"
-    enabled: true
-
+  # ── 国内/中文热门源 ──────────────────────────────────
   - name: "fanmingming-ipv6"
     url: "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
     type: "m3u"
     enabled: true
+    region: cn
 
   - name: "yuechan-cn"
     url: "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
     type: "m3u"
     enabled: true
+    region: cn
 
-  - name: "free-tv"
+  - name: "guovin-iptv-api"
+    url: "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+
+  - name: "iptv-org-cn"
+    url: "https://iptv-org.github.io/iptv/countries/cn.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+
+  - name: "iptv-org-hk"
+    url: "https://iptv-org.github.io/iptv/countries/hk.m3u"
+    type: "m3u"
+    enabled: true
+    region: hk_tw
+
+  - name: "iptv-org-tw"
+    url: "https://iptv-org.github.io/iptv/countries/tw.m3u"
+    type: "m3u"
+    enabled: true
+    region: hk_tw
+
+  # ── 酒店/特殊源 ──────────────────────────────────────
+  - name: "ccsh-hotel"
+    url: "https://raw.githubusercontent.com/CCSH/IPTV/main/live_lite.txt"
+    type: "txt"
+    enabled: true
+    region: hotel
+
+  # ── 国际源（少量，降权） ──────────────────────────────
+  - name: "free-tv-global"
     url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
     type: "m3u"
     enabled: true
+    region: overseas
 
-  - name: "iptv-org-index"
-    url: "https://iptv-org.github.io/iptv/index.m3u"
+  - name: "iptv-org-jp"
+    url: "https://iptv-org.github.io/iptv/countries/jp.m3u"
     type: "m3u"
     enabled: true
+    region: overseas
+
+  - name: "iptv-org-kr"
+    url: "https://iptv-org.github.io/iptv/countries/kr.m3u"
+    type: "m3u"
+    enabled: true
+    region: overseas
