@@ -1,3 +1,39 @@
+## 📺 采集报告 (2026-07-27 07:11:10)
+
+- **状态**: stage=probe, total=1205, probe_enabled=True
+- **生成时间**: 2026-07-27 07:11:07
+
+### 📁 文件概览
+
+| 文件 | 条数 |
+|------|------|
+| live.m3u | 480 |
+| live_cctv.m3u | 23 |
+| live_gangtai.m3u | 10 |
+| live_live.m3u | 0 |
+| live_local.m3u | 282 |
+| live_other.m3u | 5765 |
+| live_overseas.m3u | 725 |
+| live_radio.m3u | 0 |
+| live_special.m3u | 131 |
+| live_sports.m3u | 9 |
+| live_verified.m3u | 2820 |
+| live_weishi.m3u | 25 |
+
+### 🏷️ 分类分布 (live.m3u)
+
+| 分类 | 条数 |
+|------|------|
+| 各省市 | 282 |
+| 特殊·酒店源 | 131 |
+| 卫视 | 25 |
+| 央视 | 23 |
+| 港澳台 | 10 |
+| 体育 | 9 |
+
+---
+
+
 ## 📺 采集报告 (2026-07-27 06:57:05)
 
 - **状态**: stage=collect, total=3630, probe_enabled=False

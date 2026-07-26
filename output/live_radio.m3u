@@ -1,13 +1,1 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="滁州市广播电视台 新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/滁州市广播电视台 新闻综合.png" group-title="电台",滁州市广播电视台 新闻综合
-http://live.cztv.cc:85/live/xwpd.m3u8
-#EXTINF:-1 tvg-id="滁州市广播电视台 公共" tvg-logo="https://www.xn--rgv465a.top/tvlogo/滁州市广播电视台 公共.png" group-title="电台",滁州市广播电视台 公共
-http://live.cztv.cc:85/live/ggpd.m3u8
-#EXTINF:-1 tvg-id="音乐广播" tvg-logo="https://www.xn--rgv465a.top/tvlogo/音乐广播.png" group-title="电台",音乐广播
-https://tv.iill.top/fm/552&token=7c908a370d95d78e90a9d2ba4007e5185038b0ceac7435ba90e72c77cc035ff6
-#EXTINF:-1 tvg-id="音乐广播" tvg-logo="https://www.xn--rgv465a.top/tvlogo/音乐广播.png" group-title="电台",音乐广播
-https://tv.iill.top/fm/552&token=074c3dfc2f95090e006ab15f0d86b1aaef70b389a934b096ad5e6674b5724d0d
-#EXTINF:-1 tvg-id="ChuzhouPublicChannel.cn@SD" tvg-logo="https://i.imgur.com/9JfZJRv.png" group-title="电台",滁州市广播电视台 公共频道
-http://live.cztv.cc:85/live/ggpd.m3u8
-#EXTINF:-1 tvg-id="ChuzhouNewsChannel.cn@SD" tvg-logo="https://i.imgur.com/9JfZJRv.png" group-title="电台",滁州市广播电视台 新闻综合频道
-http://live.cztv.cc:85/live/xwpd.m3u8
