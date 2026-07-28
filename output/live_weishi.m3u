@@ -173,12 +173,12 @@ http://38.64.72.148:80/hls/modn/list/4009/playlist.m3u8
 http://124.116.183.146:9901/tsfile/live/1004_1.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/农林卫视.png" group-title="卫视",农林卫视
 http://home.wwang.pw:35455/itv/1000000005000266003.m3u8?cdn=ystenlive
-#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://tb.zbds.top/logo/上海卫视.png" group-title="卫视",上海卫视
-http://112.27.235.94:8000/hls/28/index.m3u8
 #EXTINF:-1 tvg-id="人间卫视" tvg-logo="https://tb.zbds.top/logo/人间卫视.png" group-title="卫视",人间卫视
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
 #EXTINF:-1 tvg-logo="https://gitee.com/suxuang/TVlogo/raw/main/img/BLTV.png" group-title="卫视",人间卫视
 http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u
+#EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/上海卫视.png" group-title="卫视",上海卫视
+http://39.135.135.28/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225735/index.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/山东教育卫视.png" group-title="卫视",山东教育卫视
 http://39.134.65.79/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225655/index.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/广东珠江.png" group-title="卫视",珠江卫视
@@ -193,3 +193,5 @@ http://aktv-stream.m16tv.cfd/stream/aktv3/null/AKTV.m3u8
 http://aktv-stream.m16tv.cfd/stream/aktv3/null-2/AKTV.m3u8
 #EXTINF:-1 group-title="卫视",旅游卫视
 http://115.207.211.191:9901/tsfile/live/0114_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-id="澳门卫视" tvg-logo="https://i.imgur.com/qDI3aMp.png" group-title="卫视",澳门卫视
+http://61.244.22.4/ch1/ch1.live/playlist.m3u8

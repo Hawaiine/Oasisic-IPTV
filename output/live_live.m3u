@@ -1,7 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="熊猫直播" tvg-logo="https://tb.zbds.top/logo/熊猫直播.png" group-title="网络直播",熊猫直播
-https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
 #EXTINF:-1 tvg-id="直播中国" tvg-logo="https://tb.zbds.top/logo/直播中国.png" group-title="网络直播",直播
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/直播中国精编直播.png" group-title="网络直播",直播精编直播
-https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8

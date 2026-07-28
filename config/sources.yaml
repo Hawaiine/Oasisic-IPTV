@@ -84,3 +84,16 @@ sources:
     type: "txt"
     enabled: true
     region: cn
+
+  # ── Quality-2.1 新增源 ───────────────────────────────
+  - name: "zbds-iptv6"
+    url: "https://live.zbds.top/tv/iptv6.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+
+  - name: "hujingguang-chinaiptv"
+    url: "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/cnTV_AutoUpdate.m3u8"
+    type: "m3u"
+    enabled: true
+    region: cn

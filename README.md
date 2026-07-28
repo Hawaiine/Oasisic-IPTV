@@ -47,7 +47,7 @@
 ## 特性
 
 - ✅ 每日 UTC 22:00 自动采集（GitHub Actions 云端）
-- ✅ 约 20 个中文优先稳定源（iptv-org / fanmingming / YueChan / Free-TV）
+- ✅ 15 个中文优先稳定源（iptv-org / fanmingming / YueChan / Free-TV）
 - ✅ 标准频道表匹配 + 关键词分类兜底（9 大分类 + 电台）
 - ✅ 频道名自动清洗（繁转简、去分辨率标签、CCTV 归一）
 - ✅ **可选地域测活**：自建 [oasisic-runner](https://github.com/Hawaiine/oasisic-runner) 时产出 `live_verified`（无 runner 可跳过）

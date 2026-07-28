@@ -167,3 +167,7 @@ http://aktv-stream.m16tv.cfd/stream/astro_a1/tvbxinghe/AKTV.m3u8
 http://aktv-stream.m16tv.cfd/stream/taiwan/inews/AKTV.m3u8
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/特种兵之火凤凰.png" group-title="港澳台",特种兵之火凤凰
 http://182.40.120.195/test-txdwk.flv.huya.com/src/1239543150714-1239543150714-11135001069078183936-2479086424884-10057-A-0-1.m3u8
+#EXTINF:-1 tvg-id="东森财经新闻" tvg-logo="https://i.imgur.com/k4fhcPl.png" group-title="港澳台",东森财经新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV03.m3u8
+#EXTINF:-1 tvg-id="民视新闻HD" tvg-logo="https://i.imgur.com/k4fhcPl.png" group-title="港澳台",民视新闻
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV17.m3u8

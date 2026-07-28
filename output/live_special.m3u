@@ -9,8 +9,6 @@ http://74.91.26.218:82/live/vlxjyy.m3u8
 http://kkk.888.3116598.xyz/api.php?n=tttt&id=HNbgwe&tk=FgM0vQMejxvG
 #EXTINF:-1 group-title="特殊·酒店源",发现之旅
 https://iptv.catvod.com/migu?id=624878970&token=75ce133ba1c1f79551a9262fa37d9913
-#EXTINF:-1 group-title="特殊·酒店源",美亚电影
-https://t.freetv.fun/live/mei-ya-dian-ying.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",家庭剧场
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225677/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",超级电视剧
@@ -199,8 +197,6 @@ https://stream1.freetv.fun/dong-sen-dian-ying-5.m3u8
 https://t.freetv.fun/live/dong-sen-zong-he.php
 #EXTINF:-1 group-title="特殊·酒店源",东森财经新闻台
 https://t.freetv.fun/live/dong-sen-cai-jing-xin-wen.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",东森财经新闻台
-https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV03.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来体育台
 https://stream1.freetv.fun/wei-lai-ti-yu-9.ctv
 #EXTINF:-1 group-title="特殊·酒店源",纬来体育台
@@ -279,6 +275,10 @@ https://t.freetv.fun/live/tai-shi-cai-jing-1.m3u8
 https://t.freetv.fun/live/tai-shi-cai-jing.ts
 #EXTINF:-1 group-title="特殊·酒店源",HBO
 https://t.freetv.fun/live/hbo-b.m3u8
+#EXTINF:-1 group-title="特殊·酒店源",美亚电影
+https://t.freetv.fun/live/mei-ya-dian-ying.m3u8
+#EXTINF:-1 group-title="特殊·酒店源",美亚电影
+https://t.freetv.fun/live/mei-ya-dian-ying-2.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",周星驰
 http://173.208.234.146/live/vlzxc.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",周星驰
