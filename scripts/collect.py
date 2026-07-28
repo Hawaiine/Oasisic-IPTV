@@ -50,6 +50,14 @@ _CORE_SOURCE_NAMES: set[str] = {
     "iptv-org-cn", "iptv-org-hk", "iptv-org-tw",
 }
 
+# Source region priority (lower = preferred for stable sort without probe)
+_SOURCE_PRIORITY: dict[str, int] = {
+    "cn": 0,
+    "hk_tw": 1,
+    "hotel": 2,
+    "overseas": 3,
+}
+
 
 def _load_settings() -> dict:
     return load_yaml(os.path.join(project_root(), "config", "settings.yaml"))
@@ -177,6 +185,16 @@ def _group_by_category(channels: list[dict]) -> dict[str, list[dict]]:
 
 
 def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list[dict]]:
+    """
+    Per-category selection + global dedup.
+
+    1. Within each category, group by name key, keep max_keep per name.
+    2. Sort by source_region priority (cn→hk_tw→hotel→overseas), then latency.
+    3. URL dedup within each category.
+    4. Global dedup: merge same-name channels across categories, keep max_keep.
+    5. Radio is isolated (not merged with other categories).
+    """
+    # ── Step 1-3: Per-category selection ──────────────────────
     selected: dict[str, list[dict]] = {}
     for key, ch_list in groups.items():
         seen: dict[str, list[dict]] = {}
@@ -185,12 +203,59 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
                 continue
             std = ch.get("standard_name") or ch.get("name", "?")
             seen.setdefault(std, []).append(ch)
+
         chosen: list[dict] = []
         for _std, entries in seen.items():
-            sorted_entries = sorted(entries, key=lambda x: x.get("latency_ms", 999999))
+            sorted_entries = sorted(
+                entries,
+                key=lambda x: (
+                    _SOURCE_PRIORITY.get(x.get("source_region", "cn"), 99),
+                    x.get("latency_ms", 999999),
+                ),
+            )
             chosen.extend(sorted_entries[:max_keep])
-        selected[key] = chosen
-    return selected
+
+        # URL dedup within category
+        cat_dedup: list[dict] = []
+        cat_seen_urls: set[str] = set()
+        for ch in chosen:
+            url = ch.get("url", "")
+            if url and url in cat_seen_urls:
+                continue
+            cat_seen_urls.add(url)
+            cat_dedup.append(ch)
+        selected[key] = cat_dedup
+
+    # ── Step 4: Global dedup across categories ────────────────
+    global_by_name: dict[str, list[dict]] = {}
+    for key, ch_list in selected.items():
+        if key == "radio":
+            continue
+        for ch in ch_list:
+            nk = ch.get("standard_name") or ch.get("name", "?")
+            global_by_name.setdefault(nk, []).append(ch)
+
+    # Rebuild selected with global max_keep applied
+    global_selected: dict[str, list[dict]] = {}
+    for key in selected:
+        if key == "radio":
+            global_selected[key] = selected[key]
+        else:
+            global_selected[key] = []
+
+    for nk, ch_list in global_by_name.items():
+        ch_list.sort(key=lambda x: (
+            _SOURCE_PRIORITY.get(x.get("source_region", "cn"), 99),
+            x.get("latency_ms", 999999),
+        ))
+        kept = ch_list[:max_keep]
+        for ch in kept:
+            key = ch.get("category", "other")
+            if key == "radio":
+                continue
+            global_selected.setdefault(key, []).append(ch)
+
+    return global_selected
 
 
 def main() -> None:

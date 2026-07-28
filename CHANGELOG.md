@@ -262,8 +262,9 @@
 | Phase 4 | 2026-07-25 | EPG 多源合并（fetch_epg.py），工程报告（generate_report.py），group-title 收敛，日更提交收窄 |
 | Phase 5 | 2026-07-25 | m3u8 子片段测活（probe.py），probe workflow，RUNNER 文档，STRICT 文档一致 |
 | Phase 6 | 2026-07-25 | 失效源标记（flag_dead_sources.py），双 job 冲突硬化，workflow_run 门禁 |
-| Phase 7 | 2026-07-25 | README / CHANGELOG 收尾，订阅链接与旧链清理 |
-| 架构收口 | 2026-07-25 | 自研 [oasisic-runner](https://github.com/Hawaiine/oasisic-runner)；probe 改为可选增强；弃用 minimal-runner |
+| Phase 7 | 2026-07-25 | README/数据收尾与旧链清理 |
+| Quality-1 | 2026-07-27 | 中文优先源配比 + 酒店源 + 标准表/分类/命名翻修 |
+| Quality-2 | 2026-07-28 | 标准表/别名扩容（49→81条/118→193条别名）；全局去重+源优先级排序；新增3中文源 |
 
 ---
 

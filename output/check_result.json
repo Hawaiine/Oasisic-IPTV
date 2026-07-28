@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "stage": "collect",
-  "generated_at": "2026-07-28 06:57:44",
+  "generated_at": "2026-07-28 13:02:28",
   "timezone": "Asia/Shanghai",
   "region": "wuhan-unicom",
-  "total": 3618,
+  "total": 4123,
   "ok": 0,
   "fail": 0,
   "ratio": 0.0,

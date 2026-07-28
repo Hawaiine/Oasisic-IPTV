@@ -65,3 +65,22 @@ sources:
     type: "m3u"
     enabled: true
     region: overseas
+
+  # ── 新增中文源（Quality-2） ──────────────────────────────
+  - name: "zbds-iptv4"
+    url: "https://live.zbds.top/tv/iptv4.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+
+  - name: "suxuang-ipv6"
+    url: "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+
+  - name: "ssili-tv"
+    url: "https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt"
+    type: "txt"
+    enabled: true
+    region: cn
