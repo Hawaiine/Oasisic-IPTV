@@ -190,10 +190,19 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
 
     1. Within each category, group by name key, keep max_keep per name.
     2. Sort by source_region priority (cn→hk_tw→hotel→overseas), then latency.
+       rtp:// URLs are penalized (sorted last regardless of region).
     3. URL dedup within each category.
     4. Global dedup: merge same-name channels across categories, keep max_keep.
-    5. Radio is isolated (not merged with other categories).
+    5. Global URL dedup: same URL → keep highest-priority entry (non-radio wins).
+    6. Radio is isolated (not merged with other categories).
     """
+    def _sort_key(ch: dict) -> tuple:
+        """Sort key: region priority, rtp penalty, latency."""
+        region = _SOURCE_PRIORITY.get(ch.get("source_region", "cn"), 99)
+        url = ch.get("url", "")
+        rtp_penalty = 1 if url.lower().startswith("rtp://") else 0
+        return (region, rtp_penalty, ch.get("latency_ms", 999999))
+
     # ── Step 1-3: Per-category selection ──────────────────────
     selected: dict[str, list[dict]] = {}
     for key, ch_list in groups.items():
@@ -206,13 +215,7 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
 
         chosen: list[dict] = []
         for _std, entries in seen.items():
-            sorted_entries = sorted(
-                entries,
-                key=lambda x: (
-                    _SOURCE_PRIORITY.get(x.get("source_region", "cn"), 99),
-                    x.get("latency_ms", 999999),
-                ),
-            )
+            sorted_entries = sorted(entries, key=_sort_key)
             chosen.extend(sorted_entries[:max_keep])
 
         # URL dedup within category
@@ -226,7 +229,7 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
             cat_dedup.append(ch)
         selected[key] = cat_dedup
 
-    # ── Step 4: Global dedup across categories ────────────────
+    # ── Step 4: Global dedup across categories by name ────────
     global_by_name: dict[str, list[dict]] = {}
     for key, ch_list in selected.items():
         if key == "radio":
@@ -235,7 +238,6 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
             nk = ch.get("standard_name") or ch.get("name", "?")
             global_by_name.setdefault(nk, []).append(ch)
 
-    # Rebuild selected with global max_keep applied
     global_selected: dict[str, list[dict]] = {}
     for key in selected:
         if key == "radio":
@@ -244,16 +246,49 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
             global_selected[key] = []
 
     for nk, ch_list in global_by_name.items():
-        ch_list.sort(key=lambda x: (
-            _SOURCE_PRIORITY.get(x.get("source_region", "cn"), 99),
-            x.get("latency_ms", 999999),
-        ))
+        ch_list.sort(key=_sort_key)
         kept = ch_list[:max_keep]
         for ch in kept:
             key = ch.get("category", "other")
             if key == "radio":
                 continue
             global_selected.setdefault(key, []).append(ch)
+
+    # ── Step 5: Global URL dedup (non-radio wins) ─────────────
+    url_taken: dict[str, dict] = {}
+    url_duplicate_count = 0
+
+    for key, ch_list in list(global_selected.items()):
+        if key == "radio":
+            continue
+        deduped: list[dict] = []
+        for ch in ch_list:
+            url = ch.get("url", "")
+            if not url:
+                deduped.append(ch)
+                continue
+            if url in url_taken:
+                url_duplicate_count += 1
+                existing = url_taken[url]
+                if _sort_key(ch) < _sort_key(existing):
+                    url_taken[url] = ch
+            else:
+                url_taken[url] = ch
+                deduped.append(ch)
+        global_selected[key] = deduped
+
+    if "radio" in global_selected:
+        radio_deduped: list[dict] = []
+        for ch in global_selected["radio"]:
+            url = ch.get("url", "")
+            if url and url in url_taken:
+                url_duplicate_count += 1
+                continue
+            radio_deduped.append(ch)
+        global_selected["radio"] = radio_deduped
+
+    if url_duplicate_count:
+        print(f"   🔗 全局 URL 去重: 移除 {url_duplicate_count} 条重复")
 
     return global_selected
 

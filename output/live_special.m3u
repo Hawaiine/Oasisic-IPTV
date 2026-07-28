@@ -33,8 +33,6 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225742/index.m3u8
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225681/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",CHC影迷电影
 https://t.freetv.fun/live/chcying-mi-dian-ying-2.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",1905电影网
-http://php.jdshipin.com:8880/1905.php?id=1905dy
 #EXTINF:-1 group-title="特殊·酒店源",黑莓动画
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225662/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",华视新闻
@@ -95,8 +93,6 @@ http://rihou.cc:555/tv/CCTV央视文化
 http://183.11.239.36:808/hls/97/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",卫生健康
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=wsjk
-#EXTINF:-1 group-title="特殊·酒店源",卫生健康
-http://38.75.136.137:98/gslb/dsdqpub/wsjk.m3u8?auth=testpub
 #EXTINF:-1 group-title="特殊·酒店源",老故事
 https://iptv.catvod.com/migu?id=884121956&token=1231532eb4e300223368ed4be96e8560
 #EXTINF:-1 group-title="特殊·酒店源",老故事
@@ -133,8 +129,6 @@ https://t.freetv.fun/live/tvbs.m3u8
 https://t.freetv.fun/live/tvbsjing-cai-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",ViuTV
 https://cdn.163189.xyz/163189/viu
-#EXTINF:-1 group-title="特殊·酒店源",ViuTV
-http://php.jdshipin.com:8880/PLTV/iptv.php?id=viutv
 #EXTINF:-1 group-title="特殊·酒店源",八大娱乐台
 http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=badaentertain_twn
 #EXTINF:-1 group-title="特殊·酒店源",八大第一台
@@ -147,8 +141,6 @@ http://45.192.97.170:8880/play/1329.m3u8
 https://stream1.freetv.fun/ba-da-zong-he-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大综合台
 https://stream1.freetv.fun/ba-da-zong-he-2.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",三立台湾台
-https://stream1.freetv.fun/san-li-tai-wan-1.ctv
 #EXTINF:-1 group-title="特殊·酒店源",三立台湾台
 https://stream1.freetv.fun/san-li-tai-wan-5.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",三立戏剧
@@ -199,8 +191,6 @@ https://t.freetv.fun/live/dong-sen-xin-wen.m3u8
 https://stream1.freetv.fun/dong-sen-xin-wen-3.ctv
 #EXTINF:-1 group-title="特殊·酒店源",东森洋片台
 https://live.catvod.com/live.php?id=ettvwestern
-#EXTINF:-1 group-title="特殊·酒店源",东森洋片台
-https://stream1.freetv.fun/dong-sen-yang-pian-3.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",东森电影台
 https://stream1.freetv.fun/dong-sen-dian-ying-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",东森电影台
@@ -223,8 +213,6 @@ http://free.cnlive.club/channel/581b458b.m3u8
 https://stream1.freetv.fun/wei-lai-dian-ying-3.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来精彩台
 https://t.freetv.fun/live/wei-lai-jing-cai.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",纬来精彩台
-http://61.221.215.25:8800/hls/48/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来综合台
 http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=videolandzonghe_twn
 #EXTINF:-1 group-title="特殊·酒店源",纬来育乐台
@@ -241,8 +229,6 @@ http://litv.zapi.us.kg/?id=4gtv-4gtv063
 http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=jingtianintl
 #EXTINF:-1 group-title="特殊·酒店源",靖天戏剧台
 http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv058
-#EXTINF:-1 group-title="特殊·酒店源",靖天戏剧台
-https://stream1.freetv.fun/jing-tian-xi-ju-4.ctv
 #EXTINF:-1 group-title="特殊·酒店源",靖天日本台
 http://litv.zapi.us.kg/?id=4gtv-4gtv047
 #EXTINF:-1 group-title="特殊·酒店源",靖天欢乐台
@@ -259,8 +245,6 @@ https://t.freetv.fun/live/jing-tian-yu-le.m3u8
 http://litv.zapi.us.kg/?id=4gtv-4gtv062
 #EXTINF:-1 group-title="特殊·酒店源",靖天资讯台
 http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv065
-#EXTINF:-1 group-title="特殊·酒店源",靖天资讯台
-https://stream1.freetv.fun/jing-tian-zi-xun-2.ctv
 #EXTINF:-1 group-title="特殊·酒店源",靖洋卡通台
 http://litv.zapi.us.kg/?id=4gtv-4gtv057
 #EXTINF:-1 group-title="特殊·酒店源",靖洋戏剧台
@@ -295,8 +279,6 @@ https://t.freetv.fun/live/tai-shi-cai-jing-1.m3u8
 https://t.freetv.fun/live/tai-shi-cai-jing.ts
 #EXTINF:-1 group-title="特殊·酒店源",HBO
 https://t.freetv.fun/live/hbo-b.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",amc电影台
-http://61.221.215.25:8800/hls/43/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",周星驰
 http://173.208.234.146/live/vlzxc.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",周星驰
