@@ -1,3 +1,41 @@
+## 📺 采集报告 (2026-07-28 21:12:53)
+
+- **状态**: stage=collect, total=3508, probe_enabled=False
+- **生成时间**: 2026-07-28 21:12:53
+
+### 📁 文件概览
+
+| 文件 | 条数 |
+|------|------|
+| live.m3u | 98 |
+| live_cctv.m3u | 21559 |
+| live_gangtai.m3u | 15489 |
+| live_live.m3u | 579 |
+| live_local.m3u | 294309 |
+| live_more.m3u | 1322 |
+| live_other.m3u | 1100346 |
+| live_overseas.m3u | 454484 |
+| live_radio.m3u | 932 |
+| live_special.m3u | 25963 |
+| live_sports.m3u | 20900 |
+| live_verified.m3u | 449913 |
+| live_weishi.m3u | 25551 |
+
+### 🏷️ 分类分布 (live.m3u)
+
+| 分类 | 条数 |
+|------|------|
+| 央视 | 23 |
+| 卫视 | 35 |
+| 各省市 | 14 |
+| 港澳台 | 15 |
+| 体育 | 4 |
+| 国际 | 0 |
+| 网络直播 | 0 |
+| 特殊·酒店源 | 0 |
+
+---
+
 ## 📺 采集报告 (2026-07-28 17:52:02)
 
 - **状态**: stage=collect, total=4128, probe_enabled=False
@@ -297,77 +335,8 @@
 | Phase 6 | 2026-07-25 | 失效源标记（flag_dead_sources.py），双 job 冲突硬化，workflow_run 门禁 |
 | Phase 7 | 2026-07-25 | README/数据收尾与旧链清理 |
 | Quality-1 | 2026-07-27 | 中文优先源配比 + 酒店源 + 标准表/分类/命名翻修 |
-| Quality-2 | 2026-07-28 | 标准表/别名扩容（49→69条/118→196条别名）；全局去重+源优先级排序；新增 2 中文源（zbds-iptv6、hujingguang-chinaiptv） |
-
----
-
-## 📺 采集报告 (2026-07-25 15:31:57)
-
-- **状态**: stage=collect, total=19172, probe_enabled=False
-- **生成时间**: 2026-07-25 15:30:48
-
-### 📁 文件概览
-
-| 文件 | 条数 |
-|------|------|
-| live.m3u | 18823 |
-| live_cctv.m3u | 138 |
-| live_gangtai.m3u | 36 |
-| live_live.m3u | 10 |
-| live_local.m3u | 109 |
-| live_other.m3u | 15552 |
-| live_overseas.m3u | 2853 |
-| live_radio.m3u | 349 |
-| live_sports.m3u | 41 |
-| live_weishi.m3u | 84 |
-
-### 🏷️ 分类分布 (live.m3u)
-
-| 分类 | 条数 |
-|------|------|
-| 其他 | 15552 |
-| 国际 | 2853 |
-| 央视 | 138 |
-| 各省市 | 109 |
-| 卫视 | 84 |
-| 体育 | 41 |
-| 港澳台 | 36 |
-| 网络直播 | 10 |
-
----
-
-## 📺 采集报告 (2026-07-25 15:25:27)
-
-- **状态**: stage=collect, total=19172, probe_enabled=False
-- **生成时间**: 2026-07-25 15:25:06
-
-### 📁 文件概览
-
-| 文件 | 条数 |
-|------|------|
-| live.m3u | 18823 |
-| live_cctv.m3u | 138 |
-| live_gangtai.m3u | 36 |
-| live_live.m3u | 10 |
-| live_local.m3u | 109 |
-| live_other.m3u | 15552 |
-| live_overseas.m3u | 2853 |
-| live_radio.m3u | 349 |
-| live_sports.m3u | 41 |
-| live_weishi.m3u | 84 |
-
-### 🏷️ 分类分布 (live.m3u)
-
-| 分类 | 条数 |
-|------|------|
-| 其他 | 15552 |
-| 国际 | 2853 |
-| 央视 | 138 |
-| 各省市 | 109 |
-| 卫视 | 84 |
-| 体育 | 41 |
-| 港澳台 | 36 |
-| 网络直播 | 10 |
+| Quality-2 | 2026-07-28 | 标准表/别名扩容（49→69条/118→196条别名）；全局去重+源优先级排序；新增 2 中文源 |
+| **Quality-D2** | **2026-07-28** | **目录制双列表：主列表一台一链（98条） + live_more 扩展（1322条）；标准表扩容至126实体；max_keep=1；settings.yaml 新增 catalog/more 配置；verify_outputs 新增目录质门；77/77 pytest** |
 
 ---
 

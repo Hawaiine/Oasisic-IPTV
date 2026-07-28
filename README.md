@@ -15,7 +15,8 @@
 
 | 文件 | 链接 | 说明 |
 |------|------|------|
-| **完整列表** | [`live.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u) | 所有分类合并 |
+| **精选完整** | [`live.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u) | 标准台目录，一台一链，推荐主订阅 |
+| 扩展更多 | [`live_more.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_more.m3u) | 未入标准表的更多频道 |
 | 央视 | [`live_cctv.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_cctv.m3u) | CCTV 频道 |
 | 卫视 | [`live_weishi.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_weishi.m3u) | 卫星电视 |
 | 各省市 | [`live_local.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_local.m3u) | 地方频道 |
@@ -35,7 +36,8 @@
 
 | 列表 | 含义 |
 |------|------|
-| `live.m3u` / 分类 `live_*.m3u` | **候选聚合** — 自动采集、清洗、去重后的公开 IPTV 源集合，按中文分类组织。未经过本仓库测活验证，不代表所有链接均可播放。 |
+| `live.m3u` / 分类 `live_*.m3u` | **精选目录** — 仅限标准频道表匹配的频道，一台一链，按中文分类组织。未经过本仓库测活验证，不代表所有链接均可播放。 |
+| `live_more.m3u` | **扩展列表** — 未入标准表的更多频道（含地方/酒店/未分类）。不保证整齐，但保留更多选择。 |
 | `live_verified.m3u` | **武汉联通出口测活子集** — 仅当 self-hosted runner（武汉联通 AS4837）在线时生成，代表该出口视角下可连通的流。**非全国通用，不代表其他地域/运营商可用。** |
 | `live_radio.m3u` | 电台专列，独立文件，不混入主列表。 |
 | `live_overseas.m3u` | 国际频道（默认不加入主列表，通过 `main_include_overseas` 配置）。 |
@@ -47,8 +49,9 @@
 ## 特性
 
 - ✅ 每日 UTC 22:00 自动采集（GitHub Actions 云端）
-- ✅ 15 个中文优先稳定源（iptv-org / fanmingming / YueChan / Free-TV）
-- ✅ 标准频道表匹配 + 关键词分类兜底（9 大分类 + 电台）
+- ✅ **15 个**中文优先稳定源（iptv-org / fanmingming / YueChan / Free-TV / zbds / suxuang / ssili / hujingguang）
+- ✅ **目录制双列表**：精选主列表 `live.m3u`（一台一链）+ 扩展 `live_more.m3u`（更多频道）
+- ✅ 标准频道表匹配（126 实体） + 关键词分类兜底（9 大分类 + 电台）
 - ✅ 频道名自动清洗（繁转简、去分辨率标签、CCTV 归一）
 - ✅ **可选地域测活**：自建 [oasisic-runner](https://github.com/Hawaiine/oasisic-runner) 时产出 `live_verified`（无 runner 可跳过）
 - ✅ 失效源自动标记（连续 3 天不可用 → 禁用；需测活数据）
@@ -82,8 +85,8 @@ Oasisic-IPTV/
 │       ├── io_util.py
 │       └── probe.py
 ├── data/
-│   ├── channels.json      # 标准频道表
-│   └── aliases.json       # 别名字典
+│   ├── channels.json      # 标准频道表（126 实体）
+│   └── aliases.json       # 别名字典（288 条）
 ├── output/                # 生成 M3U / EPG / check_result
 ├── .github/workflows/
 │   ├── collect.yml        # 每日采集（云端，必跑）

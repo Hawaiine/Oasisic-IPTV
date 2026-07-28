@@ -1,7 +1,13 @@
 # Oasisic-IPTV 全局设置
-# 采集 → 解析 → 清洗 → 匹配 → 分类 → 分组 → 测活 → 选优 → 生成
+# 采集 → 解析 → 清洗 → 匹配 → 分类 → 分组 → 直播 → 选优 → 目录分流 → 生成
 
-max_keep_per_channel: 2
+# ── 选优（Catalog / More 双列表） ────────────────────────────────
+max_keep_per_channel: 1          # 精选主列表一台一链；env MAX_KEEP_PER_CHANNEL 可覆盖
+catalog_only_main: true          # live.m3u 仅含标准表匹配频道（目录制）
+write_live_more: true            # 生成 live_more.m3u（未上表频道）
+more_max_channels: 3000          # live_more 上限，防止爆炸
+
+# ── 采集设置 ─────────────────────────────────────────────────────
 probe_enabled: false
 epg_commit: false
 request_timeout_sec: 30

@@ -293,10 +293,58 @@ def _select_best(groups: dict[str, list[dict]], max_keep: int) -> dict[str, list
     return global_selected
 
 
+def _split_catalog_more(selected: dict[str, list[dict]], main_include_overseas: bool) -> tuple[dict[str, list[dict]], list[dict]]:
+    """
+    Split selected channels into catalog (has standard_name) and more (no standard_name).
+
+    Returns:
+      catalog: dict[str, list[dict]] — for live.m3u and category files
+      more: list[dict] — for live_more.m3u
+    """
+    catalog: dict[str, list[dict]] = {}
+    more: list[dict] = []
+    more_order = list(cat.iter_main_order())
+
+    for key, ch_list in selected.items():
+        if key == "radio":
+            catalog[key] = ch_list
+            continue
+        if key == "overseas" and not main_include_overseas:
+            # Overseas only goes to catalog if explicitly included
+            # Otherwise, still add to more (but more is mainly domestic)
+            catalog[key] = []
+            continue
+
+        cat_catalog: list[dict] = []
+        cat_more: list[dict] = []
+        for ch in ch_list:
+            if ch.get("standard_name"):
+                cat_catalog.append(ch)
+            else:
+                cat_more.append(ch)
+
+        catalog[key] = cat_catalog
+        more.extend(cat_more)
+
+    # Sort more by category order
+    def _more_sort_key(ch: dict) -> tuple:
+        try:
+            return (more_order.index(ch.get("category", "other")), ch.get("name", ""))
+        except ValueError:
+            return (999, ch.get("name", ""))
+
+    more.sort(key=_more_sort_key)
+
+    return catalog, more
+
+
 def main() -> None:
     settings = _load_settings()
     sources = _load_sources()
-    max_keep = int(_MAX_KEEP_ENV) if _MAX_KEEP_ENV else settings.get("max_keep_per_channel", 2)
+    max_keep = int(_MAX_KEEP_ENV) if _MAX_KEEP_ENV else settings.get("max_keep_per_channel", 1)
+    catalog_only = settings.get("catalog_only_main", True)
+    write_more = settings.get("write_live_more", True)
+    more_max = settings.get("more_max_channels", 3000)
     main_include_overseas = settings.get("main_include_overseas", False)
     output_dir = settings.get("output_dir", "output/")
     output_abs = os.path.join(project_root(), output_dir)
@@ -375,31 +423,35 @@ def main() -> None:
     total_selected = sum(len(v) for v in selected.values())
     print(f"   {total_selected} 条选优后")
 
-    # ── 8. Write M3U ───────────────────────────────────────────
+    # ── 8. Split catalog vs more ───────────────────────────────
+    catalog, more = _split_catalog_more(selected, main_include_overseas)
+    catalog_total = sum(len(v) for v in catalog.values())
+    print(f"📋 目录分流: catalog={catalog_total} / more={len(more)}")
+
+    # ── 9. Write M3U ───────────────────────────────────────────
     print("💾 写 M3U ...")
 
     # Normalize group_title
-    for key, ch_list in selected.items():
+    for key, ch_list in catalog.items():
         canonical = cat.group_title(key)
         for ch in ch_list:
             ch["group_title"] = canonical
 
-    # Main live.m3u: cctv + weishi + local + gangtai + sports + live + special + other(CN)
-    # Exclude overseas unless main_include_overseas
+    # Main live.m3u: catalog only (standard table matched)
     main_order = list(cat.iter_main_order())
     main_channels: list[dict] = []
     for key in main_order:
         if key == "overseas" and not main_include_overseas:
             continue
-        if key in selected:
-            for ch in selected[key]:
+        if key in catalog:
+            for ch in catalog[key]:
                 main_channels.append({**ch, "group_title": cat.group_title(key)})
 
     generate_m3u(main_channels, os.path.join(output_abs, "live.m3u"), "Oasisic-IPTV")
     print(f"   live.m3u: {len(main_channels)} 条")
 
-    # Category files (all categories, including overseas)
-    for key, ch_list in selected.items():
+    # Category files (catalog only)
+    for key, ch_list in catalog.items():
         if cat.is_radio(key):
             continue
         filename = cat.file_for(key)
@@ -408,12 +460,23 @@ def main() -> None:
 
     # Radio
     radio_key = cat.RADIO_KEY
-    if radio_key in selected:
-        radio_list = [{**ch, "group_title": cat.group_title(radio_key)} for ch in selected[radio_key]]
+    if radio_key in catalog:
+        radio_list = [{**ch, "group_title": cat.group_title(radio_key)} for ch in catalog[radio_key]]
         generate_m3u(radio_list, os.path.join(output_abs, cat.file_for(radio_key)), "Oasisic-IPTV - 电台")
         print(f"   {cat.file_for(radio_key)}: {len(radio_list)} 条")
 
-    print(f"   分类文件: {len([k for k in selected if not cat.is_radio(k)])} 个类别")
+    print(f"   分类文件: {len([k for k in catalog if not cat.is_radio(k)])} 个类别")
+
+    # ── live_more.m3u ──────────────────────────────────────────
+    if write_more:
+        more_channels = more[:more_max]
+        if more_channels:
+            # Normalize group_title for more
+            for ch in more_channels:
+                cat_key = ch.get("category", "other")
+                ch["group_title"] = cat.group_title(cat_key)
+            generate_m3u(more_channels, os.path.join(output_abs, "live_more.m3u"), "Oasisic-IPTV - More")
+            print(f"   live_more.m3u: {len(more_channels)} 条")
 
     # ── live_verified.m3u (probe mode) ────────────────────────
     if _PROBE_ENABLED:
@@ -428,7 +491,7 @@ def main() -> None:
         generate_m3u(verified_dedup, os.path.join(output_abs, "live_verified.m3u"), "Oasisic-IPTV - Verified")
         print(f"   live_verified.m3u: {len(verified_dedup)} 条")
 
-    # ── 9. Write check_result.json ─────────────────────────────
+    # ── 10. Write check_result.json ─────────────────────────────
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
     probe_ratio = (probe_ok / (probe_ok + probe_fail) * 100) if (probe_ok + probe_fail) else 0.0
     check = {
@@ -438,6 +501,8 @@ def main() -> None:
         "timezone": "Asia/Shanghai",
         "region": _PROBE_REGION,
         "total": total_selected,
+        "catalog_count": catalog_total,
+        "more_count": len(more),
         "ok": probe_ok,
         "fail": probe_fail,
         "ratio": round(probe_ratio, 1),
@@ -453,6 +518,7 @@ def main() -> None:
     print("=" * 40)
     print(f"✅ 采集完成 (probe_enabled={_PROBE_ENABLED})")
     print(f"   总输出: {total_selected} 条")
+    print(f"   目录: {catalog_total} 条 / 扩展: {len(more)} 条")
     print(f"   源成功率: {ok_count}/{total_enabled} ({success_rate:.0f}%)")
     if _PROBE_ENABLED:
         print(f"   测活: {probe_ok} 可用 / {probe_fail} 不可用 ({probe_ratio:.0f}%)")

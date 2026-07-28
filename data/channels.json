@@ -1,71 +1,884 @@
 [
-  {"standard_name":"CCTV-1","category":"cctv","group_title":"央视","tvg_id":"CCTV1","display_name":"CCTV-1 综合"},
-  {"standard_name":"CCTV-2","category":"cctv","group_title":"央视","tvg_id":"CCTV2","display_name":"CCTV-2 财经"},
-  {"standard_name":"CCTV-3","category":"cctv","group_title":"央视","tvg_id":"CCTV3","display_name":"CCTV-3 综艺"},
-  {"standard_name":"CCTV-4","category":"cctv","group_title":"央视","tvg_id":"CCTV4","display_name":"CCTV-4 中文国际"},
-  {"standard_name":"CCTV-5","category":"sports","group_title":"体育","tvg_id":"CCTV5","display_name":"CCTV-5 体育"},
-  {"standard_name":"CCTV-5+","category":"sports","group_title":"体育","tvg_id":"CCTV5Plus","display_name":"CCTV-5+ 体育赛事"},
-  {"standard_name":"CCTV-6","category":"cctv","group_title":"央视","tvg_id":"CCTV6","display_name":"CCTV-6 电影"},
-  {"standard_name":"CCTV-7","category":"cctv","group_title":"央视","tvg_id":"CCTV7","display_name":"CCTV-7 军事农业"},
-  {"standard_name":"CCTV-8","category":"cctv","group_title":"央视","tvg_id":"CCTV8","display_name":"CCTV-8 电视剧"},
-  {"standard_name":"CCTV-9","category":"cctv","group_title":"央视","tvg_id":"CCTV9","display_name":"CCTV-9 纪录"},
-  {"standard_name":"CCTV-10","category":"cctv","group_title":"央视","tvg_id":"CCTV10","display_name":"CCTV-10 科教"},
-  {"standard_name":"CCTV-11","category":"cctv","group_title":"央视","tvg_id":"CCTV11","display_name":"CCTV-11 戏曲"},
-  {"standard_name":"CCTV-12","category":"cctv","group_title":"央视","tvg_id":"CCTV12","display_name":"CCTV-12 社会与法"},
-  {"standard_name":"CCTV-13","category":"cctv","group_title":"央视","tvg_id":"CCTV13","display_name":"CCTV-13 新闻"},
-  {"standard_name":"CCTV-14","category":"cctv","group_title":"央视","tvg_id":"CCTV14","display_name":"CCTV-14 少儿"},
-  {"standard_name":"CCTV-15","category":"cctv","group_title":"央视","tvg_id":"CCTV15","display_name":"CCTV-15 音乐"},
-  {"standard_name":"CCTV-16","category":"cctv","group_title":"央视","tvg_id":"CCTV16","display_name":"CCTV-16 奥林匹克"},
-  {"standard_name":"CCTV-17","category":"cctv","group_title":"央视","tvg_id":"CCTV17","display_name":"CCTV-17 农业农村"},
-  {"standard_name":"CGTN","category":"cctv","group_title":"央视","tvg_id":"CGTN","display_name":"CGTN"},
-  {"standard_name":"中国教育1","category":"cctv","group_title":"央视","tvg_id":"CETV1","display_name":"CETV-1"},
-  {"standard_name":"中国教育2","category":"cctv","group_title":"央视","tvg_id":"CETV2","display_name":"CETV-2"},
-  {"standard_name":"中国教育3","category":"cctv","group_title":"央视","tvg_id":"CETV3","display_name":"CETV-3"},
-  {"standard_name":"湖南卫视","category":"weishi","group_title":"卫视","tvg_id":"HunanTV","display_name":"湖南卫视"},
-  {"standard_name":"浙江卫视","category":"weishi","group_title":"卫视","tvg_id":"ZJTV","display_name":"浙江卫视"},
-  {"standard_name":"上海东方卫视","category":"weishi","group_title":"卫视","tvg_id":"DragonTV","display_name":"东方卫视"},
-  {"standard_name":"江苏卫视","category":"weishi","group_title":"卫视","tvg_id":"JSTV","display_name":"江苏卫视"},
-  {"standard_name":"广东卫视","category":"weishi","group_title":"卫视","tvg_id":"GDTV","display_name":"广东卫视"},
-  {"standard_name":"安徽卫视","category":"weishi","group_title":"卫视","tvg_id":"AHTV","display_name":"安徽卫视"},
-  {"standard_name":"山东卫视","category":"weishi","group_title":"卫视","tvg_id":"SDTV","display_name":"山东卫视"},
-  {"standard_name":"天津卫视","category":"weishi","group_title":"卫视","tvg_id":"TJTV","display_name":"天津卫视"},
-  {"standard_name":"辽宁卫视","category":"weishi","group_title":"卫视","tvg_id":"LNTV","display_name":"辽宁卫视"},
-  {"standard_name":"河南卫视","category":"weishi","group_title":"卫视","tvg_id":"HNTV","display_name":"河南卫视"},
-  {"standard_name":"四川卫视","category":"weishi","group_title":"卫视","tvg_id":"SCTV","display_name":"四川卫视"},
-  {"standard_name":"湖北卫视","category":"weishi","group_title":"卫视","tvg_id":"HBTV","display_name":"湖北卫视"},
-  {"standard_name":"江西卫视","category":"weishi","group_title":"卫视","tvg_id":"JXTV","display_name":"江西卫视"},
-  {"standard_name":"福建东南卫视","category":"weishi","group_title":"卫视","tvg_id":"SETV","display_name":"东南卫视"},
-  {"standard_name":"黑龙江卫视","category":"weishi","group_title":"卫视","tvg_id":"HLJTV","display_name":"黑龙江卫视"},
-  {"standard_name":"重庆卫视","category":"weishi","group_title":"卫视","tvg_id":"CQTV","display_name":"重庆卫视"},
-  {"standard_name":"陕西卫视","category":"weishi","group_title":"卫视","tvg_id":"SXTV","display_name":"陕西卫视"},
-  {"standard_name":"山西卫视","category":"weishi","group_title":"卫视","tvg_id":"SXTV2","display_name":"山西卫视"},
-  {"standard_name":"吉林卫视","category":"weishi","group_title":"卫视","tvg_id":"JLTV","display_name":"吉林卫视"},
-  {"standard_name":"云南卫视","category":"weishi","group_title":"卫视","tvg_id":"YNTV","display_name":"云南卫视"},
-  {"standard_name":"贵州卫视","category":"weishi","group_title":"卫视","tvg_id":"GZTV2","display_name":"贵州卫视"},
-  {"standard_name":"甘肃卫视","category":"weishi","group_title":"卫视","tvg_id":"GSTV","display_name":"甘肃卫视"},
-  {"standard_name":"海南卫视","category":"weishi","group_title":"卫视","tvg_id":"HNTV2","display_name":"海南卫视"},
-  {"standard_name":"新疆卫视","category":"weishi","group_title":"卫视","tvg_id":"XJTV","display_name":"新疆卫视"},
-  {"standard_name":"内蒙古卫视","category":"weishi","group_title":"卫视","tvg_id":"NMGTV","display_name":"内蒙古卫视"},
-  {"standard_name":"北京卫视","category":"local","group_title":"各省市","tvg_id":"BTV","display_name":"北京卫视"},
-  {"standard_name":"深圳卫视","category":"local","group_title":"各省市","tvg_id":"SZTV","display_name":"深圳卫视"},
-  {"standard_name":"广东珠江","category":"local","group_title":"各省市","tvg_id":"GDTVZJ","display_name":"广东珠江"},
-  {"standard_name":"广东公共","category":"local","group_title":"各省市","tvg_id":"GDGG","display_name":"广东公共"},
-  {"standard_name":"广东新闻","category":"local","group_title":"各省市","tvg_id":"GDXW","display_name":"广东新闻"},
-  {"standard_name":"广东南方卫视","category":"local","group_title":"各省市","tvg_id":"GDNF","display_name":"南方卫视"},
-  {"standard_name":"广州综合","category":"local","group_title":"各省市","tvg_id":"GZTV","display_name":"广州综合"},
-  {"standard_name":"广州新闻","category":"local","group_title":"各省市","tvg_id":"GZXW","display_name":"广州新闻"},
-  {"standard_name":"广州影视","category":"local","group_title":"各省市","tvg_id":"GZYS","display_name":"广州影视"},
-  {"standard_name":"广东体育","category":"sports","group_title":"体育","tvg_id":"GDSports","display_name":"广东体育"},
-  {"standard_name":"上海五星体育","category":"sports","group_title":"体育","tvg_id":"ShanghaiSports","display_name":"五星体育"},
-  {"standard_name":"北京体育","category":"sports","group_title":"体育","tvg_id":"BeijingSports","display_name":"北京体育"},
-  {"standard_name":"劲爆体育","category":"sports","group_title":"体育","tvg_id":"JJSports","display_name":"劲爆体育"},
-  {"standard_name":"凤凰卫视中文台","category":"gangtai","group_title":"港澳台","tvg_id":"PhoenixChinese","display_name":"凤凰卫视中文台"},
-  {"standard_name":"凤凰卫视资讯台","category":"gangtai","group_title":"港澳台","tvg_id":"PhoenixInfo","display_name":"凤凰卫视资讯台"},
-  {"standard_name":"TVB Jade","category":"gangtai","group_title":"港澳台","tvg_id":"TVBJade","display_name":"TVB Jade"},
-  {"standard_name":"TVB Pearl","category":"gangtai","group_title":"港澳台","tvg_id":"TVBPearl","display_name":"TVB Pearl"},
-  {"standard_name":"中天电视","category":"gangtai","group_title":"港澳台","tvg_id":"CTiTV","display_name":"中天电视"},
-  {"standard_name":"东森新闻","category":"gangtai","group_title":"港澳台","tvg_id":"EBCNews","display_name":"东森新闻"},
-  {"standard_name":"华视","category":"gangtai","group_title":"港澳台","tvg_id":"CTS","display_name":"华视"},
-  {"standard_name":"台视","category":"gangtai","group_title":"港澳台","tvg_id":"TTV","display_name":"台视"},
-  {"standard_name":"中视","category":"gangtai","group_title":"港澳台","tvg_id":"CTV","display_name":"中视"}
+  {
+    "standard_name": "CCTV-1",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV1",
+    "display_name": "CCTV-1 综合"
+  },
+  {
+    "standard_name": "CCTV-2",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV2",
+    "display_name": "CCTV-2 财经"
+  },
+  {
+    "standard_name": "CCTV-3",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV3",
+    "display_name": "CCTV-3 综艺"
+  },
+  {
+    "standard_name": "CCTV-4",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV4",
+    "display_name": "CCTV-4 中文国际"
+  },
+  {
+    "standard_name": "CCTV-5",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "CCTV5",
+    "display_name": "CCTV-5 体育"
+  },
+  {
+    "standard_name": "CCTV-5+",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "CCTV5Plus",
+    "display_name": "CCTV-5+ 体育赛事"
+  },
+  {
+    "standard_name": "CCTV-6",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV6",
+    "display_name": "CCTV-6 电影"
+  },
+  {
+    "standard_name": "CCTV-7",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV7",
+    "display_name": "CCTV-7 军事农业"
+  },
+  {
+    "standard_name": "CCTV-8",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV8",
+    "display_name": "CCTV-8 电视剧"
+  },
+  {
+    "standard_name": "CCTV-9",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV9",
+    "display_name": "CCTV-9 纪录"
+  },
+  {
+    "standard_name": "CCTV-10",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV10",
+    "display_name": "CCTV-10 科教"
+  },
+  {
+    "standard_name": "CCTV-11",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV11",
+    "display_name": "CCTV-11 戏曲"
+  },
+  {
+    "standard_name": "CCTV-12",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV12",
+    "display_name": "CCTV-12 社会与法"
+  },
+  {
+    "standard_name": "CCTV-13",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV13",
+    "display_name": "CCTV-13 新闻"
+  },
+  {
+    "standard_name": "CCTV-14",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV14",
+    "display_name": "CCTV-14 少儿"
+  },
+  {
+    "standard_name": "CCTV-15",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV15",
+    "display_name": "CCTV-15 音乐"
+  },
+  {
+    "standard_name": "CCTV-16",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV16",
+    "display_name": "CCTV-16 奥林匹克"
+  },
+  {
+    "standard_name": "CCTV-17",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV17",
+    "display_name": "CCTV-17 农业农村"
+  },
+  {
+    "standard_name": "CGTN",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CGTN",
+    "display_name": "CGTN"
+  },
+  {
+    "standard_name": "中国教育1",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CETV1",
+    "display_name": "CETV-1"
+  },
+  {
+    "standard_name": "中国教育2",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CETV2",
+    "display_name": "CETV-2"
+  },
+  {
+    "standard_name": "中国教育3",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CETV3",
+    "display_name": "CETV-3"
+  },
+  {
+    "standard_name": "湖南卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "HunanTV",
+    "display_name": "湖南卫视"
+  },
+  {
+    "standard_name": "浙江卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "ZJTV",
+    "display_name": "浙江卫视"
+  },
+  {
+    "standard_name": "上海东方卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "DragonTV",
+    "display_name": "东方卫视"
+  },
+  {
+    "standard_name": "江苏卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "JSTV",
+    "display_name": "江苏卫视"
+  },
+  {
+    "standard_name": "广东卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "GDTV",
+    "display_name": "广东卫视"
+  },
+  {
+    "standard_name": "安徽卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "AHTV",
+    "display_name": "安徽卫视"
+  },
+  {
+    "standard_name": "山东卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "SDTV",
+    "display_name": "山东卫视"
+  },
+  {
+    "standard_name": "天津卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "TJTV",
+    "display_name": "天津卫视"
+  },
+  {
+    "standard_name": "辽宁卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "LNTV",
+    "display_name": "辽宁卫视"
+  },
+  {
+    "standard_name": "河南卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "HNTV",
+    "display_name": "河南卫视"
+  },
+  {
+    "standard_name": "四川卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "SCTV",
+    "display_name": "四川卫视"
+  },
+  {
+    "standard_name": "湖北卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "HBTV",
+    "display_name": "湖北卫视"
+  },
+  {
+    "standard_name": "江西卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "JXTV",
+    "display_name": "江西卫视"
+  },
+  {
+    "standard_name": "福建东南卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "SETV",
+    "display_name": "东南卫视"
+  },
+  {
+    "standard_name": "黑龙江卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "HLJTV",
+    "display_name": "黑龙江卫视"
+  },
+  {
+    "standard_name": "重庆卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "CQTV",
+    "display_name": "重庆卫视"
+  },
+  {
+    "standard_name": "陕西卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "SXTV",
+    "display_name": "陕西卫视"
+  },
+  {
+    "standard_name": "山西卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "SXTV2",
+    "display_name": "山西卫视"
+  },
+  {
+    "standard_name": "吉林卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "JLTV",
+    "display_name": "吉林卫视"
+  },
+  {
+    "standard_name": "云南卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "YNTV",
+    "display_name": "云南卫视"
+  },
+  {
+    "standard_name": "贵州卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "GZTV2",
+    "display_name": "贵州卫视"
+  },
+  {
+    "standard_name": "甘肃卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "GSTV",
+    "display_name": "甘肃卫视"
+  },
+  {
+    "standard_name": "海南卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "HNTV2",
+    "display_name": "海南卫视"
+  },
+  {
+    "standard_name": "新疆卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "XJTV",
+    "display_name": "新疆卫视"
+  },
+  {
+    "standard_name": "内蒙古卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "NMGTV",
+    "display_name": "内蒙古卫视"
+  },
+  {
+    "standard_name": "北京卫视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "BTV",
+    "display_name": "北京卫视"
+  },
+  {
+    "standard_name": "深圳卫视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "SZTV",
+    "display_name": "深圳卫视"
+  },
+  {
+    "standard_name": "广东珠江",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GDTVZJ",
+    "display_name": "广东珠江"
+  },
+  {
+    "standard_name": "广东公共",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GDGG",
+    "display_name": "广东公共"
+  },
+  {
+    "standard_name": "广东新闻",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GDXW",
+    "display_name": "广东新闻"
+  },
+  {
+    "standard_name": "广东南方卫视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GDNF",
+    "display_name": "南方卫视"
+  },
+  {
+    "standard_name": "广州综合",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GZTV",
+    "display_name": "广州综合"
+  },
+  {
+    "standard_name": "广州新闻",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GZXW",
+    "display_name": "广州新闻"
+  },
+  {
+    "standard_name": "广州影视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "GZYS",
+    "display_name": "广州影视"
+  },
+  {
+    "standard_name": "广东体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "GDSports",
+    "display_name": "广东体育"
+  },
+  {
+    "standard_name": "上海五星体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "ShanghaiSports",
+    "display_name": "五星体育"
+  },
+  {
+    "standard_name": "北京体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "BeijingSports",
+    "display_name": "北京体育"
+  },
+  {
+    "standard_name": "劲爆体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "JJSports",
+    "display_name": "劲爆体育"
+  },
+  {
+    "standard_name": "凤凰卫视中文台",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "PhoenixChinese",
+    "display_name": "凤凰卫视中文台"
+  },
+  {
+    "standard_name": "凤凰卫视资讯台",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "PhoenixInfo",
+    "display_name": "凤凰卫视资讯台"
+  },
+  {
+    "standard_name": "TVB Jade",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVBJade",
+    "display_name": "TVB Jade"
+  },
+  {
+    "standard_name": "TVB Pearl",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVBPearl",
+    "display_name": "TVB Pearl"
+  },
+  {
+    "standard_name": "中天电视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "CTiTV",
+    "display_name": "中天电视"
+  },
+  {
+    "standard_name": "东森新闻",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "EBCNews",
+    "display_name": "东森新闻"
+  },
+  {
+    "standard_name": "华视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "CTS",
+    "display_name": "华视"
+  },
+  {
+    "standard_name": "台视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TTV",
+    "display_name": "台视"
+  },
+  {
+    "standard_name": "中视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "CTV",
+    "display_name": "中视"
+  },
+  {
+    "standard_name": "CCTV-4K",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV4K",
+    "display_name": "CCTV-4K 超高清"
+  },
+  {
+    "standard_name": "CCTV-8K",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CCTV8K",
+    "display_name": "CCTV-8K 超高清"
+  },
+  {
+    "standard_name": "CGTN纪录",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CGTN_Doc",
+    "display_name": "CGTN 纪录"
+  },
+  {
+    "standard_name": "CGTN西班牙语",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CGTN_Esp",
+    "display_name": "CGTN 西班牙语"
+  },
+  {
+    "standard_name": "CGTN法语",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CGTN_Fr",
+    "display_name": "CGTN 法语"
+  },
+  {
+    "standard_name": "CGTN阿拉伯语",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CGTN_Ar",
+    "display_name": "CGTN 阿拉伯语"
+  },
+  {
+    "standard_name": "CGTN俄语",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CGTN_Ru",
+    "display_name": "CGTN 俄语"
+  },
+  {
+    "standard_name": "中国教育4",
+    "category": "cctv",
+    "group_title": "央视",
+    "tvg_id": "CETV4",
+    "display_name": "CETV-4 空中课堂"
+  },
+  {
+    "standard_name": "河北卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "hebei_ws",
+    "display_name": "河北卫视"
+  },
+  {
+    "standard_name": "广西卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "guangxi_ws",
+    "display_name": "广西卫视"
+  },
+  {
+    "standard_name": "青海卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "qinghai_ws",
+    "display_name": "青海卫视"
+  },
+  {
+    "standard_name": "宁夏卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "ningxia_ws",
+    "display_name": "宁夏卫视"
+  },
+  {
+    "standard_name": "西藏卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "xizang_ws",
+    "display_name": "西藏卫视"
+  },
+  {
+    "standard_name": "兵团卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "bingtuan_ws",
+    "display_name": "兵团卫视"
+  },
+  {
+    "standard_name": "三沙卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "sansha_ws",
+    "display_name": "三沙卫视"
+  },
+  {
+    "standard_name": "延边卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "yanbian_ws",
+    "display_name": "延边卫视"
+  },
+  {
+    "standard_name": "康巴卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "kangba_ws",
+    "display_name": "康巴卫视"
+  },
+  {
+    "standard_name": "大湾区卫视",
+    "category": "weishi",
+    "group_title": "卫视",
+    "tvg_id": "dawanqu_ws",
+    "display_name": "大湾区卫视"
+  },
+  {
+    "standard_name": "凤凰卫视香港台",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "phoenix_hk",
+    "display_name": "凤凰卫视香港台"
+  },
+  {
+    "standard_name": "TVB News",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVB_News",
+    "display_name": "TVB News"
+  },
+  {
+    "standard_name": "香港开电视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "hk_open",
+    "display_name": "香港开电视"
+  },
+  {
+    "standard_name": "香港有线新闻",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "hk_cable",
+    "display_name": "香港有线新闻"
+  },
+  {
+    "standard_name": "澳亚卫视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "aoya_ws",
+    "display_name": "澳亚卫视"
+  },
+  {
+    "standard_name": "澳门卫视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "macau_ws",
+    "display_name": "澳门卫视"
+  },
+  {
+    "standard_name": "TVB星河",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVB_Star",
+    "display_name": "TVB星河"
+  },
+  {
+    "standard_name": "TVB财经",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVB_Finance",
+    "display_name": "TVB财经"
+  },
+  {
+    "standard_name": "凤凰卫视电影台",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "phoenix_movie",
+    "display_name": "凤凰卫视电影台"
+  },
+  {
+    "standard_name": "民视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "minshi",
+    "display_name": "民视"
+  },
+  {
+    "standard_name": "三立电视",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "sanli",
+    "display_name": "三立电视"
+  },
+  {
+    "standard_name": "TVBS",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVBS",
+    "display_name": "TVBS"
+  },
+  {
+    "standard_name": "TVBS新闻",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVBS_News",
+    "display_name": "TVBS新闻"
+  },
+  {
+    "standard_name": "TVBS欢乐",
+    "category": "gangtai",
+    "group_title": "港澳台",
+    "tvg_id": "TVBS_Entertainment",
+    "display_name": "TVBS欢乐"
+  },
+  {
+    "standard_name": "北京文艺",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "beijing_wenyi",
+    "display_name": "北京文艺"
+  },
+  {
+    "standard_name": "北京影视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "beijing_yingshi",
+    "display_name": "北京影视"
+  },
+  {
+    "standard_name": "北京新闻",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "beijing_news",
+    "display_name": "北京新闻"
+  },
+  {
+    "standard_name": "北京生活",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "beijing_life",
+    "display_name": "北京生活"
+  },
+  {
+    "standard_name": "上海新闻综合",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "shanghai_news",
+    "display_name": "上海新闻综合"
+  },
+  {
+    "standard_name": "上海都市",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "shanghai_metro",
+    "display_name": "上海都市"
+  },
+  {
+    "standard_name": "上海电视剧",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "shanghai_drama",
+    "display_name": "上海电视剧"
+  },
+  {
+    "standard_name": "浙江经视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "zhejiang_econ",
+    "display_name": "浙江经视"
+  },
+  {
+    "standard_name": "浙江教育科技",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "zhejiang_edu",
+    "display_name": "浙江教育科技"
+  },
+  {
+    "standard_name": "江苏城市",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "jiangsu_city",
+    "display_name": "江苏城市"
+  },
+  {
+    "standard_name": "江苏综艺",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "jiangsu_variety",
+    "display_name": "江苏综艺"
+  },
+  {
+    "standard_name": "湖南经视",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "hunan_econ",
+    "display_name": "湖南经视"
+  },
+  {
+    "standard_name": "湖南都市",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "hunan_city",
+    "display_name": "湖南都市"
+  },
+  {
+    "standard_name": "广东民生",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "guangdong_ms",
+    "display_name": "广东民生"
+  },
+  {
+    "standard_name": "广东少儿",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "guangdong_kids",
+    "display_name": "广东少儿"
+  },
+  {
+    "standard_name": "深圳都市",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "shenzhen_city",
+    "display_name": "深圳都市"
+  },
+  {
+    "standard_name": "深圳公共",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "shenzhen_pub",
+    "display_name": "深圳公共"
+  },
+  {
+    "standard_name": "深圳财经",
+    "category": "local",
+    "group_title": "各省市",
+    "tvg_id": "shenzhen_finance",
+    "display_name": "深圳财经"
+  },
+  {
+    "standard_name": "CCTV-高尔夫网球",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "CCTV_Golf",
+    "display_name": "CCTV-高尔夫网球"
+  },
+  {
+    "standard_name": "上海体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "shanghai_sports",
+    "display_name": "上海体育"
+  },
+  {
+    "standard_name": "山东体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "shandong_sports",
+    "display_name": "山东体育"
+  },
+  {
+    "standard_name": "辽宁体育",
+    "category": "sports",
+    "group_title": "体育",
+    "tvg_id": "liaoning_sports",
+    "display_name": "辽宁体育"
+  },
+  {
+    "standard_name": "斗鱼游戏",
+    "category": "live",
+    "group_title": "网络直播",
+    "tvg_id": "douyu_game",
+    "display_name": "斗鱼游戏"
+  },
+  {
+    "standard_name": "虎牙直播",
+    "category": "live",
+    "group_title": "网络直播",
+    "tvg_id": "huya",
+    "display_name": "虎牙直播"
+  },
+  {
+    "standard_name": "Bilibili直播",
+    "category": "live",
+    "group_title": "网络直播",
+    "tvg_id": "bilibili_live",
+    "display_name": "Bilibili直播"
+  }
 ]
