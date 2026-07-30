@@ -166,9 +166,9 @@ http://221.7.175.154:8445/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="台视" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/台视.png" group-title="港澳台",台视
 rtmp://f13h.mine.nu/sat/tv071
 #EXTINF:-1 tvg-id="TVB_Star" group-title="港澳台",TVB星河
-http://r.jdshipin.com/Voac4
+http://aktv.top/AKTV/live/aktv2/tvb/AKTV.m3u8
 #EXTINF:-1 tvg-id="TVBS" group-title="港澳台",TVBS
-https://t.freetv.fun/live/tvbs-1.m3u8
+https://t.freetv.fun/live/tvbs.m3u8
 #EXTINF:-1 tvg-id="中视" tvg-logo="https://gitee.com/suxuang/TVlogo/raw/main/img/CTV.png" group-title="港澳台",中视
 rtmp://f13h.mine.nu/sat/tv091
 #EXTINF:-1 tvg-id="民视" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/民视.png" group-title="港澳台",民视
@@ -194,4 +194,4 @@ https://zby.130519.xyz/PLTV/11/224/3221225732/index.m3u8
 #EXTINF:-1 tvg-id="劲爆体育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/劲爆体育.png" group-title="体育",劲爆体育
 https://www.freetv.top/migu/796071336.m3u8?migutoken=1cc947d86cb584c31c31c88c005d55965238dbfff7ed75fca8451aed0b564786fde7e4b327e93b92dc96ef57e64e3bb56e8a9e921338080cdae817cb6125d8450b687659ecfee06be9c5d53ac6
 #EXTINF:-1 tvg-id="liaoning_sports" group-title="体育",辽宁体育
-https://stream1.freetv.fun/liao-zhu-ti-yu-3.m3u8
+http://120.76.248.139/live/bfgd/4200000611.m3u8
