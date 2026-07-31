@@ -113,8 +113,8 @@ http://173.208.212.130:8181/720p/fyyy.m3u8
 http://207.56.13.146:81/cdnlive/gefwq.m3u8
 #EXTINF:-1 tvg-id="BeijingSatelliteTV.cn@HD" tvg-logo="https://i.imgur.com/vsktAez.png" group-title="卫视",BRTV 北京卫视
 http://go.bkpcp.top/mg/bjws
-#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://tb.zbds.top/logo/上海卫视.png" group-title="卫视",上海卫视
-http://112.27.235.94:8000/hls/28/index.m3u8
+#EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/上海卫视.png" group-title="卫视",上海卫视
+http://39.135.135.28/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225735/index.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/東方衛視國際頻道.png" group-title="卫视",东方卫视国际频道
 http://aktv-stream.m16tv.cfd/stream/aktv3/null/AKTV.m3u8
 #EXTINF:-1 tvg-id="人间卫视" tvg-logo="https://tb.zbds.top/logo/人间卫视.png" group-title="卫视",人间卫视
@@ -685,6 +685,8 @@ http://125.210.152.18:9090/live/FXZL_750.m3u8
 http://1.94.31.214:35455/yy/1382736803
 #EXTINF:-1 tvg-id="叙州新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/叙州新闻综合.png" group-title="各省市",叙州新闻综合
 https://stream1.freetv.fun/xu-zhou-xin-wen-zong-he-6.m3u8
+#EXTINF:-1 tvg-id="古县综合" tvg-logo="https://tb.zbds.top/logo/古县综合.png" group-title="各省市",古县综合
+https://l2fpdktp.live.sxmty.com/live/hls/e4c3b363cc4549788e2d983f403e07db/d99ce1eb686e41b9afc888110bd95aa7.m3u8?zshanxd
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="各省市",古天乐电影
 http://1.94.31.214:35455/huya/29982675
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/古装剧场.png" group-title="各省市",古装剧场
@@ -931,6 +933,8 @@ https://jwcdnqx.hebyun.com.cn/live/pqzh/1500k/tzwj_video.m3u8
 https://stream1.freetv.fun/ping-hu-xin-wen-zong-he-2.m3u8
 #EXTINF:-1 tvg-id="平湖民生休闲" tvg-logo="https://www.xn--rgv465a.top/tvlogo/平湖民生休闲.png" group-title="各省市",平湖民生休闲
 http://l.cztvcloud.com/channels/lantian/SXpinghu2/720p.m3u8
+#EXTINF:-1 tvg-id="平遥新闻综合" tvg-logo="https://tb.zbds.top/logo/平遥新闻综合.png" group-title="各省市",平遥新闻综合
+https://tntgjhjb.live.sxmty.com/live/hls/3a4585ac11ec4e1bb07b419101b370c3/baf63e2b313440c2a25d7859f9b73b05-1.m3u8?zshanxd
 #EXTINF:-1 tvg-id="广元公共" tvg-logo="https://www.xn--rgv465a.top/tvlogo/广元公共.png" group-title="各省市",广元公共
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
 #EXTINF:-1 tvg-id="广元综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/广元综合.png" group-title="各省市",广元综合
@@ -1041,8 +1045,6 @@ http://182.40.120.195/test-txdwk.flv.huya.com/src/1394565188-1394565188-59896118
 http://live.xysrmt.cn/xwzh/sd/live.m3u8?zjiangsd"
 #EXTINF:-1 tvg-id="新沂生活" tvg-logo="https://www.xn--rgv465a.top/tvlogo/新沂生活.png" group-title="各省市",新沂生活
 http://live.xysrmt.cn/shpd/sd/live.m3u8?zjiangsd
-#EXTINF:-1 tvg-id="新疆天山" tvg-logo="https://tb.zbds.top/logo/新疆天山.png" group-title="各省市",新疆天山
-http://gctxyc.liveplay.myqcloud.com/gc/xjtcdhsz_1/index.m3u8
 #EXTINF:-1 tvg-id="新白娘子传奇" tvg-logo="https://www.xn--rgv465a.top/tvlogo/新白娘子传奇.png" group-title="各省市",新白娘子传奇
 https://live.ottiptv.cc/yy/1354490667
 #EXTINF:-1 tvg-id="新蔡综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/新蔡综合.png" group-title="各省市",新蔡综合
@@ -1391,6 +1393,8 @@ https://stream1.freetv.fun/hu-nan-gong-gong-7.m3u8
 https://stream1.freetv.fun/hu-nan-guo-ji-2.ctv
 #EXTINF:-1 tvg-id="湖南娱乐" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南娱乐.png" group-title="各省市",湖南娱乐
 https://stream1.freetv.fun/hu-nan-yu-le-9.ctv
+#EXTINF:-1 tvg-id="湖南娱乐频道" tvg-logo="http://tv.haoqu99.com/d/file/2015/0417/20150417125630263.jpg" group-title="各省市",湖南娱乐频道
+http://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2hzPSZkZWY9MSZ1aXA9MTA2LjE0LjM4LjU1JnRlcm09NSZtYWNpZD02ODZlOGNmOGM4OGU3N2VjOWEwNzkzMjg5ZjUzNDg0MmFiZWM0ZjNjJnFpZD0mcmF1dGhfZW5hYmxlPW9mZiZjZG5leF9pZD1hbF9waG9uZTMmZXM9MTc4NTEwMjI4NiZ1dWlkPTRmODMyYzYxYzVkODU3ZWJkMjc1ODIyNTQ4OWM1ZTFiLTZhMGUyNjM3JnM9OWIyOTE5YWM4ZjE0YjY4ZTlkZDU1NDRkODRjMTFlMzcmdWlkPSZuZHY9aW9zLTYuNS4wJnY9MiZhcz0wJl9jYXJDb2RlPTA,/HNDSMPP360.m3u8
 #EXTINF:-1 tvg-id="湖南教育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南教育.png" group-title="各省市",湖南教育
 https://stream1.freetv.fun/hu-nan-jiao-yu-6.ctv
 #EXTINF:-1 tvg-id="湖南爱晚" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南爱晚.png" group-title="各省市",湖南爱晚
@@ -2295,7 +2299,7 @@ https://hls-gateway.vpstv.net/streams/708839.m3u8
 https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/直播中国.png" group-title="网络直播",直播
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 group-title="特殊·酒店源",20260731 04:53
+#EXTINF:-1 group-title="特殊·酒店源",20260801 04:50
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226537/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",CETV3
 http://198.204.228.26/live/cetv3.m3u8
