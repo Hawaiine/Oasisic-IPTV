@@ -13,6 +13,8 @@ rtp://239.3.1.214:4220
 https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live
 #EXTINF:-1 tvg-id="CCTV4America.cn" tvg-logo="https://i.imgur.com/1TPiRqR.png" group-title="央视",CCTV-4 中文国际（美） Ⓢ
 https://global.cgtn.cicc.media.caton.cloud/master/cgtn-america.m3u8
+#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://live.fanmingming.com/tv/CCTV6.png" group-title="央视",CCTV-6 电影频道
+https://piccpndks.v.kcdnvip.com/audio/cctv6_2/index.m3u8
 #EXTINF:-1 tvg-id="CCTV7" tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视",CCTV-7 国防军事
 http://218.13.14.6:60050/tsfile/live/1007_1.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视",CCTV-7国防军事
@@ -141,8 +143,8 @@ http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://aktv-stream.m16tv.cfd/stream/aktv3/null-2/AKTV.m3u8
 #EXTINF:-1 tvg-id="星空卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/星空卫视.png" group-title="卫视",星空卫视
 https://stream1.freetv.fun/xing-kong-wei-shi-12.m3u8
-#EXTINF:-1 tvg-id="5" tvg-logo="https://tb.zbds.top/logo/海峡卫视.png" group-title="卫视",海峡卫视
-http://38.64.72.148:80/hls/modn/list/4009/playlist.m3u8
+#EXTINF:-1 tvg-id="3" tvg-logo="https://tb.zbds.top/logo/海峡卫视.png" group-title="卫视",海峡卫视
+http://38.64.72.148:80/hls/modn/list/4009/chunklist0.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/广东珠江.png" group-title="卫视",珠江卫视
 http://home.wwang.pw:35455/itv/2000000003000000033.m3u8?cdn=hnbblive
 #EXTINF:-1 tvg-id="莲花卫视" tvg-logo="https://gitee.com/suxuang/TVlogo/raw/main/img/Lotus.png" group-title="卫视",莲花卫视
@@ -635,8 +637,6 @@ http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/322122
 https://zby.130519.xyz/PLTV/11/224/3221226019/index.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/北京国际.png" group-title="各省市",北京国际
 http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226510/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EIfgL7tTUNqHAIdgvKuwj8A%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPr9j5nfyiWS_jEXD6m401A%2CEND
-#EXTINF:-1 group-title="各省市",北京少儿
-http://115.48.160.81:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/北京纪实科教.png" group-title="各省市",北京纪实科教
 http://[2409:8087:1:20:20::29]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226434/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7Ejj3PtVjzl6ZzFdM-Vi1dmQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPJa61jREJv4ZfZigyrxX0U%2CEND
 #EXTINF:-1 tvg-id="北京财经" tvg-logo="https://www.xn--rgv465a.top/tvlogo/北京财经.png" group-title="各省市",北京财经
@@ -1179,8 +1179,6 @@ https://stream1.freetv.fun/wu-yi-jiao-yu-4.m3u8
 http://www.hiliu.myds.me:18088/rtp/239.69.1.147:10518
 #EXTINF:-1 tvg-id="武清综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/武清综合.png" group-title="各省市",武清综合
 https://tvpull.smartwq.cn/wqlive/convergencemedia/playlist.m3u8?ztianjd
-#EXTINF:-1 tvg-id="武进新闻" tvg-logo="https://tb.zbds.top/logo/武进新闻.png" group-title="各省市",武进新闻
-https://live.wjyanghu.com/live/CH1.m3u8
 #EXTINF:-1 tvg-id="武进生活" tvg-logo="https://www.xn--rgv465a.top/tvlogo/武进生活.png" group-title="各省市",武进生活
 http://43.251.226.89:8080/play/522.m3u8
 #EXTINF:-1 tvg-id="ChinaWeatherChannel.cn@SD" tvg-logo="https://i.imgur.com/syNwDpg.png" group-title="各省市",气象
@@ -1395,8 +1393,6 @@ https://stream1.freetv.fun/hu-nan-gong-gong-7.m3u8
 https://stream1.freetv.fun/hu-nan-guo-ji-2.ctv
 #EXTINF:-1 tvg-id="湖南娱乐" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南娱乐.png" group-title="各省市",湖南娱乐
 https://stream1.freetv.fun/hu-nan-yu-le-9.ctv
-#EXTINF:-1 tvg-id="湖南娱乐频道" tvg-logo="http://tv.haoqu99.com/d/file/2015/0417/20150417125630263.jpg" group-title="各省市",湖南娱乐频道
-http://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2hzPSZkZWY9MSZ1aXA9MTA2LjE0LjM4LjU1JnRlcm09NSZtYWNpZD02ODZlOGNmOGM4OGU3N2VjOWEwNzkzMjg5ZjUzNDg0MmFiZWM0ZjNjJnFpZD0mcmF1dGhfZW5hYmxlPW9mZiZjZG5leF9pZD1hbF9waG9uZTMmZXM9MTc4NTEwMjI4NiZ1dWlkPTRmODMyYzYxYzVkODU3ZWJkMjc1ODIyNTQ4OWM1ZTFiLTZhMGUyNjM3JnM9OWIyOTE5YWM4ZjE0YjY4ZTlkZDU1NDRkODRjMTFlMzcmdWlkPSZuZHY9aW9zLTYuNS4wJnY9MiZhcz0wJl9jYXJDb2RlPTA,/HNDSMPP360.m3u8
 #EXTINF:-1 tvg-id="湖南教育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南教育.png" group-title="各省市",湖南教育
 https://stream1.freetv.fun/hu-nan-jiao-yu-6.ctv
 #EXTINF:-1 tvg-id="湖南爱晚" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南爱晚.png" group-title="各省市",湖南爱晚
@@ -1891,6 +1887,8 @@ http://1.94.31.214:35455/huya/23903183
 https://stream01.willfonk.com/live_playlist.m3u8?cid=BS251&r=FHD&ccode=JP&m=d0:20:20:04:35:cc&t=0d6938cb3dcf4b79848bc1753a59daf1
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/铁齿铜牙纪晓岚.png" group-title="各省市",铁齿铜牙纪晓岚
 http://1.94.31.214:35455/huya/11342396
+#EXTINF:-1 tvg-id="铜梁综合" tvg-logo="https://tb.zbds.top/logo/铜梁综合.png" group-title="各省市",铜梁综合
+http://183.64.174.171:40123/ch1.m3u8?zzhongqd
 #EXTINF:-1 tvg-id="铜陵新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/铜陵新闻综合.png" group-title="各省市",铜陵新闻综合
 https://ls.qingting.fm/live/21303/64k.m3u8
 #EXTINF:-1 tvg-id="镇江二套社会民生" tvg-logo="https://www.xn--rgv465a.top/tvlogo/镇江二套社会民生.png" group-title="各省市",镇江二套社会民生
@@ -2299,7 +2297,7 @@ https://hls-gateway.vpstv.net/streams/708839.m3u8
 https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/直播中国.png" group-title="网络直播",直播
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 group-title="特殊·酒店源",20260802 04:39
+#EXTINF:-1 group-title="特殊·酒店源",20260803 04:41
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226537/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",CETV3
 http://198.204.228.26/live/cetv3.m3u8
@@ -2393,10 +2391,14 @@ http://38.75.136.137:82/live1/jsb.m3u8?id=lbcl&ip=whus21&usign=1LR7Q-EFMMTvbEbLX
 http://jiaojirentv.top/2020/yy.php?id=1382735557
 #EXTINF:-1 group-title="特殊·酒店源",我的体育老师
 http://jiaojirentv.top/2020/yy.php?id=1382745169
+#EXTINF:-1 group-title="特殊·酒店源",我的前半生
+https://yg.ygbox.de5.net/huya.php?id=11352916
 #EXTINF:-1 group-title="特殊·酒店源",明星大片
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225664/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",林正英
 https://t.freetv.fun/live/lin-zheng-ying-ying-yuan-4.m3u8
+#EXTINF:-1 group-title="特殊·酒店源",梁家辉
+https://yg.ygbox.de5.net/huya.php?id=11342429
 #EXTINF:-1 group-title="特殊·酒店源",橙记港剧
 http://www.goodiptv.club/douyu/4549169
 #EXTINF:-1 group-title="特殊·酒店源",正阳门下
@@ -2421,6 +2423,8 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225719/index.m3u8
 http://www.goodiptv.club/douyu/5522351
 #EXTINF:-1 group-title="特殊·酒店源",父母爱情
 http://173.208.234.146/live/lbfumuaiqing.m3u8
+#EXTINF:-1 group-title="特殊·酒店源",王晶
+https://yg.ygbox.de5.net/huya.php?id=11602058
 #EXTINF:-1 group-title="特殊·酒店源",电影_功夫片
 https://lbds.us.ci/11352941
 #EXTINF:-1 group-title="特殊·酒店源",电影_动作电影
@@ -2489,6 +2493,8 @@ http://free.cnlive.club/channel/581b458b.m3u8
 https://t.freetv.fun/live/wei-lai-jing-cai.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来育乐台
 https://live.catvod.com/live.php?id=videolandmax
+#EXTINF:-1 group-title="特殊·酒店源",经典小品
+https://yg.ygbox.de5.net/huya.php?id=11602068
 #EXTINF:-1 group-title="特殊·酒店源",老三国
 http://jiaojirentv.top/2020/yy.php?id=1354930932
 #EXTINF:-1 group-title="特殊·酒店源",老故事
