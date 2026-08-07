@@ -166,7 +166,7 @@ http://221.7.175.154:8445/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="台视" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/台视.png" group-title="港澳台",台视
 rtmp://f13h.mine.nu/sat/tv071
 #EXTINF:-1 tvg-id="TVB_Star" group-title="港澳台",TVB星河
-http://aktv.top/AKTV/live/aktv2/tvb/AKTV.m3u8
+http://r.jdshipin.com/Voac4
 #EXTINF:-1 tvg-id="TVBS" group-title="港澳台",TVBS
 https://t.freetv.fun/live/tvbs.m3u8
 #EXTINF:-1 tvg-id="中视" tvg-logo="https://gitee.com/suxuang/TVlogo/raw/main/img/CTV.png" group-title="港澳台",中视
