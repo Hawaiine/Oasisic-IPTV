@@ -15,6 +15,8 @@ https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live
 https://global.cgtn.cicc.media.caton.cloud/master/cgtn-america.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@SD" tvg-logo="https://i.imgur.com/rFiaef7.png" group-title="央视",CCTV-6 ed]
 https://live.eac-news.com/CCTV/streams/cctv6.m3u8
+#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://live.fanmingming.com/tv/CCTV6.png" group-title="央视",CCTV-6 电影频道
+https://piccpndks.v.kcdnvip.com/audio/cctv6_2/index.m3u8
 #EXTINF:-1 tvg-id="CCTV7" tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视",CCTV-7 国防军事
 http://218.13.14.6:60050/tsfile/live/1007_1.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视",CCTV-7国防军事
@@ -121,7 +123,7 @@ http://112.27.235.94:8000/hls/28/index.m3u8
 http://aktv-stream.m16tv.cfd/stream/aktv3/null/AKTV.m3u8
 #EXTINF:-1 tvg-id="人间卫视" tvg-logo="https://tb.zbds.top/logo/人间卫视.png" group-title="卫视",人间卫视
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
-#EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/农林卫视.png" group-title="卫视",农林卫视
+#EXTINF:-1 tvg-id="4" tvg-logo="https://tb.zbds.top/logo/农林卫视.png" group-title="卫视",农林卫视
 http://124.116.183.146:9901/tsfile/live/1004_1.m3u8
 #EXTINF:-1 tvg-id="BeijingSatelliteTV.cn@SD" tvg-logo="https://i.imgur.com/vsktAez.png" group-title="卫视",北京卫视 ed]
 http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/bjwshd/4000000/mnf.m3u8
@@ -143,7 +145,7 @@ http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://aktv-stream.m16tv.cfd/stream/aktv3/null-2/AKTV.m3u8
 #EXTINF:-1 tvg-id="星空卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/星空卫视.png" group-title="卫视",星空卫视
 https://stream1.freetv.fun/xing-kong-wei-shi-12.m3u8
-#EXTINF:-1 tvg-id="2" tvg-logo="https://tb.zbds.top/logo/海峡卫视.png" group-title="卫视",海峡卫视
+#EXTINF:-1 tvg-id="5" tvg-logo="https://tb.zbds.top/logo/海峡卫视.png" group-title="卫视",海峡卫视
 http://38.64.72.148:80/hls/modn/list/4009/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/广东珠江.png" group-title="卫视",珠江卫视
 http://home.wwang.pw:35455/itv/2000000003000000033.m3u8?cdn=hnbblive
@@ -671,7 +673,7 @@ https://stream1.freetv.fun/nan-zhu-xin-wen-zong-he-3.m3u8
 http://615bbf179ba53515dccad7b1da5d1ad9.livehwc3.cn/hls.nntv.cn/nnlive/WLSH_24.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=2598844eaee8a4265e706fc14b3fc11d
 #EXTINF:-1 tvg-id="南通新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/南通新闻综合.png" group-title="各省市",南通新闻综合
 https://mgtv.ottiptv.cc/migu/955227985.m3u8?migutoken=03e9c85f19b5ac291f5863436507873a8f47ec3c677c7857c89bda5778edc8e38fc38b4270aa374c49eee39b39ffaf80a20b750130c27760df766c0cf7b5d437be8dc60c1ced9117d98f6c9b3e
-#EXTINF:-1 tvg-id="3" tvg-logo="https://tb.zbds.top/logo/卡酷少儿.png" group-title="各省市",卡酷少儿
+#EXTINF:-1 tvg-id="11" tvg-logo="https://tb.zbds.top/logo/卡酷少儿.png" group-title="各省市",卡酷少儿
 http://218.13.170.98:9901/tsfile/live/1021_1.m3u8
 #EXTINF:-1 tvg-id="卫辉综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/卫辉综合.png" group-title="各省市",卫辉综合
 http://tvpull.dxhmt.cn:9081/tv/10781-1.m3u8?%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7[%E6%99%B4%E5%9B%AD]
@@ -2299,7 +2301,7 @@ https://hls-gateway.vpstv.net/streams/708839.m3u8
 https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/直播中国.png" group-title="网络直播",直播
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 group-title="特殊·酒店源",20260808 04:26
+#EXTINF:-1 group-title="特殊·酒店源",20260809 04:15
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226537/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",CETV3
 http://198.204.228.26/live/cetv3.m3u8
@@ -2345,6 +2347,8 @@ https://t.freetv.fun/live/zhong-shi-jing-dian-1.m3u8
 https://t.freetv.fun/live/zhong-shi-jing-cai-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",亚洲旅游台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=250
+#EXTINF:-1 group-title="特殊·酒店源",八大娱乐台
+http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=badaentertain_twn
 #EXTINF:-1 group-title="特殊·酒店源",八大第一台
 http://61.221.215.25:8800/hls/55/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大精彩台
@@ -2429,18 +2433,10 @@ https://lbds.us.ci/11352897
 https://lbds.us.ci/11352941
 #EXTINF:-1 group-title="特殊·酒店源",电影_动作电影
 https://lbds.us.ci/11602077
-#EXTINF:-1 group-title="特殊·酒店源",电影_古墓系列
-https://lbds.us.ci/11352913
-#EXTINF:-1 group-title="特殊·酒店源",电影_喜乐影院
-https://lbds.us.ci/21059580
 #EXTINF:-1 group-title="特殊·酒店源",电影_喜剧专场
 https://lbds.us.ci/11602044
 #EXTINF:-1 group-title="特殊·酒店源",电影_强森
 https://lbds.us.ci/21059581
-#EXTINF:-1 group-title="特殊·酒店源",电影_怪兽
-https://lbds.us.ci/21059577
-#EXTINF:-1 group-title="特殊·酒店源",电影_成龙
-https://lbds.us.ci/11342386
 #EXTINF:-1 group-title="特殊·酒店源",电影_推荐
 https://lbds.us.ci/11602041
 #EXTINF:-1 group-title="特殊·酒店源",电影_搞笑喜剧
@@ -2453,12 +2449,8 @@ https://lbds.us.ci/11342412
 https://lbds.us.ci/21059579
 #EXTINF:-1 group-title="特殊·酒店源",电影_梁家辉
 https://lbds.us.ci/11342429
-#EXTINF:-1 group-title="特殊·酒店源",电影_武侠
-https://lbds.us.ci/11342427
 #EXTINF:-1 group-title="特殊·酒店源",电影_沈腾
 https://lbds.us.ci/11601968
-#EXTINF:-1 group-title="特殊·酒店源",电影_洪金宝
-https://lbds.us.ci/11279251
 #EXTINF:-1 group-title="特殊·酒店源",电影_犯罪片
 https://lbds.us.ci/11352974
 #EXTINF:-1 group-title="特殊·酒店源",电影_玄幻
@@ -2492,13 +2484,17 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226508/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",红楼梦
 http://alist.xicp.fun:35455/yy/1382745084#https://live.metshop.top/yy/1382745084#https://lunbo.freetv.top/yy/1382745084
 #EXTINF:-1 group-title="特殊·酒店源",纪晓岚
-http://alist.xicp.fun:35455/yy/1382781415#https://live.metshop.top/yy/1382781415
+https://live.metshop.top/huya/11342396
 #EXTINF:-1 group-title="特殊·酒店源",纬来体育台
 https://stream1.freetv.fun/wei-lai-ti-yu-9.ctv
+#EXTINF:-1 group-title="特殊·酒店源",纬来日本台
+http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=videolandjapan
 #EXTINF:-1 group-title="特殊·酒店源",纬来电影台
 http://free.cnlive.club/channel/581b458b.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来精彩台
 https://t.freetv.fun/live/wei-lai-jing-cai.m3u8
+#EXTINF:-1 group-title="特殊·酒店源",纬来综合台
+http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=videolandzonghe_twn
 #EXTINF:-1 group-title="特殊·酒店源",纬来育乐台
 https://live.catvod.com/live.php?id=videolandmax
 #EXTINF:-1 group-title="特殊·酒店源",老故事
@@ -2511,18 +2507,8 @@ https://lbds.us.ci/21277391
 https://lbds.us.ci/15870999
 #EXTINF:-1 group-title="特殊·酒店源",解说_扁豆看电影
 https://lbds.us.ci/16028551
-#EXTINF:-1 group-title="特殊·酒店源",解说_斌哥漫说
-https://lbds.us.ci/18632116
-#EXTINF:-1 group-title="特殊·酒店源",解说_涵哥评电影
-https://lbds.us.ci/16865726
 #EXTINF:-1 group-title="特殊·酒店源",解说_电影狂人
 https://lbds.us.ci/18715610
-#EXTINF:-1 group-title="特殊·酒店源",解说_科幻梦工场
-https://lbds.us.ci/15152155
-#EXTINF:-1 group-title="特殊·酒店源",解说_越哥说电影
-https://lbds.us.ci/15894162
-#EXTINF:-1 group-title="特殊·酒店源",解说_阿斗说电影
-https://lbds.us.ci/13303478
 #EXTINF:-1 group-title="特殊·酒店源",解说_阿良说剧
 https://lbds.us.ci/20488841
 #EXTINF:-1 group-title="特殊·酒店源",解说_鱼丸电影
@@ -2535,10 +2521,14 @@ http://alist.xicp.fun:35455/yy/1382736839#https://live.metshop.top/yy/1382736839
 http://173.208.234.146/live/lbyongzhengwc.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",靖天卡通台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=15
+#EXTINF:-1 group-title="特殊·酒店源",靖天国际
+http://litv.zapi.us.kg/?id=4gtv-4gtv063
 #EXTINF:-1 group-title="特殊·酒店源",靖天戏剧台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=116
 #EXTINF:-1 group-title="特殊·酒店源",靖天日本台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=22
+#EXTINF:-1 group-title="特殊·酒店源",靖天欢乐台
+http://litv.zapi.us.kg/?id=4gtv-4gtv054
 #EXTINF:-1 group-title="特殊·酒店源",靖天电影台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=82
 #EXTINF:-1 group-title="特殊·酒店源",靖天综合台
@@ -2547,6 +2537,8 @@ https://ha.msbot.dpdns.org/4gtv_api.php?id=21
 https://ha.msbot.dpdns.org/4gtv_api.php?id=83
 #EXTINF:-1 group-title="特殊·酒店源",靖天资讯台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=88
+#EXTINF:-1 group-title="特殊·酒店源",靖洋卡通台
+http://litv.zapi.us.kg/?id=4gtv-4gtv057
 #EXTINF:-1 group-title="特殊·酒店源",靖洋戏剧台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=118
 #EXTINF:-1 group-title="特殊·酒店源",龙华偶像
