@@ -43,5 +43,3 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/51/20240709/index.m3u8?msisdn
 http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990000001309/index.m3u8
 #EXTINF:-1 tvg-id="CCTV8K.cn@HD" tvg-logo="https://i.imgur.com/fxVPMJF.png" group-title="央视",CCTV-8K 超高清
 http://192.151.150.154/live/cctv8k.m3u8
-#EXTINF:-1 tvg-id="CGTN" tvg-logo="https://tb.zbds.top/logo/CGTN.png" group-title="央视",CGTN
-http://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8
