@@ -35,9 +35,7 @@ https://stream1.freetv.fun/hu-nan-du-shi-13.m3u8
 https://stream1.freetv.fun/hu-nan-jing-shi-6.m3u8
 #EXTINF:-1 tvg-id="JiangsuVarietyChannel.cn@SD" tvg-logo="https://www.tvchinese.net/uploads/tv/jszy.jpg" group-title="各省市",江苏综艺
 http://183.207.248.71/gitv/live1/G_JSZY/G_JSZY
-#EXTINF:-1 tvg-id="2" tvg-logo="https://tb.zbds.top/logo/南方卫视.png" group-title="各省市",南方卫视
+#EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/南方卫视.png" group-title="各省市",南方卫视
 http://120.237.39.10:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&down=1
-#EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/广东少儿.png" group-title="各省市",广东少儿
-http://171.38.148.188:9003/hls/45/index.m3u8
 #EXTINF:-1 tvg-id="广州新闻" tvg-logo="https://tb.zbds.top/logo/广州新闻.png" group-title="各省市",广州新闻
 http://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=d2c2db0b598c02ec1b5623728434d367&txTime=18d57929bd3
