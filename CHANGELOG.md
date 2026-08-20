@@ -1,3 +1,39 @@
+## 📺 采集报告 (2026-08-21 06:23:06)
+
+- **状态**: stage=collect, total=3538, probe_enabled=False
+- **生成时间**: 2026-08-21 06:23:04
+
+### 📁 文件概览
+
+| 文件 | 条数 |
+|------|------|
+| live.m3u | 98 |
+| live_cctv.m3u | 23 |
+| live_gangtai.m3u | 12 |
+| live_live.m3u | 0 |
+| live_local.m3u | 21 |
+| live_more.m3u | 1262 |
+| live_other.m3u | 5765 |
+| live_overseas.m3u | 0 |
+| live_radio.m3u | 3 |
+| live_special.m3u | 0 |
+| live_sports.m3u | 7 |
+| live_verified.m3u | 2820 |
+| live_weishi.m3u | 35 |
+
+### 🏷️ 分类分布 (live.m3u)
+
+| 分类 | 条数 |
+|------|------|
+| 卫视 | 35 |
+| 央视 | 23 |
+| 各省市 | 21 |
+| 港澳台 | 12 |
+| 体育 | 7 |
+
+---
+
+
 ## 📺 采集报告 (2026-08-20 06:20:21)
 
 - **状态**: stage=collect, total=3545, probe_enabled=False

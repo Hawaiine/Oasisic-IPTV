@@ -79,6 +79,8 @@ http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990000001309/index.m3
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?msisdn=592016db9bfb7f4b6ffd62f11b37bfa9&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20260810062125&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=39.103.182.111&SecurityKey=20260810062125&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=WX-A1-9.8.0-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=cff9997d435abf1cf48f331046b18563&ddCalcu=3c6fv5fa89b19ab9674d0413353afb8f41fc&sv=10004&ct=android
 #EXTINF:-1 tvg-id="CETV4" tvg-logo="https://live.fanmingming.cn/tv/CETV4.png" group-title="央视",CETV-4 职业教育
 http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226557/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EBzZToIaOOoaa_jAUfhUQHQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNOD9BEmVSNbqSQpqXZxnxbk%2CEND
+#EXTINF:-1 tvg-id="CGTN-News" group-title="央视",CGNT 新闻频道
+https://english-livebkali.cgtn.com/live/encgtn_0.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/CGTN.png" group-title="央视",CGTN英语
 https://0472.org/hls/cgtn.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/CGTN西语.png" group-title="央视",CGTN西语
@@ -121,7 +123,7 @@ http://39.135.135.28/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225735/inde
 http://aktv-stream.m16tv.cfd/stream/aktv3/null/AKTV.m3u8
 #EXTINF:-1 tvg-id="人间卫视" tvg-logo="https://tb.zbds.top/logo/人间卫视.png" group-title="卫视",人间卫视
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
-#EXTINF:-1 tvg-id="4" tvg-logo="https://tb.zbds.top/logo/农林卫视.png" group-title="卫视",农林卫视
+#EXTINF:-1 tvg-id="261" tvg-logo="https://tb.zbds.top/logo/农林卫视.png" group-title="卫视",农林卫视
 http://111.59.24.227:8181/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="BeijingSatelliteTV.cn@SD" tvg-logo="https://i.imgur.com/vsktAez.png" group-title="卫视",北京卫视 ed]
 http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/bjwshd/4000000/mnf.m3u8
@@ -143,7 +145,7 @@ http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://aktv-stream.m16tv.cfd/stream/aktv3/null-2/AKTV.m3u8
 #EXTINF:-1 tvg-id="星空卫视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/星空卫视.png" group-title="卫视",星空卫视
 https://stream1.freetv.fun/xing-kong-wei-shi-12.m3u8
-#EXTINF:-1 tvg-id="3" tvg-logo="https://tb.zbds.top/logo/海峡卫视.png" group-title="卫视",海峡卫视
+#EXTINF:-1 tvg-id="274" tvg-logo="https://tb.zbds.top/logo/海峡卫视.png" group-title="卫视",海峡卫视
 http://113.57.140.161:10081/newlive/live/hls/27/live.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/广东珠江.png" group-title="卫视",珠江卫视
 http://home.wwang.pw:35455/itv/2000000003000000033.m3u8?cdn=hnbblive
@@ -677,7 +679,7 @@ https://stream1.freetv.fun/nan-zhu-xin-wen-zong-he-3.m3u8
 http://615bbf179ba53515dccad7b1da5d1ad9.livehwc3.cn/hls.nntv.cn/nnlive/WLSH_24.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=2598844eaee8a4265e706fc14b3fc11d
 #EXTINF:-1 tvg-id="南通新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/南通新闻综合.png" group-title="各省市",南通新闻综合
 https://mgtv.ottiptv.cc/migu/955227985.m3u8?migutoken=03e9c85f19b5ac291f5863436507873a8f47ec3c677c7857c89bda5778edc8e38fc38b4270aa374c49eee39b39ffaf80a20b750130c27760df766c0cf7b5d437be8dc60c1ced9117d98f6c9b3e
-#EXTINF:-1 tvg-id="3" tvg-logo="https://tb.zbds.top/logo/卡酷少儿.png" group-title="各省市",卡酷少儿
+#EXTINF:-1 tvg-id="135" tvg-logo="https://tb.zbds.top/logo/卡酷少儿.png" group-title="各省市",卡酷少儿
 http://111.59.139.82:11888/tsfile/live/1056_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="卫辉综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/卫辉综合.png" group-title="各省市",卫辉综合
 http://tvpull.dxhmt.cn:9081/tv/10781-1.m3u8?%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7[%E6%99%B4%E5%9B%AD]
@@ -941,6 +943,8 @@ https://stream1.freetv.fun/ping-hu-xin-wen-zong-he-2.m3u8
 http://l.cztvcloud.com/channels/lantian/SXpinghu2/720p.m3u8
 #EXTINF:-1 tvg-id="平遥新闻综合" tvg-logo="https://tb.zbds.top/logo/平遥新闻综合.png" group-title="各省市",平遥新闻综合
 https://tntgjhjb.live.sxmty.com/live/hls/3a4585ac11ec4e1bb07b419101b370c3/baf63e2b313440c2a25d7859f9b73b05-1.m3u8?zshanxd
+#EXTINF:-1 tvg-id="162" tvg-logo="https://tb.zbds.top/logo/广东影视.png" group-title="各省市",广东影视
+http://120.198.86.186:9901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="广元公共" tvg-logo="https://www.xn--rgv465a.top/tvlogo/广元公共.png" group-title="各省市",广元公共
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
 #EXTINF:-1 tvg-id="广元综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/广元综合.png" group-title="各省市",广元综合
@@ -1109,6 +1113,8 @@ http://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
 https://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/曼聯電視頻道.png" group-title="各省市",曼联电视频道
 http://aktv-stream.m16tv.cfd/stream/astro_a1/ch87/AKTV.m3u8
+#EXTINF:-1 tvg-id="朝天综合" tvg-logo="https://tb.zbds.top/logo/朝天综合.png" group-title="各省市",朝天综合
+https://m3u8.channel.dzsm.com/nmip-media/channellive/channel104601/playlist.m3u8
 #EXTINF:-1 tvg-id="朝阳新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/朝阳新闻综合.png" group-title="各省市",朝阳新闻综合
 http://120.76.248.139/live/bfgd/4200000282.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/朝鮮恩情台.png" group-title="各省市",朝鲜恩情台
@@ -1289,6 +1295,8 @@ https://wshlslive.migucloud.com/live/RJ0EYBCZ_C0/playlist.m3u8
 https://wshlslive.migucloud.com/live/6AL7GTQX_C0/playlist.m3u8
 #EXTINF:-1 tvg-id="洞头综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/洞头综合.png" group-title="各省市",洞头综合
 http://l.cztvcloud.com/channels/lantian/SXdongtou1/720p.m3u8
+#EXTINF:-1 tvg-id="津南一套" tvg-logo="https://tb.zbds.top/logo/津南一套.png" group-title="各省市",津南一套
+http://play.jinnantv.top/live/JNTV1.m3u8?ztianjd
 #EXTINF:-1 tvg-id="活佛济公3" tvg-logo="https://tb.zbds.top/logo/活佛济公3.png" group-title="各省市",活佛济公3
 https://live.metshop.top/huya/23903123
 #EXTINF:-1 tvg-id="济南教育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/济南教育.png" group-title="各省市",济南教育
@@ -1517,6 +1525,8 @@ http://218.84.127.245:1026/hls/main1/playlist.m3u8?zxinjd,
 http://1.94.31.214:35455/huya/23865142
 #EXTINF:-1 tvg-id="环球电视" tvg-logo="https://live.fanmingming.cn/tv/环球电视台.png" group-title="各省市",环球电视
 http://zb.xzxwhcb.com:9999/hls/world.m3u8
+#EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/现代教育.png" group-title="各省市",现代教育
+http://120.198.86.186:9901/tsfile/live/1112_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="珲春新闻" tvg-logo="https://tb.zbds.top/logo/珲春新闻.png" group-title="各省市",珲春新闻
 http://stream8.jlntv.cn/hctv/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="珲春新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/珲春新闻综合.png" group-title="各省市",珲春新闻综合
@@ -1688,7 +1698,7 @@ http://live.shaoxing.com.cn/video/s10001-sxtv2/index.m3u8?%E5%85%B3%E6%B3%A8%E5%
 #EXTINF:-1 tvg-id="经典电影" tvg-logo="https://www.xn--rgv465a.top/tvlogo/经典电影.png" group-title="各省市",经典电影
 https://yylunbo.ottiptv.cc/yy/1414812324
 #EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/经济科教.png" group-title="各省市",经济科教
-http://120.237.39.10:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&down=1
+http://120.237.39.10:9901/tsfile/live/1069_1.m3u8?key=txiptv&playlive=1&down=1
 #EXTINF:-1 tvg-id="绵阳科技" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绵阳科技.png" group-title="各省市",绵阳科技
 https://stream1.freetv.fun/mian-yang-ke-ji-2.m3u8
 #EXTINF:-1 tvg-id="缙云新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/缙云新闻综合.png" group-title="各省市",缙云新闻综合
@@ -2323,7 +2333,7 @@ https://hls-gateway.vpstv.net/streams/708839.m3u8
 https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/img/直播中国.png" group-title="网络直播",直播
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 group-title="特殊·酒店源",20260820 04:12
+#EXTINF:-1 group-title="特殊·酒店源",20260821 04:16
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226537/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",CETV3
 http://198.204.228.26/live/cetv3.m3u8
@@ -2338,17 +2348,15 @@ https://stream1.freetv.fun/eltaai-er-da-ti-yu--2--wj-1.ctv
 #EXTINF:-1 group-title="特殊·酒店源",HBO
 http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34571
 #EXTINF:-1 group-title="特殊·酒店源",TVBPlus
-https://t.freetv.fun/live/etv-plus.m3u8
+https://t.freetv.fun/live/etv-plus-2.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",TVBS精采台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=227
 #EXTINF:-1 group-title="特殊·酒店源",ViuTV
 https://cdn.163189.xyz/163189/viu
 #EXTINF:-1 group-title="特殊·酒店源",amc电影台
-https://t.freetv.fun/live/amcdian-ying.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",万合出品
-https://www.goodiptv.club/douyu/9220456
+https://ha.msbot.dpdns.org/4gtv_api.php?id=39
 #EXTINF:-1 group-title="特殊·酒店源",三立戏剧
-https://stream1.freetv.fun/san-li-xi-ju-4.m3u8
+http://61.221.215.25:8800/hls/41/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",三立新闻台
 https://t.freetv.fun/live/san-li-xin-wen.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",三立综合台
@@ -2373,8 +2381,6 @@ https://t.freetv.fun/live/zhong-shi-jing-dian-1.m3u8
 https://t.freetv.fun/live/zhong-shi-jing-cai-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",亚洲旅游台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=250
-#EXTINF:-1 group-title="特殊·酒店源",八大娱乐台
-http://cookies.elementfx.com/chaojidianshi/chaojidianshi.php?id=badaentertain_twn
 #EXTINF:-1 group-title="特殊·酒店源",八大第一台
 http://61.221.215.25:8800/hls/55/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大精彩台
@@ -2382,15 +2388,13 @@ https://ha.msbot.dpdns.org/4gtv_api.php?id=172
 #EXTINF:-1 group-title="特殊·酒店源",八大综合台
 https://stream1.freetv.fun/ba-da-zong-he-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大综艺台
-https://ha.msbot.dpdns.org/4gtv_api.php?id=114
+https://ha.msbot.dpdns.org/4gtv_api.php?id=276
 #EXTINF:-1 group-title="特殊·酒店源",公视
 https://t.freetv.fun/live/gong-shi-2.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",公视台语台
 http://74.91.26.218:82/live/ptsty.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",公视戏剧
-https://t.freetv.fun/live/gong-shi-xi-ju.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",内蒙古蒙语卫视
-https://stream1.freetv.fun/nei-meng-gu-meng-yu-wei-shi-1.m3u8
+https://ha.msbot.dpdns.org/4gtv_api.php?id=7
 #EXTINF:-1 group-title="特殊·酒店源",军事评论
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225668/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",农业致富
@@ -2398,39 +2402,35 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225683/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",刀刀影院
 http://www.goodiptv.club/douyu/747764
 #EXTINF:-1 group-title="特殊·酒店源",刘德华
-https://vd2.bdstatic.com/mda-ni103pry5e4aqk39/sc/cae_h264/1662084584421447983/mda-ni103pry5e4aqk39.mp4
+http://epg.112114.xyz/douyu/2516864
 #EXTINF:-1 group-title="特殊·酒店源",华语影视
 http://www.goodiptv.club/douyu/3928
 #EXTINF:-1 group-title="特殊·酒店源",卫生健康
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=wsjk
 #EXTINF:-1 group-title="特殊·酒店源",台视新闻台
-https://t.freetv.fun/live/tai-shi-xin-wen-2.m3u8
+https://t.freetv.fun/live/tai-shi-xin-wen-3.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",台视财经台
 https://t.freetv.fun/live/tai-shi-cai-jing-1.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",周星驰
-http://173.208.234.146/live/vlzxc.m3u8
+http://alist.xicp.fun:35455/yy/1382736808#https://live.metshop.top/yy/1382736808
 #EXTINF:-1 group-title="特殊·酒店源",咪咕体育
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226398/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",咪咕视频
 http://kkk.888.3116598.xyz/api.php?n=tttt&id=bRumHS&tk=FgM0vQMejxvG
-#EXTINF:-1 group-title="特殊·酒店源",宋小宝小品
-https://www.goodiptv.club/douyu/9817729
+#EXTINF:-1 group-title="特殊·酒店源",央视文化精品
+http://183.11.239.36:808/hls/97/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",宫心计
 http://2.itv.nctv.top:54321/yy/1354933540#http://www.xzbn.site:35455/yy/1354933540
 #EXTINF:-1 group-title="特殊·酒店源",宰相刘罗锅
 http://alist.xicp.fun:35455/yy/1353892468#https://lunbo.freetv.top/yy/1353892468
 #EXTINF:-1 group-title="特殊·酒店源",巩汉林小品
 http://120.78.6.151:8968/yy.php?id=1354889035
-#EXTINF:-1 group-title="特殊·酒店源",开心麻花小品
-https://www.goodiptv.club/douyu/10153463
 #EXTINF:-1 group-title="特殊·酒店源",开端
 http://159.75.85.63:35455/huya/11342397#http://cfss.cc/cdn/hy/11342397.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",影迷数位电影
-https://t.freetv.fun/live/ying-mi-shu-wei-dian-ying.m3u8
+https://ha.msbot.dpdns.org/4gtv_api.php?id=40
 #EXTINF:-1 group-title="特殊·酒店源",怡伴健康
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225673/index.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",成龙
-http://38.75.136.137:82/live1/jsb.m3u8?id=lbcl&ip=whus21&usign=1LR7Q-EFMMTvbEbLXeCmxA
 #EXTINF:-1 group-title="特殊·酒店源",明星大片
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225664/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",林正英
@@ -2441,12 +2441,8 @@ http://www.goodiptv.club/douyu/4549169
 http://alist.xicp.fun:35455/yy/1354931580#https://live.metshop.top/yy/1354931580
 #EXTINF:-1 group-title="特殊·酒店源",武搏世界
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225680/index.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",武林外传
-http://173.208.234.146/live/lbwlwz.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",民视旅游台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=61
-#EXTINF:-1 group-title="特殊·酒店源",洪金宝
-http://173.208.234.146/live/vlhjb.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",济公游记
 http://alist.xicp.fun:35455/yy/1355265814#http://43.138.170.29:35455/yy/1355265814
 #EXTINF:-1 group-title="特殊·酒店源",海外剧场
@@ -2457,12 +2453,6 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225685/index.m3u8
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225719/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",热门港剧
 http://www.goodiptv.club/douyu/5522351
-#EXTINF:-1 group-title="特殊·酒店源",父母爱情
-http://173.208.234.146/live/lbfumuaiqing.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",甄子丹
-https://live.metshop.top/huya/11352935
-#EXTINF:-1 group-title="特殊·酒店源",电影_玄幻
-http://cdn.jdshipin.com:8880/huya.php?id=11342414
 #EXTINF:-1 group-title="特殊·酒店源",相声小品
 http://live.nctv.top/douyu1.php?id=9286868
 #EXTINF:-1 group-title="特殊·酒店源",睛彩羽毛球
@@ -2478,11 +2468,11 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226508/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",红楼梦
 http://alist.xicp.fun:35455/yy/1382745084#https://live.metshop.top/yy/1382745084#https://lunbo.freetv.top/yy/1382745084
 #EXTINF:-1 group-title="特殊·酒店源",纪晓岚
-https://live.metshop.top/huya/11342396
+http://alist.xicp.fun:35455/yy/1382781415#https://live.metshop.top/yy/1382781415
 #EXTINF:-1 group-title="特殊·酒店源",纬来体育台
-https://stream1.freetv.fun/wei-lai-ti-yu-9.ctv
+http://8.138.7.223/【公众号：榴芒电视】/wlty.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来戏剧台
-http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34854
+http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34812
 #EXTINF:-1 group-title="特殊·酒店源",纬来日本台
 http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34809
 #EXTINF:-1 group-title="特殊·酒店源",纬来电影台
@@ -2497,47 +2487,39 @@ https://live.catvod.com/live.php?id=videolandmax
 http://204.12.221.218:8181/3m1080p/lgs.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",蔡明小品
 http://120.78.6.151:8968/yy.php?id=1354936177
-#EXTINF:-1 group-title="特殊·酒店源",许君聪小品
-https://www.goodiptv.club/douyu/10419558
-#EXTINF:-1 group-title="特殊·酒店源",贝爷贰厅
-http://www.goodiptv.club/douyu/9661369
-#EXTINF:-1 group-title="特殊·酒店源",贾玲小品
-https://www.goodiptv.club/douyu/10419541
-#EXTINF:-1 group-title="特殊·酒店源",赵本山小品
-https://www.goodiptv.club/douyu/9817716
 #EXTINF:-1 group-title="特殊·酒店源",钟馗传说
 http://alist.xicp.fun:35455/yy/1382736839#https://live.metshop.top/yy/1382736839
 #EXTINF:-1 group-title="特殊·酒店源",雍正王朝
-http://173.208.234.146/live/lbyongzhengwc.m3u8
+http://alist.xicp.fun:35455/yy/1356043620#https://live.metshop.top/huya/11342439#http://cfss.cc/cdn/hy/11342439.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",靖天卡通台
 https://ha.msbot.dpdns.org/4gtv_api.php?id=15
 #EXTINF:-1 group-title="特殊·酒店源",靖天国际
 http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34841
 #EXTINF:-1 group-title="特殊·酒店源",靖天戏剧台
-https://t.freetv.fun/live/jing-tian-xi-ju.m3u8
+https://ha.msbot.dpdns.org/4gtv_api.php?id=116
 #EXTINF:-1 group-title="特殊·酒店源",靖天日本台
-http://4gtv.cnlive.club/channel/3f1816f7/index.m3u8?q=1782639885837
+https://ha.msbot.dpdns.org/4gtv_api.php?id=22
 #EXTINF:-1 group-title="特殊·酒店源",靖天欢乐台
 http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34837
 #EXTINF:-1 group-title="特殊·酒店源",靖天电影台
-https://t.freetv.fun/live/jing-tian-dian-ying.m3u8
+https://ha.msbot.dpdns.org/4gtv_api.php?id=82
 #EXTINF:-1 group-title="特殊·酒店源",靖天综合台
-http://4gtv.cnlive.club/channel/3f6ecb92/index.m3u8?q=1782639885837
+https://ha.msbot.dpdns.org/4gtv_api.php?id=21
 #EXTINF:-1 group-title="特殊·酒店源",靖天育乐台
-http://4gtv.cnlive.club/channel/3f7d0a6e/index.m3u8?q=1782639885837
+https://ha.msbot.dpdns.org/4gtv_api.php?id=83
 #EXTINF:-1 group-title="特殊·酒店源",靖天资讯台
-http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv065
+https://ha.msbot.dpdns.org/4gtv_api.php?id=88
 #EXTINF:-1 group-title="特殊·酒店源",靖洋卡通台
 http://31.43.191.125:8080/VIP019301734188047280/7bce5254f13d/34834
 #EXTINF:-1 group-title="特殊·酒店源",靖洋戏剧台
-https://t.freetv.fun/live/jing-yang-xi-ju.m3u8
+https://ha.msbot.dpdns.org/4gtv_api.php?id=118
 #EXTINF:-1 group-title="特殊·酒店源",龙华偶像
 http://cdn8.163189.xyz/163189/lhox
 #EXTINF:-1 group-title="特殊·酒店源",龙华戏剧
 http://cdn8.163189.xyz/163189/lhxj
 #EXTINF:-1 group-title="特殊·酒店源",龙华洋片
-http://cdn8.163189.xyz/163189/lhyp
+https://cdn8.163189.xyz/live/lhyp/stream.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",龙华经典
-https://cdn8.123.rr.kg/163189/lhjd
+http://cdn8.163189.xyz/163189/lhjd
 #EXTINF:-1 group-title="特殊·酒店源",龙祥时代
 http://bak.dou.ddns-ip.net/api.php?n=xxxtw&id=4Vqzbo&tk=SLK5QjnsRiya
