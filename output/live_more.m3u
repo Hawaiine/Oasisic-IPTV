@@ -1821,8 +1821,6 @@ http://ottproxy2.ist.ooo/livehls/MOB-U1-NO/03.m3u8
 http://aktv-stream.m16tv.cfd/stream/aktv/hk-1/AKTV.m3u8
 #EXTINF:-1 tvg-id="BSTV.hk@SD" tvg-logo="https://i.imgur.com/GVYSSgm.png" group-title="各省市",耀才财经台
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
-#EXTINF:-1 tvg-id="自然传奇" tvg-logo="https://tb.zbds.top/logo/自然传奇.png" group-title="各省市",自然传奇
-http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/81a1ad3a661748bfb8560c92d38204ca/1200.m3u8
 #EXTINF:-1 tvg-id="舒兰新闻" tvg-logo="https://tb.zbds.top/logo/舒兰新闻.png" group-title="各省市",舒兰新闻
 http://stream8.jlntv.cn/shulan/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="舒兰新闻综合" tvg-logo="https://tb.zbds.top/logo/舒兰新闻综合.png" group-title="各省市",舒兰新闻综合
@@ -2471,7 +2469,7 @@ https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2/index.m3u8
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
 #EXTINF:-1 tvg-id="1" tvg-logo="https://tb.zbds.top/logo/直播中国精编直播.png" group-title="网络直播",直播精编直播
 https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",20260904 05:59
+#EXTINF:-1 group-title="特殊·酒店源",20260905 05:55
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226537/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",CETV3
 http://kkk.888.3116598.xyz/api.php?n=tttt&id=s067jF&tk=FgM0vQMejxvG
@@ -2502,7 +2500,7 @@ https://hls-gateway.vpstv.net/streams/476232.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",上海滩
 https://vd4.bdstatic.com/mda-keck5jhdaagebxkm/v1-cae/mda-keck5jhdaagebxkm.mp4?auth_key=1602762530-0-0-3e02c62e492e00c28c5557d41188d769&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=8797_2&sle=1&sl=288&split=391503
 #EXTINF:-1 group-title="特殊·酒店源",与凤行
-http://8.155.43.98:35455/huya/26355866
+http://39.153.130.167:35455/huya/26355866
 #EXTINF:-1 group-title="特殊·酒店源",东森幼幼台
 http://api.mytv666.top/api/qwt.php?t=台湾频道&id=东森幼幼
 #EXTINF:-1 group-title="特殊·酒店源",东森戏剧台
@@ -2519,8 +2517,6 @@ http://74.91.26.218:82/live/ctvjd.m3u8
 http://74.91.26.218:82/live/ctvjc.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大娱乐台
 http://api.mytv666.top/api/qwt.php?t=台湾频道&id=八大娱乐台
-#EXTINF:-1 group-title="特殊·酒店源",八大第一台
-http://61.221.215.25:8800/hls/55/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大精彩台
 https://hls-gateway.vpstv.net/streams/477035.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",八大综合台
@@ -2568,13 +2564,11 @@ http://maomao.kandiantv.cn/yy.php?id=1354889035
 #EXTINF:-1 group-title="特殊·酒店源",开心麻花小品
 http://maomao.kandiantv.cn/douyu1.php?id=10153463
 #EXTINF:-1 group-title="特殊·酒店源",开端
-http://live.nctv.top/huya.php?id=11342397
+http://cfss.cc/cdn/hy/11342397.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",影迷数位电影
 http://31.43.191.125:8080/vip6821768502490/6c17bae55394/34868
 #EXTINF:-1 group-title="特殊·酒店源",怡伴健康
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225673/index.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",我的体育老师
-https://live.ottiptv.cc/yy/1382745169
 #EXTINF:-1 group-title="特殊·酒店源",明星大片
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225664/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",林正英
@@ -2597,8 +2591,6 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225671/index.m3u8
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226342/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",潮妈辣婆
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225685/index.m3u8
-#EXTINF:-1 group-title="特殊·酒店源",灾难片
-https://live.metshop.top/huya/11602075
 #EXTINF:-1 group-title="特殊·酒店源",炫舞未来
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225719/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",热门港剧
@@ -2618,7 +2610,7 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226508/index.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",红楼梦
 http://alist.xicp.fun:35455/yy/1382745084#https://live.metshop.top/yy/1382745084#https://lunbo.freetv.top/yy/1382745084
 #EXTINF:-1 group-title="特殊·酒店源",纪晓岚
-https://live.ottiptv.cc/yy/1354143978
+http://alist.xicp.fun:35455/yy/1382781415#https://live.metshop.top/yy/1382781415
 #EXTINF:-1 group-title="特殊·酒店源",纬来体育台
 http://8.138.7.223/【公众号：榴芒电视】/wlty.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",纬来戏剧台
@@ -2684,4 +2676,4 @@ http://220.135.64.124:5050/of-litv-longturn02/index.m3u8?proxy=true
 #EXTINF:-1 group-title="特殊·酒店源",龙华经典
 https://cdn8.163189.xyz/live/lhjd/stream.m3u8
 #EXTINF:-1 group-title="特殊·酒店源",龙祥时代
-https://smt.1678520.xyz/163189/6963a2247128286b
+https://test.946985.filegear-sg.me/proxy/005cf3860426d8bf
