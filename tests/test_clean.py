@@ -1,4 +1,8 @@
-from lib.clean import clean_channel_name
+from lib.clean import (
+    _CCTV_PROGRAM,
+    _WEISHI_FIX,
+    clean_channel_name,
+)
 
 
 def test_cctv1_with_program() -> None:
@@ -30,3 +34,13 @@ def test_strip_tags() -> None:
     assert "高清" not in clean_channel_name("江苏卫视高清")
     assert "IPV6" not in clean_channel_name("北京卫视 IPV6").upper()
     assert "备用" not in clean_channel_name("广东卫视备用")
+    assert "50 FPS" not in clean_channel_name("湖南卫视 50 FPS")
+    assert "60fps" not in clean_channel_name("东方卫视 60fps").lower()
+
+
+def test_external_data_loaded() -> None:
+    """data/cctv_programs.json 与 weishi_aliases.json 应被加载且完整。"""
+    assert _CCTV_PROGRAM["7"] == "国防军事"
+    assert _CCTV_PROGRAM["13"] == "新闻"
+    assert _WEISHI_FIX["上海东方卫视"] == "东方卫视"
+    assert _WEISHI_FIX["旅游卫视"] == "海南卫视"

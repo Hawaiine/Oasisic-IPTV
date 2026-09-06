@@ -1,12 +1,15 @@
-"""选优：源 priority → 区域 → 名称稳定性；全局 URL 去重；rtp 降权；目录制分流。"""
+"""选优：源 priority → 区域 → 频道级偏好 → 名称稳定性；全局 URL 去重；rtp 降权；目录制分流。"""
 
 from __future__ import annotations
 
+import logging
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from typing import Any
 
 from .categories import RADIO_KEY, group_title, iter_main_order
+
+logger = logging.getLogger(__name__)
 
 REGION_RANK = {
     "cn": 0,
@@ -16,23 +19,35 @@ REGION_RANK = {
     "radio": 4,
 }
 
+DEFAULT_CHANNEL_PRIORITY = 50  # 频道表未写 priority 时的默认值（越小越优先）
+
 
 def _sort_key(entry: dict[str, Any]) -> tuple:
     url = entry.get("url") or ""
     rtp = 1 if url.startswith("rtp://") else 0
     region = entry.get("source_region") or "overseas"
-    region_rank = REGION_RANK.get(region, 9)
+    # 频道级 preferred_region：命中则该源的区域排名视为最优先（cn 同级）
+    pref = entry.get("preferred_region") or ""
+    if pref and region == pref:
+        region_rank = 0
+    else:
+        region_rank = REGION_RANK.get(region, 9)
+    # 频道级 priority 优先于源 priority；默认 50 时行为与旧版一致
+    channel_prio = int(entry.get("channel_priority") or DEFAULT_CHANNEL_PRIORITY)
     priority = int(entry.get("source_priority") or 100)
     matched = 0 if entry.get("matched") else 1
     # 名称稳定性：已匹配标准表优先
     name_len = len(entry.get("cleaned_name") or entry.get("name") or "")
-    return (rtp, region_rank, priority, matched, name_len)
+    return (rtp, region_rank, channel_prio, priority, matched, name_len)
 
 
-def _dedup_urls(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """全局 URL 去重：非 radio 优先保留。"""
+def _dedup_urls(
+    entries: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int]:
+    """全局 URL 去重：非 radio 优先保留。返回 (去重后, 被去重条数)。"""
     best: dict[str, dict[str, Any]] = {}
     order: list[str] = []
+    dropped = 0
     for e in entries:
         url = e.get("url") or ""
         if not url:
@@ -46,12 +61,17 @@ def _dedup_urls(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
         new_radio = (e.get("category") == RADIO_KEY)
         if old_radio and not new_radio:
             best[url] = e
+            dropped += 1
             continue
         if not old_radio and new_radio:
+            dropped += 1
             continue
         if _sort_key(e) < _sort_key(old):
             best[url] = e
-    return [best[u] for u in order if u in best]
+            dropped += 1
+        else:
+            dropped += 1
+    return [best[u] for u in order if u in best], dropped
 
 
 def select_best(
@@ -60,7 +80,7 @@ def select_best(
     max_keep: int = 1,
 ) -> list[dict[str, Any]]:
     """按 display/standard 名保留 max_keep 条，先全局 URL 去重。"""
-    entries = _dedup_urls(entries)
+    entries, dropped = _dedup_urls(entries)
     groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
     radio: list[dict[str, Any]] = []
     for e in entries:
@@ -82,7 +102,28 @@ def select_best(
     for items in radio_groups.values():
         items.sort(key=_sort_key)
         selected.extend(items[: max(1, max_keep)])
+
+    _log_select_stats(entries, dropped, selected, max_keep)
     return selected
+
+
+def _log_select_stats(
+    deduped: list[dict[str, Any]],
+    dropped: int,
+    selected: list[dict[str, Any]],
+    max_keep: int,
+) -> None:
+    rtp_n = sum(1 for e in deduped if (e.get("url") or "").startswith("rtp://"))
+    by_cat: Counter[str] = Counter(e.get("category") or "other" for e in selected)
+    cat_str = " ".join(f"{c}={n}" for c, n in sorted(by_cat.items()))
+    logger.info(
+        "[select] rtp=%d url_dropped=%d selected=%d max_keep=%d cats: %s",
+        rtp_n,
+        dropped,
+        len(selected),
+        max_keep,
+        cat_str or "-",
+    )
 
 
 def split_catalog_more(
@@ -109,6 +150,12 @@ def split_catalog_more(
             more.append(e)
     if more_max_channels > 0 and len(more) > more_max_channels:
         more = more[:more_max_channels]
+    logger.info(
+        "[select] split catalog=%d more=%d radio=%d",
+        len(catalog),
+        len(more),
+        len(radio),
+    )
     return catalog, more, radio
 
 

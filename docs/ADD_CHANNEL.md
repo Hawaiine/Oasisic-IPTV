@@ -19,6 +19,9 @@
 - `standard_name` 与 `display_name` 必须符合命名规范（央视带节目名，卫视无「高清/HD」）。
 - `category` 只能是：cctv / weishi / local / gangtai / sports / live / overseas / hotel / radio / other。
 - `tvg_id` 尽量与 fanmingming 台标文件名一致。
+- 可选字段（不写则用默认值，行为不变）：
+  - `priority`：整数，越小越优先（默认 50）。央视核心台可写 10~20，让其在同区域同源竞争时胜出。
+  - `preferred_region`：`cn` / `hk_tw` 等。命中该区域的源会被提到 cn 同级再按 priority 竞争；港澳台频道建议 `hk_tw`。
 
 ## aliases.json
 

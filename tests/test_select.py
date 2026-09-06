@@ -27,6 +27,53 @@ def test_max_keep_one() -> None:
     assert video[0]["url"] == "http://a/1"
 
 
+def test_channel_priority_wins_over_source_priority() -> None:
+    """频道级 priority 应优先于源 priority（同区域、同 rtp 时）。"""
+    items = [
+        _e(url="http://srcA", source_priority=90, channel_priority=10),
+        _e(url="http://srcB", source_priority=10, channel_priority=50),
+    ]
+    out = select_best(items, max_keep=1)
+    video = [x for x in out if x["category"] != "radio"]
+    assert video[0]["url"] == "http://srcA"
+
+
+def test_preferred_region_boosts_match() -> None:
+    """preferred_region 命中：hk_tw 源与 cn 源同级竞争，再按源 priority。"""
+    items = [
+        _e(
+            url="http://hk",
+            standard_name="凤凰卫视中文台",
+            display_name="凤凰卫视中文台",
+            source_region="hk_tw",
+            source_priority=10,
+            preferred_region="hk_tw",
+        ),
+        _e(
+            url="http://cn",
+            standard_name="凤凰卫视中文台",
+            display_name="凤凰卫视中文台",
+            source_region="cn",
+            source_priority=90,
+            preferred_region="hk_tw",
+        ),
+    ]
+    out = select_best(items, max_keep=1)
+    video = [x for x in out if x["category"] != "radio"]
+    assert video[0]["url"] == "http://hk"
+
+
+def test_no_preferred_region_keeps_old_order() -> None:
+    """无 preferred_region / channel_priority 时行为与旧版一致（cn 先于 hk_tw）。"""
+    items = [
+        _e(url="http://hk", source_region="hk_tw", source_priority=1),
+        _e(url="http://cn", source_region="cn", source_priority=90),
+    ]
+    out = select_best(items, max_keep=1)
+    video = [x for x in out if x["category"] != "radio"]
+    assert video[0]["url"] == "http://cn"
+
+
 def test_global_url_dedup_non_radio_wins() -> None:
     items = [
         _e(url="http://same", category="radio", matched=False, standard_name="电台"),
@@ -81,3 +128,4 @@ def test_split_catalog_more() -> None:
     assert any(x["standard_name"] == "XX地方台" for x in more)
     assert any(x["standard_name"] == "NHK" for x in more)
     assert len(radio) == 1
+

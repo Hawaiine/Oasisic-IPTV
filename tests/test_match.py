@@ -20,6 +20,13 @@ CHANNELS = [
         "category": "weishi",
         "tvg_id": "DragonTV",
     },
+    {
+        "standard_name": "凤凰卫视中文台",
+        "display_name": "凤凰卫视中文台",
+        "category": "gangtai",
+        "tvg_id": "PhoenixChinese",
+        "preferred_region": "hk_tw",
+    },
 ]
 ALIASES = {
     "CCTV-1 综合": ["CCTV1", "央视一套"],
@@ -47,3 +54,25 @@ def test_attach_match_flags() -> None:
     assert out[0]["matched"] is True
     assert out[0]["display_name"] == "湖南卫视"
     assert out[1]["matched"] is False
+
+
+def test_match_stats_counts() -> None:
+    m = ChannelMatcher(CHANNELS, ALIASES)
+    attach_match(
+        [
+            {"name": "CCTV-1 综合", "url": "u1"},   # exact
+            {"name": "芒果台", "url": "u2"},        # alias
+            {"name": "东方卫视", "url": "u3"},       # exact
+            {"name": "未知频道", "url": "u4"},       # miss
+        ],
+        m,
+    )
+    assert m.stats["exact"] == 2
+    assert m.stats["alias"] == 1
+    assert m.stats["miss"] == 1
+
+
+def test_preferred_region_propagated() -> None:
+    m = ChannelMatcher(CHANNELS, ALIASES)
+    out = attach_match([{"name": "凤凰卫视中文台", "url": "u1"}], m)
+    assert out[0]["preferred_region"] == "hk_tw"

@@ -4,63 +4,72 @@
     "display_name": "CCTV-1 综合",
     "category": "cctv",
     "tvg_id": "CCTV1",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV1.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV1.png",
+    "priority": 10
   },
   {
     "standard_name": "CCTV-2 财经",
     "display_name": "CCTV-2 财经",
     "category": "cctv",
     "tvg_id": "CCTV2",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV2.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV2.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-3 综艺",
     "display_name": "CCTV-3 综艺",
     "category": "cctv",
     "tvg_id": "CCTV3",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV3.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV3.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-4 中文国际",
     "display_name": "CCTV-4 中文国际",
     "category": "cctv",
     "tvg_id": "CCTV4",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV4.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV4.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-5 体育",
     "display_name": "CCTV-5 体育",
     "category": "cctv",
     "tvg_id": "CCTV5",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV5.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV5.png",
+    "priority": 10
   },
   {
     "standard_name": "CCTV-5+ 体育赛事",
     "display_name": "CCTV-5+ 体育赛事",
     "category": "cctv",
     "tvg_id": "CCTV5Plus",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV5Plus.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV5Plus.png",
+    "priority": 10
   },
   {
     "standard_name": "CCTV-6 电影",
     "display_name": "CCTV-6 电影",
     "category": "cctv",
     "tvg_id": "CCTV6",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV6.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV6.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-7 国防军事",
     "display_name": "CCTV-7 国防军事",
     "category": "cctv",
     "tvg_id": "CCTV7",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV7.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV7.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-8 电视剧",
     "display_name": "CCTV-8 电视剧",
     "category": "cctv",
     "tvg_id": "CCTV8",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV8.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV8.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-9 纪录",
@@ -95,7 +104,8 @@
     "display_name": "CCTV-13 新闻",
     "category": "cctv",
     "tvg_id": "CCTV13",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV13.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV13.png",
+    "priority": 10
   },
   {
     "standard_name": "CCTV-14 少儿",
@@ -130,7 +140,8 @@
     "display_name": "CCTV-4K 超高清",
     "category": "cctv",
     "tvg_id": "CCTV4K",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV4K.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CCTV4K.png",
+    "priority": 20
   },
   {
     "standard_name": "CCTV-8K 超高清",
@@ -186,49 +197,56 @@
     "display_name": "湖南卫视",
     "category": "weishi",
     "tvg_id": "HunanTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HunanTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HunanTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "浙江卫视",
     "display_name": "浙江卫视",
     "category": "weishi",
     "tvg_id": "ZJTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/ZJTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/ZJTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "东方卫视",
     "display_name": "东方卫视",
     "category": "weishi",
     "tvg_id": "DragonTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/DragonTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/DragonTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "江苏卫视",
     "display_name": "江苏卫视",
     "category": "weishi",
     "tvg_id": "JSTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/JSTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/JSTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "北京卫视",
     "display_name": "北京卫视",
     "category": "weishi",
     "tvg_id": "BTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/BTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/BTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "深圳卫视",
     "display_name": "深圳卫视",
     "category": "weishi",
     "tvg_id": "SZTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SZTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SZTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "广东卫视",
     "display_name": "广东卫视",
     "category": "weishi",
     "tvg_id": "GDTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GDTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GDTV.png",
+    "preferred_region": "cn"
   },
   {
     "standard_name": "安徽卫视",
@@ -662,133 +680,152 @@
     "display_name": "凤凰卫视中文台",
     "category": "gangtai",
     "tvg_id": "PhoenixChinese",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixChinese.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixChinese.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "凤凰卫视资讯台",
     "display_name": "凤凰卫视资讯台",
     "category": "gangtai",
     "tvg_id": "PhoenixInfo",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixInfo.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixInfo.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "凤凰卫视香港台",
     "display_name": "凤凰卫视香港台",
     "category": "gangtai",
     "tvg_id": "PhoenixHK",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixHK.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixHK.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "TVB翡翠台",
     "display_name": "TVB翡翠台",
     "category": "gangtai",
     "tvg_id": "TVBJade",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBJade.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBJade.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "TVB明珠台",
     "display_name": "TVB明珠台",
     "category": "gangtai",
     "tvg_id": "TVBPearl",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBPearl.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBPearl.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "无线新闻",
     "display_name": "无线新闻",
     "category": "gangtai",
     "tvg_id": "TVBNews",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBNews.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBNews.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "ViuTV",
     "display_name": "ViuTV",
     "category": "gangtai",
     "tvg_id": "ViuTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/ViuTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/ViuTV.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "HOY TV",
     "display_name": "HOY TV",
     "category": "gangtai",
     "tvg_id": "HOYTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HOYTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HOYTV.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "澳视澳门",
     "display_name": "澳视澳门",
     "category": "gangtai",
     "tvg_id": "TDM",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TDM.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TDM.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "中天新闻",
     "display_name": "中天新闻",
     "category": "gangtai",
     "tvg_id": "CTiTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CTiTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CTiTV.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "东森新闻",
     "display_name": "东森新闻",
     "category": "gangtai",
     "tvg_id": "EBCNews",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/EBCNews.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/EBCNews.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "华视",
     "display_name": "华视",
     "category": "gangtai",
     "tvg_id": "CTS",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CTS.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CTS.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "台视",
     "display_name": "台视",
     "category": "gangtai",
     "tvg_id": "TTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TTV.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "中视",
     "display_name": "中视",
     "category": "gangtai",
     "tvg_id": "CTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CTV.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "民视",
     "display_name": "民视",
     "category": "gangtai",
     "tvg_id": "FTV",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/FTV.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/FTV.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "TVBS新闻",
     "display_name": "TVBS新闻",
     "category": "gangtai",
     "tvg_id": "TVBSNews",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBSNews.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBSNews.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "三立新闻",
     "display_name": "三立新闻",
     "category": "gangtai",
     "tvg_id": "SETNews",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SETNews.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SETNews.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "TVB星河",
     "display_name": "TVB星河",
     "category": "gangtai",
     "tvg_id": "TVBXinghe",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBXinghe.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBXinghe.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "J2",
     "display_name": "J2",
     "category": "gangtai",
     "tvg_id": "TVBJ2",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBJ2.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBJ2.png",
+    "preferred_region": "hk_tw"
   },
   {
     "standard_name": "广东体育",

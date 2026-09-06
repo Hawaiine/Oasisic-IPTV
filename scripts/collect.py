@@ -5,8 +5,9 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import logging
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
@@ -19,6 +20,8 @@ from lib.io_util import load_json, load_yaml, project_root, save_json, save_text
 from lib.m3u import build_m3u, parse_playlist  # noqa: E402
 from lib.match import ChannelMatcher, attach_match  # noqa: E402
 from lib.select import order_for_output, select_best, split_catalog_more  # noqa: E402
+
+logger = logging.getLogger(__name__)
 
 CST = timezone(timedelta(hours=8))
 # 台标走 jsDelivr，避免 live.fanmingming.com/.cn 在部分网络不可达
@@ -378,6 +381,14 @@ def run() -> int:
         backup = select_best(backup_pool, max_keep=backup_keep)
     counts = write_outputs(catalog, more, radio, backup, settings)
     write_check_result(counts, fetched, settings)
+    logger.info(
+        "[collect] live=%d backup=%d more=%d radio=%d | %s",
+        counts["catalog"],
+        counts.get("backup", 0),
+        counts["more"],
+        counts["radio"],
+        _cat_summary(catalog, more, radio),
+    )
     print(
         f"✅ catalog={counts['catalog']} / more={counts['more']} / "
         f"backup={counts.get('backup', 0)} / radio={counts['radio']}"
@@ -385,9 +396,27 @@ def run() -> int:
     return 0
 
 
+def _cat_summary(
+    catalog: list[dict[str, Any]],
+    more: list[dict[str, Any]],
+    radio: list[dict[str, Any]],
+) -> str:
+    """各分类最终条数摘要（catalog 主列表 + more 扩展列表）。"""
+    by_cat: Counter[str] = Counter()
+    for e in catalog:
+        by_cat[e.get("category") or "other"] += 1
+    for e in more:
+        by_cat[f"{e.get('category') or 'other'}*"] += 1
+    for e in radio:
+        by_cat["radio"] += 1
+    return " ".join(f"{c}={n}" for c, n in sorted(by_cat.items()))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Oasisic-IPTV 采集（不检测直播流）")
     parser.parse_args()
+    # 阶段统计走 logging（[match]/[select]/[collect]），CLI 进度仍用 print
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
     try:
         raise SystemExit(run())
     except KeyboardInterrupt:

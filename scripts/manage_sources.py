@@ -97,6 +97,10 @@ def cmd_validate(args: argparse.Namespace) -> int:
     return asyncio.run(_validate_online(sources))
 
 
+# 在线校验：有效频道数低于此值视为「内容为空列表」异常
+EMPTY_LIST_THRESHOLD = 5
+
+
 async def _validate_online(sources: list[dict[str, Any]]) -> int:
     import aiohttp
 
@@ -111,6 +115,7 @@ async def _validate_online(sources: list[dict[str, Any]]) -> int:
                 print(f"  – {source_key(s)}: disabled")
                 continue
             key = source_key(s)
+            core = bool(s.get("core"))
             try:
                 async with session.get(
                     s["url"],
@@ -129,6 +134,16 @@ async def _validate_online(sources: list[dict[str, Any]]) -> int:
                     ) and not entries:
                         print(f"  ✗ {key}: 非 M3U 且无条目")
                         fail += 1
+                        continue
+                    if len(entries) < EMPTY_LIST_THRESHOLD:
+                        # 内容为空/接近为空：核心源只告警，非核心源按失败计
+                        suffix = "（核心源仅告警）" if core else "（建议禁用）"
+                        print(
+                            f"  ⚠ {key}: 内容近乎为空（{len(entries)} 条 < {EMPTY_LIST_THRESHOLD}）"
+                            f" {suffix}"
+                        )
+                        if not core:
+                            fail += 1
                         continue
                     print(f"  ✓ {key}: HTTP 200, {len(entries)} 条")
             except Exception as exc:  # noqa: BLE001

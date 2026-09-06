@@ -1,17 +1,23 @@
-"""频道名清洗：简体、去标签、央视/卫视强制规范。"""
+"""频道名清洗：简体、去标签、央视/卫视强制规范。
+
+央视节目名与卫视别名来自 data/cctv_programs.json / data/weishi_aliases.json，
+文件缺失或解析失败时回退到内置默认值。
+"""
 
 from __future__ import annotations
 
+import json
 import re
 import unicodedata
+from pathlib import Path
 
 try:
     import zhconv
 except ImportError:  # pragma: no cover
     zhconv = None  # type: ignore[assignment]
 
-# CCTV 数字台 → 节目名。4K/8K/5+ 单独处理。
-_CCTV_PROGRAM: dict[str, str] = {
+# ── 内置默认（文件加载失败时的回退值）──────────────────
+_CCTV_PROGRAM_DEFAULT: dict[str, str] = {
     "1": "综合",
     "2": "财经",
     "3": "综艺",
@@ -31,8 +37,7 @@ _CCTV_PROGRAM: dict[str, str] = {
     "17": "农业农村",
 }
 
-# 卫视别名统一
-_WEISHI_FIX: dict[str, str] = {
+_WEISHI_FIX_DEFAULT: dict[str, str] = {
     "上海东方卫视": "东方卫视",
     "东方卫视频道": "东方卫视",
     "上海卫视": "东方卫视",
@@ -42,6 +47,32 @@ _WEISHI_FIX: dict[str, str] = {
     "旅游卫视": "海南卫视",
     "兵团卫视频道": "兵团卫视",
 }
+
+
+def _load_json_map(path: Path, fallback: dict[str, str]) -> dict[str, str]:
+    """加载 {str: str} 映射文件；缺失/损坏/类型不对时回退内置默认。"""
+    try:
+        if not path.exists():
+            return fallback
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict) and all(
+            isinstance(k, str) and isinstance(v, str) for k, v in data.items()
+        ):
+            return {str(k): str(v) for k, v in data.items()}
+    except Exception:  # noqa: BLE001
+        pass
+    return fallback
+
+
+_DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
+# CCTV 数字台 → 节目名。4K/8K/5+ 单独处理。
+_CCTV_PROGRAM: dict[str, str] = _load_json_map(
+    _DATA_DIR / "cctv_programs.json", _CCTV_PROGRAM_DEFAULT
+)
+# 卫视别名统一
+_WEISHI_FIX: dict[str, str] = _load_json_map(
+    _DATA_DIR / "weishi_aliases.json", _WEISHI_FIX_DEFAULT
+)
 
 # 分辨率 / 编码 / 运营商 / 状态标签（CCTV-4K/8K 频道名除外）
 _TAG_RE = re.compile(
