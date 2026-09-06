@@ -21,10 +21,25 @@ REGION_RANK = {
 
 DEFAULT_CHANNEL_PRIORITY = 50  # 频道表未写 priority 时的默认值（越小越优先）
 
+# 时效性签名参数：URL query 带这些大概率会过期（分钟~小时级），选优时降权
+# 只匹配 ?param= / &param= 位置，避免误伤域名或路径中的同名子串
+_SIGNED_URL_RE = re.compile(
+    r"[?&](?:auth_key|accountinfo|GuardEncType|SecurityKey|"
+    r"timestamp|expires?|token|signed|sign|sig|st)=",
+    re.IGNORECASE,
+)
+
+
+def _is_signed(url: str) -> bool:
+    """带时效签名参数的 URL 视为不稳定（如北京移动 accountinfo、央视 auth_key）。"""
+    return bool(_SIGNED_URL_RE.search(url or ""))
+
 
 def _sort_key(entry: dict[str, Any]) -> tuple:
     url = entry.get("url") or ""
     rtp = 1 if url.startswith("rtp://") else 0
+    # 时效签名降权：介于 rtp 与 region 之间，优先无签名稳定链接
+    signed = 1 if _is_signed(url) else 0
     region = entry.get("source_region") or "overseas"
     # 频道级 preferred_region：命中则该源的区域排名视为最优先（cn 同级）
     pref = entry.get("preferred_region") or ""
@@ -38,7 +53,7 @@ def _sort_key(entry: dict[str, Any]) -> tuple:
     matched = 0 if entry.get("matched") else 1
     # 名称稳定性：已匹配标准表优先
     name_len = len(entry.get("cleaned_name") or entry.get("name") or "")
-    return (rtp, region_rank, channel_prio, priority, matched, name_len)
+    return (rtp, signed, region_rank, channel_prio, priority, matched, name_len)
 
 
 def _dedup_urls(

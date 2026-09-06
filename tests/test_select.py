@@ -74,6 +74,50 @@ def test_no_preferred_region_keeps_old_order() -> None:
     assert video[0]["url"] == "http://cn"
 
 
+def test_signed_url_penalized() -> None:
+    """带时效签名参数的 URL 应排在无签名稳定链接之后。"""
+    items = [
+        _e(
+            url="http://signed/live.m3u8?accountinfo=abc&GuardEncType=2",
+            source_priority=5,
+        ),
+        _e(url="http://stable/live.m3u8", source_priority=50),
+    ]
+    out = select_best(items, max_keep=1)
+    video = [x for x in out if x["category"] != "radio"]
+    assert video[0]["url"] == "http://stable/live.m3u8"
+
+
+def test_auth_key_penalized() -> None:
+    items = [
+        _e(url="https://hls.example/ch.m3u8?auth_key=1788720300-abc", source_priority=1),
+        _e(url="https://plain.example/ch.m3u8", source_priority=60),
+    ]
+    out = select_best(items, max_keep=1)
+    video = [x for x in out if x["category"] != "radio"]
+    assert video[0]["url"] == "https://plain.example/ch.m3u8"
+
+
+def test_signed_penalty_within_same_source() -> None:
+    """同一频道同时有签名/无签名候选时，无签名胜出，即使签名 URL 源 priority 更优。"""
+    items = [
+        _e(url="http://a/signed?token=xyz", source_priority=10),
+        _e(url="http://b/plain", source_priority=30),
+    ]
+    out = select_best(items, max_keep=1)
+    video = [x for x in out if x["category"] != "radio"]
+    assert video[0]["url"] == "http://b/plain"
+
+
+def test_path_token_not_false_positive() -> None:
+    """路径或域名中的 token/sign 不应误判为签名参数。"""
+    from lib.select import _is_signed
+
+    assert _is_signed("http://token.example/live.m3u8") is False
+    assert _is_signed("http://example.com/path/sign.m3u8") is False
+    assert _is_signed("http://example.com/live.m3u8?token=1") is True
+
+
 def test_global_url_dedup_non_radio_wins() -> None:
     items = [
         _e(url="http://same", category="radio", matched=False, standard_name="电台"),
