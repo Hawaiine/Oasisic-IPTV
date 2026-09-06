@@ -2,9 +2,11 @@
 # 采集 → 解析 → 清洗 → 匹配 → 分类 → 分组 → 选优 → 生成
 # 本项目不进行任何流媒体测活。
 
-max_keep_per_channel: 1          # 一台一链
+max_keep_per_channel: 1          # 主列表一台一链
+backup_max_keep: 3               # 备份列表每台最多 3 条不同 URL
 catalog_only_main: true          # 主列表仅标准表命中
 write_live_more: true            # 生成扩展列表 live_more.m3u
+write_live_backup: true          # 生成备份列表 live_backup.m3u
 more_max_channels: 3000
 main_include_overseas: false     # 国际不进主列表
 request_timeout_sec: 30
@@ -12,14 +14,11 @@ strict_sources_ratio: 0.7        # 启用源成功率低于此值则 CI 失败
 auto_disable_fail_days: 3        # 非核心源连续失败自动禁用
 user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
-# 写入所有主要 M3U 的 #EXTM3U url-tvg（播放器自动加载）
 url_tvg: "https://live.fanmingming.com/e.xml"
 
 output_dir: "output/"
 data_dir: "data/"
 
-# EPG 上游。fetch_epg.py 拉取后按 channels.json 的 tvg_id 裁剪为 output/guide.xml
-# url-tvg（播放器）仍用 live.fanmingming.com；拉取失败则回落到 GitHub raw（同一文件）
 epg_sources:
   - "https://live.fanmingming.com/e.xml"
   - "https://raw.githubusercontent.com/fanmingming/live/main/e.xml"

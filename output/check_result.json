@@ -1,13 +1,14 @@
 {
   "schema_version": 1,
   "stage": "collect",
-  "generated_at": "2026-09-06 10:59:06",
+  "generated_at": "2026-09-06 11:22:41",
   "timezone": "Asia/Shanghai",
-  "total": 3174,
+  "total": 1792,
   "catalog": 115,
-  "more": 3000,
-  "radio": 59,
-  "ok": 12,
+  "more": 1674,
+  "radio": 3,
+  "backup": 321,
+  "ok": 14,
   "fail": 0,
   "ratio": 1.0,
   "sources": [
@@ -19,17 +20,17 @@
       "error": ""
     },
     {
+      "key": "fanmingming-itv",
+      "ok": true,
+      "status": 200,
+      "count": 189,
+      "error": ""
+    },
+    {
       "key": "yuechan-cn",
       "ok": true,
       "status": 200,
       "count": 90,
-      "error": ""
-    },
-    {
-      "key": "guovin-iptv-api",
-      "ok": true,
-      "status": 200,
-      "count": 1619,
       "error": ""
     },
     {
@@ -40,18 +41,46 @@
       "error": ""
     },
     {
+      "key": "guovin-iptv-api",
+      "ok": true,
+      "status": 200,
+      "count": 1619,
+      "error": ""
+    },
+    {
+      "key": "hujingguang-cntv",
+      "ok": true,
+      "status": 200,
+      "count": 68,
+      "error": ""
+    },
+    {
+      "key": "yang-gather",
+      "ok": true,
+      "status": 200,
+      "count": 127,
+      "error": ""
+    },
+    {
+      "key": "zilong-best",
+      "ok": true,
+      "status": 200,
+      "count": 741,
+      "error": ""
+    },
+    {
+      "key": "tianmutnt",
+      "ok": true,
+      "status": 200,
+      "count": 745,
+      "error": ""
+    },
+    {
       "key": "suxuang-ipv6",
       "ok": true,
       "status": 200,
       "count": 862,
       "error": ""
-    },
-    {
-      "key": "ssili-tv",
-      "ok": false,
-      "status": 0,
-      "count": 0,
-      "error": "disabled"
     },
     {
       "key": "iptv-org-hk",
@@ -79,27 +108,6 @@
       "ok": true,
       "status": 200,
       "count": 1918,
-      "error": ""
-    },
-    {
-      "key": "free-tv-global",
-      "ok": true,
-      "status": 200,
-      "count": 2052,
-      "error": ""
-    },
-    {
-      "key": "iptv-org-jp",
-      "ok": true,
-      "status": 200,
-      "count": 13,
-      "error": ""
-    },
-    {
-      "key": "iptv-org-kr",
-      "ok": true,
-      "status": 200,
-      "count": 74,
       "error": ""
     }
   ],

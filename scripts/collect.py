@@ -186,9 +186,9 @@ def record_source_stats(
                 print(f"  ⚠ 核心源 {key} 连续失败 {rec['consecutive_fail']} 天（仅告警，不禁用）")
 
     stats["updated_at"] = now_cst()
+    known = {item["key"] for item in fetched}
+    stats["sources"] = {k: v for k, v in sources_map.items() if k in known}
     save_json(path, stats)
-    if changed:
-        pass  # 已原地改 YAML
 
 
 def _disable_source_in_yaml(text: str, key: str) -> bool:
@@ -215,6 +215,7 @@ def write_outputs(
     catalog: list[dict[str, Any]],
     more: list[dict[str, Any]],
     radio: list[dict[str, Any]],
+    backup: list[dict[str, Any]],
     settings: dict[str, Any],
 ) -> dict[str, int]:
     out_dir = project_root() / (settings.get("output_dir") or "output/")
@@ -222,6 +223,7 @@ def write_outputs(
 
     catalog = [fill_logo(e) for e in order_for_output(catalog)]
     more_ordered = [fill_logo(e) for e in order_for_output(more)]
+    backup_ordered = [fill_logo(e) for e in order_for_output(backup)]
     radio_ordered = [fill_logo(e) for e in radio]
     for e in radio_ordered:
         e["group_title"] = group_title(RADIO_KEY)
@@ -235,6 +237,11 @@ def write_outputs(
         save_text(
             out_dir / "live_more.m3u",
             build_m3u(more_ordered, playlist_title="Oasisic-IPTV 扩展", url_tvg=url_tvg),
+        )
+    if settings.get("write_live_backup", True):
+        save_text(
+            out_dir / "live_backup.m3u",
+            build_m3u(backup_ordered, playlist_title="Oasisic-IPTV 备份", url_tvg=url_tvg),
         )
 
     by_cat: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -258,6 +265,7 @@ def write_outputs(
         "catalog": len(catalog),
         "more": len(more_ordered),
         "radio": len(radio_ordered),
+        "backup": len(backup_ordered),
     }
 
 
@@ -280,6 +288,7 @@ def write_check_result(
         "catalog": counts["catalog"],
         "more": counts["more"],
         "radio": counts["radio"],
+        "backup": counts.get("backup") or 0,
         "ok": ok_n,
         "fail": fail_n,
         "ratio": round(ratio, 4),
@@ -339,15 +348,28 @@ def run() -> int:
     classified = classify_entries(matched)
     max_keep = int(settings.get("max_keep_per_channel") or 1)
     selected = select_best(classified, max_keep=max_keep)
+    include_ov = bool(settings.get("main_include_overseas", False))
     catalog, more, radio = split_catalog_more(
         selected,
         more_max_channels=int(settings.get("more_max_channels") or 3000),
-        main_include_overseas=bool(settings.get("main_include_overseas", False)),
+        main_include_overseas=include_ov,
     )
-    counts = write_outputs(catalog, more, radio, settings)
+    backup: list[dict[str, Any]] = []
+    if settings.get("write_live_backup", True):
+        backup_keep = int(settings.get("backup_max_keep") or 3)
+        backup_pool = [
+            e
+            for e in classified
+            if e.get("matched")
+            and e.get("category") != RADIO_KEY
+            and (include_ov or e.get("category") != "overseas")
+        ]
+        backup = select_best(backup_pool, max_keep=backup_keep)
+    counts = write_outputs(catalog, more, radio, backup, settings)
     write_check_result(counts, fetched, settings)
     print(
-        f"✅ catalog={counts['catalog']} / more={counts['more']} / radio={counts['radio']}"
+        f"✅ catalog={counts['catalog']} / more={counts['more']} / "
+        f"backup={counts.get('backup', 0)} / radio={counts['radio']}"
     )
     return 0
 

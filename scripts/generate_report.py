@@ -27,7 +27,7 @@ def main() -> None:
     lines = [
         f"## 采集报告 {result.get('generated_at', '')}",
         "",
-        f"- 状态: catalog={result.get('catalog')} / more={result.get('more')} / radio={result.get('radio')}",
+        f"- 状态: catalog={result.get('catalog')} / more={result.get('more')} / backup={result.get('backup')} / radio={result.get('radio')}",
         f"- 源成功率: {result.get('ok')}/{result.get('ok', 0) + result.get('fail', 0)} ({float(result.get('ratio') or 0):.0%})",
         f"- 时区: {result.get('timezone')}",
         "",

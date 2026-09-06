@@ -2,10 +2,10 @@
 #PLAYLIST:各省市
 #EXTINF:-1 tvg-id="SHXW" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/上海新闻综合.png" group-title="各省市",上海新闻综合
 http://t.061899.xyz/tl/tl.php?id=shxwzh
-#EXTINF:-1 tvg-id="SHDS" tvg-logo="https://www.xn--rgv465a.top/tvlogo/上海都市.png" group-title="各省市",上海都市
-https://zby.130519.xyz/PLTV/11/224/3221225749/index.m3u8
-#EXTINF:-1 tvg-id="DFYS" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/东方影视.png" group-title="各省市",东方影视
-https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8
+#EXTINF:-1 tvg-id="SHDS" tvg-logo="https://live.fanmingming.com/tv/上海都市.png" group-title="各省市",上海都市
+http://gslbserv.itv.cmvideo.cn/5000000010000018926/1.m3u8?channel-id=bestzb&Contentid=5000000010000018926&livemode=1&stbId=3
+#EXTINF:-1 tvg-id="DFYS" tvg-logo="https://live.fanmingming.com/tv/东方影视.png" group-title="各省市",东方影视
+http://gslbserv.itv.cmvideo.cn/5000000010000032212/1.m3u8?channel-id=bestzb&Contentid=5000000010000032212&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="BTVYS" tvg-logo="https://live.fanmingming.cn/tv/北京影视.png" group-title="各省市",北京影视
 http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226433/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EygquRbh9L0wUPRY53fsZWw%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNO62IynDcU1yYDL1b4Xte8T%2CEND
 #EXTINF:-1 tvg-id="BTVWY" tvg-logo="https://live.fanmingming.cn/tv/北京文艺.png" group-title="各省市",北京文艺

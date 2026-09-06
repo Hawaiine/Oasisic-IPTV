@@ -34,7 +34,8 @@ classify  表内用表分类；未命中走关键词回退
     ▼
 select  全局 URL 去重 → rtp 降权 → 区域/priority 排序 → max_keep=1
     │
-    ├─ matched 且非电台非（可选）国际 → live.m3u + live_{cat}.m3u
+    ├─ matched 且非电台非（可选）国际 → live.m3u（max_keep=1）+ live_{cat}.m3u
+    ├─ 同口径标准台 最多 3 条 URL     → live_backup.m3u
     ├─ 其余保留                    → live_more.m3u
     └─ radio                       → live_radio.m3u
 

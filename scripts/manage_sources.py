@@ -148,11 +148,23 @@ def cmd_stats(_args: argparse.Namespace) -> int:
         return 0
     data = load_json(path)
     print(f"更新于 {data.get('updated_at', '-')}")
-    print(f"{'KEY':<22} {'OK':<6} {'FAIL':<6} {'STREAK':<7} {'COUNT':<6} {'LAST_ERR'}")
-    for key, rec in (data.get("sources") or {}).items():
+    print(
+        f"{'KEY':<22} {'OK':>4} {'FAIL':>5} {'RATE':>6} {'STREAK':>6} "
+        f"{'COUNT':>6} {'LAST_OK':<12} {'LAST_FAIL':<12} ERR"
+    )
+    rows = list((data.get("sources") or {}).items())
+    rows.sort(key=lambda kv: (-(kv[1].get("ok") or 0), kv[0]))
+    for key, rec in rows:
+        ok_n = int(rec.get("ok") or 0)
+        fail_n = int(rec.get("fail") or 0)
+        total = ok_n + fail_n
+        rate = f"{ok_n / total:.0%}" if total else "-"
         print(
-            f"{key:<22} {rec.get('ok',0):<6} {rec.get('fail',0):<6} "
-            f"{rec.get('consecutive_fail',0):<7} {rec.get('last_count',0):<6} "
+            f"{key:<22} {ok_n:>4} {fail_n:>5} {rate:>6} "
+            f"{int(rec.get('consecutive_fail') or 0):>6} "
+            f"{int(rec.get('last_count') or 0):>6} "
+            f"{(rec.get('last_ok') or '-'):<12} "
+            f"{(rec.get('last_fail') or '-'):<12} "
             f"{(rec.get('last_error') or '')[:40]}"
         )
     return 0

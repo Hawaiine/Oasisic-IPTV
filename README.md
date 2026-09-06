@@ -8,7 +8,7 @@
 
 Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经过名称清洗、标准频道表匹配、中文分类和一台一链选优后，输出结构清晰的 M3U，可导入 VLC、PotPlayer、TVBox、TiviMate、Kodi。
 
-项目坚持目录制：主列表 `live.m3u` 只保留命中标准表的频道，且每台一条最优链接；扩展列表 `live_more.m3u` 保留更多选择。源的新增、禁用、连续失败自动下线都走配置，不必改代码。
+项目坚持目录制：主列表 `live.m3u` 只保留命中标准表的频道，且每台一条最优链接；`live_backup.m3u` 为同一批标准台保留最多 3 条不同 URL（给会自动切换的播放器）；扩展列表 `live_more.m3u` 保留未入表频道。源的新增、禁用、连续失败自动下线都走配置，不必改代码。
 
 **不进行任何流媒体测活。** 收录不代表实时可播，请遵守当地法律法规。
 
@@ -19,6 +19,7 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 | 文件 | 说明 |
 |------|------|
 | [`live.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u) | 精选目录，一台一链 |
+| [`live_backup.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_backup.m3u) | 标准台备份，每台最多 3 条 URL |
 | [`live_more.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_more.m3u) | 扩展列表（未入标准表） |
 | [`live_cctv.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_cctv.m3u) | 央视 |
 | [`live_weishi.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_weishi.m3u) | 卫视 |
@@ -41,6 +42,22 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 - 地域源、IPv6、酒店源、`rtp://` 组播可以收录；`rtp://` 会降权排后。
 - 国际频道默认只出现在 `live_overseas.m3u` / `live_more.m3u`。
 - 主列表一台一链：同一频道名最多 1 条 URL。
+- 备份列表：同一标准台最多 3 条**不同** URL，按源 priority + 区域排序。VLC / PotPlayer 请只用主列表。
+
+---
+
+## 推荐播放器与订阅方式
+
+| 播放器 | 主列表 | 备份列表 | EPG | 说明 |
+|--------|--------|----------|-----|------|
+| TiviMate | 必订 `live.m3u` | 可同时订 `live_backup.m3u` | 自动读 url-tvg，或手动填 fanmingming e.xml | 支持多源/故障转移 |
+| APTV | 必订 | 可订 | 订阅设置里填 EPG 地址并开自动更新 | iOS / tvOS / macOS |
+| TVBox / 影视仓 / 易播 | 必订 | 视壳子是否支持多链接 | 接口 EPG 字段或 url-tvg | 壳子能力不一 |
+| Kodi PVR IPTV Simple | 必订 | 一般不订 | EPG URL 填 fanmingming e.xml | 专业但配置多 |
+| VLC | 只订主列表 | 不要订备份 | 几乎无 EPG | 当直播源用 |
+| PotPlayer | 只订主列表 | 不要订备份 | 需插件 | 当直播源用 |
+
+主列表 vs 备份：主列表干净、一台一链，适合所有播放器；备份给「会自动换链」的客户端提高可用性，不会进默认订阅。
 
 ---
 
@@ -60,8 +77,8 @@ python scripts/verify_outputs.py
 ```bash
 python scripts/manage_sources.py list
 python scripts/manage_sources.py validate --online
-python scripts/manage_sources.py disable ssili-tv
-python scripts/manage_sources.py enable ssili-tv
+python scripts/manage_sources.py disable ccsh-hotel
+python scripts/manage_sources.py enable ccsh-hotel
 python scripts/manage_sources.py stats
 ```
 
@@ -129,7 +146,7 @@ python scripts/verify_outputs.py
 
 见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。
 
-当前启用 **12** 个公开源（另有 1 个禁用：ssili-tv 上游为空列表）。标准表 119 个实体（`data/channels.json`）。
+当前启用 **14** 个公开源（`config/sources.yaml`）。标准表 119 个实体。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。
 
 ---
 

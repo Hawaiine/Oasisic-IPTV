@@ -1,10 +1,10 @@
 #EXTM3U url-tvg="https://live.fanmingming.com/e.xml"
 #PLAYLIST:港澳台
-#EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://live.fanmingming.com/tv/HOYTV.png" group-title="港澳台",HOY TV
-http://cdn.132.us.kg/live/hoy/stream.m3u8
+#EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://live.fanmingming.cn/tv/HOY TV.png" group-title="港澳台",HOY TV
+http://php.jdshipin.com/TVOD/iptv.php?id=hoytv
 #EXTINF:-1 tvg-id="TVBJ2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/J2.png" group-title="港澳台",J2
 https://hls-gateway.vpstv.net/streams/476932.m3u8
-#EXTINF:-1 tvg-id="TVBSNews" tvg-logo="https://gitee.com/suxuang/TVlogo/raw/main/img/TVBS1.png" group-title="港澳台",TVBS新闻
+#EXTINF:-1 tvg-id="TVBSNews" tvg-logo="https://live.fanmingming.cn/tv/TVBS新闻台.png" group-title="港澳台",TVBS新闻
 http://61.221.215.25:8800/hls/9/index.m3u8
 #EXTINF:-1 tvg-id="TVBPearl" tvg-logo="https://www.xn--rgv465a.top/tvlogo/明珠台.png" group-title="港澳台",TVB明珠台
 https://hls-gateway.vpstv.net/streams/476936.m3u8
@@ -36,5 +36,5 @@ rtmp://f13h.mine.nu/sat/tv071
 https://h5cdn3.kylintv.tv/live/tvbnews_iphone.m3u8
 #EXTINF:-1 tvg-id="FTV" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/民视.png" group-title="港澳台",民视
 rtmp://f13h.mine.nu/sat/tv051
-#EXTINF:-1 tvg-id="TDM" tvg-logo="https://gitee.com/suxuang/epglogo/raw/master/gangaotai/Aoshi1.png" group-title="港澳台",澳视澳门
-https://stream1.freetv.fun/ao-shi-ao-men-4.m3u8
+#EXTINF:-1 tvg-id="TDM" tvg-logo="https://live.fanmingming.cn/tv/澳视澳门.png" group-title="港澳台",澳视澳门
+https://cdn6.163189.xyz/163189/asam

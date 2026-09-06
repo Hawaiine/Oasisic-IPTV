@@ -88,6 +88,9 @@ def main() -> None:
     live = check_m3u(root / "output" / "live.m3u", max_keep=1, require_nonempty=True, errors=errors)
     check_m3u(root / "output" / "live_more.m3u", max_keep=1, require_nonempty=False, errors=errors)
     check_m3u(root / "output" / "live_radio.m3u", max_keep=1, require_nonempty=False, errors=errors)
+    backup_path = root / "output" / "live_backup.m3u"
+    if backup_path.exists():
+        check_m3u(backup_path, max_keep=3, require_nonempty=False, errors=errors)
 
     other = 0
     bad_group = 0

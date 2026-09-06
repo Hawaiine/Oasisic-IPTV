@@ -93,6 +93,7 @@ jobs:
             output/live_special.m3u \
             output/live_other.m3u \
             output/live_radio.m3u \
+            output/live_backup.m3u \
             output/check_result.json \
             output/guide.xml \
             data/source_stats.json \

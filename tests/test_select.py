@@ -57,6 +57,18 @@ def test_cctv_numeric_order() -> None:
     assert names == ["CCTV-1 综合", "CCTV-5 体育", "CCTV-5+ 体育赛事", "CCTV-10 科教"]
 
 
+def test_backup_keep_three_distinct_urls() -> None:
+    items = [
+        _e(url="http://a/1", source_priority=10),
+        _e(url="http://a/2", source_priority=20),
+        _e(url="http://a/3", source_priority=30),
+        _e(url="http://a/4", source_priority=40),
+    ]
+    out = select_best(items, max_keep=3)
+    urls = [x["url"] for x in out if x["category"] != "radio"]
+    assert urls == ["http://a/1", "http://a/2", "http://a/3"]
+
+
 def test_split_catalog_more() -> None:
     items = [
         _e(matched=True, standard_name="湖南卫视"),
