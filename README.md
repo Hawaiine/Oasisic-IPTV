@@ -10,7 +10,7 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 
 项目坚持目录制：主列表 `live.m3u` 只保留命中标准表的频道，且每台一条最优链接；`live_backup.m3u` 为同一批标准台保留最多 3 条不同 URL（给会自动切换的播放器）；扩展列表 `live_more.m3u` 保留未入表频道。源的新增、禁用、连续失败自动下线都走配置，不必改代码。
 
-**不进行任何流媒体测活。** 收录不代表实时可播，请遵守当地法律法规。
+**不检测直播流是否可播放。** 收录不代表实时可播，请遵守当地法律法规。
 
 ---
 
@@ -32,7 +32,15 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 | [`live_radio.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_radio.m3u) | 电台（独立文件） |
 | [`guide.xml`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/guide.xml) | 裁剪版 EPG（仅标准表频道） |
 
-主列表 `#EXTM3U` 已写入 `url-tvg="https://live.fanmingming.com/e.xml"`，支持自动读取的播放器可直接出节目单。手动填写时用同一地址。裁剪版 `guide.xml` 体积更小，稳定后会把 `url-tvg` 切到自建地址。
+主列表 `#EXTM3U` 已写入 `url-tvg="https://live.fanmingming.com/e.xml"`。部分网络打不开该域名时，EPG 可改填 GitHub raw：`https://raw.githubusercontent.com/fanmingming/live/main/e.xml`。台标走 jsDelivr 镜像。
+
+国内访问 GitHub raw 慢时，主列表可用镜像：
+
+- 原始：`https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u`
+- jsDelivr：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/output/live.m3u`
+- ghproxy：`https://ghproxy.com/https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u`
+
+普通用户只订 `live.m3u`；TiviMate / APTV 等支持多链接的可再订 `live_backup.m3u`。
 
 ---
 
@@ -146,7 +154,7 @@ python scripts/verify_outputs.py
 
 见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。
 
-当前启用 **14** 个公开源（`config/sources.yaml`）。标准表 119 个实体。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。
+当前启用 **17** 个公开源（`config/sources.yaml`）。标准表 119 个实体。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。zbds iptv6 当前几乎为空，未启用。
 
 ---
 

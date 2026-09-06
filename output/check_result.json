@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "stage": "collect",
-  "generated_at": "2026-09-06 11:22:41",
+  "generated_at": "2026-09-06 11:34:59",
   "timezone": "Asia/Shanghai",
-  "total": 1792,
-  "catalog": 115,
-  "more": 1674,
+  "total": 1971,
+  "catalog": 117,
+  "more": 1851,
   "radio": 3,
-  "backup": 321,
-  "ok": 14,
+  "backup": 328,
+  "ok": 17,
   "fail": 0,
   "ratio": 1.0,
   "sources": [
@@ -76,10 +76,31 @@
       "error": ""
     },
     {
+      "key": "suxuang-ipv4",
+      "ok": true,
+      "status": 200,
+      "count": 1223,
+      "error": ""
+    },
+    {
       "key": "suxuang-ipv6",
       "ok": true,
       "status": 200,
       "count": 862,
+      "error": ""
+    },
+    {
+      "key": "mymsnn-tier-a",
+      "ok": true,
+      "status": 200,
+      "count": 76,
+      "error": ""
+    },
+    {
+      "key": "mymsnn-tier-b",
+      "ok": true,
+      "status": 200,
+      "count": 61,
       "error": ""
     },
     {

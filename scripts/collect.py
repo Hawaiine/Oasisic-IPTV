@@ -21,7 +21,8 @@ from lib.match import ChannelMatcher, attach_match  # noqa: E402
 from lib.select import order_for_output, select_best, split_catalog_more  # noqa: E402
 
 CST = timezone(timedelta(hours=8))
-FANMINGMING_LOGO = "https://live.fanmingming.com/tv/{id}.png"
+# 台标走 jsDelivr，避免 live.fanmingming.com/.cn 在部分网络不可达
+LOGO_BASE = "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv"
 
 
 def now_cst() -> str:
@@ -37,13 +38,23 @@ def load_sources() -> list[dict[str, Any]]:
     return list(data.get("sources") or [])
 
 
+def _logo_url(tvg_id: str) -> str:
+    return f"{LOGO_BASE}/{tvg_id}.png"
+
+
 def fill_logo(entry: dict[str, Any]) -> dict[str, Any]:
-    if entry.get("tvg_logo"):
-        return entry
+    """缺 logo 时补 jsDelivr；已有 fanmingming.com/.cn 的也改成镜像。"""
     tvg_id = entry.get("tvg_id") or ""
+    logo = entry.get("tvg_logo") or ""
+    if "live.fanmingming." in logo and tvg_id:
+        entry = dict(entry)
+        entry["tvg_logo"] = _logo_url(tvg_id)
+        return entry
+    if logo:
+        return entry
     if tvg_id:
         entry = dict(entry)
-        entry["tvg_logo"] = FANMINGMING_LOGO.format(id=tvg_id)
+        entry["tvg_logo"] = _logo_url(tvg_id)
     return entry
 
 
@@ -375,7 +386,7 @@ def run() -> int:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Oasisic-IPTV 采集（无测活）")
+    parser = argparse.ArgumentParser(description="Oasisic-IPTV 采集（不检测直播流）")
     parser.parse_args()
     try:
         raise SystemExit(run())

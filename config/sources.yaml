@@ -94,6 +94,15 @@ sources:
     core: false
     # 日更中文列表
 
+  - key: "suxuang-ipv4"
+    url: "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 39
+    core: false
+    # 卫视覆盖较好
+
   - key: "suxuang-ipv6"
     url: "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u"
     type: "m3u"
@@ -102,6 +111,24 @@ sources:
     priority: 40
     core: false
     # IPv6 补充
+
+  - key: "mymsnn-tier-a"
+    url: "https://raw.githubusercontent.com/mymsnn/DailyIPTV/main/outputs/tier_a.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 42
+    core: false
+    # DailyIPTV A 级（质量分级）
+
+  - key: "mymsnn-tier-b"
+    url: "https://raw.githubusercontent.com/mymsnn/DailyIPTV/main/outputs/tier_b.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 44
+    core: false
+    # DailyIPTV B 级
 
   # ── 港澳台 / 国内结构化切片 ──────────────────────────
   - key: "iptv-org-hk"

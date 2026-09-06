@@ -1,6 +1,6 @@
 # Oasisic-IPTV 架构
 
-公开 IPTV 源日更聚合工具。配置与代码分离，采集流水线无状态，不测活。
+公开 IPTV 源日更聚合工具。配置与代码分离，采集流水线无状态，不检测直播流是否可播放。
 
 ## 角色
 
@@ -55,7 +55,7 @@ M3U 头：#EXTM3U url-tvg="https://live.fanmingming.com/e.xml"
 
 ## 不做什么
 
-- 不测活、不探测 TS/HLS 可用性
+- 不检测直播流 / TS / HLS 是否可播放
 - 不上数据库、Web UI、复杂调度
 - 不把 iptv-org 英文国家树当主 `group-title`
 - 不 `git add -A`，不 force push

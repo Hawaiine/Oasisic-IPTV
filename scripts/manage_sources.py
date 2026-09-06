@@ -93,7 +93,7 @@ def cmd_validate(args: argparse.Namespace) -> int:
     if not getattr(args, "online", False):
         return 0
 
-    # 在线探测可访问性与返回频道数（不是流媒体测活）
+    # 在线检查源 URL 可访问性与返回频道数（不是检测直播流）
     return asyncio.run(_validate_online(sources))
 
 
