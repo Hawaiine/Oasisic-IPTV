@@ -28,8 +28,8 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 | [`live_sports.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_sports.m3u) | 体育 |
 | [`live_live.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_live.m3u) | 网络直播 |
 | [`live_overseas.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_overseas.m3u) | 国际（默认不进主列表） |
-| [`live_special.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_special.m3u) | 酒店（非推荐） |
-| [`live_other.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_other.m3u) | 其他（目录制下通常为空，非推荐） |
+| [`live_special.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_special.m3u) | 酒店（目录制下通常为空，非推荐） |
+| [`live_other.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_other.m3u) | 其他（通常为空，非推荐） |
 | [`live_radio.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_radio.m3u) | 电台（独立文件） |
 | [`guide.xml`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/guide.xml) | 裁剪版 EPG（仅标准表频道） |
 
@@ -155,7 +155,7 @@ python scripts/verify_outputs.py
 
 见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。
 
-当前启用 **17** 个公开源（`config/sources.yaml`）。标准表 119 个实体。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。zbds iptv6 当前几乎为空，未启用。
+当前启用 **18** 个公开源（`config/sources.yaml`）。标准表 120 个实体。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。zbds iptv6 当前几乎为空，未启用。
 
 ---
 
@@ -169,7 +169,7 @@ python scripts/verify_outputs.py
 
 ## 数据源
 
-源列表只维护在 `config/sources.yaml`。核心源连续失败会告警但不会自动禁用；非核心源连续 3 天失败自动 `enabled: false`。`live_other.m3u` 会生成并提交，但主列表目录制下通常为空，**不推荐订阅**。
+源列表只维护在 `config/sources.yaml`。核心源连续失败会告警但不会自动禁用；非核心源连续 3 天失败自动 `enabled: false`。空壳列表 `live_other.m3u` / `live_overseas.m3u` / `live_special.m3u` 不再提交到仓库，**不推荐订阅**。
 
 ---
 

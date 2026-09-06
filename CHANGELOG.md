@@ -78,4 +78,4 @@
 
 ---
 
-采集报告将由 `scripts/generate_report.py --write-changelog` 写在本文件顶部。
+采集报告只保留最近 1 天摘要；重要变更见下方 # CHANGELOG。完整历史可用 git log。

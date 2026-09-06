@@ -1,3 +1,6 @@
+# 校验产物不进仓库
+output/check_result.json
+
 # Python
 __pycache__/
 *.pyc
