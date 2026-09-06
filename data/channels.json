@@ -1,0 +1,835 @@
+[
+  {
+    "standard_name": "CCTV-1 综合",
+    "display_name": "CCTV-1 综合",
+    "category": "cctv",
+    "tvg_id": "CCTV1",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV1.png"
+  },
+  {
+    "standard_name": "CCTV-2 财经",
+    "display_name": "CCTV-2 财经",
+    "category": "cctv",
+    "tvg_id": "CCTV2",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV2.png"
+  },
+  {
+    "standard_name": "CCTV-3 综艺",
+    "display_name": "CCTV-3 综艺",
+    "category": "cctv",
+    "tvg_id": "CCTV3",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV3.png"
+  },
+  {
+    "standard_name": "CCTV-4 中文国际",
+    "display_name": "CCTV-4 中文国际",
+    "category": "cctv",
+    "tvg_id": "CCTV4",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV4.png"
+  },
+  {
+    "standard_name": "CCTV-5 体育",
+    "display_name": "CCTV-5 体育",
+    "category": "cctv",
+    "tvg_id": "CCTV5",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV5.png"
+  },
+  {
+    "standard_name": "CCTV-5+ 体育赛事",
+    "display_name": "CCTV-5+ 体育赛事",
+    "category": "cctv",
+    "tvg_id": "CCTV5Plus",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV5Plus.png"
+  },
+  {
+    "standard_name": "CCTV-6 电影",
+    "display_name": "CCTV-6 电影",
+    "category": "cctv",
+    "tvg_id": "CCTV6",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV6.png"
+  },
+  {
+    "standard_name": "CCTV-7 国防军事",
+    "display_name": "CCTV-7 国防军事",
+    "category": "cctv",
+    "tvg_id": "CCTV7",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV7.png"
+  },
+  {
+    "standard_name": "CCTV-8 电视剧",
+    "display_name": "CCTV-8 电视剧",
+    "category": "cctv",
+    "tvg_id": "CCTV8",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV8.png"
+  },
+  {
+    "standard_name": "CCTV-9 纪录",
+    "display_name": "CCTV-9 纪录",
+    "category": "cctv",
+    "tvg_id": "CCTV9",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV9.png"
+  },
+  {
+    "standard_name": "CCTV-10 科教",
+    "display_name": "CCTV-10 科教",
+    "category": "cctv",
+    "tvg_id": "CCTV10",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV10.png"
+  },
+  {
+    "standard_name": "CCTV-11 戏曲",
+    "display_name": "CCTV-11 戏曲",
+    "category": "cctv",
+    "tvg_id": "CCTV11",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV11.png"
+  },
+  {
+    "standard_name": "CCTV-12 社会与法",
+    "display_name": "CCTV-12 社会与法",
+    "category": "cctv",
+    "tvg_id": "CCTV12",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV12.png"
+  },
+  {
+    "standard_name": "CCTV-13 新闻",
+    "display_name": "CCTV-13 新闻",
+    "category": "cctv",
+    "tvg_id": "CCTV13",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV13.png"
+  },
+  {
+    "standard_name": "CCTV-14 少儿",
+    "display_name": "CCTV-14 少儿",
+    "category": "cctv",
+    "tvg_id": "CCTV14",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV14.png"
+  },
+  {
+    "standard_name": "CCTV-15 音乐",
+    "display_name": "CCTV-15 音乐",
+    "category": "cctv",
+    "tvg_id": "CCTV15",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV15.png"
+  },
+  {
+    "standard_name": "CCTV-16 奥林匹克",
+    "display_name": "CCTV-16 奥林匹克",
+    "category": "cctv",
+    "tvg_id": "CCTV16",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV16.png"
+  },
+  {
+    "standard_name": "CCTV-17 农业农村",
+    "display_name": "CCTV-17 农业农村",
+    "category": "cctv",
+    "tvg_id": "CCTV17",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV17.png"
+  },
+  {
+    "standard_name": "CCTV-4K 超高清",
+    "display_name": "CCTV-4K 超高清",
+    "category": "cctv",
+    "tvg_id": "CCTV4K",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV4K.png"
+  },
+  {
+    "standard_name": "CCTV-8K 超高清",
+    "display_name": "CCTV-8K 超高清",
+    "category": "cctv",
+    "tvg_id": "CCTV8K",
+    "tvg_logo": "https://live.fanmingming.com/tv/CCTV8K.png"
+  },
+  {
+    "standard_name": "CGTN",
+    "display_name": "CGTN",
+    "category": "cctv",
+    "tvg_id": "CGTN",
+    "tvg_logo": "https://live.fanmingming.com/tv/CGTN.png"
+  },
+  {
+    "standard_name": "CGTN纪录",
+    "display_name": "CGTN纪录",
+    "category": "cctv",
+    "tvg_id": "CGTNDoc",
+    "tvg_logo": "https://live.fanmingming.com/tv/CGTNDoc.png"
+  },
+  {
+    "standard_name": "CETV-1",
+    "display_name": "CETV-1",
+    "category": "cctv",
+    "tvg_id": "CETV1",
+    "tvg_logo": "https://live.fanmingming.com/tv/CETV1.png"
+  },
+  {
+    "standard_name": "CETV-2",
+    "display_name": "CETV-2",
+    "category": "cctv",
+    "tvg_id": "CETV2",
+    "tvg_logo": "https://live.fanmingming.com/tv/CETV2.png"
+  },
+  {
+    "standard_name": "CETV-3",
+    "display_name": "CETV-3",
+    "category": "cctv",
+    "tvg_id": "CETV3",
+    "tvg_logo": "https://live.fanmingming.com/tv/CETV3.png"
+  },
+  {
+    "standard_name": "CETV-4",
+    "display_name": "CETV-4",
+    "category": "cctv",
+    "tvg_id": "CETV4",
+    "tvg_logo": "https://live.fanmingming.com/tv/CETV4.png"
+  },
+  {
+    "standard_name": "湖南卫视",
+    "display_name": "湖南卫视",
+    "category": "weishi",
+    "tvg_id": "HunanTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/HunanTV.png"
+  },
+  {
+    "standard_name": "浙江卫视",
+    "display_name": "浙江卫视",
+    "category": "weishi",
+    "tvg_id": "ZJTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/ZJTV.png"
+  },
+  {
+    "standard_name": "东方卫视",
+    "display_name": "东方卫视",
+    "category": "weishi",
+    "tvg_id": "DragonTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/DragonTV.png"
+  },
+  {
+    "standard_name": "江苏卫视",
+    "display_name": "江苏卫视",
+    "category": "weishi",
+    "tvg_id": "JSTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/JSTV.png"
+  },
+  {
+    "standard_name": "北京卫视",
+    "display_name": "北京卫视",
+    "category": "weishi",
+    "tvg_id": "BTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/BTV.png"
+  },
+  {
+    "standard_name": "深圳卫视",
+    "display_name": "深圳卫视",
+    "category": "weishi",
+    "tvg_id": "SZTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SZTV.png"
+  },
+  {
+    "standard_name": "广东卫视",
+    "display_name": "广东卫视",
+    "category": "weishi",
+    "tvg_id": "GDTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/GDTV.png"
+  },
+  {
+    "standard_name": "安徽卫视",
+    "display_name": "安徽卫视",
+    "category": "weishi",
+    "tvg_id": "AHTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/AHTV.png"
+  },
+  {
+    "standard_name": "山东卫视",
+    "display_name": "山东卫视",
+    "category": "weishi",
+    "tvg_id": "SDTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SDTV.png"
+  },
+  {
+    "standard_name": "天津卫视",
+    "display_name": "天津卫视",
+    "category": "weishi",
+    "tvg_id": "TJTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/TJTV.png"
+  },
+  {
+    "standard_name": "辽宁卫视",
+    "display_name": "辽宁卫视",
+    "category": "weishi",
+    "tvg_id": "LNTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/LNTV.png"
+  },
+  {
+    "standard_name": "河南卫视",
+    "display_name": "河南卫视",
+    "category": "weishi",
+    "tvg_id": "HNTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/HNTV.png"
+  },
+  {
+    "standard_name": "四川卫视",
+    "display_name": "四川卫视",
+    "category": "weishi",
+    "tvg_id": "SCTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SCTV.png"
+  },
+  {
+    "standard_name": "湖北卫视",
+    "display_name": "湖北卫视",
+    "category": "weishi",
+    "tvg_id": "HBTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/HBTV.png"
+  },
+  {
+    "standard_name": "江西卫视",
+    "display_name": "江西卫视",
+    "category": "weishi",
+    "tvg_id": "JXTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/JXTV.png"
+  },
+  {
+    "standard_name": "东南卫视",
+    "display_name": "东南卫视",
+    "category": "weishi",
+    "tvg_id": "SETV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SETV.png"
+  },
+  {
+    "standard_name": "黑龙江卫视",
+    "display_name": "黑龙江卫视",
+    "category": "weishi",
+    "tvg_id": "HLJTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/HLJTV.png"
+  },
+  {
+    "standard_name": "重庆卫视",
+    "display_name": "重庆卫视",
+    "category": "weishi",
+    "tvg_id": "CQTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/CQTV.png"
+  },
+  {
+    "standard_name": "陕西卫视",
+    "display_name": "陕西卫视",
+    "category": "weishi",
+    "tvg_id": "SXTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SXTV.png"
+  },
+  {
+    "standard_name": "山西卫视",
+    "display_name": "山西卫视",
+    "category": "weishi",
+    "tvg_id": "SXRTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SXRTV.png"
+  },
+  {
+    "standard_name": "吉林卫视",
+    "display_name": "吉林卫视",
+    "category": "weishi",
+    "tvg_id": "JLTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/JLTV.png"
+  },
+  {
+    "standard_name": "云南卫视",
+    "display_name": "云南卫视",
+    "category": "weishi",
+    "tvg_id": "YNTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/YNTV.png"
+  },
+  {
+    "standard_name": "贵州卫视",
+    "display_name": "贵州卫视",
+    "category": "weishi",
+    "tvg_id": "GZTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/GZTV.png"
+  },
+  {
+    "standard_name": "甘肃卫视",
+    "display_name": "甘肃卫视",
+    "category": "weishi",
+    "tvg_id": "GSTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/GSTV.png"
+  },
+  {
+    "standard_name": "海南卫视",
+    "display_name": "海南卫视",
+    "category": "weishi",
+    "tvg_id": "HNTV2",
+    "tvg_logo": "https://live.fanmingming.com/tv/HNTV2.png"
+  },
+  {
+    "standard_name": "新疆卫视",
+    "display_name": "新疆卫视",
+    "category": "weishi",
+    "tvg_id": "XJTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/XJTV.png"
+  },
+  {
+    "standard_name": "内蒙古卫视",
+    "display_name": "内蒙古卫视",
+    "category": "weishi",
+    "tvg_id": "NMGTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/NMGTV.png"
+  },
+  {
+    "standard_name": "河北卫视",
+    "display_name": "河北卫视",
+    "category": "weishi",
+    "tvg_id": "HEBTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/HEBTV.png"
+  },
+  {
+    "standard_name": "广西卫视",
+    "display_name": "广西卫视",
+    "category": "weishi",
+    "tvg_id": "GXTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/GXTV.png"
+  },
+  {
+    "standard_name": "青海卫视",
+    "display_name": "青海卫视",
+    "category": "weishi",
+    "tvg_id": "QHTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/QHTV.png"
+  },
+  {
+    "standard_name": "宁夏卫视",
+    "display_name": "宁夏卫视",
+    "category": "weishi",
+    "tvg_id": "NXTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/NXTV.png"
+  },
+  {
+    "standard_name": "西藏卫视",
+    "display_name": "西藏卫视",
+    "category": "weishi",
+    "tvg_id": "XZTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/XZTV.png"
+  },
+  {
+    "standard_name": "兵团卫视",
+    "display_name": "兵团卫视",
+    "category": "weishi",
+    "tvg_id": "BTTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/BTTV.png"
+  },
+  {
+    "standard_name": "三沙卫视",
+    "display_name": "三沙卫视",
+    "category": "weishi",
+    "tvg_id": "SSTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/SSTV.png"
+  },
+  {
+    "standard_name": "广东珠江",
+    "display_name": "广东珠江",
+    "category": "local",
+    "tvg_id": "GDTVZJ",
+    "tvg_logo": "https://live.fanmingming.com/tv/GDTVZJ.png"
+  },
+  {
+    "standard_name": "广东公共",
+    "display_name": "广东公共",
+    "category": "local",
+    "tvg_id": "GDGG",
+    "tvg_logo": "https://live.fanmingming.com/tv/GDGG.png"
+  },
+  {
+    "standard_name": "广东新闻",
+    "display_name": "广东新闻",
+    "category": "local",
+    "tvg_id": "GDXW",
+    "tvg_logo": "https://live.fanmingming.com/tv/GDXW.png"
+  },
+  {
+    "standard_name": "南方卫视",
+    "display_name": "南方卫视",
+    "category": "local",
+    "tvg_id": "GDNF",
+    "tvg_logo": "https://live.fanmingming.com/tv/GDNF.png"
+  },
+  {
+    "standard_name": "广州综合",
+    "display_name": "广州综合",
+    "category": "local",
+    "tvg_id": "GZTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/GZTV.png"
+  },
+  {
+    "standard_name": "广州新闻",
+    "display_name": "广州新闻",
+    "category": "local",
+    "tvg_id": "GZXW",
+    "tvg_logo": "https://live.fanmingming.com/tv/GZXW.png"
+  },
+  {
+    "standard_name": "广州影视",
+    "display_name": "广州影视",
+    "category": "local",
+    "tvg_id": "GZYS",
+    "tvg_logo": "https://live.fanmingming.com/tv/GZYS.png"
+  },
+  {
+    "standard_name": "武汉新闻",
+    "display_name": "武汉新闻",
+    "category": "local",
+    "tvg_id": "WHTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/WHTV.png"
+  },
+  {
+    "standard_name": "武汉文艺",
+    "display_name": "武汉文艺",
+    "category": "local",
+    "tvg_id": "WHWY",
+    "tvg_logo": "https://live.fanmingming.com/tv/WHWY.png"
+  },
+  {
+    "standard_name": "上海新闻综合",
+    "display_name": "上海新闻综合",
+    "category": "local",
+    "tvg_id": "SHXW",
+    "tvg_logo": "https://live.fanmingming.com/tv/SHXW.png"
+  },
+  {
+    "standard_name": "上海都市",
+    "display_name": "上海都市",
+    "category": "local",
+    "tvg_id": "SHDS",
+    "tvg_logo": "https://live.fanmingming.com/tv/SHDS.png"
+  },
+  {
+    "standard_name": "东方影视",
+    "display_name": "东方影视",
+    "category": "local",
+    "tvg_id": "DFYS",
+    "tvg_logo": "https://live.fanmingming.com/tv/DFYS.png"
+  },
+  {
+    "standard_name": "北京文艺",
+    "display_name": "北京文艺",
+    "category": "local",
+    "tvg_id": "BTVWY",
+    "tvg_logo": "https://live.fanmingming.com/tv/BTVWY.png"
+  },
+  {
+    "standard_name": "北京影视",
+    "display_name": "北京影视",
+    "category": "local",
+    "tvg_id": "BTVYS",
+    "tvg_logo": "https://live.fanmingming.com/tv/BTVYS.png"
+  },
+  {
+    "standard_name": "北京新闻",
+    "display_name": "北京新闻",
+    "category": "local",
+    "tvg_id": "BTVXW",
+    "tvg_logo": "https://live.fanmingming.com/tv/BTVXW.png"
+  },
+  {
+    "standard_name": "湖南经视",
+    "display_name": "湖南经视",
+    "category": "local",
+    "tvg_id": "HNJS",
+    "tvg_logo": "https://live.fanmingming.com/tv/HNJS.png"
+  },
+  {
+    "standard_name": "湖南娱乐",
+    "display_name": "湖南娱乐",
+    "category": "local",
+    "tvg_id": "HNWL",
+    "tvg_logo": "https://live.fanmingming.com/tv/HNWL.png"
+  },
+  {
+    "standard_name": "金鹰卡通",
+    "display_name": "金鹰卡通",
+    "category": "local",
+    "tvg_id": "JYKT",
+    "tvg_logo": "https://live.fanmingming.com/tv/JYKT.png"
+  },
+  {
+    "standard_name": "浙江钱江",
+    "display_name": "浙江钱江",
+    "category": "local",
+    "tvg_id": "ZJQJ",
+    "tvg_logo": "https://live.fanmingming.com/tv/ZJQJ.png"
+  },
+  {
+    "standard_name": "浙江经济生活",
+    "display_name": "浙江经济生活",
+    "category": "local",
+    "tvg_id": "ZJSH",
+    "tvg_logo": "https://live.fanmingming.com/tv/ZJSH.png"
+  },
+  {
+    "standard_name": "江苏城市",
+    "display_name": "江苏城市",
+    "category": "local",
+    "tvg_id": "JSCS",
+    "tvg_logo": "https://live.fanmingming.com/tv/JSCS.png"
+  },
+  {
+    "standard_name": "江苏综艺",
+    "display_name": "江苏综艺",
+    "category": "local",
+    "tvg_id": "JSZY",
+    "tvg_logo": "https://live.fanmingming.com/tv/JSZY.png"
+  },
+  {
+    "standard_name": "山东齐鲁",
+    "display_name": "山东齐鲁",
+    "category": "local",
+    "tvg_id": "SDQL",
+    "tvg_logo": "https://live.fanmingming.com/tv/SDQL.png"
+  },
+  {
+    "standard_name": "四川文化旅游",
+    "display_name": "四川文化旅游",
+    "category": "local",
+    "tvg_id": "SCWH",
+    "tvg_logo": "https://live.fanmingming.com/tv/SCWH.png"
+  },
+  {
+    "standard_name": "成都新闻综合",
+    "display_name": "成都新闻综合",
+    "category": "local",
+    "tvg_id": "CDXW",
+    "tvg_logo": "https://live.fanmingming.com/tv/CDXW.png"
+  },
+  {
+    "standard_name": "重庆新闻",
+    "display_name": "重庆新闻",
+    "category": "local",
+    "tvg_id": "CQXW",
+    "tvg_logo": "https://live.fanmingming.com/tv/CQXW.png"
+  },
+  {
+    "standard_name": "陕西都市青春",
+    "display_name": "陕西都市青春",
+    "category": "local",
+    "tvg_id": "SXDS",
+    "tvg_logo": "https://live.fanmingming.com/tv/SXDS.png"
+  },
+  {
+    "standard_name": "安徽经济生活",
+    "display_name": "安徽经济生活",
+    "category": "local",
+    "tvg_id": "AHJJ",
+    "tvg_logo": "https://live.fanmingming.com/tv/AHJJ.png"
+  },
+  {
+    "standard_name": "福建综合",
+    "display_name": "福建综合",
+    "category": "local",
+    "tvg_id": "FJZC",
+    "tvg_logo": "https://live.fanmingming.com/tv/FJZC.png"
+  },
+  {
+    "standard_name": "厦门卫视",
+    "display_name": "厦门卫视",
+    "category": "local",
+    "tvg_id": "XMTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/XMTV.png"
+  },
+  {
+    "standard_name": "延边卫视",
+    "display_name": "延边卫视",
+    "category": "local",
+    "tvg_id": "YBTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/YBTV.png"
+  },
+  {
+    "standard_name": "康巴卫视",
+    "display_name": "康巴卫视",
+    "category": "local",
+    "tvg_id": "KBTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/KBTV.png"
+  },
+  {
+    "standard_name": "安多卫视",
+    "display_name": "安多卫视",
+    "category": "local",
+    "tvg_id": "ADTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/ADTV.png"
+  },
+  {
+    "standard_name": "凤凰卫视中文台",
+    "display_name": "凤凰卫视中文台",
+    "category": "gangtai",
+    "tvg_id": "PhoenixChinese",
+    "tvg_logo": "https://live.fanmingming.com/tv/PhoenixChinese.png"
+  },
+  {
+    "standard_name": "凤凰卫视资讯台",
+    "display_name": "凤凰卫视资讯台",
+    "category": "gangtai",
+    "tvg_id": "PhoenixInfo",
+    "tvg_logo": "https://live.fanmingming.com/tv/PhoenixInfo.png"
+  },
+  {
+    "standard_name": "凤凰卫视香港台",
+    "display_name": "凤凰卫视香港台",
+    "category": "gangtai",
+    "tvg_id": "PhoenixHK",
+    "tvg_logo": "https://live.fanmingming.com/tv/PhoenixHK.png"
+  },
+  {
+    "standard_name": "TVB翡翠台",
+    "display_name": "TVB翡翠台",
+    "category": "gangtai",
+    "tvg_id": "TVBJade",
+    "tvg_logo": "https://live.fanmingming.com/tv/TVBJade.png"
+  },
+  {
+    "standard_name": "TVB明珠台",
+    "display_name": "TVB明珠台",
+    "category": "gangtai",
+    "tvg_id": "TVBPearl",
+    "tvg_logo": "https://live.fanmingming.com/tv/TVBPearl.png"
+  },
+  {
+    "standard_name": "无线新闻",
+    "display_name": "无线新闻",
+    "category": "gangtai",
+    "tvg_id": "TVBNews",
+    "tvg_logo": "https://live.fanmingming.com/tv/TVBNews.png"
+  },
+  {
+    "standard_name": "ViuTV",
+    "display_name": "ViuTV",
+    "category": "gangtai",
+    "tvg_id": "ViuTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/ViuTV.png"
+  },
+  {
+    "standard_name": "HOY TV",
+    "display_name": "HOY TV",
+    "category": "gangtai",
+    "tvg_id": "HOYTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/HOYTV.png"
+  },
+  {
+    "standard_name": "澳视澳门",
+    "display_name": "澳视澳门",
+    "category": "gangtai",
+    "tvg_id": "TDM",
+    "tvg_logo": "https://live.fanmingming.com/tv/TDM.png"
+  },
+  {
+    "standard_name": "中天新闻",
+    "display_name": "中天新闻",
+    "category": "gangtai",
+    "tvg_id": "CTiTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/CTiTV.png"
+  },
+  {
+    "standard_name": "东森新闻",
+    "display_name": "东森新闻",
+    "category": "gangtai",
+    "tvg_id": "EBCNews",
+    "tvg_logo": "https://live.fanmingming.com/tv/EBCNews.png"
+  },
+  {
+    "standard_name": "华视",
+    "display_name": "华视",
+    "category": "gangtai",
+    "tvg_id": "CTS",
+    "tvg_logo": "https://live.fanmingming.com/tv/CTS.png"
+  },
+  {
+    "standard_name": "台视",
+    "display_name": "台视",
+    "category": "gangtai",
+    "tvg_id": "TTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/TTV.png"
+  },
+  {
+    "standard_name": "中视",
+    "display_name": "中视",
+    "category": "gangtai",
+    "tvg_id": "CTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/CTV.png"
+  },
+  {
+    "standard_name": "民视",
+    "display_name": "民视",
+    "category": "gangtai",
+    "tvg_id": "FTV",
+    "tvg_logo": "https://live.fanmingming.com/tv/FTV.png"
+  },
+  {
+    "standard_name": "TVBS新闻",
+    "display_name": "TVBS新闻",
+    "category": "gangtai",
+    "tvg_id": "TVBSNews",
+    "tvg_logo": "https://live.fanmingming.com/tv/TVBSNews.png"
+  },
+  {
+    "standard_name": "三立新闻",
+    "display_name": "三立新闻",
+    "category": "gangtai",
+    "tvg_id": "SETNews",
+    "tvg_logo": "https://live.fanmingming.com/tv/SETNews.png"
+  },
+  {
+    "standard_name": "TVB星河",
+    "display_name": "TVB星河",
+    "category": "gangtai",
+    "tvg_id": "TVBXinghe",
+    "tvg_logo": "https://live.fanmingming.com/tv/TVBXinghe.png"
+  },
+  {
+    "standard_name": "J2",
+    "display_name": "J2",
+    "category": "gangtai",
+    "tvg_id": "TVBJ2",
+    "tvg_logo": "https://live.fanmingming.com/tv/TVBJ2.png"
+  },
+  {
+    "standard_name": "广东体育",
+    "display_name": "广东体育",
+    "category": "sports",
+    "tvg_id": "GDSports",
+    "tvg_logo": "https://live.fanmingming.com/tv/GDSports.png"
+  },
+  {
+    "standard_name": "五星体育",
+    "display_name": "五星体育",
+    "category": "sports",
+    "tvg_id": "ShanghaiSports",
+    "tvg_logo": "https://live.fanmingming.com/tv/ShanghaiSports.png"
+  },
+  {
+    "standard_name": "北京体育",
+    "display_name": "北京体育",
+    "category": "sports",
+    "tvg_id": "BeijingSports",
+    "tvg_logo": "https://live.fanmingming.com/tv/BeijingSports.png"
+  },
+  {
+    "standard_name": "劲爆体育",
+    "display_name": "劲爆体育",
+    "category": "sports",
+    "tvg_id": "JJSports",
+    "tvg_logo": "https://live.fanmingming.com/tv/JJSports.png"
+  },
+  {
+    "standard_name": "高尔夫网球",
+    "display_name": "高尔夫网球",
+    "category": "sports",
+    "tvg_id": "GolfTennis",
+    "tvg_logo": "https://live.fanmingming.com/tv/GolfTennis.png"
+  },
+  {
+    "standard_name": "纬来体育",
+    "display_name": "纬来体育",
+    "category": "sports",
+    "tvg_id": "VideolandSports",
+    "tvg_logo": "https://live.fanmingming.com/tv/VideolandSports.png"
+  },
+  {
+    "standard_name": "湖南爱晚",
+    "display_name": "湖南爱晚",
+    "category": "live",
+    "tvg_id": "HunanAiwan",
+    "tvg_logo": "https://live.fanmingming.com/tv/HunanAiwan.png"
+  }
+]

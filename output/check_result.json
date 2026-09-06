@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "stage": "collect",
+  "generated_at": "2026-09-06 10:59:06",
+  "timezone": "Asia/Shanghai",
+  "total": 3174,
+  "catalog": 115,
+  "more": 3000,
+  "radio": 59,
+  "ok": 12,
+  "fail": 0,
+  "ratio": 1.0,
+  "sources": [
+    {
+      "key": "fanmingming-ipv6",
+      "ok": true,
+      "status": 200,
+      "count": 82,
+      "error": ""
+    },
+    {
+      "key": "yuechan-cn",
+      "ok": true,
+      "status": 200,
+      "count": 90,
+      "error": ""
+    },
+    {
+      "key": "guovin-iptv-api",
+      "ok": true,
+      "status": 200,
+      "count": 1619,
+      "error": ""
+    },
+    {
+      "key": "zbds-iptv4",
+      "ok": true,
+      "status": 200,
+      "count": 540,
+      "error": ""
+    },
+    {
+      "key": "suxuang-ipv6",
+      "ok": true,
+      "status": 200,
+      "count": 862,
+      "error": ""
+    },
+    {
+      "key": "ssili-tv",
+      "ok": false,
+      "status": 0,
+      "count": 0,
+      "error": "disabled"
+    },
+    {
+      "key": "iptv-org-hk",
+      "ok": true,
+      "status": 200,
+      "count": 13,
+      "error": ""
+    },
+    {
+      "key": "iptv-org-tw",
+      "ok": true,
+      "status": 200,
+      "count": 26,
+      "error": ""
+    },
+    {
+      "key": "iptv-org-cn",
+      "ok": true,
+      "status": 200,
+      "count": 143,
+      "error": ""
+    },
+    {
+      "key": "ccsh-hotel",
+      "ok": true,
+      "status": 200,
+      "count": 1918,
+      "error": ""
+    },
+    {
+      "key": "free-tv-global",
+      "ok": true,
+      "status": 200,
+      "count": 2052,
+      "error": ""
+    },
+    {
+      "key": "iptv-org-jp",
+      "ok": true,
+      "status": 200,
+      "count": 13,
+      "error": ""
+    },
+    {
+      "key": "iptv-org-kr",
+      "ok": true,
+      "status": 200,
+      "count": 74,
+      "error": ""
+    }
+  ],
+  "channels": []
+}

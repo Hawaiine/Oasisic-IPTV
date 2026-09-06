@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-06 10:44:57",
+  "sources": {
+    "fanmingming-ipv6": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 82,
+      "last_error": ""
+    },
+    "yuechan-cn": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 90,
+      "last_error": ""
+    },
+    "guovin-iptv-api": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 1619,
+      "last_error": ""
+    },
+    "zbds-iptv4": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 540,
+      "last_error": ""
+    },
+    "suxuang-ipv6": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 862,
+      "last_error": ""
+    },
+    "ssili-tv": {
+      "ok": 0,
+      "fail": 1,
+      "consecutive_fail": 1,
+      "last_ok": "",
+      "last_fail": "2026-09-06",
+      "last_count": 0,
+      "last_error": "empty or unparseable"
+    },
+    "iptv-org-hk": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 13,
+      "last_error": ""
+    },
+    "iptv-org-tw": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 26,
+      "last_error": ""
+    },
+    "iptv-org-cn": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 143,
+      "last_error": ""
+    },
+    "ccsh-hotel": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 1918,
+      "last_error": ""
+    },
+    "free-tv-global": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 2052,
+      "last_error": ""
+    },
+    "iptv-org-jp": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 13,
+      "last_error": ""
+    },
+    "iptv-org-kr": {
+      "ok": 3,
+      "fail": 0,
+      "consecutive_fail": 0,
+      "last_ok": "2026-09-06",
+      "last_fail": "",
+      "last_count": 74,
+      "last_error": ""
+    }
+  }
+}

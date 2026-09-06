@@ -1,0 +1,110 @@
+name: collect
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # UTC 22:00 = 北京时间 06:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 单元测试
+        run: pytest tests/ -q
+
+      - name: 源配置校验
+        run: python scripts/manage_sources.py validate
+
+      - name: 采集
+        run: python scripts/collect.py
+
+      - name: 输出校验
+        run: python scripts/verify_outputs.py
+
+      - name: 生成报告
+        run: python scripts/generate_report.py --write-changelog
+
+      - name: EPG 裁剪（失败告警，不阻断）
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          if python scripts/fetch_epg.py; then
+            echo 'EPG 裁剪成功'
+          else
+            echo '⚠️ EPG 失败，M3U 日更继续'
+            DISCORD_MESSAGE="⚠️ Oasisic-IPTV EPG 拉取/裁剪失败，M3U 日更不受影响" \
+              python scripts/send_discord.py || true
+          fi
+
+      - name: 上传产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: oasisic-iptv-output
+          path: |
+            output/
+            !output/*.xml
+            output/guide.xml
+          if-no-files-found: warn
+
+      - name: 脱敏扫描
+        run: |
+          PAT1='ghp_'"[A-Za-z0-9]{20,}"
+          PAT2='github_pat_'"[A-Za-z0-9_]{20,}"
+          PAT3='DISCORD_WEBHOOK=''https://discord'
+          PAT4='xox[baprs]-'
+          if grep -RInE --exclude-dir=.git --exclude-dir=.venv --exclude-dir=.pytest_cache \
+            --exclude='*.yml' "${PAT1}|${PAT2}|${PAT3}|${PAT4}" .; then
+            echo '❌ 发现疑似密钥'
+            exit 1
+          fi
+          echo '✅ 脱敏扫描通过'
+
+      - name: 提交日更结果
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          git add \
+            output/live.m3u \
+            output/live_more.m3u \
+            output/live_cctv.m3u \
+            output/live_weishi.m3u \
+            output/live_local.m3u \
+            output/live_gangtai.m3u \
+            output/live_sports.m3u \
+            output/live_live.m3u \
+            output/live_overseas.m3u \
+            output/live_special.m3u \
+            output/live_other.m3u \
+            output/live_radio.m3u \
+            output/check_result.json \
+            output/guide.xml \
+            data/source_stats.json \
+            config/sources.yaml \
+            CHANGELOG.md
+          git diff --cached --quiet && echo '无变更' && exit 0
+          DATE=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M')
+          git commit -m "📺 每日采集 ${DATE}"
+          git push origin HEAD
+
+      - name: Discord 通知
+        if: always()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python scripts/send_discord.py

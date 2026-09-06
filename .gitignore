@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# 采集原始缓存
+data/all_channels.json
+data/*.csv
+!data/.gitkeep
+!data/channels.json
+!data/aliases.json
+!data/source_stats.json
+
+# 全量/临时 XML 不提交；裁剪版 guide.xml 进 git
+output/*.xml
+!output/guide.xml
+output/guide.full.xml
+output/guide.xml.gz
+
+# 系统
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+.env
+.env.*
+*.token

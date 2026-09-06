@@ -1,0 +1,121 @@
+# Oasisic-IPTV 采集源配置（唯一真实来源）
+# 添加新源：复制下面模板，填 key/url/type/region，下次 collect 自动生效。
+#
+# 模板：
+#   - key: "unique_key"          # 全局唯一
+#     url: "https://example.com/live.m3u"
+#     type: "m3u"                 # m3u | txt
+#     enabled: true
+#     region: cn                 # cn | hk_tw | hotel | overseas | radio
+#     priority: 50               # 越小越优先
+#     core: false                # 核心源失败只告警，不自动禁用
+
+sources:
+  # ── 国内 / 中文热门 ──────────────────────────────────
+  - key: "fanmingming-ipv6"
+    url: "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 10
+    core: true
+
+  - key: "yuechan-cn"
+    url: "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 20
+    core: true
+
+  - key: "guovin-iptv-api"
+    url: "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 30
+    core: false
+
+  - key: "zbds-iptv4"
+    url: "https://live.zbds.top/tv/iptv4.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 25
+    core: false
+
+  - key: "suxuang-ipv6"
+    url: "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 35
+    core: false
+
+  - key: "ssili-tv"
+    url: "https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt"
+    type: "txt"
+    enabled: false
+    region: cn
+    priority: 40
+    core: false
+
+  # ── 港澳台 ──────────────────────────────────────────
+  - key: "iptv-org-hk"
+    url: "https://iptv-org.github.io/iptv/countries/hk.m3u"
+    type: "m3u"
+    enabled: true
+    region: hk_tw
+    priority: 50
+    core: false
+
+  - key: "iptv-org-tw"
+    url: "https://iptv-org.github.io/iptv/countries/tw.m3u"
+    type: "m3u"
+    enabled: true
+    region: hk_tw
+    priority: 50
+    core: false
+
+  # ── 国内（iptv-org 国家切片，仅作补充） ──────────────
+  - key: "iptv-org-cn"
+    url: "https://iptv-org.github.io/iptv/countries/cn.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 60
+    core: false
+
+  # ── 酒店 / 特殊 ─────────────────────────────────────
+  - key: "ccsh-hotel"
+    url: "https://raw.githubusercontent.com/CCSH/IPTV/main/live_lite.txt"
+    type: "txt"
+    enabled: true
+    region: hotel
+    priority: 80
+    core: false
+
+  # ── 国际（降权，默认不进主列表） ─────────────────────
+  - key: "free-tv-global"
+    url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
+    type: "m3u"
+    enabled: true
+    region: overseas
+    priority: 90
+    core: false
+
+  - key: "iptv-org-jp"
+    url: "https://iptv-org.github.io/iptv/countries/jp.m3u"
+    type: "m3u"
+    enabled: true
+    region: overseas
+    priority: 95
+    core: false
+
+  - key: "iptv-org-kr"
+    url: "https://iptv-org.github.io/iptv/countries/kr.m3u"
+    type: "m3u"
+    enabled: true
+    region: overseas
+    priority: 95
+    core: false
