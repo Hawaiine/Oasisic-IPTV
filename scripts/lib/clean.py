@@ -49,6 +49,7 @@ _TAG_RE = re.compile(
     (?:
         \b(?:FHD|UHD|HD|SD|HDR|HEVC|H\.?265|H\.?264|AVC|AAC)\b
       | (?:超高清|高清|超清|蓝光|标清|流畅)
+      | (?:50\s*FPS|60\s*FPS)
       | (?:IPV?6|IPv6|ipv6)
       | (?:测试|备用|备份|临时|实验)
       | (?:移动|联通|电信|广电)

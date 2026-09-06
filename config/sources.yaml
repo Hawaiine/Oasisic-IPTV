@@ -156,6 +156,16 @@ sources:
     core: false
     # 仅作补充，不用其英文分类
 
+  # ── 精选公共源（小体量、命名干净） ────────────────────
+  - key: "jonhncatt-verified"
+    url: "https://raw.githubusercontent.com/jonhncatt/iptv-cn-finder/main/m3u/chinese-public-verified.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 45
+    core: false
+    # 精选公共源，体量小；若重复率高后续可禁用
+
   # ── 酒店（降权，默认不进主列表选优前列） ────────────
   - key: "ccsh-hotel"
     url: "https://raw.githubusercontent.com/CCSH/IPTV/main/live_lite.txt"

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "stage": "collect",
-  "generated_at": "2026-09-06 11:42:41",
+  "generated_at": "2026-09-06 12:07:05",
   "timezone": "Asia/Shanghai",
-  "total": 1971,
-  "catalog": 117,
-  "more": 1851,
+  "total": 1959,
+  "catalog": 118,
+  "more": 1838,
   "radio": 3,
-  "backup": 328,
-  "ok": 17,
+  "backup": 331,
+  "ok": 18,
   "fail": 0,
   "ratio": 1.0,
   "sources": [
@@ -122,6 +122,13 @@
       "ok": true,
       "status": 200,
       "count": 143,
+      "error": ""
+    },
+    {
+      "key": "jonhncatt-verified",
+      "ok": true,
+      "status": 200,
+      "count": 41,
       "error": ""
     },
     {

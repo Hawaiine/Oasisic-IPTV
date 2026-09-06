@@ -420,6 +420,13 @@
     "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SSTV.png"
   },
   {
+    "standard_name": "大湾区卫视",
+    "display_name": "大湾区卫视",
+    "category": "weishi",
+    "tvg_id": "GDWQ",
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GDWQ.png"
+  },
+  {
     "standard_name": "广东珠江",
     "display_name": "广东珠江",
     "category": "local",
