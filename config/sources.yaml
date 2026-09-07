@@ -11,7 +11,7 @@
 #     core: false                # 核心源失败只告警，不自动禁用
 
 sources:
-  # ── 核心：中文目录制标杆 ────────────────────────────
+  # ── 核心源（保持不动） ────────────────────────
   - key: "fanmingming-ipv6"
     url: "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
     type: "m3u"
@@ -39,7 +39,7 @@ sources:
     core: true
     # 精选体量小、命名干净
 
-  # ── 国内日更聚合 ────────────────────────────────────
+  # ── 高质量补充源 ────────────────────────────
   - key: "zbds-iptv4"
     url: "https://live.zbds.top/tv/iptv4.m3u"
     type: "m3u"
@@ -47,7 +47,7 @@ sources:
     region: cn
     priority: 25
     core: false
-    # vbskycn/zbds IPv4 日更（与 raw vbskycn 同内容，只保留这一条）
+    # vbskycn/zbds IPv4 日更
 
   - key: "guovin-iptv-api"
     url: "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
@@ -56,7 +56,7 @@ sources:
     region: cn
     priority: 30
     core: false
-    # 体量大，作备份 URL 来源；不作为主列表首选
+    # 体量大，作备份 URL 来源
 
   - key: "hujingguang-cntv"
     url: "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/cnTV_AutoUpdate.m3u8"
@@ -75,6 +75,15 @@ sources:
     priority: 34
     core: false
     # 日更 Gather，中文为主
+
+  - key: "joevess-iptv"
+    url: "https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u"
+    type: "m3u"
+    enabled: false
+    region: cn
+    priority: 35
+    core: false
+    # 社区精选，命名较规范；validate 返回 0 条，暂时禁用
 
   - key: "zilong-best"
     url: "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/main/best_sorted.m3u"
@@ -112,6 +121,24 @@ sources:
     core: false
     # IPv6 补充
 
+  - key: "zhi35-iptv"
+    url: "https://live.zhi35.com/iptv.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 40
+    core: false
+    # 公网直连，IPv4 友好
+
+  - key: "wwb521-live"
+    url: "https://raw.githubusercontent.com/wwb521/live/main/tv.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 41
+    core: false
+    # 社区维护，持续更新
+
   - key: "mymsnn-tier-a"
     url: "https://raw.githubusercontent.com/mymsnn/DailyIPTV/main/outputs/tier_a.m3u"
     type: "m3u"
@@ -120,6 +147,15 @@ sources:
     priority: 42
     core: false
     # DailyIPTV A 级（质量分级）
+
+  - key: "bigbiggrandg"
+    url: "https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 43
+    core: false
+    # 聚合 Gather，频道较全
 
   - key: "mymsnn-tier-b"
     url: "https://raw.githubusercontent.com/mymsnn/DailyIPTV/main/outputs/tier_b.m3u"
@@ -130,7 +166,97 @@ sources:
     core: false
     # DailyIPTV B 级
 
-  # ── 港澳台 / 国内结构化切片 ──────────────────────────
+  - key: "kimentanm-aptv"
+    url: "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 45
+    core: false
+    # APTV 社区源，命名规范
+
+  - key: "ccsh-live-lite"
+    url: "https://raw.githubusercontent.com/CCSH/IPTV/main/live_lite.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 45
+    core: false
+    # CCSH 精简版
+
+  - key: "jonhncatt-verified"
+    url: "https://raw.githubusercontent.com/jonhncatt/iptv-cn-finder/main/m3u/chinese-public-verified.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 45
+    core: false
+    # 精选公共源，体量小
+
+  - key: "zbefine-iptv"
+    url: "https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 46
+    core: false
+    # 社区维护，频道较稳定
+
+  - key: "cs3306-collection"
+    url: "https://raw.githubusercontent.com/cs3306/IPTV-Sources/main/data/output/iptv_collection.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 46
+    core: false
+    # 聚合收藏，体量大
+
+  - key: "ftindy-ipv6"
+    url: "https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u"
+    type: "m3u"
+    enabled: false
+    region: cn
+    priority: 47
+    core: false
+    # IPv6 补充；HTTP 404，暂时禁用
+
+  - key: "ftindy-iptv"
+    url: "https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u"
+    type: "m3u"
+    enabled: false
+    region: cn
+    priority: 47
+    core: false
+    # 综合列表；HTTP 404，暂时禁用
+
+  - key: "burningc4-ipv4"
+    url: "https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 48
+    core: false
+    # IPv4 专线
+
+  - key: "qwerttvv-unicom"
+    url: "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 50
+    core: false
+    # 北京联通，地域性强
+
+  - key: "qwerttvv-mobile"
+    url: "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Mobile.m3u"
+    type: "m3u"
+    enabled: true
+    region: cn
+    priority: 50
+    core: false
+    # 北京移动，地域性强
+
+  # ── 港澳台 / 结构化切片 ──────────────────────
   - key: "iptv-org-hk"
     url: "https://iptv-org.github.io/iptv/countries/hk.m3u"
     type: "m3u"
@@ -156,17 +282,7 @@ sources:
     core: false
     # 仅作补充，不用其英文分类
 
-  # ── 精选公共源（小体量、命名干净） ────────────────────
-  - key: "jonhncatt-verified"
-    url: "https://raw.githubusercontent.com/jonhncatt/iptv-cn-finder/main/m3u/chinese-public-verified.m3u"
-    type: "m3u"
-    enabled: true
-    region: cn
-    priority: 45
-    core: false
-    # 精选公共源，体量小；若重复率高后续可禁用
-
-  # ── 酒店（降权，默认不进主列表选优前列） ────────────
+  # ── 酒店（降权保留） ──────────────────────
   - key: "ccsh-hotel"
     url: "https://raw.githubusercontent.com/CCSH/IPTV/main/live_lite.txt"
     type: "txt"
@@ -175,3 +291,12 @@ sources:
     priority: 80
     core: false
     # 精简酒店源；公网用户可能无法播
+
+  - key: "cymz6-hotel"
+    url: "https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u"
+    type: "m3u"
+    enabled: false
+    region: hotel
+    priority: 80
+    core: false
+    # 酒店聚合，降权保留；HTTP 404，暂时禁用
