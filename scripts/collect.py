@@ -24,8 +24,8 @@ from lib.select import order_for_output, select_best, split_catalog_more  # noqa
 logger = logging.getLogger(__name__)
 
 CST = timezone(timedelta(hours=8))
-# 台标走 jsDelivr，避免 live.fanmingming.com/.cn 在部分网络不可达
-LOGO_BASE = "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv"
+# 台标走本仓库 jsDelivr，避免 live.fanmingming.com/.cn 在部分网络不可达
+LOGO_BASE = "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo"
 
 
 def now_cst() -> str:
