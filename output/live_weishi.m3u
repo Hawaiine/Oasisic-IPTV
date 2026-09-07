@@ -2,71 +2,71 @@
 #PLAYLIST:卫视
 #EXTINF:-1 tvg-id="SSTV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/三沙卫视.png" group-title="卫视",三沙卫视
 http://107.150.60.122/live/ssws.m3u8
-#EXTINF:-1 tvg-id="SETV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SETV.png" group-title="卫视",东南卫视
+#EXTINF:-1 tvg-id="SETV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/SETV.png" group-title="卫视",东南卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000010584/1.m3u8?channel-id=bestzb&Contentid=5000000004000010584&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="DragonTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/DragonTV.png" group-title="卫视",东方卫视
+#EXTINF:-1 tvg-id="DragonTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/DragonTV.png" group-title="卫视",东方卫视
 http://gslbserv.itv.cmvideo.cn/6000000001000003639/1.m3u8?channel-id=wasusyt&Contentid=6000000001000003639&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="YNTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/YNTV.png" group-title="卫视",云南卫视
+#EXTINF:-1 tvg-id="YNTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/YNTV.png" group-title="卫视",云南卫视
 http://gslbserv.itv.cmvideo.cn/5000000011000031120/1.m3u8?channel-id=bestzb&Contentid=5000000011000031120&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="BTTV" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/兵团卫视.png" group-title="卫视",兵团卫视
 http://liveout.btzx.com.cn/62ds9e/yil08g.m3u8
 #EXTINF:-1 tvg-id="NMGTV" tvg-logo="https://tb.zbds.top/logo/内蒙古卫视.png" group-title="卫视",内蒙古卫视
 http://play1-qk.nmtv.cn/live/1769652018126032.m3u8
-#EXTINF:-1 tvg-id="BTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/BTV.png" group-title="卫视",北京卫视
+#EXTINF:-1 tvg-id="BTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/BTV.png" group-title="卫视",北京卫视
 http://gslbserv.itv.cmvideo.cn/6000000001000020451/1.m3u8?channel-id=wasusyt&Contentid=6000000001000020451&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="JLTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/JLTV.png" group-title="卫视",吉林卫视
+#EXTINF:-1 tvg-id="JLTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/JLTV.png" group-title="卫视",吉林卫视
 http://gslbserv.itv.cmvideo.cn/5000000011000031117/1.m3u8?channel-id=bestzb&Contentid=5000000011000031117&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="SCTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SCTV.png" group-title="卫视",四川卫视
+#EXTINF:-1 tvg-id="SCTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/SCTV.png" group-title="卫视",四川卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000006119/1.m3u8?channel-id=bestzb&Contentid=5000000004000006119&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="GDWQ" tvg-logo="https://tb.zbds.top/logo/大湾区卫视.png" group-title="卫视",大湾区卫视
 http://222.128.55.152:9080/live/dwq.m3u8
-#EXTINF:-1 tvg-id="TJTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TJTV.png" group-title="卫视",天津卫视
+#EXTINF:-1 tvg-id="TJTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TJTV.png" group-title="卫视",天津卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000006827/1.m3u8?channel-id=bestzb&Contentid=5000000004000006827&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="NXTV" tvg-logo="https://tb.zbds.top/logo/宁夏卫视.png" group-title="卫视",宁夏卫视
-https://live.264788.xyz/channel/ningxiaweishi?streamid=551474d02bee1c160e1692e22c45ddba&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 tvg-id="AHTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/AHTV.png" group-title="卫视",安徽卫视
+https://live.264788.xyz/channel/ningxiaweishi?streamid=e1236348f815c36a0429357e5b5c5f10&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-id="AHTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/AHTV.png" group-title="卫视",安徽卫视
 http://gslbserv.itv.cmvideo.cn/1000000001000030159/1.m3u8?channel-id=ystenlive&Contentid=1000000001000030159&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="SDTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SDTV.png" group-title="卫视",山东卫视
+#EXTINF:-1 tvg-id="SDTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/SDTV.png" group-title="卫视",山东卫视
 http://gslbserv.itv.cmvideo.cn/1000000001000016568/1.m3u8?channel-id=ystenlive&Contentid=1000000001000016568&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="SXRTV" tvg-logo="https://tb.zbds.top/logo/山西卫视.png" group-title="卫视",山西卫视
-https://live.264788.xyz/channel/shanxiweishi?streamid=eeb7d60ca6e0db131ea7a092a3cd28d2&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 tvg-id="GDTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GDTV.png" group-title="卫视",广东卫视
+http://119.39.9.8:9901/tsfile/live/0118_1.m3u8
+#EXTINF:-1 tvg-id="GDTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDTV.png" group-title="卫视",广东卫视
 http://gslbserv.itv.cmvideo.cn/1000000001000014176/1.m3u8?channel-id=ystenlive&Contentid=1000000001000014176&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="GXTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GXTV.png" group-title="卫视",广西卫视
+#EXTINF:-1 tvg-id="GXTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GXTV.png" group-title="卫视",广西卫视
 http://gslbserv.itv.cmvideo.cn/5000000011000031118/1.m3u8?channel-id=bestzb&Contentid=5000000011000031118&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="XJTV" tvg-logo="https://tb.zbds.top/logo/新疆卫视.png" group-title="卫视",新疆卫视
 http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd;http://218.84.12.186:8001/hls/main/playlist.m3u8zxinjd
-#EXTINF:-1 tvg-id="JSTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/JSTV.png" group-title="卫视",江苏卫视
+#EXTINF:-1 tvg-id="JSTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/JSTV.png" group-title="卫视",江苏卫视
 http://gslbserv.itv.cmvideo.cn/6000000001000014861/1.m3u8?channel-id=wasusyt&Contentid=6000000001000014861&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="JXTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/JXTV.png" group-title="卫视",江西卫视
+#EXTINF:-1 tvg-id="JXTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/JXTV.png" group-title="卫视",江西卫视
 http://gslbserv.itv.cmvideo.cn/1000000006000268001/1.m3u8?channel-id=ystenlive&Contentid=1000000006000268001&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="HEBTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HEBTV.png" group-title="卫视",河北卫视
+#EXTINF:-1 tvg-id="HEBTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HEBTV.png" group-title="卫视",河北卫视
 http://gslbserv.itv.cmvideo.cn/5000000006000040016/1.m3u8?channel-id=bestzb&Contentid=5000000006000040016&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="HNTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HNTV.png" group-title="卫视",河南卫视
+#EXTINF:-1 tvg-id="HNTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HNTV.png" group-title="卫视",河南卫视
 http://gslbserv.itv.cmvideo.cn/5000000011000031119/1.m3u8?channel-id=bestzb&Contentid=5000000011000031119&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="ZJTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/ZJTV.png" group-title="卫视",浙江卫视
+#EXTINF:-1 tvg-id="ZJTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJTV.png" group-title="卫视",浙江卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000007275/1.m3u8?channel-id=bestzb&Contentid=5000000004000007275&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="HNTV2" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HNTV2.png" group-title="卫视",海南卫视
+#EXTINF:-1 tvg-id="HNTV2" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HNTV2.png" group-title="卫视",海南卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000006211/1.m3u8?channel-id=bestzb&Contentid=5000000004000006211&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="SZTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/SZTV.png" group-title="卫视",深圳卫视
+#EXTINF:-1 tvg-id="SZTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/SZTV.png" group-title="卫视",深圳卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000007410/1.m3u8?channel-id=bestzb&Contentid=5000000004000007410&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="HBTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HBTV.png" group-title="卫视",湖北卫视
+#EXTINF:-1 tvg-id="HBTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HBTV.png" group-title="卫视",湖北卫视
 http://gslbserv.itv.cmvideo.cn/1000000001000024621/1.m3u8?channel-id=ystenlive&Contentid=1000000001000024621&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="HunanTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HunanTV.png" group-title="卫视",湖南卫视
+#EXTINF:-1 tvg-id="HunanTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanTV.png" group-title="卫视",湖南卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000006692/1.m3u8?channel-id=bestzb&Contentid=5000000004000006692&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="GSTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GSTV.png" group-title="卫视",甘肃卫视
+#EXTINF:-1 tvg-id="GSTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GSTV.png" group-title="卫视",甘肃卫视
 http://gslbserv.itv.cmvideo.cn/5000000011000031121/1.m3u8?channel-id=bestzb&Contentid=5000000011000031121&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="XZTV" tvg-logo="https://tb.zbds.top/logo/西藏卫视.png" group-title="卫视",西藏卫视
-http://112.27.5.218:9901/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-id="GZTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/GZTV.png" group-title="卫视",贵州卫视
+https://live.264788.xyz/channel/xizangweishi?streamid=4b4e8ea919f1cfd5e43deed1d1675251&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-id="GZTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="卫视",贵州卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000025843/1.m3u8?channel-id=bestzb&Contentid=5000000004000025843&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="LNTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/LNTV.png" group-title="卫视",辽宁卫视
+#EXTINF:-1 tvg-id="LNTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/LNTV.png" group-title="卫视",辽宁卫视
 http://gslbserv.itv.cmvideo.cn/5000000004000011671/1.m3u8?channel-id=bestzb&Contentid=5000000004000011671&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CQTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CQTV.png" group-title="卫视",重庆卫视
+#EXTINF:-1 tvg-id="CQTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CQTV.png" group-title="卫视",重庆卫视
 http://gslbserv.itv.cmvideo.cn/1000000001000001096/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001096&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="SXTV" tvg-logo="https://tb.zbds.top/logo/陕西卫视.png" group-title="卫视",陕西卫视
 https://live.264788.xyz/channel/shaanxiweishi?streamid=9dc887dba8ecb4e4143baf4f2373800c&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 tvg-id="QHTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/QHTV.png" group-title="卫视",青海卫视
+#EXTINF:-1 tvg-id="QHTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/QHTV.png" group-title="卫视",青海卫视
 http://gslbserv.itv.cmvideo.cn/1000000002000013359/1.m3u8?channel-id=ystenlive&Contentid=1000000002000013359&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="HLJTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HLJTV.png" group-title="卫视",黑龙江卫视
+#EXTINF:-1 tvg-id="HLJTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HLJTV.png" group-title="卫视",黑龙江卫视
 http://gslbserv.itv.cmvideo.cn/1000000001000001925/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001925&livemode=1&stbId=3

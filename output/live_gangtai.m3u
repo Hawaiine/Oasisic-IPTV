@@ -1,14 +1,14 @@
 #EXTM3U url-tvg="https://live.fanmingming.com/e.xml"
 #PLAYLIST:港澳台
-#EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/HOYTV.png" group-title="港澳台",HOY TV
-http://php.jdshipin.com/TVOD/iptv.php?id=hoytv
+#EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HOYTV.png" group-title="港澳台",HOY TV
+http://r.jdshipin.com/sFw4S
 #EXTINF:-1 tvg-id="TVBJ2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/J2.png" group-title="港澳台",J2
 https://hls-gateway.vpstv.net/streams/476932.m3u8
-#EXTINF:-1 tvg-id="TVBSNews" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBSNews.png" group-title="港澳台",TVBS新闻
+#EXTINF:-1 tvg-id="TVBSNews" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBSNews.png" group-title="港澳台",TVBS新闻
 http://61.221.215.25:8800/hls/9/index.m3u8
 #EXTINF:-1 tvg-id="TVBPearl" tvg-logo="https://www.xn--rgv465a.top/tvlogo/明珠台.png" group-title="港澳台",TVB明珠台
 https://hls-gateway.vpstv.net/streams/476936.m3u8
-#EXTINF:-1 tvg-id="TVBXinghe" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TVBXinghe.png" group-title="港澳台",TVB星河
+#EXTINF:-1 tvg-id="TVBXinghe" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBXinghe.png" group-title="港澳台",TVB星河
 http://aktv-stream.m16tv.cfd/stream/astro_a1/tvbxinghe/AKTV.m3u8
 #EXTINF:-1 tvg-id="TVBJade" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/翡翠台.png" group-title="港澳台",TVB翡翠台
 http://r.jdshipin.com/qClQf
@@ -24,7 +24,7 @@ https://v.hystudio.cn:8088/live/yifatv-ztxw0.m3u8
 rtmp://f13h.mine.nu/sat/tv091
 #EXTINF:-1 tvg-id="PhoenixChinese" tvg-logo="https://www.xn--rgv465a.top/tvlogo/凤凰中文.png" group-title="港澳台",凤凰卫视中文台
 https://7612-5516-affc-d88b.kylintv.tv/live/pxinhd_iphone.m3u8
-#EXTINF:-1 tvg-id="PhoenixInfo" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/PhoenixInfo.png" group-title="港澳台",凤凰卫视资讯台
+#EXTINF:-1 tvg-id="PhoenixInfo" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/PhoenixInfo.png" group-title="港澳台",凤凰卫视资讯台
 http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv
 #EXTINF:-1 tvg-id="PhoenixHK" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰香港台.png" group-title="港澳台",凤凰卫视香港台
 http://r.jdshipin.com/yDoTN
@@ -36,5 +36,5 @@ rtmp://f13h.mine.nu/sat/tv071
 https://h5cdn3.kylintv.tv/live/tvbnews_iphone.m3u8
 #EXTINF:-1 tvg-id="FTV" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/民视.png" group-title="港澳台",民视
 rtmp://f13h.mine.nu/sat/tv051
-#EXTINF:-1 tvg-id="TDM" tvg-logo="https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/TDM.png" group-title="港澳台",澳视澳门
+#EXTINF:-1 tvg-id="TDM" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TDM.png" group-title="港澳台",澳视澳门
 https://cdn6.163189.xyz/163189/asam
