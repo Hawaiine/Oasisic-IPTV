@@ -505,7 +505,8 @@
     "display_name": "武汉文艺",
     "category": "local",
     "tvg_id": "WHWY",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/WHWY.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/WHWY.png",
+    "notes": "暂无可用上游 URL，表内留档待后续补充"
   },
   {
     "standard_name": "上海新闻综合",
@@ -617,7 +618,8 @@
     "display_name": "成都新闻综合",
     "category": "local",
     "tvg_id": "CDXW",
-    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CDXW.png"
+    "tvg_logo": "https://gcore.jsdelivr.net/gh/fanmingming/live@master/tv/CDXW.png",
+    "notes": "暂无可用上游 URL，表内留档待后续补充"
   },
   {
     "standard_name": "重庆新闻",
