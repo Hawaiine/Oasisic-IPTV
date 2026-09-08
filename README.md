@@ -33,7 +33,7 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 | [`live_radio.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_radio.m3u) | 电台（独立文件） |
 | [`guide.xml`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/guide.xml) | 裁剪版 EPG（仅标准表频道） |
 
-主列表 `#EXTM3U` 已写入 `url-tvg="https://live.fanmingming.com/e.xml"`。部分网络打不开该域名时，EPG 可改填 GitHub raw：`https://raw.githubusercontent.com/fanmingming/live/main/e.xml`。台标走 jsDelivr 镜像。
+主列表 `#EXTM3U` 已写入 `url-tvg="https://live.fanmingming.com/e.xml"`。部分网络打不开该域名时，EPG 可改填 GitHub raw：`https://raw.githubusercontent.com/fanmingming/live/main/e.xml`。台标已改为本仓库 `logo/` 托管，示例：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV1.png`。缺失台标列表见 `data/logo_missing.txt`。
 
 国内访问 GitHub raw 慢时，主列表可用镜像：
 

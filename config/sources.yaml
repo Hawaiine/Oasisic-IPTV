@@ -83,7 +83,7 @@ sources:
     region: cn
     priority: 35
     core: false
-    # 社区精选，命名较规范；validate 返回 0 条，暂时禁用
+    # 社区精选，命名较规范；2026-09-08 复查 HTTP 200 但解析 0 条，保持禁用
 
   - key: "zilong-best"
     url: "https://raw.githubusercontent.com/zilong7728/Collect-IPTV/main/best_sorted.m3u"
@@ -218,7 +218,7 @@ sources:
     region: cn
     priority: 47
     core: false
-    # IPv6 补充；HTTP 404，暂时禁用
+    # IPv6 补充；2026-09-08 复查仍 HTTP 404，保持禁用
 
   - key: "ftindy-iptv"
     url: "https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u"
@@ -227,7 +227,7 @@ sources:
     region: cn
     priority: 47
     core: false
-    # 综合列表；HTTP 404，暂时禁用
+    # 综合列表；2026-09-08 复查仍 HTTP 404，保持禁用
 
   - key: "burningc4-ipv4"
     url: "https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u"
@@ -299,4 +299,4 @@ sources:
     region: hotel
     priority: 80
     core: false
-    # 酒店聚合，降权保留；HTTP 404，暂时禁用
+    # 酒店聚合，降权保留；2026-09-08 复查仍 HTTP 404，保持禁用
