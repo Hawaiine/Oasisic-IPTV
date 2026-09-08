@@ -35,7 +35,7 @@ https://stream1.freetv.fun/yan-zhou-ying-shi-6.ctv
 #EXTINF:-1 tvg-id="GZXW" tvg-logo="https://tb.zbds.top/logo/广州新闻.png" group-title="各省市",广州新闻
 http://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=d2c2db0b598c02ec1b5623728434d367&txTime=18d57929bd3
 #EXTINF:-1 tvg-id="GZTV" tvg-logo="https://tb.zbds.top/logo/广州综合.png" group-title="各省市",广州综合
-https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=439b0fd2cf766b363c93a59cbcbe1370&txTime=18d00acf488
+https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=f0147ae6453a80f5989f382368b72aad&txTime=18d00acf487
 #EXTINF:-1 tvg-id="KBTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/KBTV.png" group-title="各省市",康巴卫视
 http://39.134.65.65/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225660/index.m3u8
 #EXTINF:-1 tvg-id="YBTV" tvg-logo="https://tb.zbds.top/logo/延边卫视.png" group-title="各省市",延边卫视
@@ -46,8 +46,8 @@ http://stream.appwuhan.com/1tzb/sd/live.m3u8
 https://stream1.freetv.fun/675206b8446ce719bfb293b5a5296db3aa26521c9810de7c996838247cc56964.ctv
 #EXTINF:-1 tvg-id="JSZY" tvg-logo="https://gitee.com/suxuang/TVlogo/raw/main/img/Jiangsu3.png" group-title="各省市",江苏综艺
 https://stream1.freetv.fun/f8ef469943662bed2abc6609d9ef1720b9e93a8a0bd6f5789133461e36763f37.m3u8
-#EXTINF:-1 tvg-id="ZJSH" tvg-logo="https://tb.zbds.top/logo/浙江经济生活.png" group-title="各省市",浙江经济生活
-http://ali-vl.cztv.com/channels/lantian/channel003/360p.m3u8
+#EXTINF:-1 tvg-id="ZJSH" tvg-logo="https://tb.zbds.top/logo/浙江经视.png" group-title="各省市",浙江经济生活
+http://ali-m-l.cztv.com/channels/lantian/channel003/720p.m3u8
 #EXTINF:-1 tvg-id="ZJQJ" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJQJ.png" group-title="各省市",浙江钱江
 https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
 #EXTINF:-1 tvg-id="HNWL" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖南娱乐.png" group-title="各省市",湖南娱乐
@@ -59,6 +59,6 @@ https://stream1.freetv.fun/fu-jian-zong-he-6.m3u8
 #EXTINF:-1 tvg-id="CQXW" tvg-logo="https://www.xn--rgv465a.top/tvlogo/重庆新闻.png" group-title="各省市",重庆新闻
 http://38.75.136.137:98/gslb/dsdqpub/cqxw.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="JYKT" tvg-logo="https://tb.zbds.top/logo/金鹰卡通.png" group-title="各省市",金鹰卡通
-http://124.228.160.210:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0
+http://221.13.235.175:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="SXDS" tvg-logo="https://tb.zbds.top/logo/陕西都市青春.png" group-title="各省市",陕西都市青春
 http://112.46.105.20:8009/hls/19/index.m3u8
