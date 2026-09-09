@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://live.fanmingming.com/e.xml"
 #PLAYLIST:港澳台
 #EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HOYTV.png" group-title="港澳台",HOY TV
-http://r.jdshipin.com/sFw4S
+http://php.jdshipin.com/TVOD/iptv.php?id=hoytv
 #EXTINF:-1 tvg-id="TVBJ2" tvg-logo="https://www.xn--rgv465a.top/tvlogo/J2.png" group-title="港澳台",J2
 https://hls-gateway.vpstv.net/streams/476932.m3u8
 #EXTINF:-1 tvg-id="TVBSNews" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBSNews.png" group-title="港澳台",TVBS新闻
