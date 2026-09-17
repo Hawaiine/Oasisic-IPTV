@@ -23,6 +23,11 @@ output/*.xml
 output/guide.full.xml
 output/guide.xml.gz
 
+# 探活分列：本机探活产物（内容取决于出口网络），不进仓库
+output/live_ipv6.m3u
+output/live_cmcc.m3u
+output/live_signed.m3u
+
 # 系统
 .DS_Store
 Thumbs.db

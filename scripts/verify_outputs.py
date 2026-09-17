@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from lib.categories import CATEGORIES, group_title, iter_main_order  # noqa: E402
+from lib.health import index_age_days  # noqa: E402
 from lib.io_util import load_json, project_root  # noqa: E402
 from lib.m3u import parse_m3u  # noqa: E402
 
@@ -92,6 +93,13 @@ def main() -> None:
     if backup_path.exists():
         check_m3u(backup_path, max_keep=3, require_nonempty=False, errors=errors)
 
+    # 探活分列（可选产物，存在即校验；属「问题清单」，同频道最多 3 条）
+    for col in ("live_ipv6.m3u", "live_cmcc.m3u", "live_signed.m3u"):
+        col_path = root / "output" / col
+        if col_path.exists():
+            check_m3u(col_path, max_keep=3, require_nonempty=False, errors=errors)
+    check_health(root, errors)
+
     other = 0
     bad_group = 0
     for e in live:
@@ -148,6 +156,45 @@ def main() -> None:
         print(f"\n❌ 校验失败 {len(errors)} 项")
         sys.exit(1)
     print("\n✅ verify_outputs 全部通过")
+
+
+def check_health(root: Path, errors: list[str]) -> None:
+    """探活产物校验（存在才校验；CI 无探活时为跳过）。"""
+    path = root / "output" / "health.json"
+    if not path.exists():
+        print("ℹ health.json 不存在（未跑探活）→ 选优按旧口径")
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        fail(f"health.json 无法解析: {exc}", errors)
+        return
+    if data.get("schema_version") != 1:
+        fail(f"health schema_version={data.get('schema_version')}", errors)
+    if data.get("stage") != "probe":
+        fail(f"health stage={data.get('stage')}", errors)
+    if data.get("timezone") != "Asia/Shanghai":
+        fail("health timezone 应为 Asia/Shanghai", errors)
+    urls = data.get("urls")
+    if not isinstance(urls, dict) or not urls:
+        fail("health.urls 为空", errors)
+        return
+    egress = (data.get("egress") or {}).get("label") or "unknown"
+    age = index_age_days(data)
+    max_age = 7
+    probe_cfg = root / "config" / "probe.yaml"
+    if probe_cfg.exists():
+        try:
+            import yaml
+
+            max_age = int((yaml.safe_load(probe_cfg.read_text(encoding="utf-8")) or {}).get("max_age_days") or 7)
+        except Exception:  # noqa: BLE001
+            max_age = 7
+    ok(
+        f"health.json: {len(urls)} 条, 出口 {egress}, 已过 {age} 天, 分级 {data.get('counts')}"
+    )
+    if age is not None and age > max_age:
+        print(f"⚠ health.json 已过 {age} 天 > {max_age} 天，选优将回退旧口径（建议重跑 scripts/probe.py）")
 
 
 def _warn_epg_tvg_ids(root: Path, live: list[dict]) -> None:

@@ -1,0 +1,36 @@
+# Oasisic-IPTV 探活（probe）设置
+#
+# 探活 = 对候选 URL 做一次真实的「能不能拉到首片」检查，结果写 output/health.json。
+# 选优（select.py）会优先选择健康度更好的 URL；没有健康数据时行为与旧版一致。
+#
+# 重要：探活结果只代表「探测出口网络」的可达性。
+#   - 本机（武汉联通）跑 = 对自己最有参考价值。
+#   - GitHub 云端（美国 egress）跑 ≠ 全国可用，不得写进 README 当作结论。
+
+# 默认探测哪些列表（相对仓库根）
+inputs:
+  - "output/live.m3u"
+  - "output/live_backup.m3u"
+
+# 探测参数
+concurrency: 24                 # 并发数；家庭宽带建议 16~32
+timeout_sec: 8                  # 单个 URL 超时
+body_bytes: 2048                # 只读首片，不下载整段流
+follow_redirects: true
+verify_ssl: false               # 部分国内源证书不规范
+probe_segment: true             # m3u8 首片探不通时，再探第一个分片
+
+# 健康数据有效期（天）：超过则视为过期，选优不再采信（回退旧行为）
+max_age_days: 7
+
+# 输出
+health_file: "output/health.json"
+write_columns: true             # 生成 live_ipv6 / live_cmcc / live_signed 分列
+column_titles:
+  ipv6: "Oasisic-IPTV IPv6 专列"
+  cmcc: "Oasisic-IPTV 网络锁专列（403，以移动魔百和为主）"
+  signed: "Oasisic-IPTV 时效签名专列"
+
+# 出口网络标签：写进 health.json，说明探测视角（不含公网 IP）
+egress_label: "local"
+record_ip: false                # true 时把出口公网 IP 也写进 health.json（默认不写）

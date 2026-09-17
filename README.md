@@ -47,11 +47,18 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 
 ## 可播口径
 
-- **收录 ≠ 可播。** 列表只保证「公开源里出现过、经过清洗和选优」，不探测 HLS/TS 是否当前可播。
+- **收录 ≠ 可播。** 列表只保证「公开源里出现过、经过清洗和选优」。
+- **探活（可选）**：`scripts/probe.py` 可在**本机网络**实测每条链接能否拉到首片，结果写 `output/health.json`；
+  本机跑完 `collect.py` 后，选优会按「本机实测可达性」优先排序（可播排前、死链降权、网络锁降权）。
+  没有 `health.json` 或数据过期时，排序与旧版完全一致。
+- **探活结果只代表探测出口网络**：家里跑 ≈ 你家能不能看；云端 CI 跑的是美国出口，**不代表大陆可用**。
+  分级表、出口说明与用法见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。
 - 地域源、IPv6、酒店源、`rtp://` 组播可以收录；`rtp://` 会降权排后。
 - 国际频道默认只出现在 `live_overseas.m3u` / `live_more.m3u`。
 - 主列表一台一链：同一频道名最多 1 条 URL。
 - 备份列表：同一标准台最多 3 条**不同** URL，按源 priority + 区域排序。VLC / PotPlayer 请只用主列表。
+- 探活按链路类型另出三份**本机产物**（默认不进仓库）：`live_ipv6.m3u`（仅 IPv6 可播）、
+  `live_cmcc.m3u`（403 网络锁，以移动魔百和为主）、`live_signed.m3u`（时效签名链接，会过期）。
 
 ---
 
@@ -78,6 +85,11 @@ pip install -r requirements.txt
 pytest tests/ -q
 python scripts/manage_sources.py validate
 python scripts/collect.py
+python scripts/verify_outputs.py
+
+# 可选：本机探活（按「本机能不能播」重排选优；结果写 output/health.json）
+python scripts/probe.py --egress-label wuhan-unicom
+python scripts/collect.py          # 再跑一次，读健康度重排
 python scripts/verify_outputs.py
 ```
 

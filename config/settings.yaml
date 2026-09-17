@@ -12,6 +12,8 @@ main_include_overseas: false     # 国际不进主列表
 request_timeout_sec: 30
 strict_sources_ratio: 0.7        # 启用源成功率低于此值则 CI 失败
 auto_disable_fail_days: 3        # 非核心源连续失败自动禁用
+use_url_health: true             # output/health.json 存在且未过期时，选优以「本机探活健康度」优先
+health_max_age_days: 7           # 健康数据超过此天数视为过期 → 回退旧口径（与 config/probe.yaml 对应）
 user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 url_tvg: "https://live.fanmingming.com/e.xml"

@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from lib.categories import RADIO_KEY, file_suffix, group_title, iter_main_order  # noqa: E402
 from lib.classify import classify_entries  # noqa: E402
+from lib.health import build_index, index_age_days, summarize as summarize_health  # noqa: E402
 from lib.io_util import load_json, load_yaml, project_root, save_json, save_text  # noqa: E402
 from lib.m3u import build_m3u, parse_playlist  # noqa: E402
 from lib.match import ChannelMatcher, attach_match  # noqa: E402
@@ -39,6 +40,36 @@ def load_settings() -> dict[str, Any]:
 def load_sources() -> list[dict[str, Any]]:
     data = load_yaml(project_root() / "config" / "sources.yaml")
     return list(data.get("sources") or [])
+
+
+def load_health_index(settings: dict[str, Any]) -> dict[str, str] | None:
+    """读取 output/health.json 生成 {url: level}。无文件/过期/关闭时返回 None（回退旧行为）。"""
+    if not settings.get("use_url_health", True):
+        print("健康度: 已关闭（settings.use_url_health=false）")
+        return None
+    out_dir = settings.get("output_dir") or "output/"
+    path = project_root() / out_dir / "health.json"
+    if not path.exists():
+        print("健康度: 无 output/health.json（选优按旧口径）")
+        return None
+    try:
+        payload = load_json(path)
+    except Exception as exc:  # noqa: BLE001
+        print(f"健康度: health.json 无法解析（{type(exc).__name__}）→ 忽略")
+        return None
+    max_age = int(settings.get("health_max_age_days") or 7)
+    index = build_index(payload, max_age_days=max_age)
+    if not index:
+        print("健康度: health.json 无有效条目 → 忽略")
+        return None
+    age = index_age_days(payload)
+    egress = (payload.get("egress") or {}).get("label") or "unknown"
+    print(
+        f"健康度: {len(index)} 条 | 出口 {egress} | 探测时间 {payload.get('generated_at')}"
+        f" | 已过 {age} 天（上限 {max_age}）"
+    )
+    print(f"健康度分布: {summarize_health(index)}")
+    return index
 
 
 def _logo_url(tvg_id: str) -> str:
@@ -360,8 +391,9 @@ def run() -> int:
 
     matched = attach_match(parsed, matcher)
     classified = classify_entries(matched)
+    health = load_health_index(settings)
     max_keep = int(settings.get("max_keep_per_channel") or 1)
-    selected = select_best(classified, max_keep=max_keep)
+    selected = select_best(classified, max_keep=max_keep, health=health)
     include_ov = bool(settings.get("main_include_overseas", False))
     catalog, more, radio = split_catalog_more(
         selected,
@@ -378,7 +410,7 @@ def run() -> int:
             and e.get("category") != RADIO_KEY
             and (include_ov or e.get("category") != "overseas")
         ]
-        backup = select_best(backup_pool, max_keep=backup_keep)
+        backup = select_best(backup_pool, max_keep=backup_keep, health=health)
     counts = write_outputs(catalog, more, radio, backup, settings)
     write_check_result(counts, fetched, settings)
     logger.info(

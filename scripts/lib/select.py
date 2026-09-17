@@ -1,4 +1,4 @@
-"""选优：源 priority → 区域 → 频道级偏好 → 名称稳定性；全局 URL 去重；rtp 降权；目录制分流。"""
+"""选优：URL 健康度 → 源 priority → 区域 → 频道级偏好 → 名称稳定性；全局 URL 去重；rtp 降权；目录制分流。"""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ from collections import Counter, defaultdict
 from typing import Any
 
 from .categories import RADIO_KEY, group_title, iter_main_order
+from .health import UNKNOWN_RANK, is_signed as _health_is_signed, level_rank
 
 logger = logging.getLogger(__name__)
 
@@ -21,25 +22,29 @@ REGION_RANK = {
 
 DEFAULT_CHANNEL_PRIORITY = 50  # 频道表未写 priority 时的默认值（越小越优先）
 
-# 时效性签名参数：URL query 带这些大概率会过期（分钟~小时级），选优时降权
-# 只匹配 ?param= / &param= 位置，避免误伤域名或路径中的同名子串
-_SIGNED_URL_RE = re.compile(
-    r"[?&](?:auth_key|accountinfo|GuardEncType|SecurityKey|"
-    r"timestamp|expires?|token|signed|sign|sig|st)=",
-    re.IGNORECASE,
-)
-
 
 def _is_signed(url: str) -> bool:
     """带时效签名参数的 URL 视为不稳定（如北京移动 accountinfo、央视 auth_key）。"""
-    return bool(_SIGNED_URL_RE.search(url or ""))
+    return _health_is_signed(url)
 
 
-def _sort_key(entry: dict[str, Any]) -> tuple:
+def _health_rank(entry: dict[str, Any], health: dict[str, str] | None) -> int:
+    """URL 健康度 rank：无健康数据（health=None）时统一 UNKNOWN_RANK，排序与旧版一致。"""
+    if not health:
+        return UNKNOWN_RANK
+    url = entry.get("url") or ""
+    if not url:
+        return UNKNOWN_RANK
+    return level_rank(health.get(url))
+
+
+def _sort_key(entry: dict[str, Any], health: dict[str, str] | None = None) -> tuple:
     url = entry.get("url") or ""
     rtp = 1 if url.startswith("rtp://") else 0
     # 时效签名降权：介于 rtp 与 region 之间，优先无签名稳定链接
     signed = 1 if _is_signed(url) else 0
+    # URL 健康度（本机探活结果）：最高优先级排序维度；无数据时全为 UNKNOWN_RANK
+    health_rank = _health_rank(entry, health)
     region = entry.get("source_region") or "overseas"
     # 频道级 preferred_region：命中则该源的区域排名视为最优先（cn 同级）
     pref = entry.get("preferred_region") or ""
@@ -53,11 +58,12 @@ def _sort_key(entry: dict[str, Any]) -> tuple:
     matched = 0 if entry.get("matched") else 1
     # 名称稳定性：已匹配标准表优先
     name_len = len(entry.get("cleaned_name") or entry.get("name") or "")
-    return (rtp, signed, region_rank, channel_prio, priority, matched, name_len)
+    return (rtp, signed, health_rank, region_rank, channel_prio, priority, matched, name_len)
 
 
 def _dedup_urls(
     entries: list[dict[str, Any]],
+    health: dict[str, str] | None = None,
 ) -> tuple[list[dict[str, Any]], int]:
     """全局 URL 去重：非 radio 优先保留。返回 (去重后, 被去重条数)。"""
     best: dict[str, dict[str, Any]] = {}
@@ -81,7 +87,7 @@ def _dedup_urls(
         if not old_radio and new_radio:
             dropped += 1
             continue
-        if _sort_key(e) < _sort_key(old):
+        if _sort_key(e, health) < _sort_key(old, health):
             best[url] = e
             dropped += 1
         else:
@@ -93,9 +99,14 @@ def select_best(
     entries: list[dict[str, Any]],
     *,
     max_keep: int = 1,
+    health: dict[str, str] | None = None,
 ) -> list[dict[str, Any]]:
-    """按 display/standard 名保留 max_keep 条，先全局 URL 去重。"""
-    entries, dropped = _dedup_urls(entries)
+    """按 display/standard 名保留 max_keep 条，先全局 URL 去重。
+
+    `health` 为 {url: level}（scripts/lib/health.build_index 的产物）。
+    为 None 或空时行为与旧版完全一致。
+    """
+    entries, dropped = _dedup_urls(entries, health)
     groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
     radio: list[dict[str, Any]] = []
     for e in entries:
@@ -107,7 +118,7 @@ def select_best(
 
     selected: list[dict[str, Any]] = []
     for _name, items in groups.items():
-        items.sort(key=_sort_key)
+        items.sort(key=lambda e: _sort_key(e, health))
         selected.extend(items[: max(1, max_keep)])
 
     radio_groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -115,10 +126,10 @@ def select_best(
         key = e.get("standard_name") or e.get("display_name") or e.get("name") or ""
         radio_groups[key].append(e)
     for items in radio_groups.values():
-        items.sort(key=_sort_key)
+        items.sort(key=lambda e: _sort_key(e, health))
         selected.extend(items[: max(1, max_keep)])
 
-    _log_select_stats(entries, dropped, selected, max_keep)
+    _log_select_stats(entries, dropped, selected, max_keep, health)
     return selected
 
 
@@ -127,16 +138,27 @@ def _log_select_stats(
     dropped: int,
     selected: list[dict[str, Any]],
     max_keep: int,
+    health: dict[str, str] | None = None,
 ) -> None:
     rtp_n = sum(1 for e in deduped if (e.get("url") or "").startswith("rtp://"))
     by_cat: Counter[str] = Counter(e.get("category") or "other" for e in selected)
     cat_str = " ".join(f"{c}={n}" for c, n in sorted(by_cat.items()))
+    if health:
+        by_health: Counter[str] = Counter(
+            health.get(e.get("url") or "", "unknown") for e in selected
+        )
+        health_str = " ".join(
+            f"{c}={n}" for c, n in sorted(by_health.items(), key=lambda kv: (level_rank(kv[0]), kv[0]))
+        )
+    else:
+        health_str = "no-health-data"
     logger.info(
-        "[select] rtp=%d url_dropped=%d selected=%d max_keep=%d cats: %s",
+        "[select] rtp=%d url_dropped=%d selected=%d max_keep=%d health: %s cats: %s",
         rtp_n,
         dropped,
         len(selected),
         max_keep,
+        health_str,
         cat_str or "-",
     )
 
