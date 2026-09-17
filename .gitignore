@@ -31,6 +31,9 @@ output/live_signed.m3u
 # EPG 上游盘点产物（机器可读，随时可重生成）
 output/epg_inventory.json
 
+# 扩容候选清单（由 scripts/suggest_channels.py 重生成）
+data/channels_candidates.json
+
 # 系统
 .DS_Store
 Thumbs.db

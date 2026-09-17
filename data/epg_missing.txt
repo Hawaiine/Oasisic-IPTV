@@ -1,7 +1,7 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-09-18 04:02:25
-# 覆盖率：90/120 = 75.0%
+# 生成时间：2026-09-18 04:28:52
+# 覆盖率：230/260 = 88.5%
 
 广东珠江 | local | upstream-missing
 广东公共 | local | upstream-missing

@@ -163,17 +163,22 @@ python scripts/verify_outputs.py
 
 ## 命名规范
 
-- 央视：`CCTV-1 综合`、`CCTV-5+ 体育赛事`、`CCTV-4K 超高清`。禁止 `CCTV1` / `CCTV1HD` / `CCTV-01`。
+- 央视：`CCTV-1 综合`、`CCTV-5+ 体育赛事`、`CCTV-4K 超高清`、`CCTV-世界地理`（付费/数字频道同形）。禁止 `CCTV1` / `CCTV1HD` / `CCTV-01`。
 - 卫视：`湖南卫视`、`东方卫视`（不是「上海东方卫视」）、`东南卫视`（不是「福建东南卫视」）。禁止「高清」「HD」「卫视频道」。
+- 各省市：城市在前，如 `武汉新闻综合`、`河南民生`、`广州影视`。
 - 全部简体；去掉分辨率、编码、运营商、IPV6、测试、备用标签。
+
+完整字段规范、收录判据、黑名单与「怎么加台」见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。
 
 ---
 
 ## 项目结构
 
-见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。
+见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。频道标准与收录规则见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。
 
-当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 120 个实体。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
+当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 **257** 个实体（央视 39 / 卫视 38 / 各省市 145 / 港澳台 19 / 体育 15 / 网络直播 1），其中 **227 个有 EPG（88.3%）**。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
+
+名称黑名单（`config/exclude.yaml`）过滤点播回看、购物、测试、引流等非直播噪声；未命中标准表的条目走关键词分类兜底（`scripts/lib/classify.py`），分类不了的留在 `live_more.m3u` 的「其他」里，**不乱分**。扩容用 `scripts/suggest_channels.py`（从长尾里挑「有上游 EPG」的候选），台标用 `scripts/fetch_missing_logos.py` 补。
 
 > IPv6 源（fanmingming-ipv6 等）频道更全；IPv4 用户建议同时订阅 `live_backup.m3u` 提高可用性。
 

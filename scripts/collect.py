@@ -11,12 +11,14 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from lib.categories import RADIO_KEY, file_suffix, group_title, iter_main_order  # noqa: E402
 from lib.classify import classify_entries  # noqa: E402
 from lib.health import build_index, index_age_days, summarize as summarize_health  # noqa: E402
+from lib.exclude import filter_entries as exclude_entries, load_patterns as load_exclude_patterns  # noqa: E402
 from lib.io_util import load_json, load_yaml, project_root, save_json, save_text  # noqa: E402
 from lib.m3u import build_m3u, parse_playlist  # noqa: E402
 from lib.match import ChannelMatcher, attach_match  # noqa: E402
@@ -40,6 +42,19 @@ def load_settings() -> dict[str, Any]:
 def load_sources() -> list[dict[str, Any]]:
     data = load_yaml(project_root() / "config" / "sources.yaml")
     return list(data.get("sources") or [])
+
+
+def load_exclude(settings: dict[str, Any]) -> list[str]:
+    """加载名称黑名单（config/exclude.yaml）。关闭时返回空列表。"""
+    if not settings.get("apply_exclude", True):
+        print("黑名单: 已关闭（settings.apply_exclude=false）")
+        return []
+    path = project_root() / str(settings.get("exclude_file") or "config/exclude.yaml")
+    if not path.exists():
+        print(f"黑名单: {path.name} 不存在 → 使用内置默认")
+        return load_exclude_patterns(None)
+    cfg = load_yaml(path)
+    return load_exclude_patterns(cfg)
 
 
 def load_health_index(settings: dict[str, Any]) -> dict[str, str] | None:
@@ -73,22 +88,26 @@ def load_health_index(settings: dict[str, Any]) -> dict[str, str] | None:
 
 
 def _logo_url(tvg_id: str) -> str:
-    return f"{LOGO_BASE}/{tvg_id}.png"
+    return f"{LOGO_BASE}/{quote(tvg_id)}.png"
 
 
 def fill_logo(entry: dict[str, Any]) -> dict[str, Any]:
-    """缺 logo 时补 jsDelivr；已有 fanmingming.com/.cn 的也改成镜像。"""
-    tvg_id = entry.get("tvg_id") or ""
-    logo = entry.get("tvg_logo") or ""
-    if "live.fanmingming." in logo and tvg_id:
-        entry = dict(entry)
+    """台标只允许本仓库 `logo/`（或留空），且只在文件确实存在时才写。
+
+    规则（防 404）：
+    1. 取 `tvg_id or epg_id` 作为台标 key；
+    2. `logo/<key>.png` 存在 → 写 jsDelivr 地址；
+    3. 否则一律置空——**绝不写第三方外链**（源自带的 tvg-logo 会 404/失效）。
+    """
+    tvg_id = str(entry.get("tvg_id") or entry.get("epg_id") or "").strip()
+    logo = str(entry.get("tvg_logo") or "")
+    if logo and LOGO_BASE in logo:
+        return entry  # 已经是本仓库地址
+    entry = dict(entry)
+    if tvg_id and (project_root() / "logo" / f"{tvg_id}.png").exists():
         entry["tvg_logo"] = _logo_url(tvg_id)
-        return entry
-    if logo:
-        return entry
-    if tvg_id:
-        entry = dict(entry)
-        entry["tvg_logo"] = _logo_url(tvg_id)
+    else:
+        entry["tvg_logo"] = ""
     return entry
 
 
@@ -386,6 +405,10 @@ def run() -> int:
     fetched = asyncio.run(fetch_all(sources, settings))
     parsed = parse_fetched(fetched)
     print(f"解析合计: {len(parsed)}")
+    patterns = load_exclude(settings)
+    if patterns:
+        parsed, dropped_names = exclude_entries(parsed, patterns)
+        print(f"黑名单过滤: -{len(dropped_names)}（样例 {dropped_names[:5]}）→ 剩 {len(parsed)}")
 
     record_source_stats(fetched, settings)
     enforce_strict(fetched, settings)

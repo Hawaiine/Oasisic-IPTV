@@ -1,9 +1,81 @@
 # 缺失台标清单（有上游即补；无上游写明尝试来源与结果）
-# 格式：tvg_id<TAB>标准名<TAB>尝试来源与结果
-SHXW	上海新闻综合	try=fanmingming 4 入口(gcore.jsdelivr / raw.githubusercontent / live.fanmingming.cn / 中文名) 全部 404 | Oasisic-Icons(424 PNG) 无匹配 | iptv-org API(31314 频道) 无此频道 → 暂不可得
-WHWY	武汉文艺	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
-TVBNews	无线新闻	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道（仅有 TVB 主频道）→ 暂不可得
-CTiTV	中天新闻	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+# 格式：标准名 | 分类 | 原因
+BRTV体育休闲 | sports | logo-missing（上游镜像无此台标）
+BRTV卡酷少儿 | local | logo-missing（上游镜像无此台标）
 BeijingSports	北京体育	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+CCTV怀旧剧场 | cctv | logo-missing（上游镜像无此台标）
+CCTV第一剧场 | cctv | logo-missing（上游镜像无此台标）
+CTiTV	中天新闻	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+SHXW	上海新闻综合	try=fanmingming 4 入口(gcore.jsdelivr / raw.githubusercontent / live.fanmingming.cn / 中文名) 全部 404 | Oasisic-Icons(424 PNG) 无匹配 | iptv-org API(31314 频道) 无此频道 → 暂不可得
+TVBNews	无线新闻	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道（仅有 TVB 主频道）→ 暂不可得
 VideolandSports	纬来体育	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
-# 对照校验：同批测试中 CCTV1.png（gcore/raw/live.fanmingming.cn/jsDelivr）均返回 200，说明上述 404 是「上游确实没有」，不是网络问题。
+WHWY	武汉文艺	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+上海新闻综合 | local | logo-missing（上游镜像无此台标）
+东莞生活资讯 | local | logo-missing（上游镜像无此台标）
+中天新闻 | gangtai | logo-missing（上游镜像无此台标）
+乐山新闻综合 | local | logo-missing（上游镜像无此台标）
+六安公共 | local | logo-missing（上游镜像无此台标）
+六安新闻综合 | local | logo-missing（上游镜像无此台标）
+北京体育 | sports | logo-missing（上游镜像无此台标）
+南京少儿 | local | logo-missing（上游镜像无此台标）
+南京新闻综合 | local | logo-missing（上游镜像无此台标）
+南通新闻综合 | local | logo-missing（上游镜像无此台标）
+吉林乡村 | local | logo-missing（上游镜像无此台标）
+大庆新闻综合 | local | logo-missing（上游镜像无此台标）
+天津体育 | sports | logo-missing（上游镜像无此台标）
+宁夏公共 | local | logo-missing（上游镜像无此台标）
+宁夏少儿 | local | logo-missing（上游镜像无此台标）
+宁夏经济 | local | logo-missing（上游镜像无此台标）
+山东教育卫视 | weishi | logo-missing（上游镜像无此台标）
+峨眉电影 | local | logo-missing（上游镜像无此台标）
+广元公共 | local | logo-missing（上游镜像无此台标）
+徐州新闻综合 | local | logo-missing（上游镜像无此台标）
+攀枝花新闻综合 | local | logo-missing（上游镜像无此台标）
+无线新闻 | gangtai | logo-missing（上游镜像无此台标）
+无锡娱乐 | local | logo-missing（上游镜像无此台标）
+无锡生活 | local | logo-missing（上游镜像无此台标）
+无锡经济 | local | logo-missing（上游镜像无此台标）
+来宾综合 | local | logo-missing（上游镜像无此台标）
+杭州影视 | local | logo-missing（上游镜像无此台标）
+杭州生活 | local | logo-missing（上游镜像无此台标）
+杭州综合 | local | logo-missing（上游镜像无此台标）
+武汉文艺 | local | logo-missing（上游镜像无此台标）
+求索记录 | local | logo-missing（上游镜像无此台标）
+江门综合 | local | logo-missing（上游镜像无此台标）
+河北农民 | local | logo-missing（上游镜像无此台标）
+河北少儿科教 | local | logo-missing（上游镜像无此台标）
+河北影视 | local | logo-missing（上游镜像无此台标）
+河北经济 | local | logo-missing（上游镜像无此台标）
+河北都市 | local | logo-missing（上游镜像无此台标）
+河源公共 | local | logo-missing（上游镜像无此台标）
+济南综合 | local | logo-missing（上游镜像无此台标）
+浙江公共新闻 | local | logo-missing（上游镜像无此台标）
+浙江教育 | local | logo-missing（上游镜像无此台标）
+浙江民生 | local | logo-missing（上游镜像无此台标）
+海南自贸 | local | logo-missing（上游镜像无此台标）
+热播剧场 | local | logo-missing（上游镜像无此台标）
+甘肃少儿 | local | logo-missing（上游镜像无此台标）
+甘肃文化影视 | local | logo-missing（上游镜像无此台标）
+石家庄娱乐 | local | logo-missing（上游镜像无此台标）
+石家庄新闻综合 | local | logo-missing（上游镜像无此台标）
+石家庄生活 | local | logo-missing（上游镜像无此台标）
+石家庄都市 | local | logo-missing（上游镜像无此台标）
+第一财经 | local | logo-missing（上游镜像无此台标）
+精彩影视 | local | logo-missing（上游镜像无此台标）
+纪实科教 | local | logo-missing（上游镜像无此台标）
+纬来体育 | sports | logo-missing（上游镜像无此台标）
+经典电影 | local | logo-missing（上游镜像无此台标）
+苏州新闻综合 | local | logo-missing（上游镜像无此台标）
+苏州社会经济 | local | logo-missing（上游镜像无此台标）
+西安都市 | local | logo-missing（上游镜像无此台标）
+赣州公共 | local | logo-missing（上游镜像无此台标）
+赣州教育 | local | logo-missing（上游镜像无此台标）
+赣州新闻综合 | local | logo-missing（上游镜像无此台标）
+长沙政法 | local | logo-missing（上游镜像无此台标）
+青海都市 | local | logo-missing（上游镜像无此台标）
+黑龙江少儿 | local | logo-missing（上游镜像无此台标）
+黑龙江影视 | local | logo-missing（上游镜像无此台标）
+黑龙江文体 | local | logo-missing（上游镜像无此台标）
+黑龙江新闻法治 | local | logo-missing（上游镜像无此台标）
+黑龙江都市 | local | logo-missing（上游镜像无此台标）
+龙岩综合 | local | logo-missing（上游镜像无此台标）

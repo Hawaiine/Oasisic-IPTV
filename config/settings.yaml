@@ -27,5 +27,7 @@ epg_sources:
   - "https://epg.112114.xyz/pp.xml"
   - "https://epg.pw/xmltv/epg_CN.xml"   # id 为数字，靠 display-name 直配（港澳台/地方台补充）
 
+apply_exclude: true              # 名称黑名单（config/exclude.yaml）：过滤点播/购物/测试等非直播噪声
+exclude_file: "config/exclude.yaml"
 epg_min_coverage: 0.6            # 标准表 EPG 覆盖率低于此值 → verify_outputs 失败
 use_epg_id: true                 # 输出 tvg-id 用 epg_id（无 epg_id 时回退 tvg_id）
