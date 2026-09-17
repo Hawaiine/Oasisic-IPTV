@@ -17,11 +17,8 @@ data/*.csv
 !data/aliases.json
 !data/source_stats.json
 
-# 全量/临时 XML 不提交；裁剪版 guide.xml 进 git
+# 全量/临时 XML 不提交
 output/*.xml
-!output/guide.xml
-output/guide.full.xml
-output/guide.xml.gz
 
 # 探活分列：本机探活产物（内容取决于出口网络），不进仓库
 output/live_ipv6.m3u

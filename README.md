@@ -6,7 +6,7 @@
 
 公开 IPTV 源日更聚合工具 —— 多源采集、智能清洗、标准命名、目录制选优，生成干净可用的分类 M3U 播放列表。
 
-Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经过名称清洗、标准频道表匹配、中文分类和一台一链选优后，输出结构清晰的 M3U，可导入 VLC、PotPlayer、TVBox、TiviMate、Kodi。
+面向中文用户。每日从多个公开源采集频道，经过名称清洗、标准频道表匹配、中文分类和一台一链选优后，输出结构清晰的 M3U，可导入 VLC、PotPlayer、TVBox、TiviMate、Kodi。
 
 项目坚持目录制：主列表 `live.m3u` 只保留命中标准表的频道，且每台一条最优链接；`live_backup.m3u` 为同一批标准台保留最多 3 条不同 URL（给会自动切换的播放器）；扩展列表 `live_more.m3u` 保留未入表频道。源的新增、禁用、连续失败自动下线都走配置，不必改代码。
 
@@ -31,37 +31,9 @@ Oasisic-IPTV 面向中文用户。它每日从多个公开源采集频道，经�
 | [`live_special.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_special.m3u) | 酒店（目录制下通常为空，非推荐） |
 | [`live_other.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_other.m3u) | 其他（通常为空，非推荐） |
 | [`live_radio.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_radio.m3u) | 电台（独立文件） |
-| [`guide.xml`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/guide.xml) | 多上游合并裁剪的 EPG（当前覆盖 90/120 个标准台） |
+| `guide.xml` | 多上游合并裁剪的 EPG，见下方「EPG 节目指南」 |
 
-主列表 `#EXTM3U` 已写入 `url-tvg="https://live.fanmingming.com/e.xml"`。台标已改为本仓库 `logo/` 托管，示例：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV1.png`。缺失台标列表见 `data/logo_missing.txt`（含已尝试的上游与结果）。
-
-节目单（EPG）由**多个上游合并后按标准表裁剪**生成，覆盖 90/120 个台（卫视、央视全覆盖），详见 [docs/EPG.md](docs/EPG.md)。
-想要更全的节目单，EPG 地址填本仓库的 `guide.xml`：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/output/guide.xml`（jsDelivr 不通时用 raw 地址）。
-
-国内访问 GitHub raw 慢时，主列表可用镜像：
-
-- 原始：`https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u`
-- jsDelivr：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/output/live.m3u`
-- ghproxy：`https://ghproxy.com/https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.m3u`
-
-普通用户只订 `live.m3u`；TiviMate / APTV 等支持多链接的可再订 `live_backup.m3u`。
-
----
-
-## 可播口径
-
-- **收录 ≠ 可播。** 列表只保证「公开源里出现过、经过清洗和选优」。
-- **探活（可选）**：`scripts/probe.py` 可在**本机网络**实测每条链接能否拉到首片，结果写 `output/health.json`；
-  本机跑完 `collect.py` 后，选优会按「本机实测可达性」优先排序（可播排前、死链降权、网络锁降权）。
-  没有 `health.json` 或数据过期时，排序与旧版完全一致。
-- **探活结果只代表探测出口网络**：家里跑 ≈ 你家能不能看；云端 CI 跑的是美国出口，**不代表大陆可用**。
-  分级表、出口说明与用法见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。
-- 地域源、IPv6、酒店源、`rtp://` 组播可以收录；`rtp://` 会降权排后。
-- 国际频道默认只出现在 `live_overseas.m3u` / `live_more.m3u`。
-- 主列表一台一链：同一频道名最多 1 条 URL。
-- 备份列表：同一标准台最多 3 条**不同** URL，按源 priority + 区域排序。VLC / PotPlayer 请只用主列表。
-- 探活按链路类型另出三份**本机产物**（默认不进仓库）：`live_ipv6.m3u`（仅 IPv6 可播）、
-  `live_cmcc.m3u`（403 网络锁，以移动魔百和为主）、`live_signed.m3u`（时效签名链接，会过期）。
+主列表已写入 `url-tvg="https://live.fanmingming.com/e.xml"`。台标已改为本仓库 `logo/` 托管，示例：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV1.png`。缺失台标列表见 `data/logo_missing.txt`（含已尝试的上游与结果）。
 
 ---
 
@@ -117,18 +89,17 @@ python scripts/verify_outputs.py
 
 ---
 
-## EPG 节目指南使用方法
+## EPG 节目指南
 
 通用：本项目主列表已自动写入 `url-tvg="https://live.fanmingming.com/e.xml"`。支持从 M3U 读取该字段的播放器无需再填。不支持的，手动填同一地址。
 
-仓库另有多上游合并裁剪版 [`output/guide.xml`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/guide.xml)（只含标准表频道，覆盖 90/120 个台，卫视与央视全覆盖）。**想要更全的节目单就填它**：
-`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/output/guide.xml`。`tvg-id` 与标准表 `epg_id` 完全对应；没有 EPG 的台见 `data/epg_missing.txt`。上游清单、对齐规则与覆盖率表见 [docs/EPG.md](docs/EPG.md)。
+`guide.xml` 是**多上游合并 + 按标准表裁剪**后的 XMLTV 节目单，只包含标准频道表里的台，覆盖 **230/260** 个台（卫视、央视全覆盖）。EPG 上游、对齐规则与覆盖率表见 [docs/EPG.md](docs/EPG.md)。`tvg-id` 与标准表 `epg_id` 完全对应；没有 EPG 的台见 `data/epg_missing.txt`。
 
-> 频道编号：`tvg-chno` 目前**不写**（TiviMate 不支持、Kodi 新版忽略该字段）。台号由列表顺序决定，主列表已按 央视 → 卫视 → 各省市 → 港澳台 → 体育 → 网络直播 排好。
+> `guide.xml` 体积较大，**不纳入 git 历史**。如需历史版本，使用 GitHub Actions Artifacts（保留 30 天）或 Release 附件。
 
 ### APTV（Apple TV / iOS / macOS）
 
-1. 添加订阅（live.m3u）。
+1. 添加订阅（`live.m3u`）。
 2. 订阅设置 →「EPG」或「节目单」地址栏，填 `https://live.fanmingming.com/e.xml`。
 3. 开启「自动更新 EPG」。
 
@@ -174,9 +145,9 @@ python scripts/verify_outputs.py
 
 ## 项目结构
 
-见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。频道标准与收录规则见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。
+见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。频道标准与收录规则见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。加入频道见 [docs/ADD_CHANNEL.md](docs/ADD_CHANNEL.md)。源治理见 [docs/ADD_SOURCE.md](docs/ADD_SOURCE.md) 与 [docs/REMOVE_SOURCE.md](docs/REMOVE_SOURCE.md)。常见问题见 [docs/FAQ.md](docs/FAQ.md)。贡献与提交规范见 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)。
 
-当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 **257** 个实体（央视 39 / 卫视 38 / 各省市 145 / 港澳台 19 / 体育 15 / 网络直播 1），其中 **227 个有 EPG（88.3%）**。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
+当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 **257** 个实体（央视 39 / 卫视 38 / 各省市 145 / 港澳台 19 / 体育 15 / 网络直播 1），其中 **230 个有 EPG（88.5%）**。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
 
 名称黑名单（`config/exclude.yaml`）过滤点播回看、购物、测试、引流等非直播噪声；未命中标准表的条目走关键词分类兜底（`scripts/lib/classify.py`），分类不了的留在 `live_more.m3u` 的「其他」里，**不乱分**。扩容用 `scripts/suggest_channels.py`（从长尾里挑「有上游 EPG」的候选），台标用 `scripts/fetch_missing_logos.py` 补。
 
@@ -197,6 +168,12 @@ python scripts/verify_outputs.py
 源列表只维护在 `config/sources.yaml`。核心源连续失败会告警但不会自动禁用；非核心源连续 3 天失败自动 `enabled: false`。空壳列表 `live_other.m3u` / `live_overseas.m3u` / `live_special.m3u` 不再提交到仓库，**不推荐订阅**。
 
 EPG 上游只维护在 `config/settings.yaml` 的 `epg_sources`（多个源真合并、按标准表裁剪）；对齐规则与当前覆盖率见 [docs/EPG.md](docs/EPG.md)。
+
+---
+
+## 常见问题
+
+见 [docs/FAQ.md](docs/FAQ.md)。
 
 ---
 
