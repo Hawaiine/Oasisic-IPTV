@@ -149,8 +149,8 @@ def main() -> None:
     else:
         ok("radio_in_main=False")
 
-    # tvg_id 对账：只警告，不失败
-    _warn_epg_tvg_ids(root, live)
+    # EPG 覆盖率硬检查（阈值 settings.epg_min_coverage）
+    check_epg_coverage(root, live, errors)
 
     if errors:
         print(f"\n❌ 校验失败 {len(errors)} 项")
@@ -197,28 +197,72 @@ def check_health(root: Path, errors: list[str]) -> None:
         print(f"⚠ health.json 已过 {age} 天 > {max_age} 天，选优将回退旧口径（建议重跑 scripts/probe.py）")
 
 
-def _warn_epg_tvg_ids(root: Path, live: list[dict]) -> None:
+def check_epg_coverage(root: Path, live: list[dict], errors: list[str]) -> None:
+    """EPG 覆盖率硬检查：低于 settings.epg_min_coverage 则失败。
+
+    覆盖率口径 = 标准表里有 guide.xml 节目单的频道数 / 标准表总数，
+    期望 id 取 `epg_id or tvg_id`。
+    """
     channels = load_json(root / "data" / "channels.json")
-    table_ids = {str(ch.get("tvg_id") or "").strip() for ch in channels if ch.get("tvg_id")}
-    live_ids = {str(e.get("tvg_id") or "").strip() for e in live if e.get("tvg_id")}
+    total = len(channels)
+    if not total:
+        fail("channels.json 为空", errors)
+        return
+
+    def _expect_id(ch: dict) -> str:
+        return str(ch.get("epg_id") or ch.get("tvg_id") or "").strip()
+
     guide = root / "output" / "guide.xml"
     if not guide.exists():
-        print("⚠ EPG 对账：output/guide.xml 不存在（fetch_epg 未跑或失败）")
+        print("⚠ EPG 覆盖率：output/guide.xml 不存在（fetch_epg 未跑或失败）")
         return
     try:
         tree = ET.parse(guide)
-        epg_ids = {ch.get("id") or "" for ch in tree.findall("channel")}
     except ET.ParseError as exc:
-        print(f"⚠ EPG 对账：guide.xml 无法解析 ({exc})")
+        fail(f"guide.xml 无法解析 ({exc})", errors)
         return
-    missing_table = sorted(table_ids - epg_ids)
+    epg_ids = {ch.get("id") or "" for ch in tree.findall("channel")}
+    prog_ids = {
+        p.get("channel") or "" for p in tree.findall("programme") if (p.get("channel") or "")
+    }
+    covered = [ch for ch in channels if _expect_id(ch) in prog_ids]
+    ratio = len(covered) / total
+
+    by_cat: dict[str, list[int]] = {}
+    for ch in channels:
+        got = 1 if _expect_id(ch) in prog_ids else 0
+        t, g = by_cat.get(ch.get("category") or "other", [0, 0])
+        by_cat[ch.get("category") or "other"] = [t + 1, g + got]
+    detail = " ".join(f"{k}={v[1]}/{v[0]}" for k, v in sorted(by_cat.items()))
+
+    try:
+        import yaml
+
+        settings = yaml.safe_load((root / "config" / "settings.yaml").read_text(encoding="utf-8")) or {}
+    except Exception:  # noqa: BLE001
+        settings = {}
+    threshold = float(settings.get("epg_min_coverage") or 0.6)
+
+    if ratio < threshold:
+        fail(
+            f"EPG 覆盖率 {len(covered)}/{total} = {ratio:.1%} < 阈值 {threshold:.0%}（{detail}）",
+            errors,
+        )
+    else:
+        ok(f"EPG 覆盖率 {len(covered)}/{total} = {ratio:.1%}（阈值 {threshold:.0%}）| {detail}")
+
+    missing_channels = [ch for ch in channels if _expect_id(ch) not in prog_ids]
+    miss_file = root / "data" / "epg_missing.txt"
+    if missing_channels and not miss_file.exists():
+        fail(f"有 {len(missing_channels)} 个频道无 EPG，但缺少 data/epg_missing.txt", errors)
+    elif missing_channels:
+        ok(f"缺口清单 data/epg_missing.txt 存在（{len(missing_channels)} 个未覆盖）")
+
+    # 主列表 tvg-id 与 guide.xml 对账（只提示，不失败——无 EPG 的频道本来就对不上）
+    live_ids = {str(e.get("tvg_id") or "").strip() for e in live if e.get("tvg_id")}
     missing_live = sorted(live_ids - epg_ids)
-    if missing_table:
-        print(f"⚠ 标准表 {len(missing_table)} 个 tvg_id 不在 guide.xml: {missing_table[:12]}")
     if missing_live:
-        print(f"⚠ 主列表 {len(missing_live)} 个 tvg_id 不在 guide.xml: {missing_live[:12]}")
-    if not missing_table and not missing_live:
-        ok(f"EPG 对账：guide.xml 覆盖标准表 {len(table_ids)} / 主列表 {len(live_ids)}")
+        print(f"ℹ 主列表 {len(missing_live)} 个 id 不在 guide.xml（预期：无 EPG 的频道）: {missing_live[:8]}")
 
 
 if __name__ == "__main__":

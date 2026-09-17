@@ -42,9 +42,12 @@ select  全局 URL 去重 → rtp 降权 → 区域/priority 排序 → max_keep
     └─ radio                       → live_radio.m3u
 
 EPG（旁路，失败不挡 M3U）：
-epg_sources → fetch_epg.py → 按 channels.json tvg_id 裁剪
+epg_sources（多个上游，真合并，先到先得 + programme 去重）
+    → fetch_epg.py 按 channels.json 的 epg_id ∪ tvg_id 裁剪
     → output/guide.xml（进 git）+ guide.xml.gz（gitignore）
+    → 覆盖率报告同时是 verify_outputs.py 的硬检查（settings.epg_min_coverage）
 M3U 头：#EXTM3U url-tvg="https://live.fanmingming.com/e.xml"
+M3U 的 tvg-id：epg_id or tvg_id（settings.use_epg_id 控制，保证零退化）
 ```
 
 ## 选优维度

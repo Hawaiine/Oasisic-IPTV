@@ -1,0 +1,35 @@
+# Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
+# 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
+# 生成时间：2026-09-18 04:02:25
+# 覆盖率：90/120 = 75.0%
+
+广东珠江 | local | upstream-missing
+广东公共 | local | upstream-missing
+广东新闻 | local | upstream-missing
+广州影视 | local | upstream-missing
+武汉新闻 | local | upstream-missing
+武汉文艺 | local | upstream-missing
+上海新闻综合 | local | upstream-missing
+上海都市 | local | upstream-missing
+四川文化旅游 | local | upstream-missing
+成都新闻综合 | local | upstream-missing
+陕西都市青春 | local | upstream-missing
+凤凰卫视香港台 | gangtai | upstream-missing
+TVB明珠台 | gangtai | upstream-missing
+无线新闻 | gangtai | upstream-missing
+ViuTV | gangtai | upstream-missing
+HOY TV | gangtai | upstream-missing
+澳视澳门 | gangtai | upstream-missing
+中天新闻 | gangtai | upstream-missing
+东森新闻 | gangtai | upstream-missing
+华视 | gangtai | upstream-missing
+台视 | gangtai | upstream-missing
+中视 | gangtai | upstream-missing
+民视 | gangtai | upstream-missing
+TVBS新闻 | gangtai | upstream-missing
+三立新闻 | gangtai | upstream-missing
+TVB星河 | gangtai | upstream-missing
+J2 | gangtai | upstream-missing
+广东体育 | sports | upstream-missing
+五星体育 | sports | upstream-missing
+纬来体育 | sports | upstream-missing

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-18 03:46:56",
+  "updated_at": "2026-09-18 04:09:17",
   "sources": {
     "fanmingming-ipv6": {
       "ok": 21,
@@ -98,7 +98,7 @@
       "consecutive_fail": 0,
       "last_ok": "2026-09-18",
       "last_fail": "",
-      "last_count": 60,
+      "last_count": 59,
       "last_error": ""
     },
     "yang-gather": {
@@ -178,7 +178,7 @@
       "consecutive_fail": 0,
       "last_ok": "2026-09-18",
       "last_fail": "",
-      "last_count": 404,
+      "last_count": 398,
       "last_error": ""
     },
     "wwb521-live": {

@@ -104,6 +104,7 @@ def attach_match(
             rec["display_name"] = hit.get("display_name") or hit["standard_name"]
             rec["category"] = hit.get("category") or rec.get("category") or "other"
             rec["tvg_id"] = hit.get("tvg_id") or rec.get("tvg_id") or ""
+            rec["epg_id"] = hit.get("epg_id") or rec.get("epg_id") or ""
             rec["tvg_logo"] = rec.get("tvg_logo") or hit.get("tvg_logo") or ""
             # 频道级选优提示（可选字段，旧数据缺失时保持默认）
             if "priority" in hit:

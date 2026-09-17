@@ -34,12 +34,16 @@ XML_B = """<?xml version="1.0"?>
 
 
 def test_clip_and_dedup() -> None:
-    root, stats = merge_and_clip([XML_A, XML_B], {"CCTV1", "HunanTV"})
+    root, stats, per_source = merge_and_clip(
+        [("src-a", XML_A), ("src-b", XML_B)], {"CCTV1", "HunanTV"}
+    )
     ids = [c.get("id") for c in root.findall("channel")]
     assert ids == ["CCTV1", "HunanTV"]
     titles = [p.findtext("title") for p in root.findall("programme")]
     assert titles == ["新闻", "综艺A", "晚间"]
     assert stats["programme_dup"] == 1
     assert stats["channel_skipped"] >= 1
+    assert per_source["src-a"]["channel_kept"] == 2
+    assert per_source["src-b"]["programme_kept"] == 1  # 第 1 条与源 A 重复被丢
     assert "应被裁掉" not in tostring(root, encoding="unicode")
     assert "重复应丢" not in tostring(root, encoding="unicode")

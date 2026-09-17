@@ -662,8 +662,6 @@ https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8
 http://ls.qingting.fm/live/1099.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.cn/tv/浙江经济生活.png" group-title="各省市",浙江经济
 https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
-#EXTINF:-1 tvg-id="浙江钱江都市" tvg-logo="https://www.xn--rgv465a.top/tvlogo/浙江钱江都市.png" group-title="各省市",浙江钱江都市
-https://t.freetv.fun/live/zhe-jiang-qian-jiang-du-shi-1.m3u8
 #EXTINF:-1 tvg-id="海南公共" tvg-logo="https://www.xn--rgv465a.top/tvlogo/海南公共.png" group-title="各省市",海南公共
 https://migu.188766.xyz/?migutoken=9b74a05ac3e7b51beecb305c9c7c22b4&id=hn_ggpd&type=sz
 #EXTINF:-1 tvg-id="海南少儿" tvg-logo="https://www.xn--rgv465a.top/tvlogo/海南少儿.png" group-title="各省市",海南少儿
@@ -762,8 +760,6 @@ http://218.84.127.245:1026/hls/main1/playlist.m3u8?zxinjd,
 http://stream8.jlntv.cn/hctv/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="珲春新闻综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/珲春新闻综合.png" group-title="各省市",珲春新闻综合
 https://stream1.freetv.fun/hun-chun-xin-wen-zong-he-3.m3u8
-#EXTINF:-1 tvg-id="璧山综合" tvg-logo="https://tb.zbds.top/logo/璧山综合.png" group-title="各省市",璧山综合
-http://222.179.42.129:8181/hls1.m3u8
 #EXTINF:-1 tvg-id="甘南县综合" tvg-logo="https://tb.zbds.top/logo/甘南县综合.png" group-title="各省市",甘南县综合
 https://stream.hrbtv.net/zxpd/sd/live.m3u8
 #EXTINF:-1 tvg-id="甘孜综合" tvg-logo="https://tb.zbds.top/logo/甘孜综合.png" group-title="各省市",甘孜综合
@@ -5346,6 +5342,8 @@ https://live.ottiptv.cc/yy/1355142167
 https://live.metshop.top/huya/30080229
 #EXTINF:-1 group-title="其他",狮口余生的小角马
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/7cfc0fe7981b4022b69c3e1cb7317b77/1200.m3u8
+#EXTINF:-1 group-title="其他",狮子和鬣狗
+https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/6ca061c3b9184e7aa46cef1ead911099/1200.m3u8
 #EXTINF:-1 tvg-id="狮子山鸟瞰丽江古城" tvg-logo="https://tb.zbds.top/logo/狮子山鸟瞰丽江古城.png" group-title="其他",狮子山鸟瞰丽江古城
 https://gcalic.v.myalicdn.com/gc/ljgcszsnkgc_1/index.m3u8
 #EXTINF:-1 group-title="其他",狮子捕猎计划
@@ -5356,6 +5354,8 @@ https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/bec9f485672345339c4
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/bdb438a81a20403db85b6e9d12707f2d/1200.m3u8
 #EXTINF:-1 group-title="其他",狮子的荣耀回归之路3
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/50ef8c8037da4735a9cb9288f45878b0/1200.m3u8
+#EXTINF:-1 group-title="其他",狮子的荣耀回归之路4
+https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/2fea6699d56f4274b5ab5260b016fda2/1200.m3u8
 #EXTINF:-1 group-title="其他",狮群的荣耀
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/84b850056589475f80528cf28b9b840a/1200.m3u8
 #EXTINF:-1 group-title="其他",狼人杀

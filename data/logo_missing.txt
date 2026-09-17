@@ -1,6 +1,9 @@
-SHXW	上海新闻综合
-WHWY	武汉文艺
-TVBNews	无线新闻
-CTiTV	中天新闻
-BeijingSports	北京体育
-VideolandSports	纬来体育
+# 缺失台标清单（有上游即补；无上游写明尝试来源与结果）
+# 格式：tvg_id<TAB>标准名<TAB>尝试来源与结果
+SHXW	上海新闻综合	try=fanmingming 4 入口(gcore.jsdelivr / raw.githubusercontent / live.fanmingming.cn / 中文名) 全部 404 | Oasisic-Icons(424 PNG) 无匹配 | iptv-org API(31314 频道) 无此频道 → 暂不可得
+WHWY	武汉文艺	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+TVBNews	无线新闻	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道（仅有 TVB 主频道）→ 暂不可得
+CTiTV	中天新闻	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+BeijingSports	北京体育	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+VideolandSports	纬来体育	try=fanmingming 4 入口 全部 404 | Oasisic-Icons 无匹配 | iptv-org API 无此频道 → 暂不可得
+# 对照校验：同批测试中 CCTV1.png（gcore/raw/live.fanmingming.cn/jsDelivr）均返回 200，说明上述 404 是「上游确实没有」，不是网络问题。

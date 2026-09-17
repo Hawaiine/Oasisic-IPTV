@@ -274,19 +274,20 @@ def write_outputs(
         e["group_title"] = group_title(RADIO_KEY)
 
     url_tvg = settings.get("url_tvg") or "https://live.fanmingming.com/e.xml"
+    use_epg_id = bool(settings.get("use_epg_id", True))
     save_text(
         out_dir / "live.m3u",
-        build_m3u(catalog, playlist_title="Oasisic-IPTV 精选", url_tvg=url_tvg),
+        build_m3u(catalog, playlist_title="Oasisic-IPTV 精选", url_tvg=url_tvg, use_epg_id=use_epg_id),
     )
     if settings.get("write_live_more", True):
         save_text(
             out_dir / "live_more.m3u",
-            build_m3u(more_ordered, playlist_title="Oasisic-IPTV 扩展", url_tvg=url_tvg),
+            build_m3u(more_ordered, playlist_title="Oasisic-IPTV 扩展", url_tvg=url_tvg, use_epg_id=use_epg_id),
         )
     if settings.get("write_live_backup", True):
         save_text(
             out_dir / "live_backup.m3u",
-            build_m3u(backup_ordered, playlist_title="Oasisic-IPTV 备份", url_tvg=url_tvg),
+            build_m3u(backup_ordered, playlist_title="Oasisic-IPTV 备份", url_tvg=url_tvg, use_epg_id=use_epg_id),
         )
 
     by_cat: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -299,12 +300,12 @@ def write_outputs(
         title = group_title(cat)
         save_text(
             out_dir / f"live_{suffix}.m3u",
-            build_m3u(items, playlist_title=title, url_tvg=url_tvg),
+            build_m3u(items, playlist_title=title, url_tvg=url_tvg, use_epg_id=use_epg_id),
         )
 
     save_text(
         out_dir / "live_radio.m3u",
-        build_m3u(radio_ordered, playlist_title="电台", url_tvg=url_tvg),
+        build_m3u(radio_ordered, playlist_title="电台", url_tvg=url_tvg, use_epg_id=use_epg_id),
     )
     return {
         "catalog": len(catalog),

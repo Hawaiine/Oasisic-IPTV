@@ -28,6 +28,9 @@ output/live_ipv6.m3u
 output/live_cmcc.m3u
 output/live_signed.m3u
 
+# EPG 上游盘点产物（机器可读，随时可重生成）
+output/epg_inventory.json
+
 # 系统
 .DS_Store
 Thumbs.db

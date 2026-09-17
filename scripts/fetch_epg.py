@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""拉取 EPG、按标准表 tvg_id 裁剪、programme 去重，写出裁剪版 guide.xml。"""
+"""拉取 EPG（多源真合并）、按标准表 epg_id/tvg_id 裁剪、programme 去重，写出 guide.xml。"""
 
 from __future__ import annotations
 
@@ -9,41 +9,28 @@ import gzip
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
+from lib.epg_map import fetch_upstreams, load_epg_ids  # noqa: E402
 from lib.io_util import load_json, load_yaml, project_root, save_text  # noqa: E402
 
 
-def load_allowed_tvg_ids() -> set[str]:
+def load_allowed_ids() -> set[str]:
+    """裁剪白名单：epg_id 优先、tvg_id 回退（两口径都收，保证零退化）。"""
     channels = load_json(project_root() / "data" / "channels.json")
-    return {str(ch.get("tvg_id") or "").strip() for ch in channels if ch.get("tvg_id")}
-
-
-async def fetch(url: str, timeout: int, ua: str) -> str:
-    import aiohttp
-
-    connector = aiohttp.TCPConnector(ssl=False)
-    async with aiohttp.ClientSession(connector=connector) as session:
-        async with session.get(
-            url,
-            timeout=aiohttp.ClientTimeout(total=timeout),
-            headers={"User-Agent": ua, "Accept-Encoding": "gzip, deflate"},
-        ) as resp:
-            resp.raise_for_status()
-            raw = await resp.read()
-            if url.endswith(".gz") or raw[:2] == b"\x1f\x8b":
-                return gzip.decompress(raw).decode("utf-8", errors="replace")
-            return raw.decode("utf-8", errors="replace")
+    return load_epg_ids(channels)
 
 
 def merge_and_clip(
-    blobs: list[str],
+    blobs: list[tuple[str, str]],
     allowed: set[str],
-) -> tuple[ET.Element, dict[str, int]]:
-    """多源合并：channel / programme 均先到先得；只保留 allowed 中的 tvg_id。"""
+) -> tuple[ET.Element, dict[str, int], dict[str, dict[str, int]]]:
+    """多源合并：channel / programme 先到先得；只保留 allowed 中的 id。
+
+    返回 (root, 汇总统计, 每源贡献)。
+    """
     root = ET.Element("tv")
     seen_ch: set[str] = set()
     seen_prog: set[tuple[str, str, str]] = set()
@@ -55,11 +42,14 @@ def merge_and_clip(
         "programme_skipped": 0,
         "parse_fail": 0,
     }
-    for blob in blobs:
+    per_source: dict[str, dict[str, int]] = {}
+    for url, blob in blobs:
+        src = {"channel_kept": 0, "programme_kept": 0}
         try:
             tree = ET.fromstring(blob)
         except ET.ParseError:
             stats["parse_fail"] += 1
+            per_source[url] = {"channel_kept": 0, "programme_kept": 0, "parse_fail": 1}
             continue
         for ch in tree.findall("channel"):
             cid = (ch.get("id") or "").strip()
@@ -73,6 +63,7 @@ def merge_and_clip(
             seen_ch.add(cid)
             root.append(ch)
             stats["channel_kept"] += 1
+            src["channel_kept"] += 1
         for prog in tree.findall("programme"):
             cid = (prog.get("channel") or "").strip()
             if allowed and cid not in allowed:
@@ -85,7 +76,9 @@ def merge_and_clip(
             seen_prog.add(key)
             root.append(prog)
             stats["programme_kept"] += 1
-    return root, stats
+            src["programme_kept"] += 1
+        per_source[url] = src
+    return root, stats, per_source
 
 
 def xml_bytes(root: ET.Element) -> bytes:
@@ -106,36 +99,37 @@ def write_outputs(root: ET.Element) -> tuple[Path, Path]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="拉取并裁剪 EPG（写入 git 的是裁剪版）")
+    parser = argparse.ArgumentParser(description="拉取并裁剪 EPG（多源真合并，写入 git 的是裁剪版）")
     parser.parse_args()
     settings = load_yaml(project_root() / "config" / "settings.yaml")
     urls = list(settings.get("epg_sources") or [])
     if not urls:
-        print("settings.yaml 未配置 epg_sources")
+        print("❌ settings.yaml 未配置 epg_sources")
         sys.exit(1)
     timeout = max(int(settings.get("request_timeout_sec") or 30), 120)
     ua = settings.get("user_agent") or "Oasisic-IPTV/1.0"
-    allowed = load_allowed_tvg_ids()
-    print(f"标准表 tvg_id: {len(allowed)}")
+    allowed = load_allowed_ids()
+    print(f"裁剪白名单（epg_id ∪ tvg_id）: {len(allowed)} 个 id")
 
-    async def _run() -> list[str]:
-        out: list[str] = []
-        for url in urls:
-            try:
-                text = await fetch(url, timeout, ua)
-                out.append(text)
-                print(f"  ✓ {url} ({len(text)} chars)")
-                break  # 先到先得；后续条目仅作回落
-            except Exception as exc:  # noqa: BLE001
-                print(f"  ✗ {url}: {exc}")
-        return out
-
-    blobs = asyncio.run(_run())
+    results = asyncio.run(fetch_upstreams(urls, timeout=timeout, ua=ua))
+    blobs: list[tuple[str, str]] = []
+    for url, text, err in results:
+        if text is None:
+            print(f"  ✗ {url}: {err}")
+            continue
+        print(f"  ✓ {url} ({len(text)//1024} KB)")
+        blobs.append((url, text))
     if not blobs:
         print("❌ 没有成功的 EPG 源")
         sys.exit(1)
-    root, stats = merge_and_clip(blobs, allowed)
+
+    root, stats, per_source = merge_and_clip(blobs, allowed)
+    for url, src in per_source.items():
+        extra = f" parse_fail={src['parse_fail']}" if src.get("parse_fail") else ""
+        print(f"    {url} 贡献 channel={src['channel_kept']} programme={src['programme_kept']}{extra}")
+
     xml_path, gz_path = write_outputs(root)
+    kept_ids = {ch.get("id") for ch in root.findall("channel")}
     print(
         f"channel kept={stats['channel_kept']} skipped={stats['channel_skipped']} | "
         f"programme kept={stats['programme_kept']} dup={stats['programme_dup']} "
@@ -143,9 +137,18 @@ def main() -> None:
     )
     print(f"✅ 裁剪版 {xml_path} ({xml_path.stat().st_size} bytes)")
     print(f"✅ gzip {gz_path} ({gz_path.stat().st_size} bytes)")
-    missing = sorted(allowed - {ch.get("id") for ch in root.findall("channel")})
+
+    channels = load_json(project_root() / "data" / "channels.json")
+    total = len(channels)
+    covered = sum(1 for ch in channels if (ch.get("epg_id") or ch.get("tvg_id")) in kept_ids)
+    print(f"覆盖率: {covered}/{total} = {covered/total:.1%}")
+    missing = sorted(
+        ch["standard_name"]
+        for ch in channels
+        if (ch.get("epg_id") or ch.get("tvg_id")) not in kept_ids
+    )
     if missing:
-        print(f"⚠ 标准表 {len(missing)} 个 tvg_id 未出现在 EPG: {missing[:12]}")
+        print(f"⚠ 未覆盖 {len(missing)} 个（清单见 data/epg_missing.txt）: {missing[:10]}")
 
 
 if __name__ == "__main__":

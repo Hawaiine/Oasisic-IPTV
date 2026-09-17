@@ -118,17 +118,24 @@ def build_m3u(
     *,
     playlist_title: str = "Oasisic-IPTV",
     url_tvg: str = DEFAULT_URL_TVG,
+    use_epg_id: bool = True,
 ) -> str:
+    """生成 M3U。`use_epg_id=True` 时 `tvg-id = epg_id or tvg_id`（回退保证零退化）。"""
     header = "#EXTM3U"
     if url_tvg:
         header = f'#EXTM3U url-tvg="{url_tvg}"'
     lines = [header, f"#PLAYLIST:{playlist_title}"]
     for e in entries:
+        tid = ""
+        if use_epg_id:
+            tid = e.get("epg_id") or e.get("tvg_id") or ""
+        else:
+            tid = e.get("tvg_id") or ""
         lines.append(
             format_extinf(
                 name=e.get("display_name") or e.get("name") or "",
                 group=e.get("group_title") or e.get("group") or "",
-                tvg_id=e.get("tvg_id") or "",
+                tvg_id=tid,
                 tvg_logo=e.get("tvg_logo") or "",
             )
         )
