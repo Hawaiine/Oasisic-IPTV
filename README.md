@@ -145,7 +145,7 @@ python scripts/verify_outputs.py
 
 ## 项目结构
 
-见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。频道标准与收录规则见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。加入频道见 [docs/ADD_CHANNEL.md](docs/ADD_CHANNEL.md)。源治理见 [docs/ADD_SOURCE.md](docs/ADD_SOURCE.md) 与 [docs/REMOVE_SOURCE.md](docs/REMOVE_SOURCE.md)。常见问题见 [docs/FAQ.md](docs/FAQ.md)。贡献与提交规范见 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)。
+见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。频道标准与收录规则见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。加入频道见 [docs/ADD_CHANNEL.md](docs/ADD_CHANNEL.md)。源治理见 [docs/ADD_SOURCE.md](docs/ADD_SOURCE.md) 与 [docs/REMOVE_SOURCE.md](docs/REMOVE_SOURCE.md)。常见问题见 [docs/FAQ.md](docs/FAQ.md)。贡献与提交规范见 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)。客户端兼容性见 [docs/CLIENT_COMPATIBILITY.md](docs/CLIENT_COMPATIBILITY.md)。
 
 当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 **257** 个实体（央视 39 / 卫视 38 / 各省市 145 / 港澳台 19 / 体育 15 / 网络直播 1），其中 **230 个有 EPG（88.5%）**。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
 

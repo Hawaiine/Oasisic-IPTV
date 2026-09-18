@@ -18,6 +18,9 @@
 | `scripts/manage_sources.py` | 源生命周期 CLI |
 | `output/` | 生成物。裁剪版 `guide.xml` 进 git；全量 xml / `guide.xml.gz` 不进 git |
 | `scripts/fetch_epg.py` | 拉上游 EPG → 按 tvg_id 裁剪 → programme 去重 |
+| `scripts/probe.py` | 本机探活 → output/health.json + 分列 |
+| `scripts/weekly_playability_report.py` | 读取 health.json 输出每周可播报告 |
+| `docs/CLIENT_COMPATIBILITY.md` | 客户端兼容性矩阵与订阅策略 |
 
 ## 流水线
 
