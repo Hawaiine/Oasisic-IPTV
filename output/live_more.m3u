@@ -1044,8 +1044,6 @@ http://www.cdnstv.com:6398/hls/1119/index.m3u8
 http://1.94.31.214/php/hntv.php?id=hnly
 #EXTINF:-1 tvg-id="河南都市" group-title="各省市",河南都市
 http://1.94.31.214/php/hntv.php?id=hnds
-#EXTINF:-1 group-title="各省市",河源公共 # Tier:A Score:10
-http://tmpstream.hyrtv.cn/hygg/sd/live.m3u8
 #EXTINF:-1 tvg-id="河源综合" group-title="各省市",河源综合
 http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",治愈•放松“音乐”
@@ -1138,6 +1136,10 @@ https://mgtv.ottiptv.cc/migu/639731826.m3u8?migutoken=383a4690d772fe16ccec98f2da
 http://play.hhnynews.com/hhny/zhpd.m3u8?auth_key=1659380497-0-0-b07e3e3cd99f9355b6aa1e79fbd305f2
 #EXTINF:-1 tvg-id="淮阴综合" group-title="各省市",淮阴综合
 https://huaiyin-tv-replay.cm.jstv.com/huaiyin-tv/huaiyinf.m3u8
+#EXTINF:-1 group-title="各省市",深圳东部
+https://lglivepull.sznews.com/live/2646.m3u8
+#EXTINF:-1 group-title="各省市",深圳众创TV
+https://lglivepull.sznews.com/live/2645.m3u8
 #EXTINF:-1 group-title="各省市",深圳飞扬971
 https://satellitepull.cnr.cn/live/wxszfy971/playlist.m3u8
 #EXTINF:-1 group-title="各省市",深圳飞扬音乐台
@@ -1548,8 +1550,6 @@ https://liveout.xntv.tv/a65jur/96iln2.m3u8?zqinghd
 https://stream1.freetv.fun/xi-zhu-sheng-huo-fu-wu-1.m3u8
 #EXTINF:-1 tvg-id="西安新闻" group-title="各省市",西安新闻
 http://112.46.105.20:8009/hls/28/index.m3u8
-#EXTINF:-1 group-title="各省市",西安都市 # Tier:B Score:5
-http://112.46.105.20:8009/hls/29/index.m3u8
 #EXTINF:-1 tvg-id="西峰综合" group-title="各省市",西峰综合
 https://play.kankanlive.com/live/1683944827526991.m3u8
 #EXTINF:-1 group-title="各省市",西部电影
@@ -1589,7 +1589,7 @@ http://stream5.jlntv.cn/hn/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="辉南新闻综合" group-title="各省市",辉南新闻综合
 http://stream5.jlntv.cn/hn/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",辽宁公共
-http://120.76.248.139/live/bfgd/4200000077.m3u8
+http://120.76.248.139/live/bfgd/4200000481.m3u8
 #EXTINF:-1 tvg-id="辽宁北方频道" group-title="各省市",辽宁北方
 https://stream1.freetv.fun/liao-zhu-bei-fang-3.m3u8
 #EXTINF:-1 group-title="各省市",辽宁影视
@@ -1789,7 +1789,7 @@ http://stream9.jlntv.cn:80/aac_longjinggb/playlist.m3u8
 #EXTINF:-1 group-title="各省市",龙华卡通
 https://cdn8.163189.xyz/live/lhkt/stream.m3u8
 #EXTINF:-1 group-title="各省市",龙华电影
-http://iptv.4666888.xyz/iptv2A.php?id=45
+https://cdn8.163189.xyz/live/lhdy/stream.m3u8
 #EXTINF:-1 group-title="各省市",龙华电影台
 http://aktv-stream.m16tv.cfd/stream/taiwan/null-8/AKTV.m3u8
 #EXTINF:-1 group-title="各省市",龙岩公共
@@ -1825,7 +1825,7 @@ http://api.kkitv.itv888.vip:8080/streams/o6fp2zqodp/index.m3u8
 #EXTINF:-1 tvg-id="TVBJ1" group-title="港澳台",TVB J1
 http://cdn3.163189.xyz/live/j1/stream.m3u8
 #EXTINF:-1 group-title="港澳台",TVB Plus
-http://r.jdshipin.com/Nr5jq
+http://php.jdshipin.com/TVOD/iptv.php?id=j2
 #EXTINF:-1 group-title="港澳台",TVBPlus
 https://cdn6.cc.cd/163189/tvbp
 #EXTINF:-1 tvg-id="TVBS-Asia" group-title="港澳台",TVBS-Asia
@@ -2524,7 +2524,7 @@ http://uni5rtmp.tulix.tv:1935/betterlife/betterlife/playlist.m3u8?checkedby:iptv
 http://uni5rtmp.tulix.tv:1935/betternature/betternature/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:-1 group-title="国际",Bloomberg
 http://50.7.238.114:8278/bloomberg_twn/playlist.m3u8?tid=MBDB5111864051118640&ct=19254&tsum=20e267ffc313070f5fff457700929457
-#EXTINF:-1 tvg-id="6140" group-title="国际",Bloomberg Asia
+#EXTINF:-1 group-title="国际",Bloomberg Asia
 https://epg.pw/stream/d2edf469b9079064a283f4b0811cbf6f2597ebbb3d08dcf77036a4b5a791b7cf.m3u8
 #EXTINF:-1 group-title="国际",Bloomberg News Asia
 https://www.bloomberg.com/media-manifest/streams/asia.m3u8
@@ -5809,7 +5809,7 @@ https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/31d0363fb3714ce4b91
 #EXTINF:-1 tvg-id="都江堰鱼嘴" group-title="其他",都江堰鱼嘴
 https://gcalic.v.myalicdn.com/gc/djyqyl1_1/index.m3u8
 #EXTINF:-1 group-title="其他",重温经典
-http://112.27.235.94:8000/hls/50/index.m3u8
+http://8.138.7.223/tv/cwjd.php
 #EXTINF:-1 group-title="其他",野狗家族传世之爱
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/dc4007615a124e29827b16bec3885db5/1200.m3u8
 #EXTINF:-1 group-title="其他",野生世界竞技场
