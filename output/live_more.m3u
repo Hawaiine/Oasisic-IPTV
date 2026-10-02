@@ -2,6 +2,8 @@
 #PLAYLIST:Oasisic-IPTV 扩展
 #EXTINF:-1 tvg-id="CCTVBilliards.cn@HD" group-title="央视",CCTV-Billiards
 http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub
+#EXTINF:-1 tvg-id="CCTVHealth.cn@HD" group-title="央视",CCTV-Health
+http://38.75.136.137:98/gslb/dsdqpub/wsjk.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="456661" group-title="央视",CCTV-Nostalgia Theater
 http://38.75.136.137:98/gslb/dsdqpub/hjjc.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="CCTVStormFootball.cn@HD" group-title="央视",CCTV-Storm Football
@@ -910,6 +912,8 @@ http://stream3.hndt.com/now/yorSd1X2/playlist.m3u8
 http://tvpull.dxhmt.cn:9081/tv/11330-1.m3u8
 #EXTINF:-1 tvg-id="桦甸综合" group-title="各省市",桦甸综合
 http://stream9.jlntv.cn:80/aac_huadiangb/playlist.m3u8
+#EXTINF:-1 group-title="各省市",梅州综合
+http://pili-live-rtmp.tvliving.gdmztv.com/meizhou-tvliving/mztv1.m3u8
 #EXTINF:-1 tvg-id="梅河口综合" group-title="各省市",梅河口综合
 http://stream3.jlntv.cn:80/aac_mhkgb/playlist.m3u8
 #EXTINF:-1 group-title="各省市",棕熊的捕鱼生活
@@ -1044,6 +1048,8 @@ http://www.cdnstv.com:6398/hls/1119/index.m3u8
 http://1.94.31.214/php/hntv.php?id=hnly
 #EXTINF:-1 tvg-id="河南都市" group-title="各省市",河南都市
 http://1.94.31.214/php/hntv.php?id=hnds
+#EXTINF:-1 group-title="各省市",河源公共 # Tier:A Score:10
+http://tmpstream.hyrtv.cn/hygg/sd/live.m3u8
 #EXTINF:-1 tvg-id="河源综合" group-title="各省市",河源综合
 http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",治愈•放松“音乐”
@@ -1274,6 +1280,8 @@ https://live.metshop.top/huya/11342414
 https://live.metshop.top/huya/11602058
 #EXTINF:-1 tvg-id="玛纳斯综合" group-title="各省市",玛纳斯综合
 http://218.84.127.245:1026/hls/main1/playlist.m3u8?zxinjd,
+#EXTINF:-1 group-title="各省市",珠海生活
+http://120.237.252.67:8800/hls/41/index.m3u8
 #EXTINF:-1 tvg-id="珲春新闻" group-title="各省市",珲春新闻
 http://stream8.jlntv.cn/hctv/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="珲春新闻综合" group-title="各省市",珲春新闻综合
@@ -1304,8 +1312,6 @@ http://tv.zimtv.cn/tv/player/api/huya.php?id=21059578
 http://tv.zimtv.cn/tv/player/api/huya.php?id=11602077
 #EXTINF:-1 group-title="各省市",电影 变形金刚
 http://tv.zimtv.cn/tv/player/api/huya.php?id=21059596
-#EXTINF:-1 group-title="各省市",电影 古墓系列
-http://tv.zimtv.cn/tv/player/api/huya.php?id=11352913
 #EXTINF:-1 group-title="各省市",电影 喜乐影院
 http://tv.zimtv.cn/tv/player/api/huya.php?id=21059580
 #EXTINF:-1 group-title="各省市",电影 喜剧专场
@@ -1328,8 +1334,6 @@ http://tv.zimtv.cn/tv/player/api/huya.php?id=11602033
 http://tv.zimtv.cn/tv/player/api/huya.php?id=21059585
 #EXTINF:-1 group-title="各省市",电影 谍战片
 http://tv.zimtv.cn/tv/player/api/huya.php?id=21059587
-#EXTINF:-1 group-title="各省市",电影 贺岁片
-http://tv.zimtv.cn/tv/player/api/huya.php?id=11601986
 #EXTINF:-1 group-title="各省市",电影 高能反转
 http://tv.zimtv.cn/tv/player/api/huya.php?id=11352887
 #EXTINF:-1 group-title="各省市",电影 黑帮片
@@ -1589,7 +1593,7 @@ http://stream5.jlntv.cn/hn/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="辉南新闻综合" group-title="各省市",辉南新闻综合
 http://stream5.jlntv.cn/hn/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",辽宁公共
-http://120.76.248.139/live/bfgd/4200000481.m3u8
+http://120.76.248.139/live/bfgd/4200000077.m3u8
 #EXTINF:-1 tvg-id="辽宁北方频道" group-title="各省市",辽宁北方
 https://stream1.freetv.fun/liao-zhu-bei-fang-3.m3u8
 #EXTINF:-1 group-title="各省市",辽宁影视
@@ -1684,6 +1688,8 @@ http://tvbox6.icu/tv/mgtv.php?id=269
 http://ls.qingting.fm/live/4877.m3u8
 #EXTINF:-1 group-title="各省市",阅读•学习“音乐”
 https://cdn.ttvb.eu.org/huya/21241813
+#EXTINF:-1 group-title="各省市",阳江综合
+https://live.yjtvw.com:8081/live/smil:yjtv1.smil/chunklist_b1152000.m3u8
 #EXTINF:-1 tvg-id="陇川综合" group-title="各省市",陇川综合
 https://zb-live.ynurl.com/longchuan/58f88df3-605e-4c57-865c-8e8f85241ca1.m3u8
 #EXTINF:-1 group-title="各省市",陇西综合
@@ -1900,12 +1906,8 @@ http://61.221.215.25:8800/hls/41/index.m3u8
 http://198.16.100.90:8278/sanlixiju_twn/playlist.m3u8?tid=MCFC5174201151742011&ct=19193&tsum=27477ddeec029345da276c2c903f09c2
 #EXTINF:-1 group-title="港澳台",三立新闻iNEWS
 http://aktv-stream.m16tv.cfd/stream/taiwan/inews/AKTV.m3u8
-#EXTINF:-1 group-title="港澳台",三立新闻台
-https://epg.pw/stream/6b49e3faa38adda85abab446f032dc1e686baa0760a9cfa66e2df8fd6fe3b445.m3u8
 #EXTINF:-1 tvg-id="三立综合" group-title="港澳台",三立综合
 http://live4play.uk/livehttpplay?channel_id=12038
-#EXTINF:-1 group-title="港澳台",三立综合台
-http://aktv.top/AKTV/live/aktv/null-13/AKTV.m3u8
 #EXTINF:-1 tvg-id="三立都会" group-title="港澳台",三立都会
 http://live4play.uk/livehttpplay?channel_id=20100
 #EXTINF:-1 group-title="港澳台",东森LIVE
@@ -1921,7 +1923,7 @@ http://rihou.cc:555/tv/东森新闻
 #EXTINF:-1 tvg-id="东森洋片台" group-title="港澳台",东森洋片
 http://31.43.191.125:8080/vip6821768502490/6c17bae55394/34904
 #EXTINF:-1 group-title="港澳台",东森洋片台
-http://31.43.191.125:8080/restream/restream/34904
+http://31.43.191.125:8080/restream/restream/34813
 #EXTINF:-1 tvg-id="东森电影" group-title="港澳台",东森电影
 https://hls-gateway.vpstv.net/streams/476995.m3u8
 #EXTINF:-1 group-title="港澳台",东森电影台
@@ -1956,8 +1958,6 @@ https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV09.m3u8
 http://50.7.238.114:8278/zhongshi_twn/playlist.m3u8?tid=14379667&ct=17988&tsum=de63d02f44741580b5070077d1949841
 #EXTINF:-1 tvg-id="中视菁采" group-title="港澳台",中视菁采
 http://litv.zapi.us.kg/?id=4gtv-4gtv064
-#EXTINF:-1 group-title="港澳台",中视菁采台
-http://74.91.26.218:82/live/ctvjc.m3u8
 #EXTINF:-1 tvg-id="凤凰中文" group-title="港澳台",凤凰中文台
 http://101.35.240.114:88/phenix.php?id=fhzw
 #EXTINF:-1 group-title="港澳台",凤凰卫视台
@@ -2011,7 +2011,7 @@ https://cdn5.163189.xyz/live/rthk31/stream.m3u8
 #EXTINF:-1 group-title="港澳台",港台电视32
 https://cdn5.163189.xyz/live/rthk32/stream.m3u8
 #EXTINF:-1 group-title="港澳台",澳视卫星
-https://cdn6.163189.xyz/163189/as
+http://r.jdshipin.com/QFhCq
 #EXTINF:-1 group-title="港澳台",澳门体育
 http://cdn6.163189.xyz/163189/amty
 #EXTINF:-1 tvg-id="澳门卫视" group-title="港澳台",澳门卫视
@@ -2033,11 +2033,11 @@ http://gcalic.v.myalicdn.com/gc/fcw01_1/index.m3u8?contentid=2820180516001
 #EXTINF:-1 tvg-id="福建漳州醉美沙滩翡翠湾" group-title="港澳台",福建漳州醉美沙滩翡翠湾
 https://gcalic.v.myalicdn.com/gc/fcw03_1/index.m3u8
 #EXTINF:-1 group-title="港澳台",纬来戏剧台
-http://31.43.191.125:8080/restream/restream/34854
+http://31.43.191.125:8080/restream/restream/34812
 #EXTINF:-1 tvg-id="纬来日本" group-title="港澳台",纬来日本
 rtmp://f13h.mine.nu/sat/tv771
 #EXTINF:-1 group-title="港澳台",纬来日本台
-http://31.43.191.125:8080/restream/restream/34809
+http://31.43.191.125:8080/restream/restream/34853
 #EXTINF:-1 tvg-id="纬来电影" group-title="港澳台",纬来电影
 https://hls-gateway.vpstv.net/streams/477063.m3u8
 #EXTINF:-1 group-title="港澳台",纬来电影台
@@ -5118,8 +5118,6 @@ https://pili-live-hls.wdit.com.cn/wditlive/c038f4fafbdf4f97ba74c74ad67259b931ee.
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/1224d3b3e1ba410d8dc316f2f2ab1872/1200.m3u8
 #EXTINF:-1 group-title="其他",巨藻林的守卫者
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/432e7e692dc841bfaefb5e662de89bdc/1200.m3u8
-#EXTINF:-1 group-title="其他",巩汉林小品
-http://120.78.6.151:8968/yy.php?id=1354889035
 #EXTINF:-1 group-title="其他",庆余年
 https://live.ottiptv.cc/huya/11352960
 #EXTINF:-1 group-title="其他",康熙微服私访记
@@ -5296,6 +5294,8 @@ http://stream5.jlntv.cn/lh/sd/live.m3u8?zjild
 https://live.ottiptv.cc/huya/23860039
 #EXTINF:-1 tvg-id="桦甸" group-title="其他",桦甸
 http://stream10.jlntv.cn/huadian/sd/live.m3u8?zjild
+#EXTINF:-1 group-title="其他",梅州二套
+http://pili-live-rtmp.tvliving.gdmztv.com/meizhou-tvliving/mztv2.m3u8
 #EXTINF:-1 group-title="其他",梦中的那片海
 https://live.ottiptv.cc/huya/26355765
 #EXTINF:-1 group-title="其他",梦幻西游·手游
