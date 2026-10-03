@@ -752,8 +752,6 @@ https://glive.grtn.cn/live/wenhua_test0203.m3u8?auth_key=1617289309-0-0-7b273098
 http://183.11.239.36:808/hls/18/index.m3u8
 #EXTINF:-1 group-title="各省市",广东经济科教
 http://119.32.12.17:2901/udp/224.1.100.6:11111
-#EXTINF:-1 group-title="各省市",广元公共 # Tier:A Score:8
-https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
 #EXTINF:-1 tvg-id="广元综合" group-title="各省市",广元综合
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel100999/playlist.m3u8
 #EXTINF:-1 tvg-id="广安公共" group-title="各省市",广安公共
@@ -1593,7 +1591,7 @@ http://stream5.jlntv.cn/hn/sd/live.m3u8?zjild
 #EXTINF:-1 tvg-id="辉南新闻综合" group-title="各省市",辉南新闻综合
 http://stream5.jlntv.cn/hn/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",辽宁公共
-http://120.76.248.139/live/bfgd/4200000077.m3u8
+http://120.76.248.139/live/bfgd/4200000481.m3u8
 #EXTINF:-1 tvg-id="辽宁北方频道" group-title="各省市",辽宁北方
 https://stream1.freetv.fun/liao-zhu-bei-fang-3.m3u8
 #EXTINF:-1 group-title="各省市",辽宁影视
@@ -1688,6 +1686,8 @@ http://tvbox6.icu/tv/mgtv.php?id=269
 http://ls.qingting.fm/live/4877.m3u8
 #EXTINF:-1 group-title="各省市",阅读•学习“音乐”
 https://cdn.ttvb.eu.org/huya/21241813
+#EXTINF:-1 group-title="各省市",阳江公共
+https://live.yjtvw.com:8081/live/smil:yjtv2.smil/chunklist_b1152000.m3u8
 #EXTINF:-1 group-title="各省市",阳江综合
 https://live.yjtvw.com:8081/live/smil:yjtv1.smil/chunklist_b1152000.m3u8
 #EXTINF:-1 tvg-id="陇川综合" group-title="各省市",陇川综合
@@ -1831,7 +1831,7 @@ http://api.kkitv.itv888.vip:8080/streams/o6fp2zqodp/index.m3u8
 #EXTINF:-1 tvg-id="TVBJ1" group-title="港澳台",TVB J1
 http://cdn3.163189.xyz/live/j1/stream.m3u8
 #EXTINF:-1 group-title="港澳台",TVB Plus
-http://php.jdshipin.com/TVOD/iptv.php?id=j2
+http://r.jdshipin.com/ndGgS
 #EXTINF:-1 group-title="港澳台",TVBPlus
 https://cdn6.cc.cd/163189/tvbp
 #EXTINF:-1 tvg-id="TVBS-Asia" group-title="港澳台",TVBS-Asia
@@ -1969,7 +1969,7 @@ http://101.35.240.114:88/phenix.php?id=fhzx
 #EXTINF:-1 tvg-id="凤凰香港" group-title="港澳台",凤凰香港台
 http://101.35.240.114:88/phenix.php?id=fhhk
 #EXTINF:-1 group-title="港澳台",华丽翡翠台
-http://r.jdshipin.com/thuYX
+http://php.jdshipin.com/TVOD/iptv.php?id=huali2
 #EXTINF:-1 tvg-id="华视HD" group-title="港澳台",华视HD
 https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV12.m3u8
 #EXTINF:-1 tvg-id="华视新闻" group-title="港澳台",华视新闻
