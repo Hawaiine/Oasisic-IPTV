@@ -375,7 +375,7 @@ http://satellitepull.cnr.cn/live/wx32fjxwgb/playlist.m3u8
 #EXTINF:-1 tvg-id="福建综合" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/FJZC.png" group-title="各省市",福建综合
 https://stream1.freetv.fun/fu-jian-zong-he-6.m3u8
 #EXTINF:-1 tvg-id="561377" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561377.png" group-title="各省市",第一剧场
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dyjc
+http://107.150.60.122/live/dyjc.m3u8
 #EXTINF:-1 tvg-id="第一财经" group-title="各省市",第一财经
 http://gslbserv.itv.cmvideo.cn/5000000010000027146/1.m3u8?channel-id=bestzb&Contentid=5000000010000027146&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="精彩影视" group-title="各省市",精彩影视
