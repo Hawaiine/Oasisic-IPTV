@@ -58,6 +58,8 @@ http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001226/index.m3u8
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ysjp
 #EXTINF:-1 group-title="卫视",tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/云南卫视.png" group-title="卫视 ",云南卫视
 http://nn.7x9d.cn/xzc2.php?ua=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTA2LjAuMC4wIFNhZmFyaS81MzcuMzY=&hls=aHR0cDovL3d3dy5kc2suY2MvcGhwL3N4Z2QucGhwP2lkPXlud3M=
+#EXTINF:-1 group-title="卫视",tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/宁夏卫视.png" group-title="卫视 ",宁夏卫视
+http://120.76.248.139/live/bfgd/4200000118.m3u8
 #EXTINF:-1 tvg-id="东方卫视4K" group-title="卫视",东方卫视4K
 https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
 #EXTINF:-1 group-title="卫视",东方卫视国际
@@ -704,8 +706,6 @@ http://livealone302.iqilu.com/iqilu/ggpd.m3u8
 http://liveflash.sxrtv.com/live/sxfinance.m3u8?sub_m3u8=true&edge_slice=true
 #EXTINF:-1 group-title="各省市",岷县综合
 http://play.kankanlive.com/live/1614311581479927.m3u8
-#EXTINF:-1 group-title="各省市",崆峒综合
-http://125.74.200.110:10080/hls/001/001_live.m3u8
 #EXTINF:-1 tvg-id="嵊州新闻综合" group-title="各省市",嵊州新闻综合
 http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8?zzhed#http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8
 #EXTINF:-1 tvg-id="嵊泗综合" group-title="各省市",嵊泗综合
@@ -744,12 +744,12 @@ http://198.16.100.186:8278/niandainews_twn/playlist.m3u8?tid=MBCB918442389184423
 http://113.117.74.17:8081/hls/145/index.m3u8
 #EXTINF:-1 group-title="各省市",广东少儿
 http://119.32.12.17:2901/udp/224.1.100.9:11111
-#EXTINF:-1 group-title="各省市",广东文化
-https://glive.grtn.cn/live/wenhua_test0203.m3u8?auth_key=1617289309-0-0-7b2730980c8860963374597c20ad3935
 #EXTINF:-1 tvg-id="78" group-title="各省市",广东民生
 http://183.11.239.36:808/hls/18/index.m3u8
 #EXTINF:-1 group-title="各省市",广东经济科教
 http://119.32.12.17:2901/udp/224.1.100.6:11111
+#EXTINF:-1 group-title="各省市",广元公共 # Tier:A Score:8
+https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
 #EXTINF:-1 tvg-id="广元综合" group-title="各省市",广元综合
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel100999/playlist.m3u8
 #EXTINF:-1 tvg-id="广安公共" group-title="各省市",广安公共
@@ -1042,8 +1042,6 @@ http://www.cdnstv.com:6398/hls/1119/index.m3u8
 http://1.94.31.214/php/hntv.php?id=hnly
 #EXTINF:-1 tvg-id="河南都市" group-title="各省市",河南都市
 http://1.94.31.214/php/hntv.php?id=hnds
-#EXTINF:-1 group-title="各省市",河源公共 # Tier:A Score:10
-http://tmpstream.hyrtv.cn/hygg/sd/live.m3u8
 #EXTINF:-1 tvg-id="河源综合" group-title="各省市",河源综合
 http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",治愈•放松“音乐”
@@ -1783,7 +1781,7 @@ http://stream9.jlntv.cn:80/aac_longjinggb/playlist.m3u8
 #EXTINF:-1 group-title="各省市",龙华卡通
 https://cdn8.163189.xyz/live/lhkt/stream.m3u8
 #EXTINF:-1 group-title="各省市",龙华电影
-http://iptv.4666888.xyz/iptv2A.php?id=45
+https://cdn8.163189.xyz/live/lhdy/stream.m3u8
 #EXTINF:-1 group-title="各省市",龙华电影台
 http://aktv-stream.m16tv.cfd/stream/taiwan/null-8/AKTV.m3u8
 #EXTINF:-1 group-title="各省市",龙岩公共
@@ -1942,6 +1940,8 @@ https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV49.m3u8
 http://aktv-stream.m16tv.cfd/stream/aktv/null-6/AKTV.m3u8
 #EXTINF:-1 group-title="港澳台",中天综合
 http://198.16.100.90:8278/ctizhonghe/playlist.m3u8?tid=m85005aeec85b14021104&ct=17874&tsum=69f19f4b12ab79d2ee683b28cdb1c8ca
+#EXTINF:-1 group-title="港澳台",中天综合台
+http://31.43.191.125:8080/restream/restream/34898
 #EXTINF:-1 tvg-id="中视新闻" group-title="港澳台",中视新闻
 https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV09.m3u8
 #EXTINF:-1 group-title="港澳台",中视经典
@@ -1959,7 +1959,7 @@ http://101.35.240.114:88/phenix.php?id=fhzx
 #EXTINF:-1 tvg-id="凤凰香港" group-title="港澳台",凤凰香港台
 http://101.35.240.114:88/phenix.php?id=fhhk
 #EXTINF:-1 group-title="港澳台",华丽翡翠台
-http://r.jdshipin.com/thuYX
+http://php.jdshipin.com/TVOD/iptv.php?id=huali2
 #EXTINF:-1 tvg-id="华视HD" group-title="港澳台",华视HD
 https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV12.m3u8
 #EXTINF:-1 tvg-id="华视新闻" group-title="港澳台",华视新闻
