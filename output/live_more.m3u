@@ -706,8 +706,6 @@ http://livealone302.iqilu.com/iqilu/ggpd.m3u8
 http://liveflash.sxrtv.com/live/sxfinance.m3u8?sub_m3u8=true&edge_slice=true
 #EXTINF:-1 group-title="各省市",岷县综合
 http://play.kankanlive.com/live/1614311581479927.m3u8
-#EXTINF:-1 group-title="各省市",崆峒综合
-http://125.74.200.110:10080/hls/001/001_live.m3u8
 #EXTINF:-1 tvg-id="嵊州新闻综合" group-title="各省市",嵊州新闻综合
 http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8?zzhed#http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8
 #EXTINF:-1 tvg-id="嵊泗综合" group-title="各省市",嵊泗综合
@@ -750,6 +748,8 @@ http://119.32.12.17:2901/udp/224.1.100.9:11111
 http://183.11.239.36:808/hls/18/index.m3u8
 #EXTINF:-1 group-title="各省市",广东经济科教
 http://119.32.12.17:2901/udp/224.1.100.6:11111
+#EXTINF:-1 group-title="各省市",广元公共 # Tier:A Score:8
+https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
 #EXTINF:-1 tvg-id="广元综合" group-title="各省市",广元综合
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel100999/playlist.m3u8
 #EXTINF:-1 tvg-id="广安公共" group-title="各省市",广安公共
@@ -1042,6 +1042,8 @@ http://www.cdnstv.com:6398/hls/1119/index.m3u8
 http://1.94.31.214/php/hntv.php?id=hnly
 #EXTINF:-1 tvg-id="河南都市" group-title="各省市",河南都市
 http://1.94.31.214/php/hntv.php?id=hnds
+#EXTINF:-1 group-title="各省市",河源公共 # Tier:A Score:10
+http://tmpstream.hyrtv.cn/hygg/sd/live.m3u8
 #EXTINF:-1 tvg-id="河源综合" group-title="各省市",河源综合
 http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8
 #EXTINF:-1 group-title="各省市",治愈•放松“音乐”
@@ -1959,7 +1961,7 @@ http://101.35.240.114:88/phenix.php?id=fhzx
 #EXTINF:-1 tvg-id="凤凰香港" group-title="港澳台",凤凰香港台
 http://101.35.240.114:88/phenix.php?id=fhhk
 #EXTINF:-1 group-title="港澳台",华丽翡翠台
-http://php.jdshipin.com/TVOD/iptv.php?id=huali2
+http://r.jdshipin.com/thuYX
 #EXTINF:-1 tvg-id="华视HD" group-title="港澳台",华视HD
 https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV12.m3u8
 #EXTINF:-1 tvg-id="华视新闻" group-title="港澳台",华视新闻
@@ -4262,8 +4264,6 @@ https://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8
 https://gcalic.v.myalicdn.com/gc/ztn_1/index.m3u8
 #EXTINF:-1 group-title="其他",中广流行网
 http://stream.rcs.revma.com/aw9uqyxy2tzuv
-#EXTINF:-1 group-title="其他",临夏市电视台
-http://124.152.34.102:8030/wCMq71/wCMq71_0.m3u8
 #EXTINF:-1 tvg-id="丽江古城万古楼遥望玉龙雪山" group-title="其他",丽江古城万古楼遥望玉龙雪山
 https://gcalic.v.myalicdn.com/gc/ljgcwglytylxs_1/index.m3u8
 #EXTINF:-1 tvg-id="丽江古城大水车" group-title="其他",丽江古城大水车
