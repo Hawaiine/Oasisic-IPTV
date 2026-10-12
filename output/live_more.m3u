@@ -116,8 +116,6 @@ http://192.168.123.1:23234/rtp/239.3.1.117:8000
 http://192.168.123.1:23234/rtp/239.3.1.116:8000
 #EXTINF:-1 group-title="各省市",CAT电影
 http://litv.zapi.us.kg/?id=4gtv-4gtv076
-#EXTINF:-1 group-title="各省市",CGNT 新闻
-https://english-livebkali.cgtn.com/live/encgtn_0.m3u8
 #EXTINF:-1 tvg-id="CHC高清电影" group-title="各省市",CHC 电影
 http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch00000090990000002065/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
 #EXTINF:-1 tvg-id="CHC电影" group-title="各省市",CHC电影
@@ -334,6 +332,8 @@ http://stream.rcs.revma.com/78fm9wyy2tzuv
 http://stream.rcs.revma.com/ks4vsmg3qtzuv
 #EXTINF:-1 group-title="各省市",临洮综合
 https://play.kankanlive.com/live/1638428318510977.m3u8
+#EXTINF:-1 group-title="各省市",临潭综合
+http://pili-live-hls.hfmt.net/gntv/lttv.m3u8
 #EXTINF:-1 tvg-id="临颍综合" group-title="各省市",临颍综合
 http://tvpull.dxhmt.cn:9081/tv/11122-1.m3u8?%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7[%E6%99%B4%E5%9B%AD]
 #EXTINF:-1 group-title="各省市",义乌新闻综合
@@ -492,6 +492,8 @@ http://live-hls-web-aja.getaj.net/AJA/02.m3u8
 http://www.goodiptv.club/douyu/3928
 #EXTINF:-1 tvg-id="YanG-1989" group-title="各省市",华语影院
 http://[2409:8087:5e00:24::2d]:6610/000000001000/1/5000000011000288005/index.m3u8?channel-id=bestzb&Contentid=5000000011000288005&livemode=1&stbId=YanG-1989
+#EXTINF:-1 group-title="各省市",卓尼综合
+http://pili-live-hls.hfmt.net/gntv/zntv.m3u8
 #EXTINF:-1 group-title="各省市",南国都市
 http://r.jdshipin.com/nWaZO
 #EXTINF:-1 tvg-id="南宁公共" group-title="各省市",南宁公共
@@ -600,6 +602,8 @@ http://www.guzhenm.com:7001/hls/hd-live.m3u8
 http://125.62.24.185:80/1.m3u8
 #EXTINF:-1 group-title="各省市",城市剧场
 http://192.168.123.1:23234/rtp/239.3.1.67:4120
+#EXTINF:-1 group-title="各省市",夏河综合
+http://pili-live-hls.hfmt.net/gntv/xhtv.m3u8
 #EXTINF:-1 tvg-id="大宁综合" group-title="各省市",大宁综合
 http://live.daningtv.com/aac_dngb/playlist.m3u8
 #EXTINF:-1 group-title="各省市",大象与羊的快乐生活
@@ -689,7 +693,7 @@ http://[2409:8087:5e00:24::2d]:6610/000000001000/1/8145334647720731271/index.m3u
 #EXTINF:-1 group-title="各省市",少儿动画
 http://192.168.123.1:23234/rtp/239.3.1.199:9000
 #EXTINF:-1 group-title="各省市",少年包青天第一部
-https://live.ottiptv.cc/huya/11352958
+https://live.ottiptv.cc/yy/1356043677
 #EXTINF:-1 tvg-id="山东农科" group-title="各省市",山东农科
 http://livealone302.iqilu.com/iqilu/nkpd.m3u8
 #EXTINF:-1 tvg-id="山东少儿" group-title="各省市",山东少儿
@@ -744,8 +748,6 @@ http://119.32.12.17:2901/udp/224.1.100.9:11111
 http://183.11.239.36:808/hls/18/index.m3u8
 #EXTINF:-1 group-title="各省市",广东经济科教
 http://119.32.12.17:2901/udp/224.1.100.6:11111
-#EXTINF:-1 group-title="各省市",广元公共 # Tier:A Score:8
-https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
 #EXTINF:-1 tvg-id="广元综合" group-title="各省市",广元综合
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel100999/playlist.m3u8
 #EXTINF:-1 tvg-id="广安公共" group-title="各省市",广安公共
@@ -1394,6 +1396,8 @@ rtmp://tv.yunxya.com:1937/channellive/shimian
 http://218.106.152.196/lsdream/MO13IYx/2000/live.m3u8
 #EXTINF:-1 tvg-id="磐石综合" group-title="各省市",磐石综合
 http://stream3.jlntv.cn:80/aac_psgb/sd/live.m3u8
+#EXTINF:-1 group-title="各省市",礼县综合
+https://play.kankanlive.com/live/1621416463200961.m3u8
 #EXTINF:-1 tvg-id="祁门综合" group-title="各省市",祁门综合
 http://zbbf2.ahbztv.com/live/416.m3u8?zanhd
 #EXTINF:-1 group-title="各省市",神乐华语影院
@@ -1472,6 +1476,8 @@ http://stream8.jlntv.cn/shulan/sd/live.m3u8?_upt=332db6421699196585
 http://220.180.24.62:1935/live/live1/playlist.m3u8
 #EXTINF:-1 group-title="各省市",舒城新闻综合
 http://220.180.24.62:1935/live/live2/playlist.m3u8
+#EXTINF:-1 group-title="各省市",舟曲新闻综合
+https://play.kankanlive.com/live/1631185650131909.m3u8
 #EXTINF:-1 group-title="各省市",航海王“动漫”
 https://cdn.ttvb.eu.org/huya/16913382
 #EXTINF:-1 group-title="各省市",芜湖公共
@@ -1528,6 +1534,8 @@ https://liveplay-srs.voc.com.cn/hls/tv/183_554704.m3u8
 http://l.cztvcloud.com/channels/lantian/SXqujiang1/720p.m3u8?zzhed
 #EXTINF:-1 tvg-id="西华综合" group-title="各省市",西华综合
 http://tvpull.dxhmt.cn:9081/tv/11622-1.m3u8?%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7[%E6%99%B4%E5%9B%AD]
+#EXTINF:-1 group-title="各省市",西和综合
+https://play.kankanlive.com/live/1626051451895935.m3u8
 #EXTINF:-1 tvg-id="西宁新闻综合" group-title="各省市",西宁新闻综合
 https://liveout.xntv.tv/a65jur/96iln2.m3u8?zqinghd
 #EXTINF:-1 tvg-id="西宁生活服务" group-title="各省市",西宁生活服务
@@ -4246,6 +4254,8 @@ https://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8
 https://gcalic.v.myalicdn.com/gc/ztn_1/index.m3u8
 #EXTINF:-1 group-title="其他",中广流行网
 http://stream.rcs.revma.com/aw9uqyxy2tzuv
+#EXTINF:-1 group-title="其他",临夏市电视台
+http://124.152.34.102:8030/wCMq71/wCMq71_0.m3u8
 #EXTINF:-1 tvg-id="丽江古城万古楼遥望玉龙雪山" group-title="其他",丽江古城万古楼遥望玉龙雪山
 https://gcalic.v.myalicdn.com/gc/ljgcwglytylxs_1/index.m3u8
 #EXTINF:-1 tvg-id="丽江古城大水车" group-title="其他",丽江古城大水车
@@ -4384,8 +4394,6 @@ https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/554c1b879dc646d4ab1
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/aba970eff8be48beb339a2ad027592cf/1200.m3u8
 #EXTINF:-1 tvg-id="刑事侦缉档案" group-title="其他",刑事侦缉档案
 https://live.metshop.top/huya/29465856
-#EXTINF:-1 group-title="其他",刘德华
-https://yg.ygbox.de5.net/huya.php?id=11342424
 #EXTINF:-1 tvg-id="创世纪" group-title="其他",创世纪
 https://live.metshop.top/huya/29465852
 #EXTINF:-1 group-title="其他",初一
@@ -5144,8 +5152,6 @@ http://222.186.39.38:8000/333207/index.m3u8
 https://vip.ffzy-play1.com/20221018/478_c3afed66/index.m3u8
 #EXTINF:-1 group-title="其他",我是特种兵之利刃出鞘
 https://live.ottiptv.cc/yy/37999586
-#EXTINF:-1 group-title="其他",我的前半生
-https://yg.ygbox.de5.net/huya.php?id=11352916
 #EXTINF:-1 group-title="其他",打造一只超级猫
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/ba966901198844d09399a354e203e6cb/1200.m3u8
 #EXTINF:-1 tvg-id="扫黄先锋" group-title="其他",扫黄先锋
@@ -5284,8 +5290,6 @@ http://stream5.jlntv.cn/lh/sd/live.m3u8?zjild
 https://live.ottiptv.cc/huya/23860039
 #EXTINF:-1 tvg-id="桦甸" group-title="其他",桦甸
 http://stream10.jlntv.cn/huadian/sd/live.m3u8?zjild
-#EXTINF:-1 group-title="其他",梁家辉
-https://yg.ygbox.de5.net/huya.php?id=11342429
 #EXTINF:-1 group-title="其他",梦中的那片海
 https://live.ottiptv.cc/huya/26355765
 #EXTINF:-1 group-title="其他",梦幻西游·手游
@@ -5382,8 +5386,6 @@ https://gcalic.v.myalicdn.com/gc/hkts03_1/index.m3u8
 https://live.metshop.top/huya/29465851
 #EXTINF:-1 tvg-id="津南一套" group-title="其他",津南一套
 http://play.jinnantv.top/live/JNTV1.m3u8?ztianjd
-#EXTINF:-1 group-title="其他",洪金宝
-https://yg.ygbox.de5.net/huya.php?id=11279251
 #EXTINF:-1 tvg-id="活佛济公3" group-title="其他",活佛济公3
 https://live.metshop.top/huya/23903123
 #EXTINF:-1 group-title="其他",流水迢迢
@@ -5522,8 +5524,6 @@ https://live.metshop.top/huya/11352879
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/17c3860b26c14110a740dfa49785a1bd/1200.m3u8
 #EXTINF:-1 group-title="其他",猴子的智慧
 https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/ef01d6b79fe74daf9bd63ff0469713d2/1200.m3u8
-#EXTINF:-1 group-title="其他",王晶
-https://yg.ygbox.de5.net/huya.php?id=11602058
 #EXTINF:-1 group-title="其他",王者荣耀
 http://tc-tct.douyucdn2.cn/dyliveflv1a/1863767rkpl2_2000p.flv?wsAuth=f73077d85e523eb95b6ce1ea3581b46b&token=cpn-androidmpro-0-1863767-7b520f6fe0a2b18db3c111c4e3c14350afd2dcaf43d0ef60&logo=0&expire=0&did=d010b07dcb997ada9934081c873542f0&origin=tct&vhost=play2
 #EXTINF:-1 tvg-id="玛纳斯" group-title="其他",玛纳斯
