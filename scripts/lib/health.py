@@ -21,6 +21,7 @@ HTTP_403 = "http-403"
 HTTP_404 = "http-404"
 RTP = "rtp"
 UNKNOWN = "unknown"
+PLACEHOLDER = "placeholder"   # 能连上，但内容是广告/无信号占位循环
 
 # 越可靠 rank 越小。unknown/not-probed 落在中间：既不奖励也不惩罚，
 # 这样「没有任何健康数据」时排序与旧版完全一致。
@@ -37,11 +38,12 @@ LEVEL_RANK: dict[str, int] = {
     CONN_FAIL: 4,
     DNS_FAIL: 5,
     HTTP_404: 5,
+    PLACEHOLDER: 5,
 }
 UNKNOWN_RANK = LEVEL_RANK[UNKNOWN]
 
 # 连续失败即视为死链（不应占据主列表）
-DEAD_LEVELS = {HTTP_404, DNS_FAIL}
+DEAD_LEVELS = {HTTP_404, DNS_FAIL, PLACEHOLDER}
 # 网络锁 / 仅 IPv6：链路类型问题，不是内容失效
 LOCKED_LEVELS = {HTTP_403, IPV6_NO_ROUTE}
 # 不参与探活的协议（组播）
@@ -120,7 +122,17 @@ def grade(
         return HTTP_ERROR
 
     if code in (200, 206):
-        return OK if looks_like_playlist(body_head) else PLAYLIST_MISSING
+        if not looks_like_playlist(body_head):
+            return PLAYLIST_MISSING
+        # 能拉到列表，但内容是广告/无信号循环 → 不该进选优
+        from .adfilter import detect_placeholder
+
+        head_text = (
+            body_head.decode("utf-8", "replace") if isinstance(body_head, bytes) else str(body_head)
+        )
+        if detect_placeholder(head_text, url):
+            return PLACEHOLDER
+        return OK
     return HTTP_ERROR
 
 

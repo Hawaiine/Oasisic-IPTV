@@ -25,6 +25,7 @@
 | `ipv6-no-route` | IPv6 字面量且本机无 IPv6 出口 | 低 | 仅 IPv6 用户可用 |
 | `conn-fail` / `ssl-fail` | 连接失败 / 证书或 TLS 失败 | 低 | |
 | `dns-fail` / `http-404` | 域名不存在 / 404 | 最低 | 死链，不应占据主列表 |
+| `placeholder` | 200 且是播放列表，但内容是广告/无信号短循环 | 最低 | `#EXT-X-ENDLIST` 且总时长 < 60s，或分片地址清一色广告位（`scripts/lib/adfilter.py`） |
 | `rtp` | `rtp://` 组播 | 低（沿用旧规则） | 不参与探活 |
 
 选优排序维度（`scripts/lib/select.py`）：
