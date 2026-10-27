@@ -1,0 +1,41 @@
+name: 失效源 / 失效频道
+description: 报告打不开的源或频道
+title: "[失效] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽量给出**可复现证据**（状态码、播放器名字）。我们不做"能不能播"的承诺，
+        但会据此调整源的启停与选优权重。
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影响范围
+      options:
+        - 单个频道
+        - 某个分类（如央视/卫视/各省市）
+        - 整份列表
+        - 某一个源（config/sources.yaml 里的 key）
+    validations:
+      required: true
+  - type: input
+    id: channel
+    attributes:
+      label: 频道名或源 key
+      placeholder: CCTV-5 体育 / suxuang-ipv4
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: curl -I 的状态码、播放器与版本、是否 IPv6、是否运营商网络
+    validations:
+      required: true
+  - type: input
+    id: network
+    attributes:
+      label: 你的网络
+      placeholder: 武汉联通 IPv4 / 广东移动 IPv6 / 海外
+    validations:
+      required: false

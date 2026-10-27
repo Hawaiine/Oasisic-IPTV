@@ -55,6 +55,16 @@ jobs:
               python scripts/send_discord.py || true
           fi
 
+      - name: 发布 EPG 到 Release（滚动 tag epg-latest）
+        if: hashFiles('output/guide.xml.gz') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view epg-latest >/dev/null 2>&1 || \
+            gh release create epg-latest --title "EPG（滚动更新）" \
+              --notes "多上游合并 + 按标准表裁剪的 XMLTV 节目单，每次采集覆盖更新。" --prerelease
+          gh release upload epg-latest output/guide.xml output/guide.xml.gz --clobber
+
       - name: 上传产物
         uses: actions/upload-artifact@v4
         with:

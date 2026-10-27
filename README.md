@@ -100,6 +100,25 @@ python scripts/verify_outputs.py
 
 > `guide.xml` 体积较大，**不纳入 git 历史**。如需历史版本，使用 GitHub Actions Artifacts（保留 30 天）或 Release 附件。
 
+### 自建 EPG 订阅地址（可选）
+
+每次采集会把裁剪后的节目单发布到滚动 Release（`epg-latest`），可以直接当订阅填：
+
+| 文件 | 地址 |
+|------|------|
+| `guide.xml.gz`（推荐，体积小） | `https://github.com/Hawaiine/Oasisic-IPTV/releases/download/epg-latest/guide.xml.gz` |
+| `guide.xml`（原始 XML） | `https://github.com/Hawaiine/Oasisic-IPTV/releases/download/epg-latest/guide.xml` |
+
+自建节目单覆盖约 **4/5** 的标准台，比上游 `e.xml`（只覆盖主列表约 1/3）更全。要让它成为主列表的默认 EPG，
+把 `config/settings.yaml` 的 `url_tvg` 改成上面的地址后重跑采集即可——**切换前请先在自己的播放器里实测**
+（部分播放器对 gzip/gz 的 XMLTV 支持不佳，那就用未压缩的 `.xml`）。
+
+### 探活（可选，本机跑才有意义）
+
+`scripts/probe.py` 会对列表里的 URL 做一次首片探测，生成 `output/health.json`，采集时按健康度优选。
+仓库自带 `.github/workflows/probe.yml`，但它绑定 `self-hosted, iptv` runner 且**只支持手动触发**——
+没有在线 runner 时不会占用任何调度。跑通用法见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。
+
 ### APTV（Apple TV / iOS / macOS）
 
 1. 添加订阅（`live.m3u`）。

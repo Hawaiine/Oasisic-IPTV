@@ -1,0 +1,55 @@
+name: 新增源
+description: 提供一个可用的公开直播源（m3u / txt）
+title: "[新增源] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提供源。请先自己验证一遍再提交——**收录不等于可播**，但源本身必须能抓取。
+        提交前请读 [docs/ADD_SOURCE.md](https://github.com/Hawaiine/Oasisic-IPTV/blob/main/docs/ADD_SOURCE.md)。
+  - type: input
+    id: url
+    attributes:
+      label: 源地址
+      description: 直链（raw.githubusercontent / 自建域名均可），不要填网页地址
+      placeholder: https://example.com/live.m3u
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: 格式
+      options:
+        - m3u
+        - txt
+    validations:
+      required: true
+  - type: input
+    id: http_status
+    attributes:
+      label: HTTP 状态码（curl -I 的结果）
+      placeholder: "200"
+    validations:
+      required: true
+  - type: input
+    id: first_line
+    attributes:
+      label: 首行内容
+      description: m3u 应含 #EXTM3U；txt 应是 `分组,#genre#` 或 `名称,URL`
+      placeholder: "#EXTM3U"
+    validations:
+      required: true
+  - type: input
+    id: count
+    attributes:
+      label: 解析到的频道数
+      placeholder: "120"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注
+      description: 地区倾向（IPv4/IPv6/运营商）、授权情况、已知问题
+    validations:
+      required: false
