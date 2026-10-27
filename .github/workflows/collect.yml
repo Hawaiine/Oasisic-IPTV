@@ -84,10 +84,33 @@ jobs:
               --notes "Oasisic-IPTV 每日采集快照。滚动保留最近 30 个 daily-* 版本；EPG 使用独立滚动 Release epg-latest。" \
               --prerelease
           fi
-          gh release upload "$TAG" \
-            output/live.m3u output/live_more.m3u output/live_backup.m3u \
-            output/live.txt output/live_lite.txt output/live_more.txt output/live_radio.txt \
-            output/status.json --clobber
+          SNAPSHOT_FILES=(
+            output/live.m3u
+            output/live_more.m3u
+            output/live_backup.m3u
+            output/live_radio.m3u
+            output/live_cctv.m3u
+            output/live_weishi.m3u
+            output/live_local.m3u
+            output/live_gangtai.m3u
+            output/live_sports.m3u
+            output/live_live.m3u
+            output/live_other.m3u
+            output/live_overseas.m3u
+            output/live_special.m3u
+            output/live.txt
+            output/live_lite.txt
+            output/live_more.txt
+            output/live_radio.txt
+            output/status.json
+          )
+          for file in "${SNAPSHOT_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ 快照文件缺失：$file"
+              exit 1
+            fi
+          done
+          gh release upload "$TAG" "${SNAPSHOT_FILES[@]}" --clobber
           python3 - <<'PY'
           import json, re, subprocess
           releases = json.loads(subprocess.check_output([
