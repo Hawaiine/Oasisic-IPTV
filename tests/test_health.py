@@ -133,3 +133,16 @@ def test_is_signed_covers_token_params() -> None:
     for url in signed:
         assert is_signed(url), url
     assert not is_signed("https://example.com/live/index.m3u8")
+
+
+def test_grade_flags_placeholder_loop() -> None:
+    """广告/无信号的短循环列表不该被判成 ok。"""
+    from lib.health import PLACEHOLDER, grade
+
+    head = (
+        "#EXTM3U\n#EXT-X-VERSION:3\n#EXTINF:5.0,\nhttps://example.com/ad/1.ts\n"
+        "#EXTINF:5.0,\nhttps://example.com/ad/2.ts\n#EXT-X-ENDLIST\n"
+    )
+    assert grade(url="https://example.com/ad.m3u8", status=200, body_head=head) == PLACEHOLDER
+    normal = "#EXTM3U\n#EXTINF:10,\nhttps://example.com/live/1.ts\n"
+    assert grade(url="https://example.com/live.m3u8", status=200, body_head=normal) == "ok"

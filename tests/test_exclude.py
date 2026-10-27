@@ -80,3 +80,11 @@ def test_filter_entries_checks_cleaned_name():
     kept, dropped = filter_entries([{"name": "4K超清"}, {"name": "湖南卫视"}], pats)
     assert dropped == ["4K超清"]
     assert [e["name"] for e in kept] == ["湖南卫视"]
+
+
+def test_config_drops_placeholder_names():
+    pats = _config_patterns()
+    for name in ("CCTV-1 无信号", "测试卡", "彩条信号", "敬请期待"):
+        assert is_excluded(name, pats), name
+    for name in ("CCTV-1 综合", "湖南卫视"):
+        assert not is_excluded(name, pats), name
