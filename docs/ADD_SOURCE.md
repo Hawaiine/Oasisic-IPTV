@@ -15,7 +15,7 @@
     enabled: true
     region: cn           # cn | hk_tw | hotel | overseas | radio
     priority: 40         # 越小越优先
-    core: false          # true = 连续失败只告警，不自动禁用
+    core: false          # true = 连续失败只告警；非核心源也只生成人工复核建议
 ```
 
 4. 校验：

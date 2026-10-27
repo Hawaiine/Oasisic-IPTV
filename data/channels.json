@@ -563,6 +563,7 @@
         "display_name": "广东珠江",
         "category": "local",
         "tvg_id": "GDTVZJ",
+        "epg_id": "广东珠江",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDTVZJ.png"
     },
     {
@@ -570,6 +571,7 @@
         "display_name": "广东公共",
         "category": "local",
         "tvg_id": "GDGG",
+        "epg_id": "广东公共",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDGG.png"
     },
     {
@@ -577,6 +579,7 @@
         "display_name": "广东新闻",
         "category": "local",
         "tvg_id": "GDXW",
+        "epg_id": "广东新闻",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDXW.png"
     },
     {
@@ -634,6 +637,7 @@
         "display_name": "上海新闻综合",
         "category": "local",
         "tvg_id": "SHXW",
+        "epg_id": "上海新闻综合",
         "tvg_logo": ""
     },
     {
@@ -641,6 +645,7 @@
         "display_name": "上海都市",
         "category": "local",
         "tvg_id": "SHDS",
+        "epg_id": "上海都市",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/SHDS.png"
     },
     {
@@ -999,6 +1004,7 @@
         "display_name": "广东体育",
         "category": "sports",
         "tvg_id": "GDSports",
+        "epg_id": "广东体育",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png"
     },
     {
@@ -1132,7 +1138,7 @@
         "display_name": "东莞生活资讯",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "东莞生活资讯",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1232,7 +1238,7 @@
         "display_name": "南京少儿",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "南京少儿",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1312,7 +1318,7 @@
         "display_name": "宁夏少儿",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "宁夏少儿",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1322,7 +1328,7 @@
         "display_name": "宁夏经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "宁夏经济",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1462,7 +1468,7 @@
         "display_name": "怀旧剧场",
         "category": "local",
         "tvg_id": "561380",
-        "epg_id": "561380",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561380.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1582,7 +1588,7 @@
         "display_name": "求索记录",
         "category": "local",
         "tvg_id": "561385",
-        "epg_id": "561385",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1792,7 +1798,7 @@
         "display_name": "浙江民生",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "浙江民生",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1892,7 +1898,7 @@
         "display_name": "生活时尚",
         "category": "local",
         "tvg_id": "生活时尚",
-        "epg_id": "生活时尚",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1962,7 +1968,7 @@
         "display_name": "第一剧场",
         "category": "local",
         "tvg_id": "561377",
-        "epg_id": "561377",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561377.png",
         "priority": 60,
         "notes": "long-tail"
@@ -2122,7 +2128,7 @@
         "display_name": "风云剧场",
         "category": "local",
         "tvg_id": "561378",
-        "epg_id": "561378",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561378.png",
         "priority": 60,
         "notes": "long-tail"
@@ -2132,7 +2138,7 @@
         "display_name": "风云音乐",
         "category": "local",
         "tvg_id": "561376",
-        "epg_id": "561376",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561376.png",
         "priority": 60,
         "notes": "long-tail"
@@ -2262,7 +2268,7 @@
         "display_name": "武术世界",
         "category": "sports",
         "tvg_id": "561391",
-        "epg_id": "561391",
+        "epg_id": "武术世界",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561391.png",
         "priority": 60,
         "notes": "long-tail"
@@ -2272,7 +2278,7 @@
         "display_name": "风云足球",
         "category": "sports",
         "tvg_id": "561408",
-        "epg_id": "561408",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561408.png",
         "priority": 60,
         "notes": "long-tail"
@@ -2312,7 +2318,7 @@
         "display_name": "CCTV-世界地理",
         "category": "cctv",
         "tvg_id": "561379",
-        "epg_id": "561379",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561379.png",
         "priority": 55,
         "notes": "curated"
@@ -2322,7 +2328,7 @@
         "display_name": "CCTV-女性时尚",
         "category": "cctv",
         "tvg_id": "561382",
-        "epg_id": "561382",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561382.png",
         "priority": 55,
         "notes": "curated"
@@ -2362,7 +2368,7 @@
         "display_name": "CCTV-发现之旅",
         "category": "cctv",
         "tvg_id": "561406",
-        "epg_id": "561406",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561406.png",
         "priority": 55,
         "notes": "curated"
@@ -2372,7 +2378,7 @@
         "display_name": "CCTV-老故事",
         "category": "cctv",
         "tvg_id": "561396",
-        "epg_id": "561396",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561396.png",
         "priority": 55,
         "notes": "curated"
@@ -2382,7 +2388,7 @@
         "display_name": "CCTV-央视台球",
         "category": "cctv",
         "tvg_id": "561390",
-        "epg_id": "561390",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561390.png",
         "priority": 55,
         "notes": "curated"

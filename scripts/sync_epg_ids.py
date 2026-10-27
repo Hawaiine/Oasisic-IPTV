@@ -113,12 +113,15 @@ def main() -> None:
         "",
     ] + missing + [""]
 
+    coverage_ok = stats["coverage"] >= min_cov
     if args.check:
-        ok = stats["coverage"] >= min_cov
-        print(f"{'✅' if ok else '❌'} --check：覆盖率 {stats['coverage']:.1%} 阈值 {min_cov:.0%}；缺口 {len(missing)} 条")
+        print(f"{'✅' if coverage_ok else '❌'} --check：覆盖率 {stats['coverage']:.1%} 阈值 {min_cov:.0%}；缺口 {len(missing)} 条")
         if changed:
             print(f"⚠ channels.json 有 {changed} 条待写入（请运行无参数版本）")
-        sys.exit(0 if ok else 1)
+        sys.exit(0 if coverage_ok else 1)
+    if not coverage_ok:
+        print(f"❌ 覆盖率低于阈值；保留现有 channels.json / epg_missing.txt，不写入候选映射")
+        sys.exit(1)
 
     channels = [reorder(c) for c in channels]
     save_text(

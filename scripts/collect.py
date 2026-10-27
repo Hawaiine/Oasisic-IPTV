@@ -194,11 +194,20 @@ def parse_fetched(fetched: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return entries
 
 
+def should_suggest_disable(rec: dict[str, Any], src: dict[str, Any], fail_days: int) -> bool:
+    """仅建议人工复核；采集流程不自动修改 sources.yaml。"""
+    return (
+        int(rec.get("consecutive_fail") or 0) >= fail_days
+        and not src.get("core")
+        and src.get("enabled", True)
+    )
+
+
 def record_source_stats(
     fetched: list[dict[str, Any]],
     settings: dict[str, Any],
 ) -> None:
-    """写入 data/source_stats.json，并按连续失败天数自动禁用非核心源。"""
+    """写入 source_stats.json；连续失败只记录人工禁用建议，不改源配置。"""
     path = project_root() / "data" / "source_stats.json"
     today = datetime.now(CST).strftime("%Y-%m-%d")
     stats: dict[str, Any] = {"schema_version": 1, "sources": {}}
@@ -209,10 +218,6 @@ def record_source_stats(
             stats = {"schema_version": 1, "sources": {}}
     sources_map: dict[str, Any] = stats.setdefault("sources", {})
     fail_days = int(settings.get("auto_disable_fail_days") or 3)
-
-    yaml_path = project_root() / "config" / "sources.yaml"
-    raw_yaml = yaml_path.read_text(encoding="utf-8")
-    changed = False
 
     for item in fetched:
         key = item["key"]
@@ -226,54 +231,31 @@ def record_source_stats(
             rec["last_ok"] = today
             rec["last_count"] = item.get("count") or 0
             rec["last_error"] = ""
+            rec["suggest_disable"] = False
         else:
             if item.get("error") == "disabled":
+                rec["suggest_disable"] = False
                 continue
             rec["fail"] = int(rec.get("fail") or 0) + 1
             rec["consecutive_fail"] = int(rec.get("consecutive_fail") or 0) + 1
             rec["last_fail"] = today
             rec["last_error"] = item.get("error") or ""
             src = item["source"]
-            if (
-                rec["consecutive_fail"] >= fail_days
-                and not src.get("core")
-                and src.get("enabled", True)
-            ):
+            if should_suggest_disable(rec, src, fail_days):
+                rec["suggest_disable"] = True
                 print(
-                    f"  ⚠ 源 {key} 连续 {rec['consecutive_fail']} 天失败，自动禁用"
+                    f"  ⚠ 源 {key} 连续 {rec['consecutive_fail']} 天失败；"
+                    "已写人工复核建议，不自动修改 config/sources.yaml"
                 )
-                # 仅改 enabled 行，避免重写整个 YAML 打乱注释
-                # 通过 key 定位块后替换该源的 enabled
-                changed = _disable_source_in_yaml(raw_yaml, key)
-                if changed:
-                    raw_yaml = yaml_path.read_text(encoding="utf-8")
             elif src.get("core") and rec["consecutive_fail"] >= fail_days:
                 print(f"  ⚠ 核心源 {key} 连续失败 {rec['consecutive_fail']} 天（仅告警，不禁用）")
+            else:
+                rec["suggest_disable"] = False
 
     stats["updated_at"] = now_cst()
     known = {item["key"] for item in fetched}
     stats["sources"] = {k: v for k, v in sources_map.items() if k in known}
     save_json(path, stats)
-
-
-def _disable_source_in_yaml(text: str, key: str) -> bool:
-    """在 sources.yaml 中把指定 key 的 enabled 改为 false。"""
-    path = project_root() / "config" / "sources.yaml"
-    lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
-    in_block = False
-    replaced = False
-    for i, line in enumerate(lines):
-        if line.strip().startswith("- key:") or line.strip().startswith("- name:"):
-            in_block = key in line
-        if in_block and "enabled:" in line:
-            lines[i] = line.replace("enabled: true", "enabled: false").replace(
-                "enabled: True", "enabled: false"
-            )
-            replaced = True
-            in_block = False
-    if replaced:
-        path.write_text("".join(lines), encoding="utf-8")
-    return replaced
 
 
 def write_outputs(

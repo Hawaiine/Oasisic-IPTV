@@ -34,6 +34,14 @@ jobs:
       - name: 源配置校验
         run: python scripts/manage_sources.py validate
 
+      - name: EPG 对齐并刷新缺口清单（低于阈值时保留旧映射）
+        run: |
+          if python scripts/sync_epg_ids.py; then
+            echo 'EPG 映射与缺口清单已刷新'
+          else
+            echo '::warning::EPG 对齐未达覆盖阈值；保留旧映射，继续 M3U 日更'
+          fi
+
       - name: 采集
         run: python scripts/collect.py
 
@@ -64,6 +72,37 @@ jobs:
             gh release create epg-latest --title "EPG（滚动更新）" \
               --notes "多上游合并 + 按标准表裁剪的 XMLTV 节目单，每次采集覆盖更新。" --prerelease
           gh release upload epg-latest output/guide.xml output/guide.xml.gz --clobber
+
+      - name: 发布每日快照（保留最近 30 个 daily-* Release）
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="daily-$(TZ=Asia/Shanghai date '+%Y-%m-%d')"
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "每日订阅快照 ${TAG#daily-}" \
+              --notes "Oasisic-IPTV 每日采集快照。滚动保留最近 30 个 daily-* 版本；EPG 使用独立滚动 Release epg-latest。" \
+              --prerelease
+          fi
+          gh release upload "$TAG" \
+            output/live.m3u output/live_more.m3u output/live_backup.m3u \
+            output/live.txt output/live_lite.txt output/live_more.txt output/live_radio.txt \
+            output/status.json --clobber
+          python3 - <<'PY'
+          import json, re, subprocess
+          releases = json.loads(subprocess.check_output([
+              "gh", "release", "list", "--limit", "100", "--json", "tagName"
+          ], text=True))
+          daily = sorted(
+              (r["tagName"] for r in releases if re.fullmatch(r"daily-\d{4}-\d{2}-\d{2}", r["tagName"])),
+              reverse=True,
+          )
+          expired = daily[30:]
+          for tag in expired:
+              subprocess.run(["gh", "release", "delete", tag, "--cleanup-tag", "--yes"], check=True)
+              print(f"🧹 已清理过期快照 {tag}")
+          print(f"✅ daily 快照保留 {min(len(daily), 30)} 个；epg-latest 独立保留")
+          PY
 
       - name: 上传产物
         uses: actions/upload-artifact@v4
@@ -112,6 +151,8 @@ jobs:
             output/live_more.txt \
             output/live_radio.txt \
             output/status.json \
+            data/channels.json \
+            data/epg_missing.txt \
             data/source_stats.json \
             config/sources.yaml \
             CHANGELOG.md
