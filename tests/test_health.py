@@ -121,3 +121,15 @@ def test_index_age_days_and_summarize():
     text = summarize({"u1": OK, "u2": OK, "u3": HTTP_403})
     assert text.startswith("ok=2")
     assert summarize({}) == "-"
+
+def test_is_signed_covers_token_params() -> None:
+    """回归：livekey / migutoken / GuardEnc 这类时效参数必须判为签名链接。"""
+    signed = [
+        "https://live.264788.xyz/channel/x?streamid=abc&livekey=def",
+        "https://migu.188766.xyz/?migutoken=abc&id=x",
+        "http://[2409::1]/a/1.m3u8?GuardEnc=1",
+        "http://x/y.m3u8?auth_key=1",
+    ]
+    for url in signed:
+        assert is_signed(url), url
+    assert not is_signed("https://example.com/live/index.m3u8")

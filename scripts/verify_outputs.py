@@ -52,6 +52,40 @@ def check_zero_orphan(root: Path, errors: list[str]) -> None:
         ok("zero-orphan")
 
 
+def check_entries_quality(
+    path: Path,
+    entries: list[dict],
+    errors: list[str],
+    *,
+    allow_other: bool = False,
+    label: str = "",
+) -> None:
+    """逐文件检查 group-title 标准化与「属性原文混入频道名」。"""
+    tag = label or path.name
+    bad_groups: list[str] = []
+    leaked = 0
+    other = 0
+    for e in entries:
+        g = e.get("group") or ""
+        if g not in ALLOWED_GROUPS:
+            bad_groups.append(g or "<空>")
+        if g == "其他":
+            other += 1
+        if '="' in (e.get("name") or ""):
+            leaked += 1
+    if bad_groups:
+        uniq = sorted(set(bad_groups))
+        fail(f"{tag} 非标准 group-title {len(bad_groups)} 条: {uniq[:6]}", errors)
+    elif entries:
+        ok(f"{tag} group-title 全部标准化")
+    if leaked:
+        fail(f"{tag} 有 {leaked} 条频道名混入属性原文（解析畸形）", errors)
+    elif entries:
+        ok(f"{tag} 频道名无属性泄漏")
+    if not allow_other and other:
+        fail(f"{tag} 其他类 {other} 条（应只出现在 live_more）", errors)
+
+
 def check_m3u(path: Path, *, max_keep: int, require_nonempty: bool, errors: list[str]) -> list[dict]:
     if not path.exists():
         fail(f"{path.name} 不存在", errors)
@@ -87,11 +121,22 @@ def main() -> None:
     check_zero_orphan(root, errors)
 
     live = check_m3u(root / "output" / "live.m3u", max_keep=1, require_nonempty=True, errors=errors)
-    check_m3u(root / "output" / "live_more.m3u", max_keep=1, require_nonempty=False, errors=errors)
-    check_m3u(root / "output" / "live_radio.m3u", max_keep=1, require_nonempty=False, errors=errors)
+    more = check_m3u(root / "output" / "live_more.m3u", max_keep=1, require_nonempty=False, errors=errors)
+    radio = check_m3u(root / "output" / "live_radio.m3u", max_keep=1, require_nonempty=False, errors=errors)
+    backup: list[dict] = []
     backup_path = root / "output" / "live_backup.m3u"
     if backup_path.exists():
-        check_m3u(backup_path, max_keep=3, require_nonempty=False, errors=errors)
+        backup = check_m3u(backup_path, max_keep=3, require_nonempty=False, errors=errors)
+
+    # 逐文件质量口径（旧版只看 live.m3u，live_more/live_radio 的分组与脏名无人管）
+    for path, entries, allow_other in (
+        (root / "output" / "live.m3u", live, False),
+        (root / "output" / "live_more.m3u", more, True),
+        (root / "output" / "live_radio.m3u", radio, False),
+        (backup_path, backup, False),
+    ):
+        if entries or path.exists():
+            check_entries_quality(path, entries, errors, allow_other=allow_other)
 
     # 探活分列（可选产物，存在即校验；属「问题清单」，同频道最多 3 条）
     for col in ("live_ipv6.m3u", "live_cmcc.m3u", "live_signed.m3u"):
@@ -128,7 +173,8 @@ def main() -> None:
 
     cr = root / "output" / "check_result.json"
     if not cr.exists():
-        fail("check_result.json 不存在", errors)
+        # 干净克隆里该文件被 .gitignore 忽略（CI 中 collect 刚写完必然存在）→ 仅提示
+        print("⚠ check_result.json 不存在（干净克隆属正常；CI 中由 collect 生成）")
     else:
         data = json.loads(cr.read_text(encoding="utf-8"))
         if data.get("schema_version") != 1:
@@ -139,7 +185,7 @@ def main() -> None:
             fail("timezone 应为 Asia/Shanghai", errors)
         ok(
             f"check_result catalog={data.get('catalog')} more={data.get('more')} "
-            f"ratio={data.get('ratio')}"
+            f"ratio={data.get('ratio')} more_dropped={data.get('more_dropped')}"
         )
 
     # 电台不得混入主列表

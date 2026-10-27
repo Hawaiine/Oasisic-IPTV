@@ -173,3 +173,35 @@ def test_split_catalog_more() -> None:
     assert any(x["standard_name"] == "NHK" for x in more)
     assert len(radio) == 1
 
+
+
+def test_split_more_is_order_independent() -> None:
+    """同一批条目换顺序输入，`more` 结果必须一致（url 做 tiebreaker）。"""
+    import random
+
+    items = [
+        _e(matched=False, standard_name=f"台{i}", display_name=f"台{i}", category="other", url=f"http://h{i}", name=f"台{i}")
+        for i in range(30)
+    ]
+    _, a, _ = split_catalog_more(list(items), more_max_channels=10)
+    shuffled = list(items)
+    random.Random(7).shuffle(shuffled)
+    _, b, _ = split_catalog_more(shuffled, more_max_channels=10)
+    assert [x["url"] for x in a] == [x["url"] for x in b]
+
+
+def test_split_more_quota_respects_category_caps() -> None:
+    items = []
+    for i in range(20):
+        items.append(_e(matched=False, standard_name=f"L{i}", display_name=f"L{i}", category="local", url=f"http://l{i}", name=f"L{i}"))
+        items.append(_e(matched=False, standard_name=f"O{i}", display_name=f"O{i}", category="other", url=f"http://o{i}", name=f"O{i}"))
+    stats: dict = {}
+    _, more, _ = split_catalog_more(
+        items, more_max_channels=10, more_quota={"local": 4, "other": 4}, stats=stats
+    )
+    cats = [e["category"] for e in more]
+    assert cats.count("local") >= 4      # 配额是保底
+    assert cats.count("other") >= 4
+    assert len(more) == 10               # 总量仍补满到上限
+    assert stats["more_candidates"] == 40
+    assert stats["more_dropped"] > 0

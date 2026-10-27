@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import os
 import logging
 import sys
 from collections import Counter, defaultdict
@@ -338,6 +339,7 @@ def write_check_result(
     counts: dict[str, int],
     fetched: list[dict[str, Any]],
     settings: dict[str, Any],
+    more_stats: dict[str, Any] | None = None,
 ) -> None:
     enabled = [f for f in fetched if f["source"].get("enabled", True)]
     ok_n = sum(1 for f in enabled if f["ok"])
@@ -369,6 +371,11 @@ def write_check_result(
         ],
         "channels": [],
     }
+    if more_stats:
+        payload["more_candidates"] = more_stats.get("more_candidates")
+        payload["more_dropped"] = more_stats.get("more_dropped")
+        payload["more_by_category"] = more_stats.get("more_by_category")
+        payload["more_dropped_by_category"] = more_stats.get("more_dropped_by_category")
     out_dir = project_root() / (settings.get("output_dir") or "output/")
     save_json(out_dir / "check_result.json", payload)
 
@@ -384,6 +391,15 @@ def enforce_strict(fetched: list[dict[str, Any]], settings: dict[str, Any]) -> N
     core = [f for f in enabled if f["source"].get("core")]
     core_ok = sum(1 for f in core if f["ok"]) if core else -1
     print(f"源成功率: {ok_n}/{len(enabled)} = {ratio:.0%}")
+    # STRICT_SOURCES=0：本地调试 / PR 验证时只告警不阻断（文档一直这么写，但此前未实现）
+    strict_env = (os.environ.get("STRICT_SOURCES") or "1").strip().lower()
+    if strict_env in {"0", "false", "no", "off"}:
+        print("⚠ 严格模式已通过 STRICT_SOURCES=0 关闭（仅告警）")
+        if core and core_ok == 0:
+            print("⚠ 核心源全部失败")
+        if ratio < threshold:
+            print(f"⚠ 成功率 {ratio:.0%} < {threshold:.0%}")
+        return
     if core and core_ok == 0:
         print("❌ 严格模式：核心源全部失败")
         sys.exit(1)
@@ -419,10 +435,20 @@ def run() -> int:
     max_keep = int(settings.get("max_keep_per_channel") or 1)
     selected = select_best(classified, max_keep=max_keep, health=health)
     include_ov = bool(settings.get("main_include_overseas", False))
+    more_stats: dict[str, Any] = {}
+    quota_raw = settings.get("more_category_quota") or {}
+    quota = (
+        {str(k): int(v) for k, v in quota_raw.items() if v is not None}
+        if isinstance(quota_raw, dict)
+        else {}
+    )
     catalog, more, radio = split_catalog_more(
         selected,
         more_max_channels=int(settings.get("more_max_channels") or 3000),
         main_include_overseas=include_ov,
+        more_quota=quota,
+        health=health,
+        stats=more_stats,
     )
     backup: list[dict[str, Any]] = []
     if settings.get("write_live_backup", True):
@@ -436,7 +462,7 @@ def run() -> int:
         ]
         backup = select_best(backup_pool, max_keep=backup_keep, health=health)
     counts = write_outputs(catalog, more, radio, backup, settings)
-    write_check_result(counts, fetched, settings)
+    write_check_result(counts, fetched, settings, more_stats=more_stats)
     logger.info(
         "[collect] live=%d backup=%d more=%d radio=%d | %s",
         counts["catalog"],
@@ -449,6 +475,12 @@ def run() -> int:
         f"✅ catalog={counts['catalog']} / more={counts['more']} / "
         f"backup={counts.get('backup', 0)} / radio={counts['radio']}"
     )
+    if more_stats:
+        print(
+            f"   live_more: 候选 {more_stats.get('more_candidates')} → "
+            f"保留 {more_stats.get('more_kept')}（丢弃 {more_stats.get('more_dropped')}，"
+            f"分类明细见 output/check_result.json）"
+        )
     return 0
 
 

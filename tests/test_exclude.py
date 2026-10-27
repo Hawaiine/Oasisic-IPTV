@@ -2,8 +2,14 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
+import yaml
+
 from lib.classify import classify_name
-from lib.exclude import DEFAULT_PATTERNS, is_excluded, load_patterns
+from lib.exclude import DEFAULT_PATTERNS, filter_entries, is_excluded, load_patterns
+
+CONFIG = Path(__file__).resolve().parent.parent / "config" / "exclude.yaml"
 
 
 def test_default_blacklist_hits_junk():
@@ -50,3 +56,27 @@ def test_classify_local_long_tail():
 def test_classify_overseas_region_wins():
     assert classify_name("某不认识的名字", "overseas") == "overseas"
     assert classify_name("某不认识的名字", "hotel") == "hotel"
+
+def _config_patterns() -> list[str]:
+    return load_patterns(yaml.safe_load(CONFIG.read_text(encoding="utf-8")))
+
+
+def test_config_keeps_real_short_names():
+    """回归：短代号规则曾把 CGTN/CCTV5/BTV 等真频道当垃圾丢掉。"""
+    pats = _config_patterns()
+    for name in ("CGTN", "CCTV5", "CCTV8", "CCTV12", "BTV", "BRTV", "CETV", "SMG", "DW", "ViuTV"):
+        assert not is_excluded(name, pats), name
+
+
+def test_config_still_drops_junk_codes():
+    pats = _config_patterns()
+    for name in ("CH5", "M2", "NU", "HKS"):
+        assert is_excluded(name, pats), name
+
+
+def test_filter_entries_checks_cleaned_name():
+    """回归：`4K超清` 清洗后是 `4K`，只在原名上匹配会漏网。"""
+    pats = _config_patterns()
+    kept, dropped = filter_entries([{"name": "4K超清"}, {"name": "湖南卫视"}], pats)
+    assert dropped == ["4K超清"]
+    assert [e["name"] for e in kept] == ["湖南卫视"]

@@ -7,14 +7,41 @@ from typing import Any
 
 DEFAULT_URL_TVG = "https://live.fanmingming.com/e.xml"
 
-_EXTINF_RE = re.compile(
-    r"#EXTINF:([^,]*),(.*)$",
-)
 _ATTR_RE = re.compile(r'([A-Za-z0-9-]+)="([^"]*)"')
+_EXTINF_PREFIX = "#EXTINF:"
 
 
 def parse_extinf_attrs(info: str) -> dict[str, str]:
     return {k: v for k, v in _ATTR_RE.findall(info)}
+
+
+def split_extinf(payload: str) -> tuple[str, str]:
+    """引号感知切分 EXTINF：返回 (属性区, 名称)。
+
+    旧的 `r"#EXTINF:([^,]*),(.*)$"` 在第一个逗号处切分，上游两种畸形写法会把
+    属性原文塞进频道名：
+    1. 属性值里带逗号（`http-user-agent="Mozilla/5.0 … like Gecko) Chrome/149"`）；
+    2. 属性块重复（`#EXTINF:-1 group-title="X",tvg-id="Y" group-title="Z",名称`）。
+    这里按引号状态找第一个「不在引号内」的逗号。
+    """
+    in_quote = False
+    for i, ch in enumerate(payload):
+        if ch == '"':
+            in_quote = not in_quote
+        elif ch == "," and not in_quote:
+            return payload[:i], payload[i + 1 :]
+    return payload, ""
+
+
+def clean_leaked_name(name: str) -> str:
+    """名称里混入属性原文时，取最后一个 `",` 之后的真实名称。"""
+    text = (name or "").strip()
+    if '="' not in text:
+        return text
+    idx = text.rfind('",')
+    if idx != -1:
+        return text[idx + 2 :].strip()
+    return text
 
 
 def parse_m3u(text: str) -> list[dict[str, Any]]:
@@ -26,11 +53,11 @@ def parse_m3u(text: str) -> list[dict[str, Any]]:
         line = raw.strip()
         if not line:
             continue
-        if line.startswith("#EXTINF:"):
-            m = _EXTINF_RE.match(line)
-            duration_and_attrs = m.group(1) if m else ""
-            name = (m.group(2) if m else "").strip()
-            attrs = parse_extinf_attrs(duration_and_attrs)
+        if line.startswith(_EXTINF_PREFIX):
+            payload = line[len(_EXTINF_PREFIX) :]
+            _head, raw_name = split_extinf(payload)
+            attrs = parse_extinf_attrs(payload)
+            name = clean_leaked_name(raw_name)
             pending = {
                 "name": name,
                 "url": "",
