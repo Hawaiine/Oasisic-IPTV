@@ -1,0 +1,44 @@
+name: pr-verify
+
+# 只做验证：不提交、不推送、不触发日更。
+# 目的：让贡献者的 PR 在合并前就能看到 pytest / 源配置 / 采集 / 输出校验 四道结果。
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 单元测试
+        run: pytest tests/ -q
+
+      - name: 源配置校验
+        run: python scripts/manage_sources.py validate
+
+      - name: 采集（PR 不因源成功率阻断）
+        env:
+          STRICT_SOURCES: "0"
+        run: python scripts/collect.py
+
+      - name: 输出校验
+        run: python scripts/verify_outputs.py

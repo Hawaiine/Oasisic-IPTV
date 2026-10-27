@@ -58,7 +58,18 @@ def _sort_key(entry: dict[str, Any], health: dict[str, str] | None = None) -> tu
     matched = 0 if entry.get("matched") else 1
     # 名称稳定性：已匹配标准表优先
     name_len = len(entry.get("cleaned_name") or entry.get("name") or "")
-    return (rtp, signed, health_rank, region_rank, channel_prio, priority, matched, name_len)
+    # 末位用 url 做确定性 tiebreaker：同分条目不再随源返回顺序漂移
+    return (
+        rtp,
+        signed,
+        health_rank,
+        region_rank,
+        channel_prio,
+        priority,
+        matched,
+        name_len,
+        url,
+    )
 
 
 def _dedup_urls(
@@ -163,13 +174,56 @@ def _log_select_stats(
     )
 
 
+def _apply_more_quota(
+    entries: list[dict[str, Any]],
+    limit: int,
+    quota: dict[str, int] | None,
+) -> list[dict[str, Any]]:
+    """按分类配额保留，额度不足时按质量顺序回流补位。
+
+    不写配额时退化为「排序后取前 limit 条」——比旧的「按源顺序硬切」更稳。
+    """
+    if limit <= 0:
+        return entries
+    if not quota:
+        return entries[:limit]
+    buckets: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for e in entries:
+        buckets[e.get("category") or "other"].append(e)
+    picked: list[dict[str, Any]] = []
+    for cat in iter_main_order():
+        cap = int(quota.get(cat) or 0)
+        if cap <= 0:
+            continue
+        picked.extend((buckets.get(cat) or [])[:cap])
+        if len(picked) >= limit:
+            break
+    if len(picked) < limit:
+        # 配额是「保底目标」而不是硬上限：某类候选不足时，空出的额度按质量顺序
+        # 回流给其他分类，保证 live_more 总量稳定在 more_max_channels。
+        chosen = {id(e) for e in picked}
+        for e in entries:
+            if len(picked) >= limit:
+                break
+            if id(e) not in chosen:
+                picked.append(e)
+    return picked[:limit]
+
+
 def split_catalog_more(
     entries: list[dict[str, Any]],
     *,
     more_max_channels: int = 3000,
     main_include_overseas: bool = False,
+    more_quota: dict[str, int] | None = None,
+    health: dict[str, str] | None = None,
+    stats: dict[str, Any] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
-    """返回 (catalog, more, radio)。catalog 仅标准表命中。"""
+    """返回 (catalog, more, radio)。catalog 仅标准表命中。
+
+    扩展列表先按质量排序（健康度 → priority → 匹配度 → 名称 → url）再按配额截断，
+    并把候选/保留/丢弃计数写进 `stats`（供 check_result 与 CHANGELOG 观测）。
+    """
     catalog: list[dict[str, Any]] = []
     more: list[dict[str, Any]] = []
     radio: list[dict[str, Any]] = []
@@ -185,13 +239,32 @@ def split_catalog_more(
             catalog.append(e)
         else:
             more.append(e)
+
+    candidates = len(more)
+    before = Counter(e.get("category") or "other" for e in more)
+    more = sorted(more, key=lambda e: _sort_key(e, health))
     if more_max_channels > 0 and len(more) > more_max_channels:
-        more = more[:more_max_channels]
+        more = _apply_more_quota(more, more_max_channels, more_quota)
+    if stats is not None:
+        kept = Counter(e.get("category") or "other" for e in more)
+        stats.update(
+            {
+                "more_candidates": candidates,
+                "more_kept": len(more),
+                "more_dropped": candidates - len(more),
+                "more_by_category": dict(sorted(kept.items())),
+                "more_dropped_by_category": {
+                    cat: before.get(cat, 0) - kept.get(cat, 0) for cat in sorted(before)
+                },
+            }
+        )
     logger.info(
-        "[select] split catalog=%d more=%d radio=%d",
+        "[select] split catalog=%d more=%d radio=%d (more 候选 %d, 丢弃 %d)",
         len(catalog),
         len(more),
         len(radio),
+        candidates,
+        candidates - len(more),
     )
     return catalog, more, radio
 

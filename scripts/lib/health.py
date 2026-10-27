@@ -49,7 +49,8 @@ UNPROBEABLE_SCHEMES = ("rtp://", "udp://", "rtmp://")
 
 # 时效性签名参数：URL query 带这些大概率会过期（分钟~小时级）
 _SIGNED_URL_RE = re.compile(
-    r"[?&](?:auth_key|accountinfo|GuardEncType|SecurityKey|hdnts|wsSecret|txSecret|"
+    r"[?&](?:auth_key|accountinfo|GuardEnc(?:Type)?|SecurityKey|hdnts|wsSecret|txSecret|"
+    r"livekey|streamid|migutoken|playlist_token|"
     r"signature|timestamp|expires?|token|signed|sign|sig|st)=",
     re.IGNORECASE,
 )

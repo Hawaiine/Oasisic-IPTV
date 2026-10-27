@@ -47,3 +47,14 @@
 ## 提问
 
 先看 [docs/FAQ.md](docs/FAQ.md)；仍不明确再开 Issue。
+
+## PR 自动验证（pr-verify）
+
+开 PR 后 `.github/workflows/pr.yml` 会自动跑四步，全绿再合并：
+
+1. `pytest tests/ -q`
+2. `python scripts/manage_sources.py validate`
+3. `STRICT_SOURCES=0 python scripts/collect.py`（PR 不因源成功率波动阻断）
+4. `python scripts/verify_outputs.py`
+
+该 workflow 只读，不提交、不推送、不触发日更。

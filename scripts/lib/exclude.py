@@ -55,12 +55,22 @@ def filter_entries(
     entries: list[dict[str, Any]],
     patterns: list[str],
 ) -> tuple[list[dict[str, Any]], list[str]]:
-    """返回 (保留条目, 被丢弃的名字列表)。"""
+    """返回 (保留条目, 被丢弃的名字列表)。
+
+    同时校验原名与清洗后的名字：有些噪声是清洗后才现形的
+    （如 `4K超清` → `4K`、`CF·手游`），只在原名上匹配会漏网。
+    """
+    from .clean import clean_channel_name
+
     kept: list[dict[str, Any]] = []
     dropped: list[str] = []
     for e in entries:
         name = e.get("name") or ""
-        if is_excluded(name, patterns):
+        cleaned = clean_channel_name(name)
+        hit = is_excluded(name, patterns)
+        if not hit and cleaned and cleaned != name:
+            hit = is_excluded(cleaned, patterns)
+        if hit:
             dropped.append(name)
         else:
             kept.append(e)

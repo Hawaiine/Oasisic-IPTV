@@ -8,6 +8,16 @@ catalog_only_main: true          # 主列表仅标准表命中
 write_live_more: true            # 生成扩展列表 live_more.m3u
 write_live_backup: true          # 生成备份列表 live_backup.m3u
 more_max_channels: 3000
+more_category_quota:             # 可选：按分类配额截断 live_more；不写则按质量排序后单一上限
+  local: 900
+  overseas: 800
+  other: 800
+  gangtai: 200
+  sports: 120
+  live: 60
+  cctv: 40
+  weishi: 30
+  hotel: 50
 main_include_overseas: false     # 国际不进主列表
 request_timeout_sec: 30
 strict_sources_ratio: 0.7        # 启用源成功率低于此值则 CI 失败
