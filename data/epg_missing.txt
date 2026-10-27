@@ -1,6 +1,6 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-10-27 15:16:17
+# 生成时间：2026-10-27 07:53:46
 # 覆盖率：216/257 = 84.0%
 
 广州影视 | local | upstream-missing
