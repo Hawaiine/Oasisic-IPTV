@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27 09:04:35",
+  "updated_at": "2026-10-27 14:50:31",
   "sources": {
     "fanmingming-ipv6": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -12,7 +12,7 @@
       "last_error": ""
     },
     "yuechan-cn": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -21,7 +21,7 @@
       "last_error": ""
     },
     "guovin-iptv-api": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -30,16 +30,16 @@
       "last_error": ""
     },
     "zbds-iptv4": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
       "last_fail": "",
-      "last_count": 428,
+      "last_count": 445,
       "last_error": ""
     },
     "suxuang-ipv6": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -48,7 +48,7 @@
       "last_error": ""
     },
     "iptv-org-hk": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -57,7 +57,7 @@
       "last_error": ""
     },
     "iptv-org-tw": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -66,7 +66,7 @@
       "last_error": ""
     },
     "iptv-org-cn": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -75,7 +75,7 @@
       "last_error": ""
     },
     "ccsh-hotel": {
-      "ok": 68,
+      "ok": 69,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -84,7 +84,7 @@
       "last_error": ""
     },
     "fanmingming-itv": {
-      "ok": 65,
+      "ok": 66,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -93,7 +93,7 @@
       "last_error": ""
     },
     "hujingguang-cntv": {
-      "ok": 65,
+      "ok": 66,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -102,7 +102,7 @@
       "last_error": ""
     },
     "yang-gather": {
-      "ok": 65,
+      "ok": 66,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -111,16 +111,16 @@
       "last_error": ""
     },
     "zilong-best": {
-      "ok": 65,
+      "ok": 66,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
       "last_fail": "",
-      "last_count": 632,
+      "last_count": 637,
       "last_error": ""
     },
     "tianmutnt": {
-      "ok": 65,
+      "ok": 66,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -129,7 +129,7 @@
       "last_error": ""
     },
     "suxuang-ipv4": {
-      "ok": 64,
+      "ok": 65,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -138,7 +138,7 @@
       "last_error": ""
     },
     "mymsnn-tier-a": {
-      "ok": 64,
+      "ok": 65,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -147,16 +147,16 @@
       "last_error": ""
     },
     "mymsnn-tier-b": {
-      "ok": 64,
+      "ok": 65,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
       "last_fail": "",
-      "last_count": 56,
+      "last_count": 55,
       "last_error": ""
     },
     "jonhncatt-verified": {
-      "ok": 62,
+      "ok": 63,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -173,16 +173,16 @@
       "last_count": 0
     },
     "zhi35-iptv": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
       "last_fail": "",
-      "last_count": 394,
+      "last_count": 395,
       "last_error": ""
     },
     "wwb521-live": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -191,7 +191,7 @@
       "last_error": ""
     },
     "bigbiggrandg": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -200,7 +200,7 @@
       "last_error": ""
     },
     "kimentanm-aptv": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -209,7 +209,7 @@
       "last_error": ""
     },
     "ccsh-live-lite": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -218,7 +218,7 @@
       "last_error": ""
     },
     "zbefine-iptv": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -227,7 +227,7 @@
       "last_error": ""
     },
     "cs3306-collection": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -252,7 +252,7 @@
       "last_count": 0
     },
     "burningc4-ipv4": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -261,7 +261,7 @@
       "last_error": ""
     },
     "qwerttvv-unicom": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",
@@ -270,7 +270,7 @@
       "last_error": ""
     },
     "qwerttvv-mobile": {
-      "ok": 58,
+      "ok": 59,
       "fail": 0,
       "consecutive_fail": 0,
       "last_ok": "2026-10-27",

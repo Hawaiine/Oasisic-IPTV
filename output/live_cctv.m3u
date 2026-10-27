@@ -49,7 +49,7 @@ http://t.061899.xyz/tl/tl.php?id=fxzl
 #EXTINF:-1 tvg-id="561390" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561390.png" group-title="央视",CCTV-央视台球
 http://107.150.60.122/live/ystq.m3u8
 #EXTINF:-1 tvg-id="561382" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561382.png" group-title="央视",CCTV-女性时尚
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nxss
+http://207.56.13.146:81/cdnlive/nxss.m3u8
 #EXTINF:-1 tvg-id="CCTV怀旧剧场" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV%E6%80%80%E6%97%A7%E5%89%A7%E5%9C%BA.png" group-title="央视",CCTV-怀旧剧场
 http://www.lizhinas.top:1009/rtp/239.252.219.90:5140
 #EXTINF:-1 tvg-id="电视指南" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%B5%E8%A7%86%E6%8C%87%E5%8D%97.png" group-title="央视",CCTV-电视指南
@@ -61,7 +61,7 @@ http://t.061899.xyz/tl/tl.php?id=lgs
 #EXTINF:-1 tvg-id="CETV1" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CETV1.png" group-title="央视",CETV-1
 http://gslbserv.itv.cmvideo.cn/5000000002000002652/1.m3u8?channel-id=bestzb&Contentid=5000000002000002652&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="CETV2" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CETV2.png" group-title="央视",CETV-2
-http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226425/index.m3u8
+http://[2409:8087:1a0b:df::4013]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226425/index.m3u8
 #EXTINF:-1 tvg-id="545955" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CETV3.png" group-title="央视",CETV-3
 http://107.150.60.122/live/cetv3.m3u8
 #EXTINF:-1 tvg-id="中国教育4台" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CETV4.png" group-title="央视",CETV-4

@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://live.fanmingming.com/e.xml"
 #PLAYLIST:电台
 #EXTINF:-1 tvg-id="音乐广播" group-title="电台",音乐广播
-https://tv.iill.top/fm/552&token=7c908a370d95d78e90a9d2ba4007e5185038b0ceac7435ba90e72c77cc035ff6
+https://tv.iill.top/fm/552&token=074c3dfc2f95090e006ab15f0d86b1aaef70b389a934b096ad5e6674b5724d0d
 #EXTINF:-1 group-title="电台",SkySportsCricket
 http://198.16.100.90:8278/tiankongcricket/playlist.m3u8?tid=MF0F2840305428403054&ct=19225&tsum=b212d3a5e0f928f816ba4653a3b31f6d
 #EXTINF:-1 group-title="电台",BBC Radio 1
@@ -137,7 +137,7 @@ https://satellitepull.cnr.cn/live/wx32hubctjtgb/playlist.m3u8
 #EXTINF:-1 group-title="电台",电音电台
 http://play.redefine.ltd/Stream3/FM1058-3.m3u8
 #EXTINF:-1 group-title="电台",法国国际广播电台
-https://rfienchinois64k.ice.infomaniak.ch/rfienchinois-64.mp3
+http://rfichinois96k.ice.infomaniak.ch/rfichinois-96k.mp3
 #EXTINF:-1 group-title="电台",房山电台
 http://live.funhillrm.com/3/sd/live.m3u8
 #EXTINF:-1 group-title="电台",飞碟电台
@@ -185,7 +185,7 @@ http://ngcdn025.cnr.cn/live/hygb/index.m3u8
 #EXTINF:-1 group-title="电台",海南广播
 https://satellitepull.cnr.cn/live/wxhainyygb/playlist.m3u8
 #EXTINF:-1 group-title="电台",河北广播
-https://satellitepull.cnr.cn/live/wxhebzhgb/playlist.m3u8
+https://satellitepull.cnr.cn/live/wxhebyygb/playlist.m3u8
 #EXTINF:-1 group-title="电台",河北交通广播
 https://satellitepull.cnr.cn/live/wxhebjtgb/playlist.m3u8
 #EXTINF:-1 group-title="电台",河北经济广播
@@ -424,8 +424,6 @@ http://canadaremar2.todostreaming.es/live/peque-pequetv.m3u8?checkedby:iptvcat.c
 https://swrswr3vr-hls.akamaized.net/hls/live/2018683/swr3vr/master.m3u8?checkedby:iptvcat.com
 #EXTINF:-1 tvg-id="FoxNewsRadio.us@SD" group-title="电台",Fox News Radio
 https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8
-#EXTINF:-1 tvg-id="BFM2.fr@HD" group-title="电台",BFM2
-https://d1ib1gsg71oarf.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-scp7wda722jph/BFM2_FR.m3u8
 #EXTINF:-1 tvg-id="AsharqRadio.sa@SD" group-title="电台",Asharq Radio
 https://svs.itworkscdn.net/asharqradiovlive/asharqradiov/playlist.m3u8
 #EXTINF:-1 tvg-id="GiornaleRadioTV.it@SD" group-title="电台",Giornale Radio TV
@@ -450,8 +448,8 @@ https://amg00711-zylo-amg00711c10-rakuten-fr-6731.playouts.now.amagi.tv/playlist
 https://a-cdn.klowdtv.com/live3/law_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAmericanTrueCrime.de@GB" group-title="电台",Pluto TV American True Crime
 https://jmp2.uk/plu-692ebafce72f03e07e7df985.m3u8
-#EXTINF:-1 tvg-id="PlutoTVTrueCrime.se@SE" group-title="电台",Pluto TV True Crime
-https://jmp2.uk/plu-61c0b438244e50000758083b.m3u8
+#EXTINF:-1 tvg-id="PlutoTVTrueCrime.us@US" group-title="电台",Pluto TV True Crime
+https://jmp2.uk/plu-5812be1c249444e05d09cc50.m3u8
 #EXTINF:-1 tvg-id="PlutoTVTrueCrime.se@DK" group-title="电台",Pluto TV True Crime DK
 https://jmp2.uk/plu-61c097ec8bb1830008e3f962.m3u8
 #EXTINF:-1 tvg-id="PlutoTVTrueCrime.se@NO" group-title="电台",Pluto TV True Crime NO
@@ -482,7 +480,7 @@ https://jmp2.uk/plu-5e94cd036cc69d0007e8a1ba.m3u8
 https://jmp2.uk/plu-6304f8d5ffb61000071ab478.m3u8
 #EXTINF:-1 tvg-id="EmisoraComunitaria1041FM.co@SD" group-title="电台",Emisora Comunitaria 104.1 FM
 https://104florencia.co/wp-admin/admin-ajax.php?action=frp_hls_proxy&url=https://streamyes.alsolnet.com/comunitariafm/live/playlist.m3u8
-#EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Czechia" group-title="电台",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",FILMBOX+ Love & Crime
+#EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Czechia" group-title="电台",FILMBOX+ Love & Crime
 http://88.212.15.50/live/test_filmbox_plus_atk_1200/playlist.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Romania" group-title="电台",FILMBOX+ Love & Crime Romania
 https://nosignal1.antenaplay.ro/hls/fb-love-and-crime-sd/index.m3u8
