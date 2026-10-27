@@ -8,7 +8,7 @@
 
 面向中文用户。每日从多个公开源采集频道，经过名称清洗、标准频道表匹配、中文分类和一台一链选优后，输出结构清晰的 M3U，可导入 VLC、PotPlayer、TVBox、TiviMate、Kodi。
 
-项目坚持目录制：主列表 `live.m3u` 只保留命中标准表的频道，且每台一条最优链接；`live_backup.m3u` 为同一批标准台保留最多 3 条不同 URL（给会自动切换的播放器）；扩展列表 `live_more.m3u` 保留未入表频道。源的新增、禁用、连续失败自动下线都走配置，不必改代码。
+项目坚持目录制：主列表 `live.m3u` 只保留命中标准表的频道，且每台一条最优链接；`live_backup.m3u` 为同一批标准台保留最多 3 条不同 URL（给会自动切换的播放器）；扩展列表 `live_more.m3u` 保留未入表频道。源的新增/禁用由人工改配置；连续失败只生成复核建议，不自动改源配置。
 
 **不检测直播流是否可播放。** 收录不代表实时可播，请遵守当地法律法规。
 
@@ -32,6 +32,7 @@
 | [`live_lite.txt`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_lite.txt) | TXT 精简版（不含各省市地方台） |
 | `live_more.txt` | TXT 扩展版（未入标准表） |
 | `status.json` | 机器可读状态：源成功率、各列表条数、more 丢弃数、台标覆盖 |
+| [每日 Release 快照](https://github.com/Hawaiine/Oasisic-IPTV/releases) | M3U/TXT/status 日快照，保留最近 30 个日期版 |
 | `guide.xml` | 多上游合并裁剪的 EPG，**不提交仓库**（每日 Release/Artifact），见下方「EPG 节目指南」 |
 
 > 国际 / 酒店 / 其他三类**不再单独出订阅文件**：它们都在 `live_more.m3u`（国际约 800 条、其他约 900 条）里，按需筛选。此前 README 列出的 `live_overseas/live_special/live_other` 因未纳入每日提交，长期是空文件。
@@ -96,7 +97,7 @@ python scripts/verify_outputs.py
 
 通用：本项目主列表已自动写入 `url-tvg="https://live.fanmingming.com/e.xml"`。支持从 M3U 读取该字段的播放器无需再填。不支持的，手动填同一地址。
 
-`guide.xml` 是**多上游合并 + 按标准表裁剪**后的 XMLTV 节目单，只包含标准频道表里的台。当前实测覆盖 **209/257 ≈ 81%**（央视、卫视基本全覆盖；未覆盖清单见 `data/epg_missing.txt`，每日由 `verify_outputs.py` 重新计算并打印）。EPG 上游、对齐规则与覆盖率表见 [docs/EPG.md](docs/EPG.md)。`tvg-id` 与标准表 `epg_id` 完全对应；没有 EPG 的台见 `data/epg_missing.txt`。
+`guide.xml` 是**多上游合并 + 按标准表裁剪**后的 XMLTV 节目单，只包含标准频道表里的台。当前实测覆盖 **216/257 ≈ 84%**（央视、卫视基本全覆盖；未覆盖清单见 `data/epg_missing.txt`，每日由 `verify_outputs.py` 重新计算并打印）。EPG 上游、对齐规则与覆盖率表见 [docs/EPG.md](docs/EPG.md)。`tvg-id` 与标准表 `epg_id` 完全对应；没有 EPG 的台见 `data/epg_missing.txt`。
 
 > `guide.xml` 体积较大，**不纳入 git 历史**。如需历史版本，使用 GitHub Actions Artifacts（保留 30 天）或 Release 附件。
 
@@ -169,7 +170,7 @@ python scripts/verify_outputs.py
 
 见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。流水线见 [docs/PIPELINE.md](docs/PIPELINE.md)。EPG（上游、对齐规则、覆盖率）见 [docs/EPG.md](docs/EPG.md)。可播性与探活见 [docs/PLAYABILITY.md](docs/PLAYABILITY.md)。频道标准与收录规则见 [docs/CHANNEL_STANDARD.md](docs/CHANNEL_STANDARD.md)。加入频道见 [docs/ADD_CHANNEL.md](docs/ADD_CHANNEL.md)。源治理见 [docs/ADD_SOURCE.md](docs/ADD_SOURCE.md) 与 [docs/REMOVE_SOURCE.md](docs/REMOVE_SOURCE.md)。常见问题见 [docs/FAQ.md](docs/FAQ.md)。贡献与提交规范见 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)。客户端兼容性见 [docs/CLIENT_COMPATIBILITY.md](docs/CLIENT_COMPATIBILITY.md)。
 
-当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 **257** 个实体（央视 39 / 卫视 38 / 各省市 145 / 港澳台 19 / 体育 15 / 网络直播 1），其中 **230 个有 EPG（88.5%）**。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
+当前启用 **28** 个公开源（`config/sources.yaml`），另有 4 个暂时禁用（见该文件注释）。标准表 **257** 个实体（央视 39 / 卫视 38 / 各省市 145 / 港澳台 19 / 体育 15 / 网络直播 1），其中 **216 个有 EPG（84.0%）**。EPG 数量由每日 workflow 的 `sync_epg_ids.py` 按当前上游重算，见 `data/epg_missing.txt`。fanmingming 是核心源之一（GitHub raw），不是唯一依赖。已剔除空列表源（ssili-tv）、与 zbds 重复的 vbskycn raw、低质国际源（Free-TV / iptv-org jp·kr）。酒店源降权保留。新增源来自社区评价较高的公开项目（joevess、mymsnn、zilong、CCSH、cs3306、TianmuTNT、zhi35、wwb521、Ftindy、BigBigGrandG、qwerttvv 等）。
 
 名称黑名单（`config/exclude.yaml`）过滤点播回看、购物、测试、引流等非直播噪声；未命中标准表的条目走关键词分类兜底（`scripts/lib/classify.py`），分类不了的留在 `live_more.m3u` 的「其他」里，**不乱分**。扩容用 `scripts/suggest_channels.py`（从长尾里挑「有上游 EPG」的候选），台标用 `scripts/fetch_missing_logos.py` 补。
 
@@ -187,7 +188,7 @@ python scripts/verify_outputs.py
 
 ## 数据源
 
-源列表只维护在 `config/sources.yaml`。核心源连续失败会告警但不会自动禁用；非核心源连续 3 天失败自动 `enabled: false`。空壳列表 `live_other.m3u` / `live_overseas.m3u` / `live_special.m3u` 不再提交到仓库，**不推荐订阅**。
+源列表只维护在 `config/sources.yaml`。核心源连续失败会告警；非核心源连续达到阈值后在 `data/source_stats.json` 标记 `suggest_disable`，由维护者复核后再改 `enabled: false`。空壳列表 `live_other.m3u` / `live_overseas.m3u` / `live_special.m3u` 不再提交到仓库，**不推荐订阅**。
 
 EPG 上游只维护在 `config/settings.yaml` 的 `epg_sources`（多个源真合并、按标准表裁剪）；对齐规则与当前覆盖率见 [docs/EPG.md](docs/EPG.md)。
 

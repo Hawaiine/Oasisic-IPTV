@@ -17,10 +17,9 @@ python scripts/manage_sources.py list
 python scripts/manage_sources.py enable fanmingming-ipv6
 ```
 
-## 自动禁用
+## 连续失败复核建议
 
-非核心源连续 `auto_disable_fail_days`（默认 3）天拉取失败，collect 会把 `enabled` 改为 `false`。  
-核心源（`core: true`）只告警，不自动禁用。
+非核心源连续 `auto_disable_fail_days`（默认 3）天拉取失败，collect 会在 `data/source_stats.json` 写入 `suggest_disable: true` 并告警；**不会自动改 `config/sources.yaml`**。维护者复核失败记录、网络差异与源价值后，再手动设置 `enabled: false`。核心源只告警，不生成禁用建议。
 
 历史在 `data/source_stats.json`：
 
