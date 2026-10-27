@@ -1,0 +1,69 @@
+name: probe
+
+# 探活（可选增强）：只在家宽 runner 上手动触发，跑完把 output/health.json 提交回仓库。
+# 没有一个在线的 self-hosted(iptv) runner 时不会有任何调度压力——本 workflow 不设 schedule。
+#
+# 为什么不用 actions/setup-python：本 runner 是极简自托管镜像（无 Node），
+# 用系统 python3 + venv 更稳。
+
+on:
+  workflow_dispatch:
+    inputs:
+      egress_label:
+        description: "出口网络标签（写进 health.json 的 egress.label）"
+        required: false
+        default: "wuhan-unicom"
+      include_more:
+        description: "是否把 live_more.m3u 也纳入探测"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: [self-hosted, iptv]
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 依赖（系统 python3 + venv）
+        run: |
+          python3 -m venv .venv-probe
+          .venv-probe/bin/pip install -q -r requirements.txt
+
+      - name: 探活
+        env:
+          EGRESS_LABEL: ${{ inputs.egress_label }}
+          INCLUDE_MORE: ${{ inputs.include_more }}
+        run: |
+          ARGS="--egress-label ${EGRESS_LABEL:-wuhan-unicom}"
+          if [ "$INCLUDE_MORE" = "true" ]; then ARGS="$ARGS --include-more"; fi
+          .venv-probe/bin/python scripts/probe.py $ARGS
+
+      - name: 校验产物（含 health.json）
+        run: python3 scripts/verify_outputs.py
+
+      - name: 提交 health.json
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          git add output/health.json
+          if git diff --cached --quiet; then echo '无变更'; exit 0; fi
+          git commit -m "🩺 探活健康度 $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M')"
+          git push origin HEAD:main
+
+      - name: 清理 venv
+        if: always()
+        run: rm -rf .venv-probe
