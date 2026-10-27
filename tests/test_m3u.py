@@ -1,6 +1,14 @@
 from pathlib import Path
 
-from lib.m3u import build_m3u, clean_leaked_name, parse_m3u, parse_playlist, parse_txt, split_extinf
+from lib.m3u import (
+    build_m3u,
+    build_txt,
+    clean_leaked_name,
+    parse_m3u,
+    parse_playlist,
+    parse_txt,
+    split_extinf,
+)
 
 
 FIXTURE = Path(__file__).parent / "fixtures" / "sample.m3u"
@@ -70,3 +78,20 @@ def test_parse_m3u_repairs_duplicated_attr_block() -> None:
 def test_clean_leaked_name_noop_for_normal_names() -> None:
     assert clean_leaked_name("CCTV-1 综合") == "CCTV-1 综合"
     assert clean_leaked_name("") == ""
+
+
+def test_build_txt_groups_and_lines() -> None:
+    src = [
+        {"display_name": "CCTV-1 综合", "url": "http://x/1", "group_title": "央视"},
+        {"display_name": "湖南卫视", "url": "http://x/2", "group_title": "卫视"},
+        {"display_name": "武汉新闻", "url": "http://x/3", "group_title": "各省市"},
+    ]
+    text = build_txt(src)
+    lines = [ln for ln in text.splitlines() if ln and not ln.startswith("#")]
+    assert lines[0] == "央视,#genre#"
+    assert lines[1] == "CCTV-1 综合,http://x/1"
+    assert lines[2] == "卫视,#genre#"
+    assert lines[4] == "各省市,#genre#"
+    # 反解析：复用 parse_txt 验证分组被正确继承
+    back = parse_txt(text)
+    assert [e["group"] for e in back] == ["央视", "卫视", "各省市"]

@@ -21,7 +21,7 @@ from lib.classify import classify_entries  # noqa: E402
 from lib.health import build_index, index_age_days, summarize as summarize_health  # noqa: E402
 from lib.exclude import filter_entries as exclude_entries, load_patterns as load_exclude_patterns  # noqa: E402
 from lib.io_util import load_json, load_yaml, project_root, save_json, save_text  # noqa: E402
-from lib.m3u import build_m3u, parse_playlist  # noqa: E402
+from lib.m3u import build_m3u, build_txt, parse_playlist  # noqa: E402
 from lib.match import ChannelMatcher, attach_match  # noqa: E402
 from lib.select import order_for_output, select_best, split_catalog_more  # noqa: E402
 
@@ -327,12 +327,59 @@ def write_outputs(
         out_dir / "live_radio.m3u",
         build_m3u(radio_ordered, playlist_title="电台", url_tvg=url_tvg, use_epg_id=use_epg_id),
     )
+
+    # TXT 双格式（TVBox / DIYP / 影视仓系只吃 TXT）
+    if settings.get("write_txt", True):
+        lite = [e for e in catalog if (e.get("category") or "") != "local"]
+        save_text(out_dir / "live.txt", build_txt(catalog))
+        save_text(out_dir / "live_lite.txt", build_txt(lite))
+        save_text(out_dir / "live_more.txt", build_txt(more_ordered))
+        save_text(out_dir / "live_radio.txt", build_txt(radio_ordered))
+
     return {
         "catalog": len(catalog),
         "more": len(more_ordered),
         "radio": len(radio_ordered),
         "backup": len(backup_ordered),
+        "lite": len(catalog) - len([e for e in catalog if (e.get("category") or "") == "local"]),
+        "main_with_logo": sum(1 for e in catalog if e.get("tvg_logo")),
     }
+
+
+def write_status(
+    counts: dict[str, int],
+    fetched: list[dict[str, Any]],
+    settings: dict[str, Any],
+    more_stats: dict[str, Any] | None = None,
+) -> None:
+    """写 output/status.json：给 README/badge/下一步自动化用的机器可读状态。"""
+    enabled = [f for f in fetched if f["source"].get("enabled", True)]
+    ok_n = sum(1 for f in enabled if f["ok"])
+    payload: dict[str, Any] = {
+        "schema_version": 1,
+        "generated_at": now_cst(),
+        "timezone": "Asia/Shanghai",
+        "sources": {
+            "enabled": len(enabled),
+            "ok": ok_n,
+            "ratio": round(ok_n / len(enabled), 4) if enabled else 0.0,
+        },
+        "counts": {
+            "catalog": counts["catalog"],
+            "backup": counts.get("backup") or 0,
+            "more": counts["more"],
+            "radio": counts["radio"],
+            "lite": counts.get("lite") or 0,
+        },
+        "more_candidates": (more_stats or {}).get("more_candidates"),
+        "more_dropped": (more_stats or {}).get("more_dropped"),
+        "logo": {
+            "main_total": counts["catalog"],
+            "main_with_logo": counts.get("main_with_logo") or 0,
+        },
+    }
+    out_dir = project_root() / (settings.get("output_dir") or "output/")
+    save_json(out_dir / "status.json", payload)
 
 
 def write_check_result(
@@ -463,6 +510,7 @@ def run() -> int:
         backup = select_best(backup_pool, max_keep=backup_keep, health=health)
     counts = write_outputs(catalog, more, radio, backup, settings)
     write_check_result(counts, fetched, settings, more_stats=more_stats)
+    write_status(counts, fetched, settings, more_stats)
     logger.info(
         "[collect] live=%d backup=%d more=%d radio=%d | %s",
         counts["catalog"],

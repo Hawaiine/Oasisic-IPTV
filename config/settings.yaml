@@ -7,6 +7,7 @@ backup_max_keep: 3               # 备份列表每台最多 3 条不同 URL
 catalog_only_main: true          # 主列表仅标准表命中
 write_live_more: true            # 生成扩展列表 live_more.m3u
 write_live_backup: true          # 生成备份列表 live_backup.m3u
+write_txt: true                  # 生成 TXT 版（live.txt / live_lite.txt / live_more.txt / live_radio.txt）
 more_max_channels: 3000
 more_category_quota:             # 可选：按分类配额截断 live_more；不写则按质量排序后单一上限
   local: 900

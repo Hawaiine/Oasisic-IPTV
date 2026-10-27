@@ -171,5 +171,39 @@ def build_m3u(
     return "\n".join(lines)
 
 
+def build_txt(
+    entries: list[dict[str, Any]],
+    *,
+    use_epg_id: bool = False,
+    include_header: bool = False,
+) -> str:
+    """生成 TXT 播放列表（TVBox / DIYP / 影视仓系）。
+
+    格式：`分组,#genre#` 分段，段内 `名称,URL`。分组用中文 group-title，
+    与 M3U 完全同口径；`use_epg_id` 仅用于把 `名称` 里附上 tvg-id 供部分壳子对 EPG。
+    """
+    lines: list[str] = []
+    if include_header:
+        lines.append("# Oasisic-IPTV TXT 播放列表（分组,#genre# 分段）")
+    current = None
+    for e in entries:
+        group = e.get("group_title") or e.get("group") or "其他"
+        if group != current:
+            if current is not None:
+                lines.append("")
+            lines.append(f"{group},#genre#")
+            current = group
+        name = e.get("display_name") or e.get("name") or ""
+        url = e.get("url") or ""
+        if not name or not url:
+            continue
+        if use_epg_id:
+            tid = e.get("epg_id") or e.get("tvg_id") or ""
+            if tid:
+                name = f"{name} (${tid})"
+        lines.append(f"{name},{url}")
+    return "\n".join(lines) + "\n"
+
+
 def count_entries(text: str) -> int:
     return sum(1 for line in text.splitlines() if line.startswith("#EXTINF"))
