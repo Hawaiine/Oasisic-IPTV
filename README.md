@@ -27,13 +27,16 @@
 | [`live_gangtai.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_gangtai.m3u) | 港澳台 |
 | [`live_sports.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_sports.m3u) | 体育 |
 | [`live_live.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_live.m3u) | 网络直播 |
-| [`live_overseas.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_overseas.m3u) | 国际（默认不进主列表） |
-| [`live_special.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_special.m3u) | 酒店（目录制下通常为空，非推荐） |
-| [`live_other.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_other.m3u) | 其他（通常为空，非推荐） |
 | [`live_radio.m3u`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_radio.m3u) | 电台（独立文件） |
-| `guide.xml` | 多上游合并裁剪的 EPG，见下方「EPG 节目指南」 |
+| [`live.txt`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live.txt) | **TXT 版**（TVBox / DIYP / 影视仓系），与 `live.m3u` 同口径 |
+| [`live_lite.txt`](https://raw.githubusercontent.com/Hawaiine/Oasisic-IPTV/main/output/live_lite.txt) | TXT 精简版（不含各省市地方台） |
+| `live_more.txt` | TXT 扩展版（未入标准表） |
+| `status.json` | 机器可读状态：源成功率、各列表条数、more 丢弃数、台标覆盖 |
+| `guide.xml` | 多上游合并裁剪的 EPG，**不提交仓库**（每日 Release/Artifact），见下方「EPG 节目指南」 |
 
-主列表已写入 `url-tvg="https://live.fanmingming.com/e.xml"`。台标已改为本仓库 `logo/` 托管，示例：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV1.png`。缺失台标列表见 `data/logo_missing.txt`（含已尝试的上游与结果）。
+> 国际 / 酒店 / 其他三类**不再单独出订阅文件**：它们都在 `live_more.m3u`（国际约 800 条、其他约 900 条）里，按需筛选。此前 README 列出的 `live_overseas/live_special/live_other` 因未纳入每日提交，长期是空文件。
+
+主列表已写入 `url-tvg="https://live.fanmingming.com/e.xml"`（上游 EPG，实测只覆盖主列表约 1/3 的台；自建 `guide.xml` 覆盖约 4/5，切换前需在目标客户端实测，见 `docs/EPG.md`）。台标已改为本仓库 `logo/` 托管，示例：`https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV1.png`。缺失台标列表见 `data/logo_missing.txt`（含已尝试的上游与结果）。
 
 ---
 
@@ -93,7 +96,7 @@ python scripts/verify_outputs.py
 
 通用：本项目主列表已自动写入 `url-tvg="https://live.fanmingming.com/e.xml"`。支持从 M3U 读取该字段的播放器无需再填。不支持的，手动填同一地址。
 
-`guide.xml` 是**多上游合并 + 按标准表裁剪**后的 XMLTV 节目单，只包含标准频道表里的台，覆盖 **230/260** 个台（卫视、央视全覆盖）。EPG 上游、对齐规则与覆盖率表见 [docs/EPG.md](docs/EPG.md)。`tvg-id` 与标准表 `epg_id` 完全对应；没有 EPG 的台见 `data/epg_missing.txt`。
+`guide.xml` 是**多上游合并 + 按标准表裁剪**后的 XMLTV 节目单，只包含标准频道表里的台。当前实测覆盖 **209/257 ≈ 81%**（央视、卫视基本全覆盖；未覆盖清单见 `data/epg_missing.txt`，每日由 `verify_outputs.py` 重新计算并打印）。EPG 上游、对齐规则与覆盖率表见 [docs/EPG.md](docs/EPG.md)。`tvg-id` 与标准表 `epg_id` 完全对应；没有 EPG 的台见 `data/epg_missing.txt`。
 
 > `guide.xml` 体积较大，**不纳入 git 历史**。如需历史版本，使用 GitHub Actions Artifacts（保留 30 天）或 Release 附件。
 

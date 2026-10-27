@@ -113,6 +113,39 @@ def check_m3u(path: Path, *, max_keep: int, require_nonempty: bool, errors: list
     return entries
 
 
+def check_txt(root: Path, errors: list[str]) -> None:
+    """TXT 版（TVBox/DIYP）与 M3U 同口径：分组必须是中文 group-title，条目数需对齐。"""
+    pairs = (
+        ("live.txt", "live.m3u", 1.0),
+        ("live_lite.txt", "live.m3u", 0.0),   # 精简版只做存在性 + 分组检查
+        ("live_more.txt", "live_more.m3u", 1.0),
+        ("live_radio.txt", "live_radio.m3u", 1.0),
+    )
+    expected_groups = {info[0] for info in CATEGORIES.values()}
+    for txt_name, m3u_name, ratio_floor in pairs:
+        txt_path = root / "output" / txt_name
+        if not txt_path.exists():
+            fail(f"{txt_name} 不存在（settings.write_txt 应为 true）", errors)
+            continue
+        lines = [ln.strip() for ln in txt_path.read_text(encoding="utf-8").splitlines() if ln.strip()]
+        groups = [ln.rsplit(",", 1)[0] for ln in lines if ln.endswith("#genre#")]
+        bad = [g for g in groups if g not in expected_groups]
+        if bad:
+            fail(f"{txt_name} 非标准分组 {sorted(set(bad))[:5]}", errors)
+            continue
+        items = [ln for ln in lines if not ln.endswith("#genre#") and not ln.startswith("#")]
+        for ln in items:
+            if "," not in ln:
+                fail(f"{txt_name} 存在无逗号行: {ln[:40]}", errors)
+                break
+        m3u_path = root / "output" / m3u_name
+        m3u_entries = parse_m3u(m3u_path.read_text(encoding="utf-8")) if m3u_path.exists() else []
+        if ratio_floor and m3u_entries and len(items) < int(len(m3u_entries) * ratio_floor):
+            fail(f"{txt_name} 条数 {len(items)} 少于 {m3u_name} 的 {len(m3u_entries)}", errors)
+        else:
+            ok(f"{txt_name}: {len(items)} 条, 分组 {len(set(groups))} 个")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.parse_args()
@@ -137,6 +170,8 @@ def main() -> None:
     ):
         if entries or path.exists():
             check_entries_quality(path, entries, errors, allow_other=allow_other)
+
+    check_txt(root, errors)
 
     # 探活分列（可选产物，存在即校验；属「问题清单」，同频道最多 3 条）
     for col in ("live_ipv6.m3u", "live_cmcc.m3u", "live_signed.m3u"):

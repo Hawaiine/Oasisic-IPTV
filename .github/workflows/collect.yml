@@ -97,6 +97,11 @@ jobs:
             output/live_live.m3u \
             output/live_radio.m3u \
             output/live_backup.m3u \
+            output/live.txt \
+            output/live_lite.txt \
+            output/live_more.txt \
+            output/live_radio.txt \
+            output/status.json \
             data/source_stats.json \
             config/sources.yaml \
             CHANGELOG.md
