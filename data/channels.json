@@ -1078,7 +1078,7 @@
         "display_name": "CGTN西语",
         "category": "cctv",
         "tvg_id": "CGTN西语",
-        "epg_id": "CGTN西语",
+        "epg_id": "570483",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1798,7 +1798,7 @@
         "display_name": "浙江民生",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "浙江民生",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1898,7 +1898,7 @@
         "display_name": "生活时尚",
         "category": "local",
         "tvg_id": "生活时尚",
-        "epg_id": null,
+        "epg_id": "生活时尚",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png",
         "priority": 60,
         "notes": "long-tail"
