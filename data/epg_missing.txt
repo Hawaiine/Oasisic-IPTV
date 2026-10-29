@@ -1,7 +1,7 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-10-28 00:56:50
-# 覆盖率：218/257 = 84.8%
+# 生成时间：2026-10-29 01:29:51
+# 覆盖率：229/257 = 89.1%
 
 广州影视 | local | upstream-missing
 武汉新闻 | local | upstream-missing
@@ -31,14 +31,3 @@ J2 | gangtai | upstream-missing
 南京少儿 | local | upstream-missing
 宁夏少儿 | local | upstream-missing
 宁夏经济 | local | upstream-missing
-怀旧剧场 | local | upstream-missing
-求索记录 | local | upstream-missing
-第一剧场 | local | upstream-missing
-风云剧场 | local | upstream-missing
-风云音乐 | local | upstream-missing
-风云足球 | sports | upstream-missing
-CCTV-世界地理 | cctv | upstream-missing
-CCTV-女性时尚 | cctv | upstream-missing
-CCTV-发现之旅 | cctv | upstream-missing
-CCTV-老故事 | cctv | upstream-missing
-CCTV-央视台球 | cctv | upstream-missing
