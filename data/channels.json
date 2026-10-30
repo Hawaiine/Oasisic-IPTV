@@ -587,7 +587,7 @@
         "display_name": "南方卫视",
         "category": "local",
         "tvg_id": "GDNF",
-        "epg_id": "539677",
+        "epg_id": "南方卫视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png"
     },
     {
@@ -1050,7 +1050,7 @@
         "display_name": "湖南爱晚",
         "category": "live",
         "tvg_id": "HunanAiwan",
-        "epg_id": "570471",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png"
     },
     {
@@ -1498,7 +1498,7 @@
         "display_name": "无锡生活",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "549669",
+        "epg_id": "无锡生活",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"

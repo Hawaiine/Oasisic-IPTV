@@ -35,7 +35,7 @@ CETV-4,http://gslbserv.itv.cmvideo.cn/5000000011000031126/1.m3u8?channel-id=best
 CGTN,https://0472.org/hls/cgtn.m3u8
 CGTN俄语,https://0472.org/hls/cgtne.m3u8
 CGTN法语,https://0472.org/hls/cgtnf.m3u8
-CGTN纪录,http://t.061899.xyz/tl/tl.php?id=cgtnjl
+CGTN纪录,https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
 CGTN西语,https://0472.org/hls/cgtnx.m3u8
 CGTN阿语,https://0472.org/hls/cgtna.m3u8
 
@@ -135,7 +135,7 @@ CHC影迷电影,http://148.135.93.213/live.php?id=CHC影迷电影
 广州综合,https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 广西新闻,http://107.150.60.122/live/gxxw.m3u8
 康巴卫视,http://39.134.65.65/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225660/index.m3u8
-延边卫视,https://srs.iyb983.cn:443/video/CYS/index.m3u8
+延边卫视,https://srs.iyb983.cn/video/CYS/index.m3u8
 徐州新闻综合,https://live.chinacert.cftest5.cn/cnmg/live/639731747
 怀旧剧场,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hjjc
 攀枝花新闻综合,http://live.pzhkai.com/xwzhtl/sd/live.m3u8
@@ -156,8 +156,8 @@ CHC影迷电影,http://148.135.93.213/live.php?id=CHC影迷电影
 江苏影视,https://stream1.freetv.fun/a89dd489fa013bc4f36bcc4afe388f1783e2251c276e2566a9359d68a61c6d91.ctv
 江苏综艺,https://stream1.freetv.fun/f8ef469943662bed2abc6609d9ef1720b9e93a8a0bd6f5789133461e36763f37.m3u8
 江门综合,https://stream1.freetv.fun/jiang-men-zong-he-1.ctv
-河北农民,https://jwcdnqx.hebyun.com.cn/live/clzhpd/1500k/tzwj_video.m3u8?zhebd
-河北都市,https://stream1.freetv.fun/he-bei-du-shi-13.ctv
+河北农民,https://ls.qingting.fm/live/1650/64k.m3u8
+河北都市,https://radio.pull.hebtv.com/live/hebnczx.m3u8
 河南公共,http://1.94.31.214/php/hntv.php?id=hngg
 河南新闻,http://1.94.31.214/php/hntv.php?id=hnxw
 河南民生,http://www.lwfz.fun:8800/rtp/239.16.20.165:11650
@@ -167,11 +167,11 @@ CHC影迷电影,http://148.135.93.213/live.php?id=CHC影迷电影
 法治天地,http://gslbserv.itv.cmvideo.cn/2000000002000000014/1.m3u8?channel-id=hnbblive&Contentid=2000000002000000014&livemode=1&stbId=3
 济南综合,https://stream1.freetv.fun/ji-nan-zong-he-1.m3u8
 浙江公共新闻,http://ali-m-l.cztv.com/channels/lantian/channel07/1080p.m3u8
-浙江少儿,https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8?
-浙江教科影视,http://ali-m-l.cztv.com/channels/lantian/channel04/1080p.m3u8
+浙江少儿,http://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8
+浙江教科影视,http://ali-vl.cztv.com/channels/lantian/channel004/360p.m3u8
 浙江教育,http://ali-m-l.cztv.com/channels/lantian/channel04/720p.m3u8
 浙江民生,https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8?
-浙江经济生活,http://ali-m-l.cztv.com/channels/lantian/channel03/1080p.m3u8
+浙江经济生活,http://ali-m-l.cztv.com/channels/lantian/channel003/720p.m3u8
 浙江钱江,https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
 海南自贸,http://nn.7x9d.cn/地方台8563/海南.php?id=jjpd
 湖南国际,https://stream1.freetv.fun/hu-nan-guo-ji-2.ctv
@@ -215,9 +215,9 @@ CHC影迷电影,http://148.135.93.213/live.php?id=CHC影迷电影
 风云音乐,http://207.56.13.146:81/cdnlive/fyyy.m3u8
 黑龙江少儿,https://ls.qingting.fm/live/4972/64k.m3u8
 黑龙江影视,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/index.m3u8
-黑龙江文体,http://[2409:8087:1a01:df::4025]:80/TVOD/88888888/224/3221225965/main.m3u8
+黑龙江文体,https://idclive.hljtv.com:4430/live/hljwy_hd.m3u8
 黑龙江新闻法治,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/index.m3u8
-黑龙江都市,http://[2409:8087:1a01:df::4025]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8
+黑龙江都市,https://idclive.hljtv.com:4430/live/dushi_hd.m3u8
 龙岩综合,http://8.138.7.223/tv/fjtv1.php?id=ly1
 
 港澳台,#genre#
@@ -253,7 +253,7 @@ BRTV体育休闲,http://smjdenny.eu.org:35455/bptv/10000100000000050000000003870
 广东体育,http://38.75.136.137:98/gslb/dsdqpub/gdty.m3u8?auth=testpub
 快乐垂钓,http://gslbserv.itv.cmvideo.cn/5000000011000031206/1.m3u8?channel-id=bestzb&Contentid=5000000011000031206&livemode=1&stbId=3
 武术世界,http://1.94.31.214/php/hntv.php?id=wspd
-纬来体育,https://epg.pw/stream/8855a9936e37e608a0ec8a014cce1673dee9c5d68d560da376cc92e5edef2b25.m3u8
+纬来体育,https://epg.pw/stream/4f18dfe0593db5c686eb64ae8edaf2a9202d4d46bdc9bbde2cee27708e12ea01.m3u8
 风云足球,http://207.56.13.146:81/cdnlive/fyzq.m3u8
 高尔夫网球,http://104.152.209.49:8181/720p/gefwq.m3u8
 魅力足球,http://gslbserv.itv.cmvideo.cn/5000000011000031207/1.m3u8?channel-id=bestzb&Contentid=5000000011000031207&livemode=1&stbId=3

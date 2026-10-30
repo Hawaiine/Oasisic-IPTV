@@ -35,7 +35,7 @@ CETV-4,http://gslbserv.itv.cmvideo.cn/5000000011000031126/1.m3u8?channel-id=best
 CGTN,https://0472.org/hls/cgtn.m3u8
 CGTN俄语,https://0472.org/hls/cgtne.m3u8
 CGTN法语,https://0472.org/hls/cgtnf.m3u8
-CGTN纪录,http://t.061899.xyz/tl/tl.php?id=cgtnjl
+CGTN纪录,https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
 CGTN西语,https://0472.org/hls/cgtnx.m3u8
 CGTN阿语,https://0472.org/hls/cgtna.m3u8
 
@@ -112,7 +112,7 @@ BRTV体育休闲,http://smjdenny.eu.org:35455/bptv/10000100000000050000000003870
 广东体育,http://38.75.136.137:98/gslb/dsdqpub/gdty.m3u8?auth=testpub
 快乐垂钓,http://gslbserv.itv.cmvideo.cn/5000000011000031206/1.m3u8?channel-id=bestzb&Contentid=5000000011000031206&livemode=1&stbId=3
 武术世界,http://1.94.31.214/php/hntv.php?id=wspd
-纬来体育,https://epg.pw/stream/8855a9936e37e608a0ec8a014cce1673dee9c5d68d560da376cc92e5edef2b25.m3u8
+纬来体育,https://epg.pw/stream/4f18dfe0593db5c686eb64ae8edaf2a9202d4d46bdc9bbde2cee27708e12ea01.m3u8
 风云足球,http://207.56.13.146:81/cdnlive/fyzq.m3u8
 高尔夫网球,http://104.152.209.49:8181/720p/gefwq.m3u8
 魅力足球,http://gslbserv.itv.cmvideo.cn/5000000011000031207/1.m3u8?channel-id=bestzb&Contentid=5000000011000031207&livemode=1&stbId=3
