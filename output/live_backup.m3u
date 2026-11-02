@@ -129,7 +129,9 @@ http://www.lizhinas.top:1009/rtp/239.252.219.93:5140
 #EXTINF:-1 tvg-id="卫生健康" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7.png" group-title="央视",CCTV-卫生健康
 http://nas.hssvm.com:8888/udp/225.1.1.210:5002
 #EXTINF:-1 tvg-id="卫生健康" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7.png" group-title="央视",CCTV-卫生健康
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=wsjk
+http://107.150.60.122/live/wsjk.m3u8
+#EXTINF:-1 tvg-id="卫生健康" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7.png" group-title="央视",CCTV-卫生健康
+http://121.199.48.54/live1/jsbv1.m3u8?id=wsjk&usign=F72mXdN_excKZ6g-Aj8yGg
 #EXTINF:-1 tvg-id="561406" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561406.png" group-title="央视",CCTV-发现之旅
 http://t.061899.xyz/tl/tl.php?id=fxzl
 #EXTINF:-1 tvg-id="561406" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561406.png" group-title="央视",CCTV-发现之旅
@@ -152,6 +154,8 @@ http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nxss
 http://www.lizhinas.top:1009/rtp/239.252.219.90:5140
 #EXTINF:-1 tvg-id="CCTV怀旧剧场" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV%E6%80%80%E6%97%A7%E5%89%A7%E5%9C%BA.png" group-title="央视",CCTV-怀旧剧场
 http://dassby.qqff.top:99/live/怀旧剧场/index.m3u8
+#EXTINF:-1 tvg-id="CCTV怀旧剧场" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV%E6%80%80%E6%97%A7%E5%89%A7%E5%9C%BA.png" group-title="央视",CCTV-怀旧剧场
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hjjc
 #EXTINF:-1 tvg-id="电视指南" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%B5%E8%A7%86%E6%8C%87%E5%8D%97.png" group-title="央视",CCTV-电视指南
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dszn
 #EXTINF:-1 tvg-id="电视指南" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%B5%E8%A7%86%E6%8C%87%E5%8D%97.png" group-title="央视",CCTV-电视指南
@@ -162,6 +166,8 @@ http://dassby.qqff.top:99/live/电视指南/index.m3u8
 http://www.lizhinas.top:1009/rtp/239.252.219.86:5140
 #EXTINF:-1 tvg-id="CCTV第一剧场" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV%E7%AC%AC%E4%B8%80%E5%89%A7%E5%9C%BA.png" group-title="央视",CCTV-第一剧场
 http://dassby.qqff.top:99/live/第一剧场/index.m3u8
+#EXTINF:-1 tvg-id="CCTV第一剧场" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV%E7%AC%AC%E4%B8%80%E5%89%A7%E5%9C%BA.png" group-title="央视",CCTV-第一剧场
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dyjc
 #EXTINF:-1 tvg-id="561396" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561396.png" group-title="央视",CCTV-老故事
 http://t.061899.xyz/tl/tl.php?id=lgs
 #EXTINF:-1 tvg-id="561396" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561396.png" group-title="央视",CCTV-老故事
@@ -197,12 +203,12 @@ https://0472.org/hls/cgtn.m3u8
 #EXTINF:-1 tvg-id="CGTN英语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN.png" group-title="央视",CGTN
 http://gslbserv.itv.cmvideo.cn/7745129417417101820/1.m3u8?channel-id=hnbblive&Contentid=7745129417417101820&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="CGTN英语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN.png" group-title="央视",CGTN
-http://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8
-#EXTINF:-1 tvg-id="570484" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png" group-title="央视",CGTN俄语
+http://112.27.235.94:8000/hls/17/index.m3u8
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png" group-title="央视",CGTN俄语
 https://0472.org/hls/cgtne.m3u8
-#EXTINF:-1 tvg-id="570484" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png" group-title="央视",CGTN俄语
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png" group-title="央视",CGTN俄语
 http://russian-livews.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd.m3u8
-#EXTINF:-1 tvg-id="570484" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png" group-title="央视",CGTN俄语
+#EXTINF:-1 tvg-id="CGTN俄语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png" group-title="央视",CGTN俄语
 https://liveru.cgtn.com/1000r/prog_index.m3u8
 #EXTINF:-1 tvg-id="CGTN法语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E6%B3%95%E8%AF%AD.png" group-title="央视",CGTN法语
 https://0472.org/hls/cgtnf.m3u8
@@ -211,16 +217,16 @@ http://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8V
 #EXTINF:-1 tvg-id="CGTN法语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E6%B3%95%E8%AF%AD.png" group-title="央视",CGTN法语
 https://livefr.cgtn.com/1000f/prog_index.m3u8
 #EXTINF:-1 tvg-id="CGTN纪录" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTNDoc.png" group-title="央视",CGTN纪录
-https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
-#EXTINF:-1 tvg-id="CGTN纪录" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTNDoc.png" group-title="央视",CGTN纪录
 https://0472.org/hls/cgtnd.m3u8
 #EXTINF:-1 tvg-id="CGTN纪录" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTNDoc.png" group-title="央视",CGTN纪录
 http://t.061899.xyz/tl/tl.php?id=cgtnjl
-#EXTINF:-1 tvg-id="570483" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png" group-title="央视",CGTN西语
+#EXTINF:-1 tvg-id="CGTN纪录" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTNDoc.png" group-title="央视",CGTN纪录
+https://english-livebkali.cgtn.com/live/doccgtn_0.m3u8
+#EXTINF:-1 tvg-id="CGTN西语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png" group-title="央视",CGTN西语
 https://0472.org/hls/cgtnx.m3u8
-#EXTINF:-1 tvg-id="570483" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png" group-title="央视",CGTN西语
+#EXTINF:-1 tvg-id="CGTN西语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png" group-title="央视",CGTN西语
 https://livees.cgtn.com/1000e/prog_index.m3u8
-#EXTINF:-1 tvg-id="570483" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png" group-title="央视",CGTN西语
+#EXTINF:-1 tvg-id="CGTN西语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png" group-title="央视",CGTN西语
 rtp://239.3.1.217:4220
 #EXTINF:-1 tvg-id="CGTN阿语" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E9%98%BF%E8%AF%AD.png" group-title="央视",CGTN阿语
 https://0472.org/hls/cgtna.m3u8
@@ -264,11 +270,11 @@ http://play1-qk.nmtv.cn/live/1769652018126032.m3u8
 http://107.150.60.122/live/nmgws.m3u8
 #EXTINF:-1 tvg-id="内蒙古卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/NMGTV.png" group-title="卫视",内蒙古卫视
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nmgws
-#EXTINF:-1 tvg-id="570491" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视",农林卫视
+#EXTINF:-1 tvg-id="陕西农林卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视",农林卫视
 https://live.chinacert.cftest5.cn/cnmg/live/956904896
-#EXTINF:-1 tvg-id="570491" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视",农林卫视
+#EXTINF:-1 tvg-id="陕西农林卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视",农林卫视
 http://120.76.248.139/live/bfgd/4200000122.m3u8
-#EXTINF:-1 tvg-id="570491" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视",农林卫视
+#EXTINF:-1 tvg-id="陕西农林卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png" group-title="卫视",农林卫视
 http://home.wwang.pw:35455/itv/1000000005000266003.m3u8?cdn=ystenlive
 #EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/BTV.png" group-title="卫视",北京卫视
 http://gslbserv.itv.cmvideo.cn/1000000005000265027/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265027&livemode=1&stbId=3
@@ -500,11 +506,11 @@ https://live.chinacert.cftest5.cn/cnmg/live/617290047
 https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8
 #EXTINF:-1 group-title="各省市",东莞生活资讯
 https://stream.sun0769.com/dgrtv1/mp4tv2_800/index.m3u8
-#EXTINF:-1 tvg-id="乐山新闻综合" group-title="各省市",乐山新闻综合
+#EXTINF:-1 tvg-id="544590" group-title="各省市",乐山新闻综合
 https://stream1.freetv.fun/le-shan-xin-wen-zong-he-1.m3u8
-#EXTINF:-1 tvg-id="乐山新闻综合" group-title="各省市",乐山新闻综合
+#EXTINF:-1 tvg-id="544590" group-title="各省市",乐山新闻综合
 https://stream1.freetv.fun/le-shan-xin-wen-zong-he-2.m3u8
-#EXTINF:-1 tvg-id="乐山新闻综合" group-title="各省市",乐山新闻综合
+#EXTINF:-1 tvg-id="544590" group-title="各省市",乐山新闻综合
 http://m3u8file.lstv.org.cn/nmip-media/channellive/channel1/playlist.m3u8
 #EXTINF:-1 tvg-id="优漫卡通" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A.png" group-title="各省市",优漫卡通
 http://t.061899.xyz/tl/tl.php?id=ymkt
@@ -518,13 +524,13 @@ https://stream1.freetv.fun/fo-shan-zong-he-15.ctv
 https://stream1.freetv.fun/fo-shan-zong-he-17.ctv
 #EXTINF:-1 tvg-id="佛山综合" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E4%BD%9B%E5%B1%B1%E7%BB%BC%E5%90%88.png" group-title="各省市",佛山综合
 https://stream1.freetv.fun/fo-shan-zong-he-22.ctv
-#EXTINF:-1 tvg-id="六安公共" group-title="各省市",六安公共
+#EXTINF:-1 tvg-id="544589" group-title="各省市",六安公共
 http://ls.qingting.fm/live/1794199.m3u8
-#EXTINF:-1 tvg-id="六安公共" group-title="各省市",六安公共
+#EXTINF:-1 tvg-id="544589" group-title="各省市",六安公共
 http://pili-live-rtmp.luan2.hfmt.net/luan2/ggpd.m3u8
-#EXTINF:-1 tvg-id="六安新闻综合" group-title="各省市",六安新闻综合
+#EXTINF:-1 tvg-id="544618" group-title="各省市",六安新闻综合
 http://ls.qingting.fm/live/267.m3u8
-#EXTINF:-1 tvg-id="六安新闻综合" group-title="各省市",六安新闻综合
+#EXTINF:-1 tvg-id="544618" group-title="各省市",六安新闻综合
 http://pili-live-rtmp.luan2.hfmt.net/luan2/jjpd.m3u8
 #EXTINF:-1 tvg-id="内蒙古少儿" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%86%85%E8%92%99%E5%8F%A4%E5%B0%91%E5%84%BF.png" group-title="各省市",内蒙古少儿
 http://play1-qk.nmtv.cn/live/1686560464515368.m3u8
@@ -582,11 +588,11 @@ http://nklive.nbs.cn/hls/d511bc9d-a694-4453-b3a2-4fc842cc97a1/index.m3u8
 http://live.nbs.cn/channels/njtv/xwzh/500k.m3u8
 #EXTINF:-1 tvg-id="南京新闻综合" group-title="各省市",南京新闻综合
 http://live.nbs.cn/channels/njtv/xwzh/m3u8:500k/live.m3u8
-#EXTINF:-1 tvg-id="539677" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png" group-title="各省市",南方卫视
+#EXTINF:-1 tvg-id="南方卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png" group-title="各省市",南方卫视
 http://74.91.26.218:82/live/nfws.m3u8
-#EXTINF:-1 tvg-id="539677" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png" group-title="各省市",南方卫视
+#EXTINF:-1 tvg-id="南方卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png" group-title="各省市",南方卫视
 http://kkk.888.3116598.xyz/api.php?n=tttt&id=vPfSAx&tk=FgM0vQMejxvG
-#EXTINF:-1 tvg-id="539677" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png" group-title="各省市",南方卫视
+#EXTINF:-1 tvg-id="南方卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png" group-title="各省市",南方卫视
 http://39.135.138.58:18890/PLTV/88888888/224/3221226203/index.m3u8
 #EXTINF:-1 tvg-id="南通新闻综合" group-title="各省市",南通新闻综合
 http://cm.wshls.homecdn.com/live/7cc9.flv
@@ -616,7 +622,7 @@ http://ep.b1791.com/php/sctv.php?id=scwhly
 http://wouu.net:9977/udp/239.93.1.101:5140
 #EXTINF:-1 tvg-id="四川经济" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%9B%9B%E5%B7%9D%E7%BB%8F%E6%B5%8E.png" group-title="各省市",四川经济
 http://ep.b1791.com/php/sctv.php?id=scjj
-#EXTINF:-1 tvg-id="大庆新闻综合" group-title="各省市",大庆新闻综合
+#EXTINF:-1 tvg-id="544617" group-title="各省市",大庆新闻综合
 https://stream1.freetv.fun/da-qing-xin-wen-zong-he-1.m3u8
 #EXTINF:-1 tvg-id="宁夏公共" group-title="各省市",宁夏公共
 https://hls.ningxiahuangheyun.com/live/nxgg1M.m3u8
@@ -660,7 +666,7 @@ http://ls.qingting.fm/live/60260.m3u8
 http://livealone302.iqilu.com/iqilu/zypd.m3u8
 #EXTINF:-1 tvg-id="山东齐鲁" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/SDQL.png" group-title="各省市",山东齐鲁
 http://livealone302.iqilu.com/iqilu/qlpd.m3u8
-#EXTINF:-1 tvg-id="539646" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png" group-title="各省市",山西影视
+#EXTINF:-1 tvg-id="山西影视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png" group-title="各省市",山西影视
 http://liveflash.sxrtv.com/live/sxfilm.m3u8?sub_m3u8=true&edge_slice=true
 #EXTINF:-1 tvg-id="山西文体生活" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E6%96%87%E4%BD%93%E7%94%9F%E6%B4%BB.png" group-title="各省市",山西文体生活
 http://liveflash.sxrtv.com/live/sxpublic.m3u8?sub_m3u8=true&edge_slice=true
@@ -684,9 +690,9 @@ http://38.75.136.137:98/gslb/dsdqpub/gdzj.m3u8?auth=testpub
 http://38.75.136.137:98/gslb/dsdqpub/gdzja.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="广东珠江" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDTVZJ.png" group-title="各省市",广东珠江
 http://cdn2.163189.xyz/live/gdzj/stream.m3u8
-#EXTINF:-1 tvg-id="广元公共" group-title="各省市",广元公共
+#EXTINF:-1 tvg-id="544584" group-title="各省市",广元公共
 https://m3u8.channel.dzsm.com/nmip-media/channellive/channel101257/playlist.m3u8
-#EXTINF:-1 tvg-id="广元公共" group-title="各省市",广元公共
+#EXTINF:-1 tvg-id="544584" group-title="各省市",广元公共
 https://m3u8.channel.dzsm.com/cms/videos/nmip-media/channellive/channel2/playlist.m3u8
 #EXTINF:-1 tvg-id="GZYS" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZYS.png" group-title="各省市",广州影视
 https://stream1.freetv.fun/yan-zhou-ying-shi-15.ctv
@@ -697,16 +703,16 @@ https://stream1.freetv.fun/yan-zhou-ying-shi-28.ctv
 #EXTINF:-1 tvg-id="广州新闻" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZXW.png" group-title="各省市",广州新闻
 http://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=d2c2db0b598c02ec1b5623728434d367&txTime=18d57929bd3
 #EXTINF:-1 tvg-id="广州竞赛" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B9%BF%E5%B7%9E%E7%AB%9E%E8%B5%9B.png" group-title="各省市",广州竞赛
-http://8.138.7.223/tv/gzjs.m3u8
-#EXTINF:-1 tvg-id="广州竞赛" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B9%BF%E5%B7%9E%E7%AB%9E%E8%B5%9B.png" group-title="各省市",广州竞赛
 https://stream1.freetv.fun/yan-zhou-jing-sai-2.m3u8
 #EXTINF:-1 tvg-id="广州竞赛" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B9%BF%E5%B7%9E%E7%AB%9E%E8%B5%9B.png" group-title="各省市",广州竞赛
 https://stream1.freetv.fun/yan-zhou-jing-sai-32.ctv
-#EXTINF:-1 tvg-id="广州综合台" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="各省市",广州综合
+#EXTINF:-1 tvg-id="广州竞赛" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B9%BF%E5%B7%9E%E7%AB%9E%E8%B5%9B.png" group-title="各省市",广州竞赛
+https://stream1.freetv.fun/yan-zhou-jing-sai-33.ctv
+#EXTINF:-1 tvg-id="544638" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="各省市",广州综合
 https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
-#EXTINF:-1 tvg-id="广州综合台" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="各省市",广州综合
+#EXTINF:-1 tvg-id="544638" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="各省市",广州综合
 http://r.jdshipin.com/iR6Gq
-#EXTINF:-1 tvg-id="广州综合台" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="各省市",广州综合
+#EXTINF:-1 tvg-id="544638" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png" group-title="各省市",广州综合
 http://r.jdshipin.com/snhya
 #EXTINF:-1 tvg-id="广西新闻" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B9%BF%E8%A5%BF%E6%96%B0%E9%97%BB.png" group-title="各省市",广西新闻
 http://107.150.60.122/live/gxxw.m3u8
@@ -719,11 +725,11 @@ http://39.134.65.65/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225660/index
 #EXTINF:-1 tvg-id="康巴卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/KBTV.png" group-title="各省市",康巴卫视
 http://home.wwang.pw:35455/itv/1000000005000266002.m3u8?cdn=ystenlive
 #EXTINF:-1 tvg-id="康巴卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/KBTV.png" group-title="各省市",康巴卫视
-http://kkk.888.3116598.xyz/api.php?n=tttt&id=mwhS1w&tk=FgM0vQMejxvG
-#EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/YBTV.png" group-title="各省市",延边卫视
-https://srs.iyb983.cn:443/video/CYS/index.m3u8
+http://121.199.48.54/live1/kbws.m3u8?id=kbws&usign=F72mXdN_excKZ6g-Aj8yGg@@referer=https://www.kangbatv.com/@@
 #EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/YBTV.png" group-title="各省市",延边卫视
 https://srs.iyb983.cn/video/CYS/index.m3u8
+#EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/YBTV.png" group-title="各省市",延边卫视
+https://srs.iyb983.cn:443/video/CYS/index.m3u8
 #EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/YBTV.png" group-title="各省市",延边卫视
 http://120.76.248.139/live/bfgd/4200000117.m3u8
 #EXTINF:-1 tvg-id="徐州新闻综合" group-title="各省市",徐州新闻综合
@@ -731,32 +737,32 @@ https://live.chinacert.cftest5.cn/cnmg/live/639731747
 #EXTINF:-1 tvg-id="561380" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561380.png" group-title="各省市",怀旧剧场
 http://38.75.136.137:98/gslb/dsdqpub/hjjc.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="561380" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561380.png" group-title="各省市",怀旧剧场
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hjjc
-#EXTINF:-1 tvg-id="561380" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561380.png" group-title="各省市",怀旧剧场
 https://hls-gateway.vpstv.net/streams/708853.m3u8
+#EXTINF:-1 tvg-id="561380" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561380.png" group-title="各省市",怀旧剧场
+http://[2409:8087:7001:20:2::3]:80/dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226972/index.m3u8
 #EXTINF:-1 tvg-id="攀枝花新闻综合" group-title="各省市",攀枝花新闻综合
 http://live.pzhkai.com/xwzhtl/sd/live.m3u8
 #EXTINF:-1 tvg-id="攀枝花新闻综合" group-title="各省市",攀枝花新闻综合
 http://zb.pzhgd.com:9095/live/xwzh.m3u8
-#EXTINF:-1 tvg-id="552828" group-title="各省市",无锡娱乐
+#EXTINF:-1 tvg-id="无锡娱乐" group-title="各省市",无锡娱乐
 http://stream.thmz.com/wxtv2/playlist.m3u8?_upt=5ff4061f1706166872
-#EXTINF:-1 tvg-id="552828" group-title="各省市",无锡娱乐
+#EXTINF:-1 tvg-id="无锡娱乐" group-title="各省市",无锡娱乐
 http://stream.thmz.com/wxtv2/sd/live.m3u8
-#EXTINF:-1 tvg-id="552828" group-title="各省市",无锡娱乐
+#EXTINF:-1 tvg-id="无锡娱乐" group-title="各省市",无锡娱乐
 http://stream.thmz.com/wxtv2/sd/live.m3u8?_upt=978cd8731706199708
-#EXTINF:-1 tvg-id="549669" group-title="各省市",无锡生活
+#EXTINF:-1 tvg-id="无锡生活" group-title="各省市",无锡生活
 http://stream.thmz.com/wxtv4/playlist.m3u8?_upt=8c51357c1707362770
-#EXTINF:-1 tvg-id="549669" group-title="各省市",无锡生活
+#EXTINF:-1 tvg-id="无锡生活" group-title="各省市",无锡生活
 http://stream.thmz.com/wxtv4/sd/live.m3u8
-#EXTINF:-1 tvg-id="549669" group-title="各省市",无锡生活
+#EXTINF:-1 tvg-id="无锡生活" group-title="各省市",无锡生活
 http://stream.thmz.com/wxtv4/sd/live.m3u8?_upt=978cd8731706199708
-#EXTINF:-1 tvg-id="552827" group-title="各省市",无锡经济
+#EXTINF:-1 tvg-id="无锡经济" group-title="各省市",无锡经济
 http://stream.thmz.com/wxtv5/playlist.m3u8
-#EXTINF:-1 tvg-id="552827" group-title="各省市",无锡经济
+#EXTINF:-1 tvg-id="无锡经济" group-title="各省市",无锡经济
 http://stream.thmz.com/wxtv5/playlist.m3u8?_upt=10155d141706166867
-#EXTINF:-1 tvg-id="552827" group-title="各省市",无锡经济
+#EXTINF:-1 tvg-id="无锡经济" group-title="各省市",无锡经济
 http://stream.thmz.com/wxtv5/sd/live.m3u8?_upt=cfacd5221704890772
-#EXTINF:-1 tvg-id="来宾综合" group-title="各省市",来宾综合
+#EXTINF:-1 tvg-id="544633" group-title="各省市",来宾综合
 http://zb.gxlbamc.com:1935/live/lbzh.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="杭州影视" group-title="各省市",杭州影视
 https://stream1.freetv.fun/hang-zhou-ying-shi-2.ctv
@@ -816,17 +822,17 @@ https://ls.qingting.fm/live/1650/64k.m3u8
 http://ls.qingting.fm/live/1650.m3u8
 #EXTINF:-1 tvg-id="河北农民" group-title="各省市",河北农民
 https://jwcdnqx.hebyun.com.cn/live/clzhpd/1500k/tzwj_video.m3u8?zhebd
-#EXTINF:-1 tvg-id="570481" group-title="各省市",河北少儿科教
+#EXTINF:-1 tvg-id="河北少儿" group-title="各省市",河北少儿科教
 http://tv.pull.hebtv.com/jishi/shaoerkejiao.m3u8?t=2510710360&k=4ff4446adf3cce3de40dd013255b38b2
-#EXTINF:-1 tvg-id="570480" group-title="各省市",河北影视
+#EXTINF:-1 tvg-id="河北影视" group-title="各省市",河北影视
 http://1.94.31.214/php/hebei.php?id=hbys
-#EXTINF:-1 tvg-id="570472" group-title="各省市",河北经济
+#EXTINF:-1 tvg-id="河北经济" group-title="各省市",河北经济
 http://1.94.31.214/php/hebei.php?id=jjsh
-#EXTINF:-1 tvg-id="570479" group-title="各省市",河北都市
+#EXTINF:-1 tvg-id="河北都市" group-title="各省市",河北都市
 https://stream1.freetv.fun/he-bei-du-shi-13.ctv
-#EXTINF:-1 tvg-id="570479" group-title="各省市",河北都市
+#EXTINF:-1 group-title="各省市",河北都市
 http://1.94.31.214/php/hebei.php?id=hbds
-#EXTINF:-1 tvg-id="570479" group-title="各省市",河北都市
+#EXTINF:-1 tvg-id="河北都市" group-title="各省市",河北都市
 https://radio.pull.hebtv.com/live/hebnczx.m3u8
 #EXTINF:-1 tvg-id="河南公共" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B2%B3%E5%8D%97%E5%85%AC%E5%85%B1.png" group-title="各省市",河南公共
 http://1.94.31.214/php/hntv.php?id=hngg
@@ -875,29 +881,29 @@ https://stream1.freetv.fun/zhe-jiang-shao-er-4.ctv
 #EXTINF:-1 tvg-id="浙江教科影视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B5%99%E6%B1%9F%E6%95%99%E7%A7%91%E5%BD%B1%E8%A7%86.png" group-title="各省市",浙江教科影视
 http://ali-m-l.cztv.com/channels/lantian/channel04/1080p.m3u8
 #EXTINF:-1 tvg-id="浙江教科影视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B5%99%E6%B1%9F%E6%95%99%E7%A7%91%E5%BD%B1%E8%A7%86.png" group-title="各省市",浙江教科影视
-https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
-#EXTINF:-1 tvg-id="浙江教科影视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B5%99%E6%B1%9F%E6%95%99%E7%A7%91%E5%BD%B1%E8%A7%86.png" group-title="各省市",浙江教科影视
 http://hw-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+#EXTINF:-1 tvg-id="浙江教科影视" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B5%99%E6%B1%9F%E6%95%99%E7%A7%91%E5%BD%B1%E8%A7%86.png" group-title="各省市",浙江教科影视
+http://hw-m-l.cztv.com/channels/lantian/channel04/360p.m3u8
 #EXTINF:-1 tvg-id="浙江教育" group-title="各省市",浙江教育
 http://ali-m-l.cztv.com/channels/lantian/channel04/720p.m3u8
-#EXTINF:-1 tvg-id="570490" group-title="各省市",浙江民生
+#EXTINF:-1 tvg-id="浙江民生" group-title="各省市",浙江民生
 https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
-#EXTINF:-1 tvg-id="570490" group-title="各省市",浙江民生
-https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8?
-#EXTINF:-1 tvg-id="570490" group-title="各省市",浙江民生
+#EXTINF:-1 tvg-id="浙江民生" group-title="各省市",浙江民生
 http://ali-m-l.cztv.com/channels/lantian/channel06/720p.m3u8
+#EXTINF:-1 tvg-id="浙江民生" group-title="各省市",浙江民生
+https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8?
 #EXTINF:-1 tvg-id="浙江经济生活" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJSH.png" group-title="各省市",浙江经济生活
-https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+http://ali-m-l.cztv.com/channels/lantian/channel003/720p.m3u8
 #EXTINF:-1 tvg-id="浙江经济生活" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJSH.png" group-title="各省市",浙江经济生活
 http://ali-m-l.cztv.com/channels/lantian/channel03/1080p.m3u8
 #EXTINF:-1 tvg-id="浙江经济生活" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJSH.png" group-title="各省市",浙江经济生活
-http://ali-m-l.cztv.com/channels/lantian/channel003/720p.m3u8
+https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
 #EXTINF:-1 tvg-id="浙江钱江都市" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJQJ.png" group-title="各省市",浙江钱江
 https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
 #EXTINF:-1 tvg-id="浙江钱江都市" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJQJ.png" group-title="各省市",浙江钱江
 https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8?
 #EXTINF:-1 tvg-id="浙江钱江都市" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/ZJQJ.png" group-title="各省市",浙江钱江
-http://ali-xwl.cztv.com/live/channel02720Plxw.m3u8
+http://ali-xwl.cztv.com/live/channel021080Plxw.m3u8
 #EXTINF:-1 tvg-id="海南自贸" group-title="各省市",海南自贸
 http://nn.7x9d.cn/地方台8563/海南.php?id=jjpd
 #EXTINF:-1 tvg-id="海南自贸" group-title="各省市",海南自贸
@@ -952,11 +958,11 @@ http://192.168.123.1:23234/rtp/239.3.1.109:8001
 https://hls.gstv.com.cn/49048r/922k96.m3u8
 #EXTINF:-1 tvg-id="甘肃文化影视" group-title="各省市",甘肃文化影视
 https://hls.gstv.com.cn/49048r/w1l6d5.m3u8
-#EXTINF:-1 tvg-id="570487" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="各省市",生活时尚
+#EXTINF:-1 tvg-id="生活时尚" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="各省市",生活时尚
 http://gslbserv.itv.cmvideo.cn/5000000002000019634/1.m3u8?channel-id=bestzb&Contentid=5000000002000019634&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="570487" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="各省市",生活时尚
+#EXTINF:-1 tvg-id="生活时尚" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="各省市",生活时尚
 https://stream1.freetv.fun/sheng-huo-shi-shang-13.m3u8
-#EXTINF:-1 tvg-id="570487" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="各省市",生活时尚
+#EXTINF:-1 tvg-id="生活时尚" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A.png" group-title="各省市",生活时尚
 https://stream1.freetv.fun/sheng-huo-shi-shang-17.ctv
 #EXTINF:-1 tvg-id="石家庄娱乐" group-title="各省市",石家庄娱乐
 https://stream1.freetv.fun/shi-jia-zhuang-yu-le-1.ctv
@@ -1003,7 +1009,7 @@ http://107.150.60.122/live/dyjc.m3u8
 #EXTINF:-1 tvg-id="561377" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561377.png" group-title="各省市",第一剧场
 http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="561377" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561377.png" group-title="各省市",第一剧场
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dyjc
+http://[2409:8087:7001:20:2::3]:80/dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226959/index.m3u8
 #EXTINF:-1 tvg-id="第一财经" group-title="各省市",第一财经
 http://gslbserv.itv.cmvideo.cn/5000000010000027146/1.m3u8?channel-id=bestzb&Contentid=5000000010000027146&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="第一财经" group-title="各省市",第一财经
@@ -1030,17 +1036,17 @@ http://kkk.888.3116598.xyz/api.php?n=tttt&id=BZITeT&tk=FgM0vQMejxvG
 https://live-auth.51kandianshi.com/szgd/csztv1.m3u8
 #EXTINF:-1 tvg-id="苏州新闻综合" group-title="各省市",苏州新闻综合
 https://liveshowbak2.kan0512.com/norecord/ncsztv1_sd/playlist.m3u8
-#EXTINF:-1 tvg-id="苏州社会经济" group-title="各省市",苏州社会经济
+#EXTINF:-1 tvg-id="539667" group-title="各省市",苏州社会经济
 https://live-auth.51kandianshi.com/szgd/csztv2.m3u8
-#EXTINF:-1 tvg-id="苏州社会经济" group-title="各省市",苏州社会经济
+#EXTINF:-1 tvg-id="539667" group-title="各省市",苏州社会经济
 https://liveshowbak2.kan0512.com/norecord/ncsztv2_sd/playlist.m3u8
 #EXTINF:-1 tvg-id="西安都市" group-title="各省市",西安都市
 http://112.46.105.20:8009/hls/29/index.m3u8
-#EXTINF:-1 tvg-id="赣州公共" group-title="各省市",赣州公共
+#EXTINF:-1 tvg-id="544601" group-title="各省市",赣州公共
 https://pili-live-hls-sjxgz2024.sobeylive.com/jxgz2024/396_q_live172526334096251.m3u8
-#EXTINF:-1 tvg-id="赣州教育" group-title="各省市",赣州教育
+#EXTINF:-1 tvg-id="544578" group-title="各省市",赣州教育
 https://pili-live-hls-sjxgz2024.sobeylive.com/jxgz2024/396_q_live172526335287668.m3u8
-#EXTINF:-1 tvg-id="赣州新闻综合" group-title="各省市",赣州新闻综合
+#EXTINF:-1 tvg-id="544611" group-title="各省市",赣州新闻综合
 http://play-live-hls.jxtvcn.com.cn/live/tv_ganzhou.m3u8
 #EXTINF:-1 tvg-id="都市剧场" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%83%BD%E5%B8%82%E5%89%A7%E5%9C%BA.png" group-title="各省市",都市剧场
 http://gslbserv.itv.cmvideo.cn/5000000011000031111/1.m3u8?channel-id=bestzb&Contentid=5000000011000031111&livemode=1&stbId=3
@@ -1126,12 +1132,12 @@ http://[2409:8087:1a01:df::4025]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/
 http://[2409:8087:1a01:df::4055]:80/TVOD/88888888/224/3221225969/main.m3u8
 #EXTINF:-1 tvg-id="黑龙江都市" group-title="各省市",黑龙江都市
 http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8
-#EXTINF:-1 tvg-id="龙岩综合" group-title="各省市",龙岩综合
+#EXTINF:-1 tvg-id="544627" group-title="各省市",龙岩综合
 http://8.138.7.223/tv/fjtv1.php?id=ly1
 #EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HOYTV.png" group-title="港澳台",HOY TV
-http://r.jdshipin.com/sFw4S
-#EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HOYTV.png" group-title="港澳台",HOY TV
 http://php.jdshipin.com/TVOD/iptv.php?id=hoytv
+#EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HOYTV.png" group-title="港澳台",HOY TV
+http://r.jdshipin.com/sFw4S
 #EXTINF:-1 tvg-id="HOYTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HOYTV.png" group-title="港澳台",HOY TV
 http://cdn.132.us.kg/live/hoy/stream.m3u8
 #EXTINF:-1 tvg-id="TVBJ2" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBJ2.png" group-title="港澳台",J2
@@ -1145,15 +1151,15 @@ http://198.16.100.90:8278/tvbs/playlist.m3u8?tid=MF8F6036660760366607&ct=19225&t
 #EXTINF:-1 tvg-id="TVBPearl" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBPearl.png" group-title="港澳台",TVB明珠台
 https://hls-gateway.vpstv.net/streams/476936.m3u8
 #EXTINF:-1 tvg-id="TVBPearl" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBPearl.png" group-title="港澳台",TVB明珠台
-http://php.jdshipin.com/TVOD/iptv.php?id=mzt2
+http://r.jdshipin.com/jUx8K
 #EXTINF:-1 tvg-id="TVBPearl" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBPearl.png" group-title="港澳台",TVB明珠台
 http://cdn9.163189.xyz/smt1.1.php?id=pearl_twn
-#EXTINF:-1 tvg-id="TVBXinghe" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBXinghe.png" group-title="港澳台",TVB星河
-http://r.jdshipin.com/sXuuD
 #EXTINF:-1 tvg-id="TVBXinghe" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBXinghe.png" group-title="港澳台",TVB星河
 http://php.jdshipin.com/TVOD/iptv.php?id=xinghe
 #EXTINF:-1 tvg-id="TVBXinghe" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBXinghe.png" group-title="港澳台",TVB星河
 http://r.jdshipin.com/Voac4
+#EXTINF:-1 tvg-id="TVBXinghe" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBXinghe.png" group-title="港澳台",TVB星河
+http://r.jdshipin.com/sXuuD
 #EXTINF:-1 tvg-id="翡翠台" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBJade.png" group-title="港澳台",TVB翡翠台
 http://r.jdshipin.com/62WM7
 #EXTINF:-1 tvg-id="翡翠台" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TVBJade.png" group-title="港澳台",TVB翡翠台
@@ -1195,7 +1201,7 @@ https://7612-5516-affc-d88b.kylintv.tv/live/pxinhd_iphone.m3u8
 #EXTINF:-1 tvg-id="凤凰中文" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/PhoenixChinese.png" group-title="港澳台",凤凰卫视中文台
 http://api.mg.itv888.cn:8080/hls/2f80047f91e/index.m3u8
 #EXTINF:-1 tvg-id="凤凰中文" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/PhoenixChinese.png" group-title="港澳台",凤凰卫视中文台
-http://r.jdshipin.com/cCCzW
+http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.flv
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/PhoenixInfo.png" group-title="港澳台",凤凰卫视资讯台
 http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/PhoenixInfo.png" group-title="港澳台",凤凰卫视资讯台
@@ -1230,6 +1236,8 @@ http://php.jdshipin.com:8880/smt.php?id=inews_twn
 rtmp://f13h.mine.nu/sat/tv051
 #EXTINF:-1 tvg-id="FTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/FTV.png" group-title="港澳台",民视
 http://183.239.108.37:1698/hls/133/index.m3u8
+#EXTINF:-1 tvg-id="FTV" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/FTV.png" group-title="港澳台",民视
+mitv://135.148.104.228:19806/92d6295913b64e898e5d102b6685568a
 #EXTINF:-1 tvg-id="TDM" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TDM.png" group-title="港澳台",澳视澳门
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=asam
 #EXTINF:-1 tvg-id="TDM" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TDM.png" group-title="港澳台",澳视澳门
@@ -1254,7 +1262,7 @@ http://gslbserv.itv.cmvideo.cn/5000000002000029972/1.m3u8?channel-id=bestzb&Cont
 http://t.061899.xyz/tl/tl.php?id=jbty
 #EXTINF:-1 tvg-id="劲爆体育" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/JJSports.png" group-title="体育",劲爆体育
 http://111.22.153.159:35455/itv/5000000002000029972.m3u8?cdn=bestzb
-#EXTINF:-1 tvg-id="BeijingSports" group-title="体育",北京体育
+#EXTINF:-1 tvg-id="北京体育休闲" group-title="体育",北京体育
 http://[2409:8087:1:20:20::29]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226438/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EeVAybrHg955d_IRT9e_uHQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMLCKqkSfuGOusJwBMwlCbz%2CEND
 #EXTINF:-1 tvg-id="四海钓鱼" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%9B%9B%E6%B5%B7%E9%92%93%E9%B1%BC.png" group-title="体育",四海钓鱼
 http://120.76.248.139/live/bfgd/4200000229.m3u8
@@ -1276,11 +1284,11 @@ https://live.lalifeier.eu.org/ahtv/ahzyty.m3u8?t=1745774515&key=27009aec794adc78
 https://live.lalifeier.eu.org/ahtv/ahzyty.m3u8?t=1746292937&key=940b0f98a121c28884c74971efaac4de
 #EXTINF:-1 tvg-id="安徽综艺体育" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%AE%89%E5%BE%BD%E7%BB%BC%E8%89%BA%E4%BD%93%E8%82%B2.png" group-title="体育",安徽综艺体育
 https://live.lalifeier.eu.org/ahtv/ahzyty.m3u8?t=1746307365&key=6b104d1fc66c5b34b63d0e19c627e0f9
-#EXTINF:-1 tvg-id="广东体育" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png" group-title="体育",广东体育
+#EXTINF:-1 tvg-id="GDSports" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png" group-title="体育",广东体育
 http://38.75.136.137:98/gslb/dsdqpub/gdty.m3u8?auth=testpub
-#EXTINF:-1 tvg-id="广东体育" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png" group-title="体育",广东体育
+#EXTINF:-1 tvg-id="GDSports" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png" group-title="体育",广东体育
 http://cdn2.163189.xyz/live/gdty/stream.m3u8
-#EXTINF:-1 tvg-id="广东体育" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png" group-title="体育",广东体育
+#EXTINF:-1 tvg-id="GDSports" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDSports.png" group-title="体育",广东体育
 http://php.jdshipin.com/PLTV/iptv.php?id=gdty
 #EXTINF:-1 tvg-id="快乐垂钓" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93.png" group-title="体育",快乐垂钓
 http://gslbserv.itv.cmvideo.cn/5000000011000031206/1.m3u8?channel-id=bestzb&Contentid=5000000011000031206&livemode=1&stbId=3
@@ -1295,9 +1303,9 @@ http://www.lizhinas.top:1009/rtp/239.252.220.180:5140
 #EXTINF:-1 tvg-id="武术世界" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561391.png" group-title="体育",武术世界
 http://live.dxhmt.cn:9080/live/yshnpre.m3u8
 #EXTINF:-1 tvg-id="VideolandSports" group-title="体育",纬来体育
-https://epg.pw/stream/4f18dfe0593db5c686eb64ae8edaf2a9202d4d46bdc9bbde2cee27708e12ea01.m3u8
-#EXTINF:-1 tvg-id="VideolandSports" group-title="体育",纬来体育
 https://epg.pw/stream/8855a9936e37e608a0ec8a014cce1673dee9c5d68d560da376cc92e5edef2b25.m3u8
+#EXTINF:-1 tvg-id="VideolandSports" group-title="体育",纬来体育
+https://epg.pw/stream/4f18dfe0593db5c686eb64ae8edaf2a9202d4d46bdc9bbde2cee27708e12ea01.m3u8
 #EXTINF:-1 tvg-id="VideolandSports" group-title="体育",纬来体育
 https://epg.pw/stream/ab6df63b64d0cc44a1f4f029ed847a26fa54a7aebd455578fb05a63f02c22f4b.m3u8
 #EXTINF:-1 tvg-id="561408" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561408.png" group-title="体育",风云足球
@@ -1318,9 +1326,9 @@ http://gslbserv.itv.cmvideo.cn/5000000011000031207/1.m3u8?channel-id=bestzb&Cont
 https://hls-gateway.vpstv.net/streams/708839.m3u8
 #EXTINF:-1 tvg-id="魅力足球" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%AD%85%E5%8A%9B%E8%B6%B3%E7%90%83.png" group-title="体育",魅力足球
 https://stream1.freetv.fun/mei-li-zu-qiu-1.m3u8
-#EXTINF:-1 tvg-id="570471" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png" group-title="网络直播",湖南爱晚
+#EXTINF:-1 tvg-id="湖南爱晚" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png" group-title="网络直播",湖南爱晚
 http://php.jdshipin.com:8880/iptv.php?id=hngg
-#EXTINF:-1 tvg-id="570471" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png" group-title="网络直播",湖南爱晚
+#EXTINF:-1 tvg-id="湖南爱晚" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png" group-title="网络直播",湖南爱晚
 http://phoneal.qing.mgtv.com/nn_live/nn_x64/Y2hzPSZkZWY9MSZ1aXA9MTA2LjE0LjM4LjU1JnRlcm09NSZtYWNpZD02ODZlOGNmOGM4OGU3N2VjOWEwNzkzMjg5ZjUzNDg0MmFiZWM0ZjNjJnFpZD0mcmF1dGhfZW5hYmxlPW9uJmNkbmV4X2lkPWFsX3Bob25lMyZlcz0xNzkzMzE5NzI4JnV1aWQ9ODY3NDY0ZjFhMmQ4YzAxNjQ0MGUzNTdjNTE4NTllY2YtNmEwZTI2Mzcmcz03ODM0M2VhOGRlY2RkYmQ3MTkyMmQyNzM5YmU4NGM3NSZ1aWQ9Jm5kdj1pb3MtNi41LjAmdj0yJmFzPTAmX2NhckNvZGU9MA,,/HNDSMPP360.m3u8
-#EXTINF:-1 tvg-id="570471" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png" group-title="网络直播",湖南爱晚
+#EXTINF:-1 tvg-id="湖南爱晚" tvg-logo="https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png" group-title="网络直播",湖南爱晚
 http://p2.vzan.com/527645544/149039617847513156/live.m3u8
