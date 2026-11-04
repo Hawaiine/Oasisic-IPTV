@@ -185,7 +185,7 @@
         "display_name": "CCTV-8K 超高清",
         "category": "cctv",
         "tvg_id": "CCTV8K",
-        "epg_id": "CCTV8",
+        "epg_id": "CCTV8K",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV8K.png",
         "notes": ""
     },
@@ -1218,7 +1218,7 @@
         "display_name": "北京纪实科教",
         "category": "local",
         "tvg_id": "北京纪实科教",
-        "epg_id": "北京纪实",
+        "epg_id": "北京纪实科教",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%8C%97%E4%BA%AC%E7%BA%AA%E5%AE%9E%E7%A7%91%E6%95%99.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1378,7 +1378,7 @@
         "display_name": "山西影视",
         "category": "local",
         "tvg_id": "山西影视",
-        "epg_id": null,
+        "epg_id": "山西影视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1488,7 +1488,7 @@
         "display_name": "无锡娱乐",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡娱乐",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1858,7 +1858,7 @@
         "display_name": "热播剧场",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "热播剧场",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2008,7 +2008,7 @@
         "display_name": "经典电影",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "经典电影",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2268,7 +2268,7 @@
         "display_name": "武术世界",
         "category": "sports",
         "tvg_id": "561391",
-        "epg_id": "武术世界",
+        "epg_id": "577956",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561391.png",
         "priority": 60,
         "notes": "long-tail"
