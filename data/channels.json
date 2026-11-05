@@ -1019,7 +1019,7 @@
         "display_name": "北京体育",
         "category": "sports",
         "tvg_id": "BeijingSports",
-        "epg_id": "北京体育休闲",
+        "epg_id": null,
         "tvg_logo": ""
     },
     {
@@ -1050,7 +1050,7 @@
         "display_name": "湖南爱晚",
         "category": "live",
         "tvg_id": "HunanAiwan",
-        "epg_id": "湖南爱晚",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png"
     },
     {
@@ -1378,7 +1378,7 @@
         "display_name": "山西影视",
         "category": "local",
         "tvg_id": "山西影视",
-        "epg_id": "山西影视",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1508,7 +1508,7 @@
         "display_name": "无锡经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "无锡经济",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1668,7 +1668,7 @@
         "display_name": "河北都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "河北都市",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2268,7 +2268,7 @@
         "display_name": "武术世界",
         "category": "sports",
         "tvg_id": "561391",
-        "epg_id": "577956",
+        "epg_id": "武术世界",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/561391.png",
         "priority": 60,
         "notes": "long-tail"
