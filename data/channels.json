@@ -1508,7 +1508,7 @@
         "display_name": "无锡经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡经济",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1668,7 +1668,7 @@
         "display_name": "河北都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "河北都市",
+        "epg_id": "570479",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
