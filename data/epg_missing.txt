@@ -1,10 +1,8 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-11-09 01:24:11
-# 覆盖率：198/257 = 77.0%
+# 生成时间：2026-11-10 03:56:48
+# 覆盖率：225/257 = 87.5%
 
-南方卫视 | local | upstream-missing
-广州综合 | local | upstream-missing
 广州影视 | local | upstream-missing
 武汉新闻 | local | upstream-missing
 武汉文艺 | local | upstream-missing
@@ -28,37 +26,12 @@ TVBS新闻 | gangtai | upstream-missing
 TVB星河 | gangtai | upstream-missing
 J2 | gangtai | upstream-missing
 五星体育 | sports | upstream-missing
-北京体育 | sports | upstream-missing
 纬来体育 | sports | upstream-missing
-湖南爱晚 | live | upstream-missing
-CGTN俄语 | cctv | upstream-missing
-CGTN西语 | cctv | upstream-missing
 CGTN阿语 | cctv | upstream-missing
 东莞生活资讯 | local | upstream-missing
-乐山新闻综合 | local | upstream-missing
-六安公共 | local | upstream-missing
-六安新闻综合 | local | upstream-missing
 南京少儿 | local | upstream-missing
-大庆新闻综合 | local | upstream-missing
 宁夏少儿 | local | upstream-missing
 宁夏经济 | local | upstream-missing
-山西影视 | local | upstream-missing
-山西社会与法治 | local | upstream-missing
-广元公共 | local | upstream-missing
-无锡娱乐 | local | upstream-missing
-无锡生活 | local | upstream-missing
 无锡经济 | local | upstream-missing
-来宾综合 | local | upstream-missing
-欢笑剧场 | local | upstream-missing
-河北少儿科教 | local | upstream-missing
-河北影视 | local | upstream-missing
-河北经济 | local | upstream-missing
-河北都市 | local | upstream-missing
-浙江民生 | local | upstream-missing
-生活时尚 | local | upstream-missing
-苏州社会经济 | local | upstream-missing
-赣州公共 | local | upstream-missing
-赣州教育 | local | upstream-missing
-赣州新闻综合 | local | upstream-missing
-龙岩综合 | local | upstream-missing
-农林卫视 | weishi | upstream-missing
+热播剧场 | local | upstream-missing
+经典电影 | local | upstream-missing

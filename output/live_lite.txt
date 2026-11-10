@@ -17,7 +17,7 @@ CCTV-14 少儿,http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88
 CCTV-15 音乐,http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
 CCTV-16 奥林匹克,http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227002/1.m3u8?
 CCTV-17 农业农村,http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226318/1.m3u8?
-CCTV-4K 超高清,http://p.ytelc.com/169l/0/cctv.php?id=cctv4k
+CCTV-4K 超高清,http://vip1.xinketongxun.fun:8082/tsfile/live/1026_1.m3u8
 CCTV-8K 超高清,https://tv.cry33.com/ys4k.php?id=8k
 CCTV-世界地理,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=sjdl
 CCTV-卫生健康,http://nas.hssvm.com:8888/udp/225.1.1.210:5002
@@ -35,7 +35,7 @@ CETV-4,http://gslbserv.itv.cmvideo.cn/5000000011000031126/1.m3u8?channel-id=best
 CGTN,https://0472.org/hls/cgtn.m3u8
 CGTN俄语,https://0472.org/hls/cgtne.m3u8
 CGTN法语,https://0472.org/hls/cgtnf.m3u8
-CGTN纪录,https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
+CGTN纪录,http://t.061899.xyz/tl/tl.php?id=cgtnjl
 CGTN西语,https://0472.org/hls/cgtnx.m3u8
 CGTN阿语,https://0472.org/hls/cgtna.m3u8
 
@@ -50,13 +50,13 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8
 北京卫视,http://gslbserv.itv.cmvideo.cn/1000000005000265027/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265027&livemode=1&stbId=3
 吉林卫视,http://gslbserv.itv.cmvideo.cn/5000000011000031117/1.m3u8?channel-id=bestzb&Contentid=5000000011000031117&livemode=1&stbId=3
 四川卫视,http://gslbserv.itv.cmvideo.cn/5000000004000006119/1.m3u8?channel-id=bestzb&Contentid=5000000004000006119&livemode=1&stbId=3
-大湾区卫视,http://222.128.55.152:9080/live/dwq.m3u8
+大湾区卫视,http://107.150.60.122/live/nfws.m3u8
 天津卫视,http://gslbserv.itv.cmvideo.cn/1000000005000265026/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265026&livemode=1&stbId=3
 宁夏卫视,http://107.150.60.122/live/nxws.m3u8
 安徽卫视,http://gslbserv.itv.cmvideo.cn/1000000001000030159/1.m3u8?channel-id=ystenlive&Contentid=1000000001000030159&livemode=1&stbId=3
 山东卫视,http://gslbserv.itv.cmvideo.cn/1000000001000016568/1.m3u8?channel-id=ystenlive&Contentid=1000000001000016568&livemode=1&stbId=3
 山东教育卫视,http://39.134.65.79/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225655/index.m3u8
-山西卫视,http://119.39.9.8:9901/tsfile/live/0118_1.m3u8
+山西卫视,http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel7/playlist.m3u8
 广东卫视,http://gslbserv.itv.cmvideo.cn/1000000001000014176/1.m3u8?channel-id=ystenlive&Contentid=1000000001000014176&livemode=1&stbId=3
 广西卫视,http://gslbserv.itv.cmvideo.cn/5000000011000031118/1.m3u8?channel-id=bestzb&Contentid=5000000011000031118&livemode=1&stbId=3
 新疆卫视,http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd;http://218.84.12.186:8001/hls/main/playlist.m3u8zxinjd
@@ -80,7 +80,7 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8
 黑龙江卫视,http://gslbserv.itv.cmvideo.cn/1000000001000001925/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001925&livemode=1&stbId=3
 
 港澳台,#genre#
-HOY TV,http://r.jdshipin.com/sFw4S
+HOY TV,http://php.jdshipin.com/TVOD/iptv.php?id=hoytv
 J2,http://50.7.238.114:8278/j2_twn/playlist.m3u8?tid=MA8A1176878411768784&ct=19225&tsum=fea41bb592165942b9971148376f8b70
 TVBS新闻,http://61.221.215.25:8800/hls/9/index.m3u8
 TVB明珠台,https://hls-gateway.vpstv.net/streams/476936.m3u8
@@ -98,7 +98,7 @@ ViuTV,http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 台视,rtmp://f13h.mine.nu/sat/tv071
 无线新闻,http://cdn9.163189.xyz/smt1.1.php?id=inews_twn
 民视,rtmp://f13h.mine.nu/sat/tv051
-澳视澳门,http://r.jdshipin.com/n2YZI
+澳视澳门,http://php.jdshipin.com:8880/TVOD/iptv.php?id=asam
 
 体育,#genre#
 BRTV体育休闲,http://smjdenny.eu.org:35455/bptv/10000100000000050000000003870779.m3u8
