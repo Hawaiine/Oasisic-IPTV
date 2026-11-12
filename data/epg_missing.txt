@@ -1,7 +1,7 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-11-11 01:41:16
-# 覆盖率：202/257 = 78.6%
+# 生成时间：2026-11-12 02:40:15
+# 覆盖率：213/257 = 82.9%
 
 南方卫视 | local | upstream-missing
 广州影视 | local | upstream-missing
@@ -27,28 +27,18 @@ TVBS新闻 | gangtai | upstream-missing
 TVB星河 | gangtai | upstream-missing
 J2 | gangtai | upstream-missing
 五星体育 | sports | upstream-missing
-北京体育 | sports | upstream-missing
 纬来体育 | sports | upstream-missing
-湖南爱晚 | live | upstream-missing
 CGTN俄语 | cctv | upstream-missing
-CGTN西语 | cctv | upstream-missing
-CGTN阿语 | cctv | upstream-missing
 东莞生活资讯 | local | upstream-missing
 南京少儿 | local | upstream-missing
 宁夏少儿 | local | upstream-missing
 宁夏经济 | local | upstream-missing
 怀旧剧场 | local | upstream-missing
-无锡娱乐 | local | upstream-missing
-无锡生活 | local | upstream-missing
-无锡经济 | local | upstream-missing
 求索记录 | local | upstream-missing
-河北少儿科教 | local | upstream-missing
 河北影视 | local | upstream-missing
-河北经济 | local | upstream-missing
-河北都市 | local | upstream-missing
-浙江民生 | local | upstream-missing
-生活时尚 | local | upstream-missing
+热播剧场 | local | upstream-missing
 第一剧场 | local | upstream-missing
+经典电影 | local | upstream-missing
 风云剧场 | local | upstream-missing
 风云音乐 | local | upstream-missing
 风云足球 | sports | upstream-missing
@@ -57,4 +47,3 @@ CCTV-女性时尚 | cctv | upstream-missing
 CCTV-发现之旅 | cctv | upstream-missing
 CCTV-老故事 | cctv | upstream-missing
 CCTV-央视台球 | cctv | upstream-missing
-农林卫视 | weishi | upstream-missing
