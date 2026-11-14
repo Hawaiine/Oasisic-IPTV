@@ -211,35 +211,33 @@ Gigant FM,https://video.uitzending.tv:19360/gigantfm/gigantfm.m3u8?checkedby:ipt
 PequeRadio TV“少儿”,http://canadaremar2.todostreaming.es/live/peque-pequetv.m3u8?checkedby:iptvcat.com
 SWR 3 Visual Radio,https://swrswr3vr-hls.akamaized.net/hls/live/2018683/swr3vr/master.m3u8?checkedby:iptvcat.com
 Fox News Radio,https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8
-MBC FM,https://dbbv9umqcd7cs.cloudfront.net/out/v1/db15b75c3cc0400c91961468d6a232ac/index.m3u8
 Asharq Radio,https://svs.itworkscdn.net/asharqradiovlive/asharqradiov/playlist.m3u8
 Giornale Radio TV,https://5f204aff97bee.streamlock.net/GR_tv/livestream/playlist.m3u8
 Guardian Talk Radio,https://cdn-edge1.streamcomedia.com/abr_tngr969fm/abr-tngr969fm_streams/playlist.m3u8
 Radio Ancon,https://www.streaming507.net:19360/anconvideo/anconvideo.m3u8
-Radio Uno Tacna,https://live-evg7.tv360.bitel.com.pe/bitel/radiounotv/playlist.m3u8
 Scripps News,https://aka-live1050.delivery.roku.com/a48b72c9-5755-4ede-9dac-9e51e4ca5cc8/t2-origin/out/v1/live.m3u8
 Vesti FM,https://stream.smotrim.ru/hls2/vesti_fm/playlist_4.m3u8
 Crime 360,https://jmp2.uk/plu-657880c46e4f6a00087404d0.m3u8
 Crimen & Historia,https://jmp2.uk/plu-64ddcbb14c5ed80008fad416.m3u8
+Into Crime,https://amg00711-zylo-amg00711c10-rakuten-fr-6731.playouts.now.amagi.tv/playlist.m3u8
 Law & Crime,https://a-cdn.klowdtv.com/live3/law_720p/playlist.m3u8
 Pluto TV American True Crime,https://jmp2.uk/plu-692ebafce72f03e07e7df985.m3u8
 Pluto TV True Crime,https://jmp2.uk/plu-5812be1c249444e05d09cc50.m3u8
 Pluto TV True Crime DK,https://jmp2.uk/plu-61c097ec8bb1830008e3f962.m3u8
+Pluto TV True Crime NO,https://jmp2.uk/plu-61c1e51354d923000731bf78.m3u8
 Pluto TV True Crime CA,https://jmp2.uk/plu-62e9289f8d467f0007fbc701.m3u8
 Storie Criminali,https://jmp2.uk/plu-66177d18c8311c0008d077d0.m3u8
 Total Crime,https://aegis-cloudfront-1.tubi.video/b062c287-a170-47df-99e4-f5dcd441ee59/playlist.m3u8
 FMH Kids,http://38.87.224.19:2220/play/a03u/index.m3u8
-AGR FM TV,https://tigocloud.desdeparaguay.net/agrtv/agrtv/playlist.m3u8
 Al Riyadh Radio,https://live.kwikmotion.com/sbrksariyadhradiolive/srpksariyadhradio/playlist.m3u8
 Antena Uno Radiovideo,https://tvdatta.com:3578/live/antenaunolive.m3u8
+Atlantis Radio TV,https://live-evg8.tv360.bitel.com.pe/bitel/atlantisSRT/playlist.m3u8
 BNR Nieuwsradio,https://bnr-cache-cdp.triple-it.nl/studio/index.m3u8
 Caoba TV Radio,https://host.streamingnation.live:3940/live/caobatvlive.m3u8
 Catve FM,https://5b33b873179a2.streamlock.net:1443/radiocamera/livestream/playlist.m3u8
 Classic TV Crime Drama,https://jmp2.uk/plu-61325c4f982acd000723287e.m3u8
 Crime + Investigation,http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/index.m3u8
 Crimenes Imperfectos,https://jmp2.uk/plu-5e94cd036cc69d0007e8a1ba.m3u8
-CSI: Crime Scene Investigation,https://jmp2.uk/plu-6304f8d5ffb61000071ab478.m3u8
-Emisora Comunitaria 104.1 FM,https://104florencia.co/wp-admin/admin-ajax.php?action=frp_hls_proxy&url=https://streamyes.alsolnet.com/comunitariafm/live/playlist.m3u8
 FILMBOX+ Love & Crime,http://88.212.15.50/live/test_filmbox_plus_atk_1200/playlist.m3u8
 FILMBOX+ Love & Crime Romania,https://nosignal1.antenaplay.ro/hls/fb-love-and-crime-sd/index.m3u8
 Heliconia Radio TV,https://eu1.servers10.com:8081/8178/index.m3u8
@@ -248,16 +246,20 @@ Inside Crime,https://aenetworks-insidecrime-rakuten.amagi.tv/playlist.m3u8
 La Nueva Radio TV 97.7,https://sv72.ecuaradiotv.net/lanuevatv/live/playlist.m3u8
 La Potente Radio TV,https://latamvdo.com:3626/hybrid/play.m3u8
 Luxembourg Global Radio TV,https://stream.globalradio.lu/lgr/index.m3u8
+Magic PowerRadio,https://server-23.stream-server.nl:1936/Magic-PowerRadio/Magic-PowerRadio/playlist.m3u8
 Montecristi Digital 8,https://soportedvb.click:3400/live/montecristitvlive.m3u8
 More True Crime,https://jmp2.uk/plu-6532e6a9bdf3cf000887ab29.m3u8
 More TV Crime,https://jmp2.uk/plu-639b558c73423d00071ce624.m3u8
 Omroep Brabant Radio,https://d3slqp9xhts6qb.cloudfront.net/live/omroepbrabant/visualradio/index.m3u8
+Pluto TV Brigade Criminelle,https://jmp2.uk/plu-684bf01df7d8b74b625b7dd1.m3u8
 Pluto TV Cine Crime,https://jmp2.uk/plu-6479ff764f5ba5000878dfe2.m3u8
 Pluto TV Cine Crimen,https://jmp2.uk/plu-624af40c004f8000079b784d.m3u8
 Pluto TV Crime,https://jmp2.uk/plu-5e7b6c60fd20c50007910bf5.m3u8
 Pluto TV Crime GB,https://jmp2.uk/plu-5d767790d0438aceb41d03ae.m3u8
 Pluto TV Crime Drama,https://jmp2.uk/plu-5f31fd1b4c510e00071c3103.m3u8
 Pluto TV Crime Drama CA,https://jmp2.uk/plu-62e92708a7ce600007b2676a.m3u8
+Pluto TV Crime Movies,https://jmp2.uk/plu-5f4d8594eb979c0007706de7.m3u8
+Pluto TV Retro Crime Action,https://jmp2.uk/plu-69aee8a1acb7eb0bb68df641.m3u8
 Pluto TV Retro Crime Drama,https://jmp2.uk/plu-630f1e6073bd1800082107f0.m3u8
 Pluto TV Serie Crime,https://jmp2.uk/plu-608aa777b907770007e5d05d.m3u8
 Pluto TV Series Criminais,https://jmp2.uk/plu-6474ab5cdc7a760008745008.m3u8
@@ -267,16 +269,15 @@ PodRadio pa Pluto TV,https://jmp2.uk/plu-67f79fdb3481170e68c0bc38.m3u8
 Power Max Radio TV,https://videostream.shockmedia.com.ar:19360/radio1045/radio1045.m3u8
 Pulse95 Radio,https://svs.itworkscdn.net/pulse95live/pulse96/playlist.m3u8
 Puto TV Classic TV Crime Drama,https://jmp2.uk/plu-696e61287d2afdec4ff2cb75.m3u8
+Radio 1,https://stream.radio1.ru/memfs/49dee7fe-77ba-4e6b-8cdc-fa840535b242.m3u8
 Radio 3,https://rtvelivestream.rtve.es/rtvesec/rne/rne3_main.m3u8
-Radio 3i,https://vstream-cdn.ch/hls/radio3i.m3u8
 Radio 10,https://radio10.prd1.talpatvcdn.nl/2b725bc7c93f477eaf0e43955ea8a6c1/index.m3u8
-Radio 51 TV,http://178.32.140.155/canale51/canale51/playlist.m3u8
 Radio 350,https://stream.radio350.nl/hls/radio350.m3u8
 Radio 538,https://radio538.prd1.talpatvcdn.nl/22e9bbf9616547d7bc162c993009c533/index.m3u8
-Radio Aalsmeer TV,https://radioaalsmeer.nl:4443/live/tv.m3u8
 Radio Albalad TV,http://streaming.zaytonatube.com:8080/radioalbalad/radioalbalad/playlist.m3u8
 Radio America TV,https://v2.tustreaming.cl/americamovil/index.m3u8
 Radio Ancoa TV,https://v2.tustreaming.cl/radioancoatv/index.m3u8
+Radio Birikina TV,https://56b50ada2d659.streamlock.net/RadioBirikinaTV/livestream/playlist.m3u8
 Radio Bocairent TV,http://185.81.77.4/BocairentTV/index.m3u8
 Radio Carnaval TV,https://eu1.servers10.com:8081/8116/index.m3u8
 Radio Centro,https://streamlov.alsolnet.com/grupocentrobo/live/playlist.m3u8
@@ -287,7 +288,8 @@ Radio Fantasia TV,https://v2.tustreaming.cl/fantasiatv/index.m3u8
 Radio Frecuencia Uno,https://v1.tustreaming.cl/frecuencia1tv/index.m3u8
 Radio Guaira TV,https://tvdatta.com:3991/live/guairatvlive.m3u8
 Radio Ibiza TV,https://5929b138b139d.streamlock.net/RadioIbizaTV/livestream/playlist.m3u8
-Radio Iglesias Sardegna,https://59d7d6f47d7fc.streamlock.net/visualradio/visualradio/playlist.m3u8
+Radio Iglesias,http://wms.shared.streamshow.it/visualradio/mp4:visualradio/playlist.m3u8
+Radio Mega TV Amazonia,https://ares.disfrutaenlared.com:1936/megatv/megatv/playlist.m3u8
 Radio Moldova,https://radiolive.trm.md/hls_rma/actualitati.m3u8
 Radio Moldova Tineret,https://radiolive.trm.md:8001/hls_rmt/tineret.m3u8
 Radio Monte Carlo TV,http://95.141.36.9:8080/stream/180/index.m3u8
@@ -297,7 +299,6 @@ Radio Number One,https://56b50ada2d659.streamlock.net/RN1TV/livestream/playlist.
 Radio Omega TV,https://5caf24a595d94.streamlock.net:1937/8142/8142/playlist.m3u8
 Radio Panoramica,https://v2.tustreaming.cl/alingeproducciones/index.m3u8
 Radio Popular TV,https://tv.arkeo.cl:19360/8052/8052.m3u8
-Radio Rancagua FM,https://tv.arkeo.cl:1936/radiorancagua/radiorancagua/playlist.m3u8
 Radio Ritmo FM,https://panel.tvstream.cl:1936/8046/8046/playlist.m3u8
 Radio Romania Iasi,https://stream3.srr.ro/live/radio-iasi/chunklist_w1565024915.m3u8
 Radio Romania Oltenia-Craiova,https://stream3.srr.ro/live/Radio-Oltenia/chunklist_w1200239883.m3u8
@@ -317,11 +318,11 @@ Radiocanal,http://204.199.3.2/.m3u8
 Radiotele,http://linkrt.ddns.net:8080/hls/rtmorelia_MID.m3u8
 RadioToppers,https://server-67.stream-server.nl:1936/RadioToppers/RadioToppers/playlist.m3u8
 RadioTV Oriente,https://live.obslivestream.com/tvoriente/index.m3u8
+Radiowa Czworka,https://stream14.polskieradio.pl/pr4_video/video_pr4.stream/playlist.m3u8
 Rotana Radio Jordan Studio,http://45.63.116.205/hls/stream1.m3u8
 RTL Web Radio TV,https://rtlradio-streaming.rtl.lu/rtlradiowebtv/smil:rtlradiowebtv/playlist.m3u8
 Saudia Radio,https://live.kwikmotion.com/sbrksasaudiaradiolive/srpksasaudiaradio/playlist.m3u8
 Shabab FM,https://streaming.zaytonatube.com:8081/ShababFM/shabab/index.m3u8
-TeleRadioNorte,https://angelistic.live:3785/live/tvoficiallive.m3u8
 True Crime,https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8
 True Crime by Pluto TV,https://jmp2.uk/plu-5f914f4b36d67d0007a91a04.m3u8
 True crime fran Viaplay,https://jmp2.uk/plu-645cb7857cb4b1000859c57c.m3u8
@@ -330,24 +331,21 @@ True Crime Network WCVB-TV,https://aegis-cloudfront-1.tubi.video/c2e3094d-ad56-4
 TV A Critica,https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
 UniRadio TV,https://video.hostingcaaguazu.com:19360/uniradiotv/uniradiotv.m3u8
 Villa Elisa Radio TV,https://copacogen.desdeparaguay.net/villaelisatv/villaelisatv/playlist.m3u8?admin=nacion
+Visual Radio,http://wms.shared.streamshow.it:1935/visualradio/visualradio/live.m3u8
 Watar Radio,https://svs.itworkscdn.net/smcwatarlive/smcwatar/playlist.m3u8
 WeertFM TV,https://ms2.mx-cd.net/tv/151-573495/WeertFM_TV.smil/playlist.m3u8
 WLNG Radio,http://wlngstudiowebcam.srfms.com:1935/wlngstudiowebcam/livestream/playlist.m3u8
-治愈之声,https://www.goodiptv.club/huya/21241787
-HitFM,https://www.goodiptv.club/huya/21610797
-甜美之声,https://www.goodiptv.club/huya/21241784
 98.1 Pearl FM,https://live2.tensila.com/pearl-v-1.pearlfm/hls/live/mystream.m3u8
 Alcance FM PLAY TV,https://video.wilohosting.com:19360/alcancefmtv/alcancefmtv.m3u8
 Azahares Radiovisual Multimedia,https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
 Beats Radio,https://videostream.shockmedia.com.ar:19360/beatsradio/beatsradio.m3u8
 Botflix Radioo,https://hls.botflix.tv/radioo/index.m3u8
 BPX TV Radio,https://video1.getstreamhosting.com:1936/8212/8212/playlist.m3u8
-Buenisima Radio TV,https://canal.mediaserver.com.co/live/buenisimatv.m3u8
-Chocolate FM,https://5eaccbab48461.streamlock.net:1936/8180/8180/playlist.m3u8
 CKNO-FM,https://videostream.jpbgdigital.com/NOWTV.m3u8
 Cool FM 98.9,https://live2.tensila.com/cool-v-1.arubara/hls/master.m3u8
 Dance FM,https://5eaccbab48461.streamlock.net:1936/dancefm_1/dancefm_1/playlist.m3u8
 Dismar Radio TV,https://rds3.desdeparaguay.net/dismartv/dismartv/playlist.m3u8
+El Radio 9090 FM,https://9090video.mobtada.com/hls/stream.m3u8
 Ellinikos FM,https://rtmp.win:3603/live/ellinikosfmlive.m3u8
 EnerGeek Radio,https://cl-2.backend.energeek.cl/bkp/egradio/mobile/index.m3u8?token=IPTVgh26
 FM Mundo,https://video2.makrodigital.com/fmmundo/fmmundo/playlist.m3u8
@@ -355,10 +353,8 @@ FM Plus TV,https://v2.tustreaming.cl/fmplus/index.m3u8
 FMTV,https://s2.tvdatta.com:3307/hybrid/play.m3u8
 Happy Radio TV,https://tv.mediacp.eu:8081/happyradio/index.m3u8
 Heart Radio Aruba,https://live2.tensila.com/heart-v-1.heartar/hls/live/mystream.m3u8
-Hitradio O3,https://studiocam-oe3.mdn.ors.at/orf/studiocam_oe3/q6a/manifest.mpd
 Hype Visual Radio,https://streammix.alsolnet.com/hyperadio/live/playlist.m3u8
 Imagen FM 105.1,https://streaming.imagenfm105-1.com/hls/stream.m3u8
-Jeddah Radio,https://live.kwikmotion.com/sbrksajeddahradiolive/srpksajeddahradio/chunks.m3u8
 JRTV Jarviradio,https://streamer.radiotaajuus.fi/memfs/47f113bf-04ea-493b-a9d4-52945fd9db31.m3u8
 Live99FM,https://media.streambrothers.com:1936/8014/8014/playlist.m3u8
 Los Angeles TV Radio,https://stmv6.voxtvhd.com.br/losangeles/losangeles/playlist.m3u8
@@ -366,8 +362,8 @@ Madras FM TV,https://edge12.vedge.infomaniak.com/livecast/ik:madrasfmtv/manifest
 Mas FM,https://vivo.solumedia.com:19360/masfm/masfm.m3u8
 Millenium 109 FM,https://videoserver.tmcreativos.com:19360/nqvnhujhrx/nqvnhujhrx.m3u8
 Nidae AlIslam Radio,https://live.kwikmotion.com/sbrksanedaradiolive/srpksanedaradio/playlist.m3u8
+ON FM,https://5ce9406b73c33.streamlock.net/ONFM/livestream/playlist.m3u8
 Patagonia Radio TV,https://video01.logicahost.com.br/grupomedia/grupomedia/playlist.m3u8
-Planet 100.9 FM,https://streamlov.alsolnet.com/planet1009fm/live/playlist.m3u8
 Power 101.7 FM,https://vcp11.myplaytv.com/powerfm/powerfm/playlist.m3u8
 Radio Bonita 106.7,https://cloudvideo.servers10.com:8081/8154/index.m3u8
 Radio Bruno TV,http://stream7.xdevel.com/video0s975758-1051/stream/playlist.m3u8
@@ -381,8 +377,8 @@ Radio Fantastica 98.9 FM,http://190.107.232.9:8082/livestream/stream.m3u8
 Radio Fx Net,https://streamlov.alsolnet.com/radiofxnet/live/playlist.m3u8
 Radio Hit FM TV,https://peer2.tdiradio.com/static/streaming-playlists/hls/bab99862-ec1c-474f-9a02-4f8c8677d565/0.m3u8
 Radio Ideal,https://www.idealfm104-7.com/hls/0/stream.m3u8
-Radio JND,https://radiojnd.cdn.hostin.cc/radiojnd/playlist.m3u8
 Radio Karolina TV,https://peer2.tdiradio.com/static/streaming-playlists/hls/4207de1d-52e8-4591-ad9e-218069b864d1/0.m3u8
+Radio La Serena TV,https://5ff3d9babae13.streamlock.net/chrgkqgkyb/chrgkqgkyb/playlist.m3u8
 Radio Lola TV,https://peer2.tdiradio.com/static/streaming-playlists/hls/7c3ea8d3-49dc-4e1b-8b1e-dc6fab71f5cf/0.m3u8
 Radio Master,https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8
 Radio Moldova Muzical,https://radiolive.trm.md:8001/hls_rmm/muzical.m3u8
@@ -390,7 +386,6 @@ Radio Monumental TV,https://cloud37.ecuatel.com/monumentaltv/live/manifest.m3u8
 Radio Onda Digital,https://live.ondadigitaltv.com/RADIOODTV/index.m3u8
 Radio Piter Pan TV,https://58d921499d3d3.streamlock.net/RadioPiterpanTV/livestream/playlist.m3u8
 Radio Realpolitik,https://vivo.solumedia.com:19360/realpolitik/realpolitik.m3u8
-Radio Romania 3Net,https://media.3netmedia.ro/hls/stream.m3u8
 Radio Rumba TV,https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8
 Radio SWH TV,https://00ff00.latnet.media/edge/swh_tv.smil/playlist.m3u8
 Radio Tropical,https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8
@@ -400,8 +395,10 @@ Radiola TV,http://158.172.217.18:8000/play/a01k/index.m3u8
 Rararadio,https://58c04fb1d143f.streamlock.net/rararadio/rararadio/playlist.m3u8
 Star 101 FM,https://live2.tensila.com/knut-v-1.choice/hls/master.m3u8
 Stingray TikTok Radio,https://d3f4oii5n0oeqi.cloudfront.net/11701/88814594/hls/master.m3u8?ads.xumo_channelId=88814594
+Strana FM,https://live-stranafm.cdnvideo.ru/stranafm/smil:stranafm.smil/playlist.m3u8
 TDI Radio TV,https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-9975-9665f5605557/master.m3u8
 Teleangol Radio,https://pantera1-100gb-cl-movistar.dps.live/teleangolradio/teleangolradio.smil/playlist.m3u8
+Today Radio,https://stream.rtl.lu/data/live/tele/rtltodayradio/playlist.m3u8
 Tropi Q 99.7 FM,https://www.streaming507.net:19360/videotropiq/videotropiq.m3u8
 Turbo Mix Radio TV,https://live-evg11.tv360.bitel.com.pe/bitel/turbomixSRT/playlist.m3u8
 VoiceOver Radio TV,https://cloudvideo.servers10.com:8081/8198/index.m3u8
@@ -412,7 +409,7 @@ Cristovision,https://5fc584f3f19c9.streamlock.net/cristovision/videocristovision
 DG:Radio,https://mdn.dg.church/683c0cb036885-1/index.m3u8
 Escuchame Radio TV,https://stmv1.transmissaodigital.com/pedro9800/pedro9800/playlist.m3u8
 Holy Quran Radio,https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8
-INC Radio,https://stream-243529.castr.net/6842a712b68c56f675d988f1/live_b60a96e056fc11f084c05f5d0649296b/rewind-1800.m3u8
+Holy Quran Radio Nablus,http://streaming.zaytonatube.com:8080/holyquran/holyquran/video.m3u8
 Nueva Vida FM,https://stream.nuevavidafm.net:3937/live/nuevavidalive.m3u8
 Radio Armonia TV,https://v2.tustreaming.cl/armoniamovil/index.m3u8
 Radio El Sembrador,https://tv.arkeo.cl:1936/elsembrador/elsembrador/playlist.m3u8
