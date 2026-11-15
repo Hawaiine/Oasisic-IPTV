@@ -1,7 +1,7 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-11-14 01:57:12
-# 覆盖率：211/257 = 82.1%
+# 生成时间：2026-11-15 01:29:43
+# 覆盖率：214/257 = 83.3%
 
 南方卫视 | local | upstream-missing
 广州影视 | local | upstream-missing
@@ -15,7 +15,6 @@ TVB明珠台 | gangtai | upstream-missing
 无线新闻 | gangtai | upstream-missing
 ViuTV | gangtai | upstream-missing
 HOY TV | gangtai | upstream-missing
-澳视澳门 | gangtai | upstream-missing
 中天新闻 | gangtai | upstream-missing
 东森新闻 | gangtai | upstream-missing
 华视 | gangtai | upstream-missing
@@ -37,8 +36,6 @@ CGTN阿语 | cctv | upstream-missing
 南京少儿 | local | upstream-missing
 宁夏少儿 | local | upstream-missing
 宁夏经济 | local | upstream-missing
-山西影视 | local | upstream-missing
-山西社会与法治 | local | upstream-missing
 无锡娱乐 | local | upstream-missing
 无锡生活 | local | upstream-missing
 无锡经济 | local | upstream-missing

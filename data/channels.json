@@ -909,6 +909,7 @@
         "display_name": "澳视澳门",
         "category": "gangtai",
         "tvg_id": "TDM",
+        "epg_id": "澳视澳门",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/TDM.png",
         "preferred_region": "hk_tw"
     },
@@ -1378,7 +1379,7 @@
         "display_name": "山西影视",
         "category": "local",
         "tvg_id": "山西影视",
-        "epg_id": null,
+        "epg_id": "山西影视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1398,7 +1399,7 @@
         "display_name": "山西社会与法治",
         "category": "local",
         "tvg_id": "山西社会与法治",
-        "epg_id": null,
+        "epg_id": "山西社会与法治",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%B3%95%E6%B2%BB.png",
         "priority": 60,
         "notes": "long-tail"
