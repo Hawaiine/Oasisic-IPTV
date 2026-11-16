@@ -587,7 +587,7 @@
         "display_name": "南方卫视",
         "category": "local",
         "tvg_id": "GDNF",
-        "epg_id": null,
+        "epg_id": "南方卫视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png"
     },
     {
@@ -595,7 +595,7 @@
         "display_name": "广州综合",
         "category": "local",
         "tvg_id": "GZTV",
-        "epg_id": "广州综合台",
+        "epg_id": "544638",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png",
         "notes": ""
     },
@@ -1059,7 +1059,7 @@
         "display_name": "CGTN俄语",
         "category": "cctv",
         "tvg_id": "CGTN俄语",
-        "epg_id": null,
+        "epg_id": "CGTN俄语",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1089,7 +1089,7 @@
         "display_name": "CGTN阿语",
         "category": "cctv",
         "tvg_id": "CGTN阿语",
-        "epg_id": null,
+        "epg_id": "CGTN阿语",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E9%98%BF%E8%AF%AD.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1149,7 +1149,7 @@
         "display_name": "乐山新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "乐山新闻综合",
+        "epg_id": "544590",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1179,7 +1179,7 @@
         "display_name": "六安公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "六安公共",
+        "epg_id": "544589",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1189,7 +1189,7 @@
         "display_name": "六安新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "六安新闻综合",
+        "epg_id": "544618",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1299,7 +1299,7 @@
         "display_name": "大庆新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "大庆新闻综合",
+        "epg_id": "544617",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1429,7 +1429,7 @@
         "display_name": "广元公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "广元公共",
+        "epg_id": "544584",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1489,7 +1489,7 @@
         "display_name": "无锡娱乐",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡娱乐",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1499,7 +1499,7 @@
         "display_name": "无锡生活",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡生活",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1509,7 +1509,7 @@
         "display_name": "无锡经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡经济",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1519,7 +1519,7 @@
         "display_name": "来宾综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "来宾综合",
+        "epg_id": "544633",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1639,7 +1639,7 @@
         "display_name": "河北少儿科教",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北少儿科教",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1649,7 +1649,7 @@
         "display_name": "河北影视",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北影视",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1659,7 +1659,7 @@
         "display_name": "河北经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北经济",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1669,7 +1669,7 @@
         "display_name": "河北都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北都市",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2029,7 +2029,7 @@
         "display_name": "苏州社会经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "苏州社会经济",
+        "epg_id": "539667",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2049,7 +2049,7 @@
         "display_name": "赣州公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "赣州公共",
+        "epg_id": "544601",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2059,7 +2059,7 @@
         "display_name": "赣州教育",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "赣州教育",
+        "epg_id": "544578",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2069,7 +2069,7 @@
         "display_name": "赣州新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "赣州新闻综合",
+        "epg_id": "544611",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2199,7 +2199,7 @@
         "display_name": "龙岩综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "龙岩综合",
+        "epg_id": "544627",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2419,7 +2419,7 @@
         "display_name": "农林卫视",
         "category": "weishi",
         "tvg_id": "陕西农林卫视",
-        "epg_id": null,
+        "epg_id": "陕西农林卫视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png",
         "priority": 55,
         "notes": "curated"
