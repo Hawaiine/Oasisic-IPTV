@@ -579,7 +579,7 @@
         "display_name": "广东新闻",
         "category": "local",
         "tvg_id": "GDXW",
-        "epg_id": "广东新闻",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDXW.png"
     },
     {
@@ -1020,7 +1020,7 @@
         "display_name": "北京体育",
         "category": "sports",
         "tvg_id": "BeijingSports",
-        "epg_id": "北京体育休闲",
+        "epg_id": null,
         "tvg_logo": ""
     },
     {
@@ -1051,7 +1051,7 @@
         "display_name": "湖南爱晚",
         "category": "live",
         "tvg_id": "HunanAiwan",
-        "epg_id": "湖南爱晚",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HunanAiwan.png"
     },
     {
@@ -1639,7 +1639,7 @@
         "display_name": "河北少儿科教",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "河北少儿科教",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1659,7 +1659,7 @@
         "display_name": "河北经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "河北经济",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1669,7 +1669,7 @@
         "display_name": "河北都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "河北都市",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2419,7 +2419,7 @@
         "display_name": "农林卫视",
         "category": "weishi",
         "tvg_id": "陕西农林卫视",
-        "epg_id": null,
+        "epg_id": "陕西农林卫视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png",
         "priority": 55,
         "notes": "curated"
