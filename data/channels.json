@@ -579,7 +579,7 @@
         "display_name": "广东新闻",
         "category": "local",
         "tvg_id": "GDXW",
-        "epg_id": null,
+        "epg_id": "广东新闻",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDXW.png"
     },
     {
@@ -1219,7 +1219,7 @@
         "display_name": "北京纪实科教",
         "category": "local",
         "tvg_id": "北京纪实科教",
-        "epg_id": "北京纪实",
+        "epg_id": "北京纪实科教",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%8C%97%E4%BA%AC%E7%BA%AA%E5%AE%9E%E7%A7%91%E6%95%99.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1379,7 +1379,7 @@
         "display_name": "山西影视",
         "category": "local",
         "tvg_id": "山西影视",
-        "epg_id": "山西影视",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1559,7 +1559,7 @@
         "display_name": "欢笑剧场",
         "category": "local",
         "tvg_id": "欢笑剧场",
-        "epg_id": "欢笑剧场",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%AC%A2%E7%AC%91%E5%89%A7%E5%9C%BA.png",
         "priority": 60,
         "notes": "long-tail"
