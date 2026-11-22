@@ -71,7 +71,7 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8
 湖北卫视,http://gslbserv.itv.cmvideo.cn/1000000001000024621/1.m3u8?channel-id=ystenlive&Contentid=1000000001000024621&livemode=1&stbId=3
 湖南卫视,http://gslbserv.itv.cmvideo.cn/1000000005000265024/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265024&livemode=1&stbId=3
 甘肃卫视,http://gslbserv.itv.cmvideo.cn/5000000011000031121/1.m3u8?channel-id=bestzb&Contentid=5000000011000031121&livemode=1&stbId=3
-西藏卫视,http://107.150.60.122/live/xzws.m3u8
+西藏卫视,http://112.27.5.218:9901/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0
 贵州卫视,http://gslbserv.itv.cmvideo.cn/5000000004000025843/1.m3u8?channel-id=bestzb&Contentid=5000000004000025843&livemode=1&stbId=3
 辽宁卫视,http://gslbserv.itv.cmvideo.cn/1000000005000265022/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265022&livemode=1&stbId=3
 重庆卫视,http://gslbserv.itv.cmvideo.cn/1000000001000001096/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001096&livemode=1&stbId=3
@@ -80,7 +80,7 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8
 黑龙江卫视,http://gslbserv.itv.cmvideo.cn/1000000001000001925/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001925&livemode=1&stbId=3
 
 港澳台,#genre#
-HOY TV,http://r.jdshipin.com/sFw4S
+HOY TV,http://php.jdshipin.com/TVOD/iptv.php?id=hoytv
 J2,http://50.7.238.114:8278/j2_twn/playlist.m3u8?tid=MA8A1176878411768784&ct=19225&tsum=fea41bb592165942b9971148376f8b70
 TVBS新闻,http://61.221.215.25:8800/hls/9/index.m3u8
 TVB明珠台,https://hls-gateway.vpstv.net/streams/476936.m3u8
@@ -98,7 +98,7 @@ ViuTV,http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 台视,rtmp://f13h.mine.nu/sat/tv071
 无线新闻,http://cdn9.163189.xyz/smt1.1.php?id=inews_twn
 民视,rtmp://f13h.mine.nu/sat/tv051
-澳视澳门,http://r.jdshipin.com/n2YZI
+澳视澳门,http://php.jdshipin.com:8880/TVOD/iptv.php?id=asam
 
 体育,#genre#
 BRTV体育休闲,http://smjdenny.eu.org:35455/bptv/10000100000000050000000003870779.m3u8
