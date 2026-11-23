@@ -587,7 +587,7 @@
         "display_name": "南方卫视",
         "category": "local",
         "tvg_id": "GDNF",
-        "epg_id": "南方卫视",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png"
     },
     {
@@ -595,7 +595,7 @@
         "display_name": "广州综合",
         "category": "local",
         "tvg_id": "GZTV",
-        "epg_id": "广州综合台",
+        "epg_id": "544638",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png",
         "notes": ""
     },
@@ -1149,7 +1149,7 @@
         "display_name": "乐山新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "乐山新闻综合",
+        "epg_id": "544590",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1179,7 +1179,7 @@
         "display_name": "六安公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "六安公共",
+        "epg_id": "544589",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1189,7 +1189,7 @@
         "display_name": "六安新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "六安新闻综合",
+        "epg_id": "544618",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1299,7 +1299,7 @@
         "display_name": "大庆新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "大庆新闻综合",
+        "epg_id": "544617",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1379,7 +1379,7 @@
         "display_name": "山西影视",
         "category": "local",
         "tvg_id": "山西影视",
-        "epg_id": null,
+        "epg_id": "山西影视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E5%BD%B1%E8%A7%86.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1399,7 +1399,7 @@
         "display_name": "山西社会与法治",
         "category": "local",
         "tvg_id": "山西社会与法治",
-        "epg_id": null,
+        "epg_id": "山西社会与法治",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%B3%95%E6%B2%BB.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1429,7 +1429,7 @@
         "display_name": "广元公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "广元公共",
+        "epg_id": "544584",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1519,7 +1519,7 @@
         "display_name": "来宾综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "来宾综合",
+        "epg_id": "544633",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2029,7 +2029,7 @@
         "display_name": "苏州社会经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "苏州社会经济",
+        "epg_id": "539667",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2049,7 +2049,7 @@
         "display_name": "赣州公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "赣州公共",
+        "epg_id": "544601",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2059,7 +2059,7 @@
         "display_name": "赣州教育",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "赣州教育",
+        "epg_id": "544578",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2069,7 +2069,7 @@
         "display_name": "赣州新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "赣州新闻综合",
+        "epg_id": "544611",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2199,7 +2199,7 @@
         "display_name": "龙岩综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "龙岩综合",
+        "epg_id": "544627",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
