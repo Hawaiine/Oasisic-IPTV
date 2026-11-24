@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23 10:11:52",
+  "generated_at": "2026-11-24 13:43:30",
   "timezone": "Asia/Shanghai",
   "sources": {
     "enabled": 28,
@@ -8,16 +8,16 @@
     "ratio": 1.0
   },
   "counts": {
-    "catalog": 249,
-    "backup": 667,
+    "catalog": 251,
+    "backup": 669,
     "more": 3000,
-    "radio": 431,
+    "radio": 425,
     "lite": 112
   },
-  "more_candidates": 8568,
-  "more_dropped": 5568,
+  "more_candidates": 8483,
+  "more_dropped": 5483,
   "logo": {
-    "main_total": 249,
+    "main_total": 251,
     "main_with_logo": 183
   }
 }

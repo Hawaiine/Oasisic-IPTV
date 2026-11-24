@@ -185,7 +185,7 @@
         "display_name": "CCTV-8K 超高清",
         "category": "cctv",
         "tvg_id": "CCTV8K",
-        "epg_id": "CCTV8K",
+        "epg_id": "CCTV8",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CCTV8K.png",
         "notes": ""
     },
@@ -595,7 +595,7 @@
         "display_name": "广州综合",
         "category": "local",
         "tvg_id": "GZTV",
-        "epg_id": "544638",
+        "epg_id": "广州综合台",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png",
         "notes": ""
     },
@@ -1099,7 +1099,7 @@
         "display_name": "BRTV卡酷少儿",
         "category": "local",
         "tvg_id": "545993",
-        "epg_id": "545993",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1149,7 +1149,7 @@
         "display_name": "乐山新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544590",
+        "epg_id": "乐山新闻综合",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1179,7 +1179,7 @@
         "display_name": "六安公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544589",
+        "epg_id": "六安公共",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1189,7 +1189,7 @@
         "display_name": "六安新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544618",
+        "epg_id": "六安新闻综合",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1299,7 +1299,7 @@
         "display_name": "大庆新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544617",
+        "epg_id": "大庆新闻综合",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1429,7 +1429,7 @@
         "display_name": "广元公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544584",
+        "epg_id": "广元公共",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1519,7 +1519,7 @@
         "display_name": "来宾综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544633",
+        "epg_id": "来宾综合",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1609,7 +1609,7 @@
         "display_name": "江苏影视",
         "category": "local",
         "tvg_id": "江苏影视",
-        "epg_id": null,
+        "epg_id": "江苏影视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B1%9F%E8%8B%8F%E5%BD%B1%E8%A7%86.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1859,7 +1859,7 @@
         "display_name": "热播剧场",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "热播剧场",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2009,7 +2009,7 @@
         "display_name": "经典电影",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "经典电影",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2029,7 +2029,7 @@
         "display_name": "苏州社会经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "539667",
+        "epg_id": "苏州社会经济",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2049,7 +2049,7 @@
         "display_name": "赣州公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544601",
+        "epg_id": "赣州公共",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2059,7 +2059,7 @@
         "display_name": "赣州教育",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544578",
+        "epg_id": "赣州教育",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2069,7 +2069,7 @@
         "display_name": "赣州新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544611",
+        "epg_id": "赣州新闻综合",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2199,7 +2199,7 @@
         "display_name": "龙岩综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "544627",
+        "epg_id": "龙岩综合",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
