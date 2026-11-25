@@ -440,16 +440,12 @@ https://panel2.videocontentstreaming.com/live/4fd37e086394ac7e11a87acbc55e8f91.m
 https://live-evg7.tv360.bitel.com.pe/bitel/radiounotv/playlist.m3u8
 #EXTINF:-1 tvg-id="ScrippsNews.us@SD" group-title="电台",Scripps News
 https://aka-live1050.delivery.roku.com/a48b72c9-5755-4ede-9dac-9e51e4ca5cc8/t2-origin/out/v1/live.m3u8
-#EXTINF:-1 tvg-id="SuaraSurabayaVisualRadio.id@Surabaya" group-title="电台",Suara Surabaya Visual Radio
-https://ssfm.siar.us/ssfm/live/playlist.m3u8
 #EXTINF:-1 tvg-id="VestiFM.ru@HD" group-title="电台",Vesti FM
 https://stream.smotrim.ru/hls2/vesti_fm/playlist_4.m3u8
-#EXTINF:-1 tvg-id="CricketGold.au@SD" group-title="电台",Cricket Gold
-https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8
 #EXTINF:-1 tvg-id="Crime360.us@SD" group-title="电台",Crime 360
 https://f82e592c.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/Vml6aW9fQ3JpbWUzNjBfSExT/playlist.m3u8
-#EXTINF:-1 tvg-id="IntoCrime.fr@SD" group-title="电台",Into Crime
-https://amg00711-zylo-amg00711c10-rakuten-fr-6731.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="CrimenHistoria.es@SD" group-title="电台",Crimen & Historia
+https://jmp2.uk/plu-64ddcbb14c5ed80008fad416.m3u8
 #EXTINF:-1 tvg-id="LawCrime.us@SD" group-title="电台",Law & Crime
 https://a-cdn.klowdtv.com/live3/law_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAmericanTrueCrime.de@GB" group-title="电台",Pluto TV American True Crime
@@ -468,6 +464,8 @@ http://38.87.224.19:2220/play/a03u/index.m3u8
 https://tigocloud.desdeparaguay.net/agrtv/agrtv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlRiyadhRadio.sa@SD" group-title="电台",Al Riyadh Radio
 https://live.kwikmotion.com/sbrksariyadhradiolive/srpksariyadhradio/playlist.m3u8
+#EXTINF:-1 tvg-id="AmericanCrimeChannel.pl@Poland" group-title="电台",American Crime Channel
+https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883104
 #EXTINF:-1 tvg-id="AntenaUnoRadiovideo.ec@SD" group-title="电台",Antena Uno Radiovideo
 https://tvdatta.com:3578/live/antenaunolive.m3u8
 #EXTINF:-1 tvg-id="AtlantisRadioTV.pe@SD" group-title="电台",Atlantis Radio TV
@@ -478,12 +476,16 @@ https://bnr-cache-cdp.triple-it.nl/studio/index.m3u8
 https://host.streamingnation.live:3940/live/caobatvlive.m3u8
 #EXTINF:-1 tvg-id="CatveFM.br@SD" group-title="电台",Catve FM
 https://5b33b873179a2.streamlock.net:1443/radiocamera/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="ClassicTVCrimeDrama.us@SD" group-title="电台",Classic TV Crime Drama
+https://jmp2.uk/plu-61325c4f982acd000723287e.m3u8
 #EXTINF:-1 tvg-id="CorreaRadiovision.ar@SD" group-title="电台",Correa Radiovision
 https://stream.arcast.net:4443/correadigital/canal12/playlist.m3u8
+#EXTINF:-1 tvg-id="CrimePlusInvestigation.us@SD" group-title="电台",Crime + Investigation
+http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/index.m3u8
 #EXTINF:-1 tvg-id="CrimenesImperfectos.us@SD" group-title="电台",Crimenes Imperfectos
 https://jmp2.uk/plu-5e94cd036cc69d0007e8a1ba.m3u8
-#EXTINF:-1 tvg-id="EmisoraComunitaria1041FM.co@SD" group-title="电台",Emisora Comunitaria 104.1 FM
-https://104florencia.co/wp-admin/admin-ajax.php?action=frp_hls_proxy&url=https://streamyes.alsolnet.com/comunitariafm/live/playlist.m3u8
+#EXTINF:-1 tvg-id="CSICrimeSceneInvestigation.de@GB" group-title="电台",CSI: Crime Scene Investigation
+https://jmp2.uk/plu-6304f8d5ffb61000071ab478.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Czechia" group-title="电台",FILMBOX+ Love & Crime
 http://88.212.15.50/live/test_filmbox_plus_atk_1200/playlist.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusLoveCrime.pl@Romania" group-title="电台",FILMBOX+ Love & Crime Romania
@@ -536,6 +538,8 @@ https://jmp2.uk/plu-69aee8a1acb7eb0bb68df641.m3u8
 https://jmp2.uk/plu-630f1e6073bd1800082107f0.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSerieCrime.de@IT" group-title="电台",Pluto TV Serie Crime
 https://jmp2.uk/plu-608aa777b907770007e5d05d.m3u8
+#EXTINF:-1 tvg-id="PlutoTVSeriesCriminais.us@BR" group-title="电台",Pluto TV Series Criminais
+https://jmp2.uk/plu-6474ab5cdc7a760008745008.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSeriescriminales.de@ES" group-title="电台",Pluto TV Series criminales
 https://jmp2.uk/plu-65cf6ab58145cb0008129ca8.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSeriesdeCrimen.us@LatAm" group-title="电台",Pluto TV Series de Crimen
@@ -544,14 +548,14 @@ https://jmp2.uk/plu-655f62ff954b020008c91ec6.m3u8
 https://videostream.shockmedia.com.ar:19360/radio1045/radio1045.m3u8
 #EXTINF:-1 tvg-id="Pulse95Radio.ae@SD" group-title="电台",Pulse95 Radio
 https://svs.itworkscdn.net/pulse95live/pulse96/playlist.m3u8
-#EXTINF:-1 tvg-id="PutoTVClassicTVCrimeDrama.us@CA" group-title="电台",Puto TV Classic TV Crime Drama
-https://jmp2.uk/plu-696e61287d2afdec4ff2cb75.m3u8
+#EXTINF:-1 tvg-id="Radio1.ru@SD" group-title="电台",Radio 1
+https://stream.radio1.ru/memfs/49dee7fe-77ba-4e6b-8cdc-fa840535b242.m3u8
 #EXTINF:-1 tvg-id="Radio3.es@SD" group-title="电台",Radio 3
 https://rtvelivestream.rtve.es/rtvesec/rne/rne3_main.m3u8
+#EXTINF:-1 tvg-id="Radio51TV.it@SD" group-title="电台",Radio 51 TV
+http://178.32.140.155/canale51/canale51/playlist.m3u8
 #EXTINF:-1 tvg-id="Radio350.nl@SD" group-title="电台",Radio 350
 https://stream.radio350.nl/hls/radio350.m3u8
-#EXTINF:-1 tvg-id="Radio538.nl@SD" group-title="电台",Radio 538
-https://radio538.prd1.talpatvcdn.nl/22e9bbf9616547d7bc162c993009c533/index.m3u8
 #EXTINF:-1 tvg-id="410316" group-title="电台",Radio Aalsmeer TV
 https://radioaalsmeer.nl:4443/live/tv.m3u8
 #EXTINF:-1 tvg-id="RadioAlbaladTV.ps@SD" group-title="电台",Radio Albalad TV
@@ -582,8 +586,14 @@ https://v1.tustreaming.cl/frecuencia1tv/index.m3u8
 https://tvdatta.com:3991/live/guairatvlive.m3u8
 #EXTINF:-1 tvg-id="RadioIbizaTV.it@SD" group-title="电台",Radio Ibiza TV
 https://5929b138b139d.streamlock.net/RadioIbizaTV/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioIglesias.it@SD" group-title="电台",Radio Iglesias
+http://wms.shared.streamshow.it/visualradio/mp4:visualradio/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioIglesiasSardegna.it@SD" group-title="电台",Radio Iglesias Sardegna
+https://59d7d6f47d7fc.streamlock.net/visualradio/visualradio/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioMegaTVAmazonia.bo@SD" group-title="电台",Radio Mega TV Amazonia
 https://ares.disfrutaenlared.com:1936/megatv/megatv/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioMoldova.md@SD" group-title="电台",Radio Moldova
+https://radiolive.trm.md/hls_rma/actualitati.m3u8
 #EXTINF:-1 tvg-id="RadioMoldovaTineret.md@SD" group-title="电台",Radio Moldova Tineret
 https://radiolive.trm.md:8001/hls_rmt/tineret.m3u8
 #EXTINF:-1 tvg-id="RadioMonteCarloTV.it@SD" group-title="电台",Radio Monte Carlo TV
@@ -602,16 +612,18 @@ https://v2.tustreaming.cl/alingeproducciones/index.m3u8
 https://tv.arkeo.cl:19360/8052/8052.m3u8
 #EXTINF:-1 tvg-id="RadioRancaguaFM.cl@SD" group-title="电台",Radio Rancagua FM
 https://tv.arkeo.cl:1936/radiorancagua/radiorancagua/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioRitmoFM.cl@SD" group-title="电台",Radio Ritmo FM
+https://panel.tvstream.cl:1936/8046/8046/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioRomaniaIasi.ro@SD" group-title="电台",Radio Romania Iasi
 https://stream3.srr.ro/live/radio-iasi/chunklist_w1565024915.m3u8
 #EXTINF:-1 tvg-id="RadioRomaniaOlteniaCraiova.ro@SD" group-title="电台",Radio Romania Oltenia-Craiova
 https://stream3.srr.ro/live/Radio-Oltenia/chunklist_w1200239883.m3u8
 #EXTINF:-1 tvg-id="RadioRossii.ru@HD" group-title="电台",Radio Rossii
 https://stream.smotrim.ru/hls2/radio_rus/playlist_4.m3u8
+#EXTINF:-1 tvg-id="RadioSuyaiTV.cl@HD" group-title="电台",Radio Suyai TV
+https://cl-2.backend.energeek.cl/RadioSuyai-Neo/index.m3u8
 #EXTINF:-1 tvg-id="RadioTaorminaSicilia.it@SD" group-title="电台",Radio Taormina Sicilia
 https://stream2.xdevel.com/video1s3-7/stream/playlist.m3u8
-#EXTINF:-1 tvg-id="RadioTeleGinen.ht@SD" group-title="电台",Radio Tele Ginen
-http://teleginen.srfms.com:1935/teleginen/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioTelePlanetCompas.ht@SD" group-title="电台",Radio Tele Planet Compas
 https://5dcab9aed5331.streamlock.net/mrcompas1/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioTelevisionMarbella.es@SD" group-title="电台",Radio Television Marbella
@@ -632,8 +644,6 @@ https://v2.tustreaming.cl/radiovidacurico/index.m3u8
 https://ocb-ingest.akamaized.net/hls/live/2037032/tvmc01/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioYaqeenJordanCityView.jo@SD" group-title="电台",Radio Yaqeen Jordan City View
 http://45.63.116.205/hls4/stream1.m3u8
-#EXTINF:-1 tvg-id="RadioYguazuTV.ar@SD" group-title="电台",Radio Yguazu TV
-https://live.enhdtv.com:8081/radioiguazutv/index.m3u8
 #EXTINF:-1 tvg-id="Radiocanal.ar@SD" group-title="电台",Radiocanal
 http://204.199.3.2/.m3u8
 #EXTINF:-1 tvg-id="RadioToppers.nl@SD" group-title="电台",RadioToppers
@@ -644,6 +654,8 @@ https://live.obslivestream.com/tvoriente/index.m3u8
 https://stream14.polskieradio.pl/pr4_video/video_pr4.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="RotanaRadioJordanStudio.jo@SD" group-title="电台",Rotana Radio Jordan Studio
 http://45.63.116.205/hls/stream1.m3u8
+#EXTINF:-1 tvg-id="410316" group-title="电台",RTL Web Radio TV
+https://rtlradio-streaming.rtl.lu/rtlradiowebtv/smil:rtlradiowebtv/playlist.m3u8
 #EXTINF:-1 tvg-id="SaudiaRadio.sa@SD" group-title="电台",Saudia Radio
 https://live.kwikmotion.com/sbrksasaudiaradiolive/srpksasaudiaradio/playlist.m3u8
 #EXTINF:-1 tvg-id="ShababFM.ps@SD" group-title="电台",Shabab FM
@@ -656,14 +668,14 @@ https://angelistic.live:3785/live/tvoficiallive.m3u8
 https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="TrueCrimebyPlutoTV.de@FR" group-title="电台",True Crime by Pluto TV
 https://jmp2.uk/plu-5f914f4b36d67d0007a91a04.m3u8
+#EXTINF:-1 tvg-id="TruecrimefranViaplay.se@SE" group-title="电台",True crime fran Viaplay
+https://jmp2.uk/plu-645cb7857cb4b1000859c57c.m3u8
 #EXTINF:-1 tvg-id="TrueCrimeNetwork.us@SD" group-title="电台",True Crime Network
 https://amg00979-amg00979c1-firetv-us-3622.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TVACritica.br@SD" group-title="电台",TV A Critica
 https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
-#EXTINF:-1 tvg-id="UniRadioTV.py@SD" group-title="电台",UniRadio TV
-https://video.hostingcaaguazu.com:19360/uniradiotv/uniradiotv.m3u8
-#EXTINF:-1 tvg-id="VillaElisaRadioTV.py@SD" group-title="电台",Villa Elisa Radio TV
-https://copacogen.desdeparaguay.net/villaelisatv/villaelisatv/playlist.m3u8?admin=nacion
+#EXTINF:-1 tvg-id="TVGMiraRadioGalega.es@SD" group-title="电台",TVG Mira Radio Galega
+https://crtvg-mirarg-schlive.flumotion.cloud/crtvglive/smil:channel1PRG.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="VisualRadio.it@SD" group-title="电台",Visual Radio
 http://wms.shared.streamshow.it:1935/visualradio/visualradio/live.m3u8
 #EXTINF:-1 tvg-id="WatarRadio.ae@SD" group-title="电台",Watar Radio
@@ -694,8 +706,6 @@ https://videostream.jpbgdigital.com/NOWTV.m3u8
 https://live2.tensila.com/cool-v-1.arubara/hls/master.m3u8
 #EXTINF:-1 tvg-id="DanceFM.cl@SD" group-title="电台",Dance FM
 https://5eaccbab48461.streamlock.net:1936/dancefm_1/dancefm_1/playlist.m3u8
-#EXTINF:-1 tvg-id="DismarRadioTV.py@SD" group-title="电台",Dismar Radio TV
-https://rds3.desdeparaguay.net/dismartv/dismartv/playlist.m3u8
 #EXTINF:-1 tvg-id="ElRadio9090FM.eg@SD" group-title="电台",El Radio 9090 FM
 https://9090video.mobtada.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="EllinikosFM.gr@SD" group-title="电台",Ellinikos FM
@@ -712,6 +722,8 @@ https://s2.tvdatta.com:3307/hybrid/play.m3u8
 https://tv.mediacp.eu:8081/happyradio/index.m3u8
 #EXTINF:-1 tvg-id="410316" group-title="电台",Heart Radio Aruba
 https://live2.tensila.com/heart-v-1.heartar/hls/live/mystream.m3u8
+#EXTINF:-1 tvg-id="HitradioO3.at@SD" group-title="电台",Hitradio O3
+https://studiocam-oe3.mdn.ors.at/orf/studiocam_oe3/q6a/manifest.mpd
 #EXTINF:-1 tvg-id="HypeVisualRadio.nl@SD" group-title="电台",Hype Visual Radio
 https://streammix.alsolnet.com/hyperadio/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ImagenFM1051.hn@SD" group-title="电台",Imagen FM 105.1
@@ -732,6 +744,8 @@ https://edge12.vedge.infomaniak.com/livecast/ik:madrasfmtv/manifest.m3u8
 https://vivo.solumedia.com:19360/masfm/masfm.m3u8
 #EXTINF:-1 tvg-id="Millenium109FM.pe@SD" group-title="电台",Millenium 109 FM
 https://videoserver.tmcreativos.com:19360/nqvnhujhrx/nqvnhujhrx.m3u8
+#EXTINF:-1 tvg-id="MosaiqueFM.tn@SD" group-title="电台",Mosaique FM
+https://webcam.mosaiquefm.net/mosatv/_definst_/studio/playlist.m3u8?DVR
 #EXTINF:-1 tvg-id="NidaeAlIslamRadio.sa@SD" group-title="电台",Nidae AlIslam Radio
 https://live.kwikmotion.com/sbrksanedaradiolive/srpksanedaradio/playlist.m3u8
 #EXTINF:-1 tvg-id="ONFM.pt@SD" group-title="电台",ON FM
@@ -748,6 +762,8 @@ https://cloudvideo.servers10.com:8081/8154/index.m3u8
 http://stream7.xdevel.com/video0s975758-1051/stream/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioChisinau.md@SD" group-title="电台",Radio Chisinau
 https://radiochisinau.md/hls/RChisinau.m3u8
+#EXTINF:-1 tvg-id="RadioClasicaTV.bo@SD" group-title="电台",Radio Clasica TV
+https://ares.disfrutaenlared.com:1936/clasica/clasica/playlist.m3u8
 #EXTINF:-1 tvg-id="RADIOCLUBDJTV.pl@HD" group-title="电台",RADIO CLUB DJ TV
 https://radioclubdj.pro/stream/tv.m3u8
 #EXTINF:-1 tvg-id="RadioColmenar925FM.py@SD" group-title="电台",Radio Colmenar 92.5 FM
@@ -768,8 +784,6 @@ https://streamlov.alsolnet.com/radiofxnet/live/playlist.m3u8
 https://peer2.tdiradio.com/static/streaming-playlists/hls/bab99862-ec1c-474f-9a02-4f8c8677d565/0.m3u8
 #EXTINF:-1 tvg-id="RadioIdeal.hn@SD" group-title="电台",Radio Ideal
 https://www.idealfm104-7.com/hls/0/stream.m3u8
-#EXTINF:-1 tvg-id="RadioJND.nl@SD" group-title="电台",Radio JND
-https://radiojnd.cdn.hostin.cc/radiojnd/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioKarolinaTV.rs@SD" group-title="电台",Radio Karolina TV
 https://peer2.tdiradio.com/static/streaming-playlists/hls/4207de1d-52e8-4591-ad9e-218069b864d1/0.m3u8
 #EXTINF:-1 tvg-id="RadioLaSerenaTV.cl@SD" group-title="电台",Radio La Serena TV
@@ -782,6 +796,8 @@ https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8
 https://radiolive.trm.md:8001/hls_rmm/muzical.m3u8
 #EXTINF:-1 tvg-id="RadioMonumentalTV.ec@SD" group-title="电台",Radio Monumental TV
 https://cloud37.ecuatel.com/monumentaltv/live/manifest.m3u8
+#EXTINF:-1 tvg-id="RadioOndaDigital.pe@SD" group-title="电台",Radio Onda Digital
+https://live.ondadigitaltv.com/RADIOODTV/index.m3u8
 #EXTINF:-1 tvg-id="RadioPiterPanTV.it@SD" group-title="电台",Radio Piter Pan TV
 https://58d921499d3d3.streamlock.net/RadioPiterpanTV/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioRealpolitik.ar@SD" group-title="电台",Radio Realpolitik
@@ -790,26 +806,20 @@ https://vivo.solumedia.com:19360/realpolitik/realpolitik.m3u8
 https://media.3netmedia.ro/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RadioRumbaTV.pe@SD" group-title="电台",Radio Rumba TV
 https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8
-#EXTINF:-1 tvg-id="RadioSWHTV.lv@SD" group-title="电台",Radio SWH TV
-https://00ff00.latnet.media/edge/swh_tv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioTeleHit.ht@SD" group-title="电台",Radio Tele Hit
 https://59d39900ebfb8.streamlock.net/RadioTelehit/RadioTelehit/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioTropical.pe@SD" group-title="电台",Radio Tropical
 https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8
-#EXTINF:-1 tvg-id="RadioZeta.it@SD" group-title="电台",Radio Zeta
-https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S9346184/XEx1LqlYbNic/playlist_video.m3u8
+#EXTINF:-1 tvg-id="RadioZona903.cl@SD" group-title="电台",Radio Zona 90.3
+https://live.tvcontrolcp.com:8081/radiozona/index.m3u8
 #EXTINF:-1 tvg-id="RadioZU.ro@720p" group-title="电台",Radio ZU
 https://stream1.antenaplay.ro/zurtv/zurtv/chunklist.m3u8
-#EXTINF:-1 tvg-id="Radiofreccia.it@SD" group-title="电台",Radiofreccia
-https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/playlist_video.m3u8
 #EXTINF:-1 tvg-id="RadiolaTV.co@SD" group-title="电台",Radiola TV
 http://158.172.217.18:8000/play/a01k/index.m3u8
 #EXTINF:-1 tvg-id="Rararadio.nl@SD" group-title="电台",Rararadio
 https://58c04fb1d143f.streamlock.net/rararadio/rararadio/playlist.m3u8
-#EXTINF:-1 tvg-id="Star101FM.gu@SD" group-title="电台",Star 101 FM
-https://live2.tensila.com/knut-v-1.choice/hls/master.m3u8
-#EXTINF:-1 tvg-id="StranaFM.ru@SD" group-title="电台",Strana FM
-https://live-stranafm.cdnvideo.ru/stranafm/smil:stranafm.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="StingrayTikTokRadio.ca@HD" group-title="电台",Stingray TikTok Radio
+https://d3f4oii5n0oeqi.cloudfront.net/11701/88814594/hls/master.m3u8?ads.xumo_channelId=88814594
 #EXTINF:-1 tvg-id="TDIRadioTV.rs@SD" group-title="电台",TDI Radio TV
 https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-9975-9665f5605557/master.m3u8
 #EXTINF:-1 tvg-id="TeleangolRadio.cl@SD" group-title="电台",Teleangol Radio
@@ -818,8 +828,12 @@ https://pantera1-100gb-cl-movistar.dps.live/teleangolradio/teleangolradio.smil/p
 https://stream.rtl.lu/data/live/tele/rtltodayradio/playlist.m3u8
 #EXTINF:-1 tvg-id="TropiQ997FM.pa@SD" group-title="电台",Tropi Q 99.7 FM
 https://www.streaming507.net:19360/videotropiq/videotropiq.m3u8
+#EXTINF:-1 tvg-id="TurboMixRadioTV.pe@SD" group-title="电台",Turbo Mix Radio TV
+https://live-evg11.tv360.bitel.com.pe/bitel/turbomixSRT/playlist.m3u8
 #EXTINF:-1 tvg-id="VoiceOverRadioTV.cr@SD" group-title="电台",VoiceOver Radio TV
 https://cloudvideo.servers10.com:8081/8198/index.m3u8
+#EXTINF:-1 tvg-id="WavezFM.aw@SD" group-title="电台",Wavez FM
+https://media.streambrothers.com:1936/uszqnhpjpa/uszqnhpjpa/playlist.m3u8
 #EXTINF:-1 tvg-id="X1027FM.aw@SD" group-title="电台",X 102.7 FM
 https://live2.tensila.com/onair-v-1.xfm1027/hls/master.m3u8
 #EXTINF:-1 tvg-id="CanalTVRadioMayaTGBA.gt@SD" group-title="电台",Canal TV Radio Maya TGBA
@@ -830,6 +844,10 @@ https://3a310f6ec721e6b362fcd22772b57f36a2fe6bb2.tabeelcr.com:8080/cristovision3
 https://5fc584f3f19c9.streamlock.net/cristovision/videocristovision/playlist.m3u8
 #EXTINF:-1 tvg-id="DGRadio.au@HD" group-title="电台",DG:Radio
 https://mdn.dg.church/683c0cb036885-1/index.m3u8
+#EXTINF:-1 tvg-id="HolyQuranRadio.sa@SD" group-title="电台",Holy Quran Radio
+https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8
+#EXTINF:-1 tvg-id="HolyQuranRadioNablus.ps@SD" group-title="电台",Holy Quran Radio Nablus
+http://streaming.zaytonatube.com:8080/holyquran/holyquran/video.m3u8
 #EXTINF:-1 tvg-id="INCRadio.ph@SD" group-title="电台",INC Radio
 https://stream-243529.castr.net/6842a712b68c56f675d988f1/live_b60a96e056fc11f084c05f5d0649296b/rewind-1800.m3u8
 #EXTINF:-1 tvg-id="RadioArmoniaTV.cl@SD" group-title="电台",Radio Armonia TV

@@ -587,7 +587,7 @@
         "display_name": "南方卫视",
         "category": "local",
         "tvg_id": "GDNF",
-        "epg_id": null,
+        "epg_id": "南方卫视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GDNF.png"
     },
     {
@@ -595,7 +595,7 @@
         "display_name": "广州综合",
         "category": "local",
         "tvg_id": "GZTV",
-        "epg_id": "广州综合台",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZTV.png",
         "notes": ""
     },
@@ -604,7 +604,7 @@
         "display_name": "广州新闻",
         "category": "local",
         "tvg_id": "GZXW",
-        "epg_id": "广州新闻",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/GZXW.png",
         "notes": ""
     },
@@ -662,7 +662,7 @@
         "display_name": "北京文艺",
         "category": "local",
         "tvg_id": "BTVWY",
-        "epg_id": "北京文艺",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/BTVWY.png",
         "notes": ""
     },
@@ -680,7 +680,7 @@
         "display_name": "北京新闻",
         "category": "local",
         "tvg_id": "BTVXW",
-        "epg_id": "北京新闻",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/BTVXW.png"
     },
     {
@@ -697,7 +697,7 @@
         "display_name": "湖南娱乐",
         "category": "local",
         "tvg_id": "HNWL",
-        "epg_id": "湖南娱乐",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/HNWL.png"
     },
     {
@@ -789,7 +789,7 @@
         "display_name": "安徽经济生活",
         "category": "local",
         "tvg_id": "AHJJ",
-        "epg_id": "安徽经济生活",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/AHJJ.png"
     },
     {
@@ -1020,7 +1020,7 @@
         "display_name": "北京体育",
         "category": "sports",
         "tvg_id": "BeijingSports",
-        "epg_id": null,
+        "epg_id": "北京体育休闲",
         "tvg_logo": ""
     },
     {
@@ -1059,7 +1059,7 @@
         "display_name": "CGTN俄语",
         "category": "cctv",
         "tvg_id": "CGTN俄语",
-        "epg_id": null,
+        "epg_id": "CGTN俄语",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E4%BF%84%E8%AF%AD.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1079,7 +1079,7 @@
         "display_name": "CGTN西语",
         "category": "cctv",
         "tvg_id": "CGTN西语",
-        "epg_id": null,
+        "epg_id": "CGTN西语",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/CGTN%E8%A5%BF%E8%AF%AD.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1199,7 +1199,7 @@
         "display_name": "内蒙古少儿",
         "category": "local",
         "tvg_id": "内蒙古少儿",
-        "epg_id": "内蒙古少儿",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%86%85%E8%92%99%E5%8F%A4%E5%B0%91%E5%84%BF.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1309,7 +1309,7 @@
         "display_name": "宁夏公共",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "宁夏公共",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1389,7 +1389,7 @@
         "display_name": "山西文体生活",
         "category": "local",
         "tvg_id": "山西文体生活",
-        "epg_id": "山西文体生活",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E6%96%87%E4%BD%93%E7%94%9F%E6%B4%BB.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1399,7 +1399,7 @@
         "display_name": "山西社会与法治",
         "category": "local",
         "tvg_id": "山西社会与法治",
-        "epg_id": "山西社会与法治",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%B1%B1%E8%A5%BF%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%B3%95%E6%B2%BB.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1489,7 +1489,7 @@
         "display_name": "无锡娱乐",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡娱乐",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1499,7 +1499,7 @@
         "display_name": "无锡生活",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡生活",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1509,7 +1509,7 @@
         "display_name": "无锡经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "无锡经济",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1549,7 +1549,7 @@
         "display_name": "杭州综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "杭州综合",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1599,7 +1599,7 @@
         "display_name": "汕头综合",
         "category": "local",
         "tvg_id": "汕头综合",
-        "epg_id": "汕头综合",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B1%95%E5%A4%B4%E7%BB%BC%E5%90%88.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1639,7 +1639,7 @@
         "display_name": "河北少儿科教",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北少儿科教",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1649,7 +1649,7 @@
         "display_name": "河北影视",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北影视",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1659,7 +1659,7 @@
         "display_name": "河北经济",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北经济",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1669,7 +1669,7 @@
         "display_name": "河北都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "河北都市",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1799,7 +1799,7 @@
         "display_name": "浙江民生",
         "category": "local",
         "tvg_id": "",
-        "epg_id": null,
+        "epg_id": "浙江民生",
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1839,7 +1839,7 @@
         "display_name": "湖南电视剧",
         "category": "local",
         "tvg_id": "湖南电视剧",
-        "epg_id": "湖南电视剧",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E6%B9%96%E5%8D%97%E7%94%B5%E8%A7%86%E5%89%A7.png",
         "priority": 60,
         "notes": "long-tail"
@@ -1879,7 +1879,7 @@
         "display_name": "甘肃少儿",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "甘肃少儿",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1909,7 +1909,7 @@
         "display_name": "石家庄娱乐",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "石家庄娱乐",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1919,7 +1919,7 @@
         "display_name": "石家庄新闻综合",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "石家庄新闻综合",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1929,7 +1929,7 @@
         "display_name": "石家庄生活",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "石家庄生活",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -1939,7 +1939,7 @@
         "display_name": "石家庄都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "石家庄都市",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2039,7 +2039,7 @@
         "display_name": "西安都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "西安都市",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2149,7 +2149,7 @@
         "display_name": "黑龙江少儿",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "黑龙江少儿",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2159,7 +2159,7 @@
         "display_name": "黑龙江影视",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "黑龙江影视",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2169,7 +2169,7 @@
         "display_name": "黑龙江文体",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "黑龙江文体",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2179,7 +2179,7 @@
         "display_name": "黑龙江新闻法治",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "黑龙江新闻法治",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2189,7 +2189,7 @@
         "display_name": "黑龙江都市",
         "category": "local",
         "tvg_id": "",
-        "epg_id": "黑龙江都市",
+        "epg_id": null,
         "tvg_logo": "",
         "priority": 60,
         "notes": "long-tail"
@@ -2249,7 +2249,7 @@
         "display_name": "安徽综艺体育",
         "category": "sports",
         "tvg_id": "安徽综艺体育",
-        "epg_id": "安徽综艺体育",
+        "epg_id": null,
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E5%AE%89%E5%BE%BD%E7%BB%BC%E8%89%BA%E4%BD%93%E8%82%B2.png",
         "priority": 60,
         "notes": "long-tail"
@@ -2419,7 +2419,7 @@
         "display_name": "农林卫视",
         "category": "weishi",
         "tvg_id": "陕西农林卫视",
-        "epg_id": null,
+        "epg_id": "陕西农林卫视",
         "tvg_logo": "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-IPTV@main/logo/%E9%99%95%E8%A5%BF%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png",
         "priority": 55,
         "notes": "curated"
