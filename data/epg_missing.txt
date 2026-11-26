@@ -1,20 +1,25 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-11-25 04:45:22
-# 覆盖率：198/257 = 77.0%
+# 生成时间：2026-11-26 03:55:13
+# 覆盖率：162/257 = 63.0%
 
+南方卫视 | local | upstream-missing
 广州综合 | local | upstream-missing
 广州新闻 | local | upstream-missing
 广州影视 | local | upstream-missing
 武汉新闻 | local | upstream-missing
 武汉文艺 | local | upstream-missing
 北京文艺 | local | upstream-missing
+北京影视 | local | upstream-missing
 北京新闻 | local | upstream-missing
+湖南经视 | local | upstream-missing
 湖南娱乐 | local | upstream-missing
 四川文化旅游 | local | upstream-missing
 成都新闻综合 | local | upstream-missing
+重庆新闻 | local | upstream-missing
 陕西都市青春 | local | upstream-missing
 安徽经济生活 | local | upstream-missing
+福建综合 | local | upstream-missing
 凤凰卫视香港台 | gangtai | upstream-missing
 TVB明珠台 | gangtai | upstream-missing
 无线新闻 | gangtai | upstream-missing
@@ -31,30 +36,59 @@ TVBS新闻 | gangtai | upstream-missing
 TVB星河 | gangtai | upstream-missing
 J2 | gangtai | upstream-missing
 五星体育 | sports | upstream-missing
+北京体育 | sports | upstream-missing
 纬来体育 | sports | upstream-missing
 湖南爱晚 | live | upstream-missing
+CGTN俄语 | cctv | upstream-missing
+CGTN西语 | cctv | upstream-missing
 CGTN阿语 | cctv | upstream-missing
 BRTV卡酷少儿 | local | upstream-no-programme:545993
 东莞生活资讯 | local | upstream-missing
+佛山综合 | local | upstream-missing
 内蒙古少儿 | local | upstream-missing
+北京生活 | local | upstream-missing
+北京财经 | local | upstream-missing
 南京少儿 | local | upstream-missing
+吉林乡村 | local | upstream-missing
+四川经济 | local | upstream-missing
 宁夏公共 | local | upstream-missing
 宁夏少儿 | local | upstream-missing
 宁夏经济 | local | upstream-missing
+安徽影视 | local | upstream-missing
+山西影视 | local | upstream-missing
 山西文体生活 | local | upstream-missing
 山西社会与法治 | local | upstream-missing
+广州竞赛 | local | upstream-missing
+攀枝花新闻综合 | local | upstream-missing
+无锡娱乐 | local | upstream-missing
+无锡生活 | local | upstream-missing
+无锡经济 | local | upstream-missing
+杭州生活 | local | upstream-missing
 杭州综合 | local | upstream-missing
 欢笑剧场 | local | upstream-missing
 汕头综合 | local | upstream-missing
+河北少儿科教 | local | upstream-missing
+河北影视 | local | upstream-missing
+河北经济 | local | upstream-missing
+河北都市 | local | upstream-missing
+浙江民生 | local | upstream-missing
+湖南国际 | local | upstream-missing
+湖南电影 | local | upstream-missing
 湖南电视剧 | local | upstream-missing
+潮州综合 | local | upstream-missing
 热播剧场 | local | upstream-missing
 甘肃少儿 | local | upstream-missing
+甘肃文化影视 | local | upstream-missing
 生活时尚 | local | upstream-missing
 石家庄娱乐 | local | upstream-missing
 石家庄新闻综合 | local | upstream-missing
 石家庄生活 | local | upstream-missing
 石家庄都市 | local | upstream-missing
+福建少儿 | local | upstream-missing
+福建新闻 | local | upstream-missing
 经典电影 | local | upstream-missing
+苏州新闻综合 | local | upstream-missing
+苏州社会经济 | local | upstream-missing
 西安都市 | local | upstream-missing
 黑龙江少儿 | local | upstream-missing
 黑龙江影视 | local | upstream-missing
@@ -62,3 +96,5 @@ BRTV卡酷少儿 | local | upstream-no-programme:545993
 黑龙江新闻法治 | local | upstream-missing
 黑龙江都市 | local | upstream-missing
 安徽综艺体育 | sports | upstream-missing
+风云足球 | sports | upstream-missing
+农林卫视 | weishi | upstream-missing
