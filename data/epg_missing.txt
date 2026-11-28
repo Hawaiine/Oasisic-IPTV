@@ -1,6 +1,6 @@
 # Oasisic-IPTV EPG 缺口清单（自动生成，勿手改）
 # 格式：标准名 | 分类 | 原因（upstream-missing = 上游无此频道；upstream-no-programme = 有频道条目但无节目单）
-# 生成时间：2026-11-27 03:55:21
+# 生成时间：2026-11-28 03:41:55
 # 覆盖率：155/257 = 60.3%
 
 南方卫视 | local | upstream-missing
